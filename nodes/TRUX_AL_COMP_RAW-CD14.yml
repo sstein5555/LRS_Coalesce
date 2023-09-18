@@ -1,0 +1,214 @@
+steps:
+  CD14-d82b0c92-7c60-42f1-8beb-75ed0f822fdb:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_AL_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3853d783-57aa-4beb-af5a-9b7e24672212
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD14_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1b8d128e-2d6c-4c27-9404-68e13a2bb91c
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CD14_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 726bc84d-7f91-40b8-b053-360a9fc707db
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CD14_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 22725c92-80e1-4ce5-be45-7851961815bd
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD14_FUELUOM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0983c8c9-2691-4e59-8fe5-4ba90dd3e1b3
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD14_DISTUOM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3f188700-6365-47f4-ba8f-ac8319c6d0d2
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD14_VOLUOM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8784835c-c032-4499-856f-238c878ad6d4
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD14_WEIGHTUOM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bcca3973-7afc-44ad-aec5-7696b9f92710
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CD14_ROUTESHEETID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0cfa1f79-b419-4be6-96b4-417a9c52806b
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CD14_BLANKRECNUM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0dd5ad90-57c3-45df-a242-1d2e6961ba5f
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CD14_PRINTCALLS
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c628c9f1-5059-4118-bddb-6a180e8490fb
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CD14_DETAILEDROUTCOMP
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c083f814-28c2-467b-8d38-01047377b294
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CD14_SHOWTIMES
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 477c08ff-7ef4-4387-bbe4-b28b1aa02a55
+              stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CD14_CINOUT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_AL_COMP_RAW', 'CD14') }}
+      name: CD14
+      schema: ""
+      sqlType: Source
+      table: CD14
+      type: sourceInput
+    stepCounter: d82b0c92-7c60-42f1-8beb-75ed0f822fdb

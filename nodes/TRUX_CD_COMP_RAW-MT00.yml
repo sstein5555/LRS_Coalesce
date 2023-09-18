@@ -1,0 +1,124 @@
+steps:
+  MT00-1a897d67-345d-4b42-8fa6-a078cd6f9ba9:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_CD_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ebfa8e78-1cbd-42f5-bcee-c7f26ab0a1ad
+              stepCounter: 1a897d67-345d-4b42-8fa6-a078cd6f9ba9
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: MT00_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f7709095-f18a-4777-bc89-5f798751ee88
+              stepCounter: 1a897d67-345d-4b42-8fa6-a078cd6f9ba9
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: MT00_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ab6b4565-5958-4d78-a4ed-adb23a45758c
+              stepCounter: 1a897d67-345d-4b42-8fa6-a078cd6f9ba9
+            config: {}
+            dataType: NUMBER(18,3)
+            defaultValue: ""
+            description: ""
+            name: MT00_RATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e0734dd5-3bdd-4123-801f-eda32d001f31
+              stepCounter: 1a897d67-345d-4b42-8fa6-a078cd6f9ba9
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: MT00_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9b1d747c-a412-45ba-8824-5c051696dcf2
+              stepCounter: 1a897d67-345d-4b42-8fa6-a078cd6f9ba9
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: MT00_SURCHRG
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 11a94145-1ff9-47db-a335-0e315631914b
+              stepCounter: 1a897d67-345d-4b42-8fa6-a078cd6f9ba9
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: MT00_ONCE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b1a261eb-bfe9-442e-8618-d6c985533da8
+              stepCounter: 1a897d67-345d-4b42-8fa6-a078cd6f9ba9
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: MT00_SERVNUMBREQ
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_CD_COMP_RAW', 'MT00') }}
+      name: MT00
+      schema: ""
+      sqlType: Source
+      table: MT00
+      type: sourceInput
+    stepCounter: 1a897d67-345d-4b42-8fa6-a078cd6f9ba9

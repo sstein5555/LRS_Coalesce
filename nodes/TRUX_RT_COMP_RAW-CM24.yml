@@ -1,0 +1,64 @@
+steps:
+  CM24-67484cbd-6327-486d-a9cc-eead6d02f71a:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_RT_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 75d42fc1-faf0-4f28-8988-1fd3c1e575a6
+              stepCounter: 67484cbd-6327-486d-a9cc-eead6d02f71a
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 09574299-7fcd-4ff0-b871-906e9d302f28
+              stepCounter: 67484cbd-6327-486d-a9cc-eead6d02f71a
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 192b976b-fc43-41d7-8ffa-a29a5cd8b734
+              stepCounter: 67484cbd-6327-486d-a9cc-eead6d02f71a
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CM24_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_RT_COMP_RAW', 'CM24') }}
+      name: CM24
+      schema: ""
+      sqlType: Source
+      table: CM24
+      type: sourceInput
+    stepCounter: 67484cbd-6327-486d-a9cc-eead6d02f71a

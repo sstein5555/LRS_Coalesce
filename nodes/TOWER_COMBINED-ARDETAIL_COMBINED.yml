@@ -1,0 +1,404 @@
+steps:
+  ARDETAIL_COMBINED-0a3426e9-de05-4197-9634-5ec4928f053d:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TOWER_COMBINED
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: aa729cd2-4520-43ff-a49b-18c1dc63b1be
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: ARDETAILUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 36174430-d406-4d1b-8b32-39facb149428
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: f6b2baff-c1e2-41e4-b9e6-2fe85bac32ad
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: SOURCEUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d42a9644-dc21-49cf-99ea-be4c93a3624b
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 3cdd5e03-f569-43ba-a607-8022994ef137
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 449a54df-9d71-4099-b306-cf576a2b7f49
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: fef2091e-97a5-4463-8696-c4fb1aa97f1c
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b87ce5c9-5967-4485-8113-8a07a4dbdb65
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 551d07e3-d89a-4648-b5d9-f34a8be4a2fd
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SITEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32fe3d36-97d5-4195-843c-616d8394f121
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: db733709-cd54-49c2-8d5e-3bc331ff9e07
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MATERIAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f09b95e7-10fc-448a-877e-a4127fbd377c
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: b714261f-b712-4c33-ab15-2b1d75f02927
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DETAILTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ddf4d762-67b0-475b-ab83-631bd9e4ea8d
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: cb2e5d43-4335-4966-bc22-7a6447d5ea88
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c7230088-ba0c-4f63-9270-7314864c315a
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: e4d2d89d-b198-4389-b796-208dc6bd6716
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEBITACCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e233d7c-51c4-4b11-9a5d-5545e26130a5
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: e663280d-083b-418f-83f8-9f6bd478355a
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREDITACCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe4bb544-99f6-40d2-abcb-1138346d7a31
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 29b61324-25f4-4d4b-97c3-a34edb1f4d13
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PERIOD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d9c01d43-de33-4b28-a78b-53a43b15e07d
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 3b218689-d951-4e14-9afe-22e3282982cc
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: INVOICEUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0c1d0378-5f2c-4d23-93f8-c226048e465d
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: a710b67f-3405-45fa-88e0-873eb6defbbb
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TRANSACTIONDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d49824a-f25b-4abb-8276-24f81a9efc18
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 3d8b7dcf-724a-4715-b60f-55172199ddea
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DUEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4dae23d5-168f-40b9-8ca4-f4d41ff9d282
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 0d18e741-c204-4414-8e3c-6f4a577e4508
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: GLEXPORTBATCHUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d403899b-0d40-4e84-8190-6190aee7db1b
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 55bf0571-0d11-45dd-90dd-88f965a8968a
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 71ab0960-ec14-4e86-b2ea-75e309c3f3f4
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: e69ef421-1b02-4279-b9d1-11254561dab8
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: UNITRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4240e2a6-a021-4a4c-a63f-5c14a3bcfcaa
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: d40f23c2-7d33-490f-b309-6ba495a85375
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORIGINALAMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d4e9210-aee1-4890-8909-d9fe26b1d56a
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 7b94a29a-7357-453b-afb9-ebb09d71b981
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BALANCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c479395-f5ac-43b9-8b71-8a4a7ffb37d5
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 0a941667-c9ea-4f09-b06a-6cb858799bb2
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BILLEDAPPLIEDAMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 27583d3d-30fa-4783-8629-cc1c579c7790
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 4019b9f5-da17-42e9-a08b-bb7639f2844a
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DISPLAYONINVOICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7b752bda-3a7c-4f98-a4c9-ecb10f6bb7f6
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 7c97e64d-dd3f-4aa7-9918-1ac6d75191e2
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DETAILSOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a8829120-56b9-4e09-b522-0e63522378a3
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 8dfe64b9-6838-4a37-a779-d7f4f4d8d966
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COMPANYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c0a0efdf-e7cb-4772-aec7-d5710878fa41
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 22f2cdfd-972f-44d0-863b-f7de178a5f11
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREATEDDATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3dba95e7-81d2-4c87-8a83-601e37ef6a90
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: f6e741d5-8b13-4726-ae0c-09b81f7986b4
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREDITACCTSEGTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ca5e0814-0649-49bb-9a9e-e1ef73db98b7
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+          - columnReference:
+              columnCounter: 7f293979-6869-41e6-8aa0-930557ae363c
+              stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEBITACCTSEGTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 98260fb0-b87b-467b-828b-384e4954369a
+                    stepCounter: 3ff53f7a-8be9-4a3b-82eb-6f5f1d45b155
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TOWER_RAW
+                nodeName: ARDETAIL
+            join:
+              joinCondition: FROM {{ ref('TOWER_RAW', 'ARDETAIL') }} "ARDETAIL"
+            name: ARDETAIL_COMBINED
+            noLinkRefs: []
+      name: ARDETAIL_COMBINED
+      overrideSQL: false
+      schema: ""
+      sqlType: persistentStage
+      type: sql
+    stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d

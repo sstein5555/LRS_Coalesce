@@ -1,0 +1,79 @@
+steps:
+  CD11-e209b3cf-af7b-49ce-999d-f31befcef2b7:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_MH_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e46fa95a-25d7-4302-9f36-c5d87d007c97
+              stepCounter: e209b3cf-af7b-49ce-999d-f31befcef2b7
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD11_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5ed087e0-4045-4d17-8914-0cde2b75b521
+              stepCounter: e209b3cf-af7b-49ce-999d-f31befcef2b7
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CD11_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 52ad6e21-f48a-427f-934e-dc003b417dd2
+              stepCounter: e209b3cf-af7b-49ce-999d-f31befcef2b7
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CD11_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6fbd7390-7c26-4f1b-9443-046e7cab0bf9
+              stepCounter: e209b3cf-af7b-49ce-999d-f31befcef2b7
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CD11_CASH
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_MH_COMP_RAW', 'CD11') }}
+      name: CD11
+      schema: ""
+      sqlType: Source
+      table: CD11
+      type: sourceInput
+    stepCounter: e209b3cf-af7b-49ce-999d-f31befcef2b7

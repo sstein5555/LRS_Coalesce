@@ -1,0 +1,64 @@
+steps:
+  PC01-099c003a-95f6-473b-99ff-b51cb448129d:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_LR_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 50745464-2081-4e6a-b106-b6defb09ab67
+              stepCounter: 099c003a-95f6-473b-99ff-b51cb448129d
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PC01_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e9667f92-0c0c-4293-8327-523e203c0c06
+              stepCounter: 099c003a-95f6-473b-99ff-b51cb448129d
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: PC01_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a156f158-6c0e-4601-8c6c-af9ca4a53533
+              stepCounter: 099c003a-95f6-473b-99ff-b51cb448129d
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: PC01_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_LR_COMP_RAW', 'PC01') }}
+      name: PC01
+      schema: ""
+      sqlType: Source
+      table: PC01
+      type: sourceInput
+    stepCounter: 099c003a-95f6-473b-99ff-b51cb448129d

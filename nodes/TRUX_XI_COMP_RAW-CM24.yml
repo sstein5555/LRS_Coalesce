@@ -1,0 +1,64 @@
+steps:
+  CM24-b1e879c0-dc89-44bf-aa9e-ca76b5fafef6:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_XI_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d76c7b22-39c1-4504-a140-f5baeede3680
+              stepCounter: b1e879c0-dc89-44bf-aa9e-ca76b5fafef6
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 599b8edf-2bcd-4914-aab4-409342262e50
+              stepCounter: b1e879c0-dc89-44bf-aa9e-ca76b5fafef6
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 78458537-7126-4127-9319-ee0701f60f0d
+              stepCounter: b1e879c0-dc89-44bf-aa9e-ca76b5fafef6
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CM24_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_XI_COMP_RAW', 'CM24') }}
+      name: CM24
+      schema: ""
+      sqlType: Source
+      table: CM24
+      type: sourceInput
+    stepCounter: b1e879c0-dc89-44bf-aa9e-ca76b5fafef6

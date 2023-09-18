@@ -1,0 +1,64 @@
+steps:
+  CM24-9e72e1ff-c7f8-41c2-9bf5-8b6029dc8a49:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_TP_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b424ff37-7839-4e22-9f56-aaa7c87c38ce
+              stepCounter: 9e72e1ff-c7f8-41c2-9bf5-8b6029dc8a49
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: aaf72e13-e7c2-47dd-b813-82fb4421f5cb
+              stepCounter: 9e72e1ff-c7f8-41c2-9bf5-8b6029dc8a49
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 11f97c52-3ee2-469b-8d3f-f4a22bc3d4e9
+              stepCounter: 9e72e1ff-c7f8-41c2-9bf5-8b6029dc8a49
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CM24_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_TP_COMP_RAW', 'CM24') }}
+      name: CM24
+      schema: ""
+      sqlType: Source
+      table: CM24
+      type: sourceInput
+    stepCounter: 9e72e1ff-c7f8-41c2-9bf5-8b6029dc8a49

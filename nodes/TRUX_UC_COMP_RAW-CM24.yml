@@ -1,0 +1,64 @@
+steps:
+  CM24-1924e23e-d209-47aa-a16f-23b2ed01e105:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_UC_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6142b4d1-3b3d-41ef-8b1d-968b2ef848c3
+              stepCounter: 1924e23e-d209-47aa-a16f-23b2ed01e105
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1d70917c-f58b-4962-9dd3-086a77dfd68d
+              stepCounter: 1924e23e-d209-47aa-a16f-23b2ed01e105
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 60ba4939-7421-413b-ba25-09421417e463
+              stepCounter: 1924e23e-d209-47aa-a16f-23b2ed01e105
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CM24_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_UC_COMP_RAW', 'CM24') }}
+      name: CM24
+      schema: ""
+      sqlType: Source
+      table: CM24
+      type: sourceInput
+    stepCounter: 1924e23e-d209-47aa-a16f-23b2ed01e105

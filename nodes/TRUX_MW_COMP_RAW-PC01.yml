@@ -1,0 +1,64 @@
+steps:
+  PC01-fb55b689-12c9-43ca-8f89-a1ccec606947:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_MW_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a13483a2-7bec-48a6-91d4-475a6db76574
+              stepCounter: fb55b689-12c9-43ca-8f89-a1ccec606947
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PC01_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1aab06bc-9958-415b-abc1-8f86f0adbe60
+              stepCounter: fb55b689-12c9-43ca-8f89-a1ccec606947
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: PC01_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9bcbe250-8801-4702-ba62-c759d4216090
+              stepCounter: fb55b689-12c9-43ca-8f89-a1ccec606947
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: PC01_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_MW_COMP_RAW', 'PC01') }}
+      name: PC01
+      schema: ""
+      sqlType: Source
+      table: PC01
+      type: sourceInput
+    stepCounter: fb55b689-12c9-43ca-8f89-a1ccec606947

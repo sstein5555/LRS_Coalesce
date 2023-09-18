@@ -1,0 +1,64 @@
+steps:
+  CM24-6b36d80d-27a4-4225-a801-96ea135e24e7:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_HA_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8dfca075-f6ad-4ea8-a063-878180715205
+              stepCounter: 6b36d80d-27a4-4225-a801-96ea135e24e7
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14db8eb2-719a-4bc1-b7ca-677ba742d533
+              stepCounter: 6b36d80d-27a4-4225-a801-96ea135e24e7
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: daaa2d4a-170a-4f3f-a771-4278588592e8
+              stepCounter: 6b36d80d-27a4-4225-a801-96ea135e24e7
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CM24_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_HA_COMP_RAW', 'CM24') }}
+      name: CM24
+      schema: ""
+      sqlType: Source
+      table: CM24
+      type: sourceInput
+    stepCounter: 6b36d80d-27a4-4225-a801-96ea135e24e7

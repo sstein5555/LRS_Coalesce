@@ -1,0 +1,94 @@
+steps:
+  FC01-cb5542e9-6093-4f00-97da-9110d6c9b85a:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_HA_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 89c96578-c433-421c-8393-f72e3fa194d0
+              stepCounter: cb5542e9-6093-4f00-97da-9110d6c9b85a
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: FC01_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dad7b57a-3d66-45a2-968b-1e0d704cdc31
+              stepCounter: cb5542e9-6093-4f00-97da-9110d6c9b85a
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: FC01_UOM
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 931509b9-dc63-4627-823d-22a99ec46b8b
+              stepCounter: cb5542e9-6093-4f00-97da-9110d6c9b85a
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: FC01_DATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fafc5e9e-e055-4e40-8add-64d6ed605341
+              stepCounter: cb5542e9-6093-4f00-97da-9110d6c9b85a
+            config: {}
+            dataType: NUMBER(18,3)
+            defaultValue: ""
+            description: ""
+            name: FC01_RATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7d0feeca-2369-4f73-a1a5-d76555a7dfcb
+              stepCounter: cb5542e9-6093-4f00-97da-9110d6c9b85a
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: FC01_TYPE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_HA_COMP_RAW', 'FC01') }}
+      name: FC01
+      schema: ""
+      sqlType: Source
+      table: FC01
+      type: sourceInput
+    stepCounter: cb5542e9-6093-4f00-97da-9110d6c9b85a

@@ -1,0 +1,64 @@
+steps:
+  CM24-66bb7dad-5c67-49d4-ac0d-ebfa3a1b13a9:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_VA_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 39bcde11-f50d-49bf-b264-eee568ac4686
+              stepCounter: 66bb7dad-5c67-49d4-ac0d-ebfa3a1b13a9
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1e1082af-7337-4bb5-81eb-66270419805a
+              stepCounter: 66bb7dad-5c67-49d4-ac0d-ebfa3a1b13a9
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 136a881c-6073-4d51-9a0b-095c9ef0ca82
+              stepCounter: 66bb7dad-5c67-49d4-ac0d-ebfa3a1b13a9
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CM24_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_VA_COMP_RAW', 'CM24') }}
+      name: CM24
+      schema: ""
+      sqlType: Source
+      table: CM24
+      type: sourceInput
+    stepCounter: 66bb7dad-5c67-49d4-ac0d-ebfa3a1b13a9

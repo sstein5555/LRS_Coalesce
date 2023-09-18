@@ -1,0 +1,124 @@
+steps:
+  CD05-867afeca-b4c1-4ef1-8bb2-cdfbd0eeb08f:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_SH_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7bb5f6a8-6199-426a-9ef7-26d505c5663d
+              stepCounter: 867afeca-b4c1-4ef1-8bb2-cdfbd0eeb08f
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD05_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14d41706-ee16-4ecd-bfd2-6753f911e4b4
+              stepCounter: 867afeca-b4c1-4ef1-8bb2-cdfbd0eeb08f
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CD05_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d6d393ef-f5fa-4bd3-b99c-c3bf8c03bf38
+              stepCounter: 867afeca-b4c1-4ef1-8bb2-cdfbd0eeb08f
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CD05_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 31775656-76d8-4f65-9a66-458fe4c0ca0a
+              stepCounter: 867afeca-b4c1-4ef1-8bb2-cdfbd0eeb08f
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD05_UOM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 91133e05-9ece-4992-8bd8-45e4ab3ecbd7
+              stepCounter: 867afeca-b4c1-4ef1-8bb2-cdfbd0eeb08f
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            name: CD05_CPCTRATIO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f06ed351-eed4-434d-bf49-e45de568066a
+              stepCounter: 867afeca-b4c1-4ef1-8bb2-cdfbd0eeb08f
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD05_MATL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2c13f617-cb20-41d0-852b-d22e5dc2c3eb
+              stepCounter: 867afeca-b4c1-4ef1-8bb2-cdfbd0eeb08f
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CD05_BINDELIVERY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_SH_COMP_RAW', 'CD05') }}
+      name: CD05
+      schema: ""
+      sqlType: Source
+      table: CD05
+      type: sourceInput
+    stepCounter: 867afeca-b4c1-4ef1-8bb2-cdfbd0eeb08f

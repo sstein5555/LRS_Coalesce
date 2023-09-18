@@ -1,0 +1,64 @@
+steps:
+  PC01-ea91ab8e-0c73-4728-9d4c-01af54a25ce1:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_RT_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 61d3e8c3-0b7f-41d2-b011-473436ef4366
+              stepCounter: ea91ab8e-0c73-4728-9d4c-01af54a25ce1
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PC01_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2450fe40-fb01-48eb-b78f-814dda6e4f5b
+              stepCounter: ea91ab8e-0c73-4728-9d4c-01af54a25ce1
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: PC01_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e4ad1c03-c276-4dfa-bc13-b98588ba1177
+              stepCounter: ea91ab8e-0c73-4728-9d4c-01af54a25ce1
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: PC01_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_RT_COMP_RAW', 'PC01') }}
+      name: PC01
+      schema: ""
+      sqlType: Source
+      table: PC01
+      type: sourceInput
+    stepCounter: ea91ab8e-0c73-4728-9d4c-01af54a25ce1

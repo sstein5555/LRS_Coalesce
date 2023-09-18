@@ -1,0 +1,64 @@
+steps:
+  PC01-2dacdffb-5d47-4933-b064-b35f73630224:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_SH_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3b5a4a4c-856b-4495-b8bc-ae808f6864f5
+              stepCounter: 2dacdffb-5d47-4933-b064-b35f73630224
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PC01_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0cfaedea-849c-4714-b68f-f6afc55f4160
+              stepCounter: 2dacdffb-5d47-4933-b064-b35f73630224
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: PC01_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 21ea51f4-cecf-453f-bd11-a53c056d1a80
+              stepCounter: 2dacdffb-5d47-4933-b064-b35f73630224
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: PC01_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_SH_COMP_RAW', 'PC01') }}
+      name: PC01
+      schema: ""
+      sqlType: Source
+      table: PC01
+      type: sourceInput
+    stepCounter: 2dacdffb-5d47-4933-b064-b35f73630224

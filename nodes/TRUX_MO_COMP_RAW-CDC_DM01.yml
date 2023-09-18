@@ -1,0 +1,300 @@
+steps:
+  CDC_DM01-5535e6a7-7001-4e43-b9e2-035fdbc1c2a8:
+    operation:
+      config:
+        taskCustomName: ""
+        taskEnabled: false
+        taskSchedule: Every 30 minutes
+        taskWarehouse: EMEA_TRANSFORM_XS_WH
+        undefined: |-
+          A CDC table consists of a few components:
+           1. A stream on the source node
+           2. The CDC table which contains a persistent replica of recent CDC records
+           3. A sequence to keep track of streams
+           4. Optional: a Task to replicate records from the Stream into the CDC table
+           
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRUX_MO_COMP_RAW
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 068051ba-2e28-4ed4-94a1-c68e86a06695
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DM01_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c728a84f-5036-4f0c-a59b-2e493e440178
+                    stepCounter: 31a0bf62-3404-4a9a-a9b5-19e5a4c046be
+                transform: ""
+          - columnReference:
+              columnCounter: c2a1d931-4a4b-4998-83aa-b97866e9f2ac
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DM01_CUST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4ddb212c-8c6b-48a6-9837-e9fd97dbc50b
+                    stepCounter: 31a0bf62-3404-4a9a-a9b5-19e5a4c046be
+                transform: ""
+          - columnReference:
+              columnCounter: 6b3c4af2-8ab5-45b5-8e04-fd12cdd8ed2f
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DM01_SITE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7128cd94-c6e9-4e59-bdbd-6728673aae9f
+                    stepCounter: 31a0bf62-3404-4a9a-a9b5-19e5a4c046be
+                transform: ""
+          - columnReference:
+              columnCounter: 496d596d-7c3e-4f69-9de3-414f7dd090bc
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            dataType: VARCHAR(13)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DM01_INVC
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d87232e-5b88-4649-94bd-db3ff5753c19
+                    stepCounter: 31a0bf62-3404-4a9a-a9b5-19e5a4c046be
+                transform: ""
+          - columnReference:
+              columnCounter: 02ba6659-f573-4c4a-8230-c98d56b7954f
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DM01_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d7008f0-5a42-4747-8e17-7959c811ba08
+                    stepCounter: 31a0bf62-3404-4a9a-a9b5-19e5a4c046be
+                transform: ""
+          - columnReference:
+              columnCounter: bed43129-e58b-45dd-a922-36c8f70ec48b
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DM01_SSIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cf5a1c9e-2fe0-4dca-b6f0-4cac0f31920c
+                    stepCounter: 31a0bf62-3404-4a9a-a9b5-19e5a4c046be
+                transform: ""
+          - columnReference:
+              columnCounter: c2726a0a-f48b-4352-8bce-3fc037462252
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            dataType: VARCHAR(1)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DM01_PBLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e820828-0134-443b-a970-ad194bd8f766
+                    stepCounter: 31a0bf62-3404-4a9a-a9b5-19e5a4c046be
+                transform: ""
+          - columnReference:
+              columnCounter: 977d84aa-6d5e-4f3c-a354-3927830260af
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            dataType: VARCHAR(14)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DM01_BILLINDV
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 43189f54-5a43-490c-a62b-52415c7c9954
+                    stepCounter: 31a0bf62-3404-4a9a-a9b5-19e5a4c046be
+                transform: ""
+          - columnReference:
+              columnCounter: 167e4d24-fec9-4abf-9704-122d5a8086b6
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DM01_CONTRACT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 24a98bd9-ee87-4ada-b0df-54682b4f08b7
+                    stepCounter: 31a0bf62-3404-4a9a-a9b5-19e5a4c046be
+                transform: ""
+          - columnReference:
+              columnCounter: 9de01583-3b42-4ca0-a84b-f0a485a4453a
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DM01_AMOUNT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bb4193cf-685a-4183-9007-182850d72e33
+                    stepCounter: 31a0bf62-3404-4a9a-a9b5-19e5a4c046be
+                transform: ""
+          - columnReference:
+              columnCounter: 8116d579-f36b-47f2-94c9-96cc3ebe6f05
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DM01_ORIGINVID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 413de6b0-d9bc-46b5-a347-dc3082f2ba81
+                    stepCounter: 31a0bf62-3404-4a9a-a9b5-19e5a4c046be
+                transform: ""
+          - columnReference:
+              columnCounter: a5d7fc98-8e5b-44bb-95ea-fb639875e1e5
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DM01_FCTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 76712626-b588-498d-822e-9b8217224c55
+                    stepCounter: 31a0bf62-3404-4a9a-a9b5-19e5a4c046be
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6e579b66-ad51-4ec5-a94f-4dbb3e4e5f84
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: Indicates the DML operation (INSERT, DELETE) recorded.
+            hashColumns: []
+            isStreamMetadataAction: true
+            name: METADATA$ACTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: METADATA$ACTION
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 341ba3b3-e3e0-4057-b1c7-47d9a1331faa
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: Indicates whether the operation was part of an UPDATE statement.
+            hashColumns: []
+            isStreamMetadataIsUpdate: true
+            name: METADATA$ISUPDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: METADATA$ISUPDATE
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 48cd1761-366e-4e63-af82-e67b0af40921
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: Specifies the unique and immutable ID for the row, which can be used to track changes to specific rows over time.
+            hashColumns: []
+            isStreamMetadataRowId: true
+            name: METADATA$ROW_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: METADATA$ROW_ID
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ed7fbfd9-d4c4-417d-84e8-115d7d71a69d
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            config: {}
+            dataType: INTEGER
+            defaultValue: ""
+            description: specific CDC identifier based on a sequence.
+            hashColumns: []
+            isStreamMetadataCDCId: true
+            name: CDC_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 24c3cfdd-8d04-430a-9aa6-2eef795a4e4e
+              stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: specific attribute containing the timestamp of storing the CDC record.
+            hashColumns: []
+            isSystemCreateDate: true
+            name: CDC_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRUX_MO_COMP_RAW
+                nodeName: DM01
+            join:
+              joinCondition: FROM {{ ref('TRUX_MO_COMP_RAW', 'DM01') }} "DM01"
+            name: CDC_DM01
+            noLinkRefs: []
+      name: CDC_DM01
+      overrideSQL: false
+      schema: ""
+      sqlType: "6"
+      type: sql
+    stepCounter: 5535e6a7-7001-4e43-b9e2-035fdbc1c2a8

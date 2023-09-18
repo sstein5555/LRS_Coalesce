@@ -1,0 +1,64 @@
+steps:
+  CM24-2249a92a-252c-4f9c-9e34-e7b2f968769b:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_WA_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7c6758bc-e4b0-4afc-b7da-d1a48a8e98e8
+              stepCounter: 2249a92a-252c-4f9c-9e34-e7b2f968769b
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5c290450-e749-44b4-8e68-0e9ea0048ac4
+              stepCounter: 2249a92a-252c-4f9c-9e34-e7b2f968769b
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0034ed0f-97dd-4432-b85e-8a31acb85abb
+              stepCounter: 2249a92a-252c-4f9c-9e34-e7b2f968769b
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CM24_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_WA_COMP_RAW', 'CM24') }}
+      name: CM24
+      schema: ""
+      sqlType: Source
+      table: CM24
+      type: sourceInput
+    stepCounter: 2249a92a-252c-4f9c-9e34-e7b2f968769b

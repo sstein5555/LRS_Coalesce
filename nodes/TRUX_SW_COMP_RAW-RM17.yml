@@ -1,0 +1,139 @@
+steps:
+  RM17-0ad2efe7-41c6-40f5-8058-e5ae7b55e8ac:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_SW_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 09e09216-200e-47bb-8804-9ca0b4e1b810
+              stepCounter: 0ad2efe7-41c6-40f5-8058-e5ae7b55e8ac
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: RM17_DATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 101c3222-43d8-46b6-86d5-00a3d2aae49f
+              stepCounter: 0ad2efe7-41c6-40f5-8058-e5ae7b55e8ac
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: RM17_DRIVER
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eeec674d-5a81-4520-93cf-44f217643326
+              stepCounter: 0ad2efe7-41c6-40f5-8058-e5ae7b55e8ac
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: RM17_CLOCKIN
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c317260a-524b-4f4f-98f3-5c64c0cdab11
+              stepCounter: 0ad2efe7-41c6-40f5-8058-e5ae7b55e8ac
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: RM17_CLOCKOUT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3cc96153-ab0b-4064-9647-c6bdb2a47c02
+              stepCounter: 0ad2efe7-41c6-40f5-8058-e5ae7b55e8ac
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: RM17_NOTES
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 93615c1c-4d7b-4fff-a2d4-7596060e22d8
+              stepCounter: 0ad2efe7-41c6-40f5-8058-e5ae7b55e8ac
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: RM17_ROUT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 257402b3-1b7a-42ef-9b6c-c420005b69f0
+              stepCounter: 0ad2efe7-41c6-40f5-8058-e5ae7b55e8ac
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            name: RM17_SEQ1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a821239b-17e5-46fa-b241-dbb35ed61f8d
+              stepCounter: 0ad2efe7-41c6-40f5-8058-e5ae7b55e8ac
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            name: RM17_SEQ2
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_SW_COMP_RAW', 'RM17') }}
+      name: RM17
+      schema: ""
+      sqlType: Source
+      table: RM17
+      type: sourceInput
+    stepCounter: 0ad2efe7-41c6-40f5-8058-e5ae7b55e8ac

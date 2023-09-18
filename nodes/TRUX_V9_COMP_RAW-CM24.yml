@@ -1,0 +1,64 @@
+steps:
+  CM24-667f0cd7-9f9b-439b-8e94-f3929df0f84a:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_V9_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fd375e79-87c3-4c25-b1be-c8c037539829
+              stepCounter: 667f0cd7-9f9b-439b-8e94-f3929df0f84a
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0ebe3502-6d65-41d1-a0cd-ab61c4fc7910
+              stepCounter: 667f0cd7-9f9b-439b-8e94-f3929df0f84a
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9a0d68cf-b1a9-4e68-a53d-41c621aba49d
+              stepCounter: 667f0cd7-9f9b-439b-8e94-f3929df0f84a
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CM24_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_V9_COMP_RAW', 'CM24') }}
+      name: CM24
+      schema: ""
+      sqlType: Source
+      table: CM24
+      type: sourceInput
+    stepCounter: 667f0cd7-9f9b-439b-8e94-f3929df0f84a

@@ -1,0 +1,64 @@
+steps:
+  PC01-8a526fea-09e4-4266-88a9-78e9e59ef655:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_NI_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 02b0df16-9e98-45f3-9883-c6ad19637e8e
+              stepCounter: 8a526fea-09e4-4266-88a9-78e9e59ef655
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PC01_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2e589bd6-fa37-4836-a544-26d47940315d
+              stepCounter: 8a526fea-09e4-4266-88a9-78e9e59ef655
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: PC01_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f1f52778-cee6-4694-b3d7-5bce0933b212
+              stepCounter: 8a526fea-09e4-4266-88a9-78e9e59ef655
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: PC01_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_NI_COMP_RAW', 'PC01') }}
+      name: PC01
+      schema: ""
+      sqlType: Source
+      table: PC01
+      type: sourceInput
+    stepCounter: 8a526fea-09e4-4266-88a9-78e9e59ef655

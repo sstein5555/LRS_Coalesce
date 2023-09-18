@@ -1,0 +1,152 @@
+steps:
+  CD05_COMBINED-498f463a-7395-4cc0-ad5f-d4e7e3d38fcf:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        storageLocationSearchText: TRUX_
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRUXCOMBINED_RAW
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: af67449b-802c-4063-896c-1de107d57502
+              stepCounter: 498f463a-7395-4cc0-ad5f-d4e7e3d38fcf
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CD05_CODE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e3c80bd-2a48-4dd1-8a52-4599bc70455d
+                    stepCounter: 09ffd225-c91c-4878-9780-401ada661735
+                transform: ""
+          - columnReference:
+              columnCounter: 421ebd94-4a1e-4449-a591-e746cdaaaa74
+              stepCounter: 498f463a-7395-4cc0-ad5f-d4e7e3d38fcf
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CD05_DESC
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aea56494-6699-484e-a8ff-bdb84a379331
+                    stepCounter: 09ffd225-c91c-4878-9780-401ada661735
+                transform: ""
+          - columnReference:
+              columnCounter: 1895ce4e-0b74-4ef6-8d6d-0057dd4fa950
+              stepCounter: 498f463a-7395-4cc0-ad5f-d4e7e3d38fcf
+            dataType: VARCHAR(5)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CD05_ACTIVE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0aab5aeb-a9d6-4edb-9d6e-22a0a69fdac3
+                    stepCounter: 09ffd225-c91c-4878-9780-401ada661735
+                transform: ""
+          - columnReference:
+              columnCounter: 707d0680-cf50-40aa-b43a-c87594b8aa98
+              stepCounter: 498f463a-7395-4cc0-ad5f-d4e7e3d38fcf
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CD05_UOM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7fa71a0f-9583-4f16-9fd9-70f62b54f966
+                    stepCounter: 09ffd225-c91c-4878-9780-401ada661735
+                transform: ""
+          - columnReference:
+              columnCounter: 5d47b828-4ab4-42d5-9a95-ea8ade5f97b9
+              stepCounter: 498f463a-7395-4cc0-ad5f-d4e7e3d38fcf
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CD05_CPCTRATIO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1bdf0af1-9363-44ab-ada3-72e8560357a0
+                    stepCounter: 09ffd225-c91c-4878-9780-401ada661735
+                transform: ""
+          - columnReference:
+              columnCounter: d6f033bc-7c5f-4c15-a5ec-72dc082b6cc4
+              stepCounter: 498f463a-7395-4cc0-ad5f-d4e7e3d38fcf
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CD05_MATL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c14e116f-a803-4a4d-93f2-4e5c3a12c513
+                    stepCounter: 09ffd225-c91c-4878-9780-401ada661735
+                transform: ""
+          - columnReference:
+              columnCounter: e6dab0c0-7657-4884-8d72-971a6f7366a9
+              stepCounter: 498f463a-7395-4cc0-ad5f-d4e7e3d38fcf
+            dataType: VARCHAR(5)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CD05_BINDELIVERY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c359c60-af54-4aac-80a8-46dbdba0783d
+                    stepCounter: 09ffd225-c91c-4878-9780-401ada661735
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7378776d-f8c4-4ecc-a676-6b5e59f6879e
+              stepCounter: 498f463a-7395-4cc0-ad5f-d4e7e3d38fcf
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemSource: true
+            name: SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRUX_VB_COMP_RAW
+                nodeName: CD05
+            join:
+              joinCondition: FROM {{ ref('TRUX_VB_COMP_RAW', 'CD05') }} "CD05"
+            name: CD05_COMBINED
+            noLinkRefs: []
+      name: CD05_COMBINED
+      overrideSQL: false
+      schema: ""
+      sqlType: "4"
+      type: sql
+    stepCounter: 498f463a-7395-4cc0-ad5f-d4e7e3d38fcf

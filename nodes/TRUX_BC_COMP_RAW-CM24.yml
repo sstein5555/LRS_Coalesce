@@ -1,0 +1,64 @@
+steps:
+  CM24-e7da3ce8-4fd6-4f05-8be4-40ec9543dbb5:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_BC_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 360cdf02-f012-4961-95d6-f1e130162331
+              stepCounter: e7da3ce8-4fd6-4f05-8be4-40ec9543dbb5
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fd91ddea-c939-48e3-adab-09a00be0a9e1
+              stepCounter: e7da3ce8-4fd6-4f05-8be4-40ec9543dbb5
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fcdaed5b-60c5-4273-b659-cfd256a9fa79
+              stepCounter: e7da3ce8-4fd6-4f05-8be4-40ec9543dbb5
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CM24_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_BC_COMP_RAW', 'CM24') }}
+      name: CM24
+      schema: ""
+      sqlType: Source
+      table: CM24
+      type: sourceInput
+    stepCounter: e7da3ce8-4fd6-4f05-8be4-40ec9543dbb5

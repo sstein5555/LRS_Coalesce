@@ -1,0 +1,64 @@
+steps:
+  CM24-3e0e4c4a-c9b1-44c4-b937-4fa0e69520ac:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_AT_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b57f1447-29b4-492d-81ed-7641fcbe1aa4
+              stepCounter: 3e0e4c4a-c9b1-44c4-b937-4fa0e69520ac
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 01acd47b-2c68-43df-853c-1f3099d04931
+              stepCounter: 3e0e4c4a-c9b1-44c4-b937-4fa0e69520ac
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 73f26f3f-f13b-402f-9bf6-ecee8f9593a6
+              stepCounter: 3e0e4c4a-c9b1-44c4-b937-4fa0e69520ac
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CM24_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_AT_COMP_RAW', 'CM24') }}
+      name: CM24
+      schema: ""
+      sqlType: Source
+      table: CM24
+      type: sourceInput
+    stepCounter: 3e0e4c4a-c9b1-44c4-b937-4fa0e69520ac

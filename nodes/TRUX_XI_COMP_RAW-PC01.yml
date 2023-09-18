@@ -1,0 +1,64 @@
+steps:
+  PC01-d2d5e3d6-d66e-4018-a753-31b0519999f8:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_XI_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6fddaf85-1f5f-4a92-b13e-5cd9a5b5fcfd
+              stepCounter: d2d5e3d6-d66e-4018-a753-31b0519999f8
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PC01_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 48e0d7fe-a516-4501-aa03-8e5c0b7608dc
+              stepCounter: d2d5e3d6-d66e-4018-a753-31b0519999f8
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: PC01_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2d1a15b5-6362-4a32-acd5-0bd971de4eb4
+              stepCounter: d2d5e3d6-d66e-4018-a753-31b0519999f8
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: PC01_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_XI_COMP_RAW', 'PC01') }}
+      name: PC01
+      schema: ""
+      sqlType: Source
+      table: PC01
+      type: sourceInput
+    stepCounter: d2d5e3d6-d66e-4018-a753-31b0519999f8

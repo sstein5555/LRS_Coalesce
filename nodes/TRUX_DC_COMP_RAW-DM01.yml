@@ -1,0 +1,199 @@
+steps:
+  DM01-da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_DC_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d73c3202-b49b-47bd-b241-b29c32762b11
+              stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DM01_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: aa18407e-b1f0-4719-9dba-81b68ebc0c52
+              stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DM01_CUST
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 51954f32-11af-455f-b618-04520378666a
+              stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DM01_SITE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 29623145-8884-4dae-8f5f-19d0094525d1
+              stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3
+            config: {}
+            dataType: VARCHAR(13)
+            defaultValue: ""
+            description: ""
+            name: DM01_INVC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 235f9060-fc47-441d-a9e5-1b9bafc3a861
+              stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: DM01_DATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a186ae62-9204-4dc0-8a98-7c396a4b6f34
+              stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DM01_SSIT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c90c5791-21de-4c03-a64d-1269e335e810
+              stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: DM01_PBLE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7ca6bd6c-d39d-41f7-82f3-ab1fca41d4e6
+              stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3
+            config: {}
+            dataType: VARCHAR(14)
+            defaultValue: ""
+            description: ""
+            name: DM01_BILLINDV
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 857c6b79-e927-4a5b-924a-7209f911246d
+              stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DM01_CONTRACT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0f023b55-24f7-4f5a-9c60-d1354c4f2883
+              stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            name: DM01_AMOUNT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 58161bc5-9a0a-4046-b7aa-3069ea00366e
+              stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DM01_ORIGINVID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 01f55312-897d-49b8-9422-57e91236cab5
+              stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: DM01_FCTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_DC_COMP_RAW', 'DM01') }}
+      name: DM01
+      schema: ""
+      sqlType: Source
+      table: DM01
+      type: sourceInput
+    stepCounter: da344a60-fb58-4a8a-b6b2-9d1b0a15bcc3

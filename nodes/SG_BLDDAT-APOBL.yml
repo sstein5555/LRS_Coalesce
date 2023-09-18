@@ -1,0 +1,79 @@
+steps:
+  APOBL-503d2e2d-b6a2-40ab-89c0-673b7a8fba89:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SG_BLDDAT
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d4fcb4d2-778c-4c55-b224-2e2879c900af
+              stepCounter: 503d2e2d-b6a2-40ab-89c0-673b7a8fba89
+            config: {}
+            dataType: VARCHAR(22)
+            defaultValue: ""
+            description: ""
+            name: IDINVC
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4860ad1d-1eda-4668-a860-319be5b6a19f
+              stepCounter: 503d2e2d-b6a2-40ab-89c0-673b7a8fba89
+            config: {}
+            dataType: VARCHAR(12)
+            defaultValue: ""
+            description: ""
+            name: IDVEND
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b4f85f33-4d7b-460c-aa4b-9d7ce27d850e
+              stepCounter: 503d2e2d-b6a2-40ab-89c0-673b7a8fba89
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eb0820b0-53b1-4fcd-928a-080a463e9d05
+              stepCounter: 503d2e2d-b6a2-40ab-89c0-673b7a8fba89
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SG_BLDDAT', 'APOBL') }}
+      name: APOBL
+      schema: ""
+      sqlType: Source
+      table: APOBL
+      type: sourceInput
+    stepCounter: 503d2e2d-b6a2-40ab-89c0-673b7a8fba89

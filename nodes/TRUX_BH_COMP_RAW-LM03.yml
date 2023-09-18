@@ -1,0 +1,139 @@
+steps:
+  LM03-846aa9eb-afcb-41be-b81f-8fb2184bf713:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_BH_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d9c87f09-7adc-4be8-9a8c-08bb5ec275d4
+              stepCounter: 846aa9eb-afcb-41be-b81f-8fb2184bf713
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: LM03_TYPE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3c60efd0-4fae-4775-9eb1-4916cab44c4d
+              stepCounter: 846aa9eb-afcb-41be-b81f-8fb2184bf713
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            name: LM03_SIZE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 35993224-61aa-42fe-8eb9-e97136e8546d
+              stepCounter: 846aa9eb-afcb-41be-b81f-8fb2184bf713
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: LM03_COMP
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b8facf18-4e21-4f3e-91aa-68bb4b4371a5
+              stepCounter: 846aa9eb-afcb-41be-b81f-8fb2184bf713
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: LM03_WTYP
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 04d8852f-1a99-47f1-92e3-3955775dbace
+              stepCounter: 846aa9eb-afcb-41be-b81f-8fb2184bf713
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            name: LM03_CAP
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9cd9beb7-8d3a-4bdd-8fb4-8c8252786cff
+              stepCounter: 846aa9eb-afcb-41be-b81f-8fb2184bf713
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: LM03_MATL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e21340dd-aab1-455a-b9de-418ac97070db
+              stepCounter: 846aa9eb-afcb-41be-b81f-8fb2184bf713
+            config: {}
+            dataType: NUMBER(18,3)
+            defaultValue: ""
+            description: ""
+            name: LM03_PRICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 772fef2d-da27-4bb3-8abd-4903e0be62c3
+              stepCounter: 846aa9eb-afcb-41be-b81f-8fb2184bf713
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: LM03_UOM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_BH_COMP_RAW', 'LM03') }}
+      name: LM03
+      schema: ""
+      sqlType: Source
+      table: LM03
+      type: sourceInput
+    stepCounter: 846aa9eb-afcb-41be-b81f-8fb2184bf713

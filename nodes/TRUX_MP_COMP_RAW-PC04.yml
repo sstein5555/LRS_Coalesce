@@ -1,0 +1,124 @@
+steps:
+  PC04-7c7cda31-f36f-4481-b2ab-ce51a090e2ee:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_MP_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e9997320-abb5-44f7-ad0f-4025e2d31814
+              stepCounter: 7c7cda31-f36f-4481-b2ab-ce51a090e2ee
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PC04_PCSID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 09e108f3-87e0-43e8-b0d5-3b5f191246e1
+              stepCounter: 7c7cda31-f36f-4481-b2ab-ce51a090e2ee
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: PC04_MATERIAL
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 74e0f0b2-9f3d-4ea0-a797-3b98188ffb56
+              stepCounter: 7c7cda31-f36f-4481-b2ab-ce51a090e2ee
+            config: {}
+            dataType: NUMBER(18,3)
+            defaultValue: ""
+            description: ""
+            name: PC04_RATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f49a29b1-1662-40b2-bc41-386bb0e348d4
+              stepCounter: 7c7cda31-f36f-4481-b2ab-ce51a090e2ee
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: PC04_UNIT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2d733f20-b357-473d-ba4d-8e5535212e70
+              stepCounter: 7c7cda31-f36f-4481-b2ab-ce51a090e2ee
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            name: PC04_MINQTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5293f6ef-c440-475a-b8a5-cd87b7a62b6e
+              stepCounter: 7c7cda31-f36f-4481-b2ab-ce51a090e2ee
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            name: PC04_MAXQTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e56c7800-37c2-4852-ace4-51de58d7d350
+              stepCounter: 7c7cda31-f36f-4481-b2ab-ce51a090e2ee
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PC04_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_MP_COMP_RAW', 'PC04') }}
+      name: PC04
+      schema: ""
+      sqlType: Source
+      table: PC04
+      type: sourceInput
+    stepCounter: 7c7cda31-f36f-4481-b2ab-ce51a090e2ee

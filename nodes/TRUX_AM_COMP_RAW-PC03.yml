@@ -1,0 +1,94 @@
+steps:
+  PC03-e56bed1c-6c19-415b-b0e4-b2d43e0bf4ed:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_AM_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f2bbe064-1fe2-48ec-a00f-a19c53e329a9
+              stepCounter: e56bed1c-6c19-415b-b0e4-b2d43e0bf4ed
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PC03_PCSID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7c4b4225-2119-4b04-aa0f-decf1d59476c
+              stepCounter: e56bed1c-6c19-415b-b0e4-b2d43e0bf4ed
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: PC03_ACTIVITY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f7a71da2-c8e9-4e8e-bddd-2d1f10fe064b
+              stepCounter: e56bed1c-6c19-415b-b0e4-b2d43e0bf4ed
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: PC03_BILLUNIT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 50504c9b-bdbb-4aa4-a993-f7409a353fea
+              stepCounter: e56bed1c-6c19-415b-b0e4-b2d43e0bf4ed
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            name: PC03_RATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a5410266-5c04-4d02-8bcc-9e1d34740ff8
+              stepCounter: e56bed1c-6c19-415b-b0e4-b2d43e0bf4ed
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PC03_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_AM_COMP_RAW', 'PC03') }}
+      name: PC03
+      schema: ""
+      sqlType: Source
+      table: PC03
+      type: sourceInput
+    stepCounter: e56bed1c-6c19-415b-b0e4-b2d43e0bf4ed

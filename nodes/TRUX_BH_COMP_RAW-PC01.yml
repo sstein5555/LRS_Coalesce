@@ -1,0 +1,64 @@
+steps:
+  PC01-fbb8310b-59cb-40ed-9e81-3c8aefb83ff8:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_BH_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8ec70428-74c4-4c05-a701-882e43dd1c96
+              stepCounter: fbb8310b-59cb-40ed-9e81-3c8aefb83ff8
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PC01_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 43d1e770-9319-4c74-b2e8-4c1384935322
+              stepCounter: fbb8310b-59cb-40ed-9e81-3c8aefb83ff8
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: PC01_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dc93efa1-1949-4c53-bce5-9718f0d70cd6
+              stepCounter: fbb8310b-59cb-40ed-9e81-3c8aefb83ff8
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: PC01_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_BH_COMP_RAW', 'PC01') }}
+      name: PC01
+      schema: ""
+      sqlType: Source
+      table: PC01
+      type: sourceInput
+    stepCounter: fbb8310b-59cb-40ed-9e81-3c8aefb83ff8

@@ -1,0 +1,64 @@
+steps:
+  CM24-4637fb4f-6c9f-4d35-a7b1-515b62c1d067:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_MW_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 964b9723-a245-4ad6-b14f-843d14514952
+              stepCounter: 4637fb4f-6c9f-4d35-a7b1-515b62c1d067
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e5f5cae9-5bcc-4382-bd22-c7ee1aec5b23
+              stepCounter: 4637fb4f-6c9f-4d35-a7b1-515b62c1d067
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6e8647da-8b04-4270-acbc-a46b0f295897
+              stepCounter: 4637fb4f-6c9f-4d35-a7b1-515b62c1d067
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CM24_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_MW_COMP_RAW', 'CM24') }}
+      name: CM24
+      schema: ""
+      sqlType: Source
+      table: CM24
+      type: sourceInput
+    stepCounter: 4637fb4f-6c9f-4d35-a7b1-515b62c1d067

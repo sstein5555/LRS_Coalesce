@@ -1,0 +1,64 @@
+steps:
+  CM24-b9dd60cc-bf3e-4d2e-91a0-199579a76c23:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_UB_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9fc1518c-3a3e-4e04-b355-d9233b9a09d0
+              stepCounter: b9dd60cc-bf3e-4d2e-91a0-199579a76c23
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_CODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9c36f3a4-656b-42ea-9330-c46dc83c86d6
+              stepCounter: b9dd60cc-bf3e-4d2e-91a0-199579a76c23
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CM24_DESC
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3976f820-2664-4605-af1c-fff44325740b
+              stepCounter: b9dd60cc-bf3e-4d2e-91a0-199579a76c23
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CM24_ACTIVE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_UB_COMP_RAW', 'CM24') }}
+      name: CM24
+      schema: ""
+      sqlType: Source
+      table: CM24
+      type: sourceInput
+    stepCounter: b9dd60cc-bf3e-4d2e-91a0-199579a76c23
