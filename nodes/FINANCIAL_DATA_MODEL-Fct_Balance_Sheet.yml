@@ -21,7 +21,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ACCTID
+            name: Account Number
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -49,7 +49,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ACCOUNTNAME
+            name: Account Name
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -63,7 +63,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: CNTDETAIL
+            name: Detail Count
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -77,7 +77,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: FISCALPERD
+            name: Fiscal Period
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -91,7 +91,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: FISCALYR
+            name: Fiscal Year
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -119,7 +119,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: JRNLDATE
+            name: Journal Date
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -133,7 +133,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: POSTINGSEQ
+            name: Posting Sequence Number
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -147,7 +147,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ACCTTYPE
+            name: Type
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -161,7 +161,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: CTRLACCTSW
+            name: Control Account
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -175,7 +175,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ACCTBAL
+            name: Normal Balance DR/CR
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -189,25 +189,11 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SRCELDGID
+            name: Reserved
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 7974b4ef-82a1-4926-8ee1-d514c5ab27f7
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-          - columnReference:
-              columnCounter: e678ef21-301f-425c-893c-06bca4bf1cc6
-              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
-            dataType: VARCHAR(12)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: ACCTGRPSCD
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: df5c0b82-a73a-4de4-b836-467da947bedc
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:
@@ -217,7 +203,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: OVALUES
+            name: Optional Fields
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -231,7 +217,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: CONSLDSW
+            name: Post to Account
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -245,7 +231,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ALLOCSW
+            name: Allocations Allowed
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -259,25 +245,11 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: YRACCTCLOS
+            name: Year Last Closed
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 4d05ab77-6823-4b1a-bc1e-d54d2c7e6647
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-          - columnReference:
-              columnCounter: 7de10726-9456-400f-b28c-cb91acf8609d
-              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: ACTIVESW
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 023d3d33-7790-4b03-b933-98ee0da121bf
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:
@@ -287,11 +259,25 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ALLOCTOT
+            name: Allocation Percent Total
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 4cdea732-94cd-46de-8275-2101744ee096
+                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
+                transform: ""
+          - columnReference:
+              columnCounter: 7de10726-9456-400f-b28c-cb91acf8609d
+              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Status
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 023d3d33-7790-4b03-b933-98ee0da121bf
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:
@@ -315,7 +301,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ROLLUPSW
+            name: Rollup Switch
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -329,7 +315,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: TOVALUES
+            name: Transaction Optional Fields
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -343,7 +329,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ACCTSEGVAL
+            name: Segment Code
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -357,7 +343,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: POSTOSEGID
+            name: Post to Segment ID
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -371,7 +357,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: QTYSW
+            name: Quantities Allowed
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -385,7 +371,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ACCTSRTY
+            name: Alloc Source Type
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -399,7 +385,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DEFCURNCOD
+            name: DEFCURNCODDefault Currency Code
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -413,7 +399,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ACCTDESC
+            name: Description
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -441,7 +427,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SPECSW
+            name: Specific Currency
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -455,7 +441,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SRCECURN
+            name: Source Currency Code
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -469,7 +455,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SRCELEDGER
+            name: Source Ledger Code
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -483,7 +469,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SRCETYPE
+            name: Source Type Code
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -497,7 +483,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: TXRPTSTAT
+            name: Tax Reporting Status - KB 103720
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -511,39 +497,11 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: RATESPREAD
+            name: Currency Rate Spread Allowed
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 357eee1f-e229-4a14-b8c4-706a2d13ee67
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-          - columnReference:
-              columnCounter: d3a49bad-35d9-4146-aabe-ba7c7613efa4
-              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
-            dataType: VARCHAR(3)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SCURNCODE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2519d4c1-8ccf-49b1-8e07-ac25d06d1b00
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-          - columnReference:
-              columnCounter: 117c5519-9600-4ff8-8187-9fd457ceccf8
-              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: EDITALLOWD
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 52e727fe-ba77-4395-ad65-75350fbe8ca4
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:
@@ -589,45 +547,17 @@ steps:
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:
-              columnCounter: 7658eec9-c6b8-4e95-8f2a-c8a788a8c3fb
-              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
-            dataType: VARCHAR(12)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: TAXAUTH
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 0828df14-7666-4cad-9cde-190a93a17c4c
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-          - columnReference:
               columnCounter: 6647b33c-d863-4510-8282-e61d02a21c76
               stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
             dataType: VARCHAR(8)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: COMPANYID
+            name: Company ID
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 6f4936e8-b3cf-4ff5-b9aa-0742e2262fdf
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-          - columnReference:
-              columnCounter: db54c898-e1ba-43dc-8176-e24954166bd3
-              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: TXACCTTYPE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 92d5f796-a877-465c-b63d-65ccc6eb35c4
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:
@@ -637,7 +567,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DOCDATE
+            name: Document Date
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -651,7 +581,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: RPTAMT
+            name: Report Currency Amount
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -665,7 +595,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: RATEDATE
+            name: Date of Currency Rate Selected
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -679,7 +609,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: CONSOLIDAT
+            name: Consolidation Occurred on Post
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -693,7 +623,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: JNLDTLDESC
+            name: Journal Detail Description
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -707,7 +637,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SCURNDEC
+            name: Nbr of Source Currency Decimals
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -721,25 +651,11 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ENTRYNBR
+            name: Journal Entry Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 747129b5-a7d8-4fb9-b631-0c05d76e0558
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-          - columnReference:
-              columnCounter: 701571fb-8fbf-4767-8890-da42484dccbd
-              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: VALUES
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: d7e39fc1-7fe3-4a40-bb1c-717eed3cb3e6
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:
@@ -749,7 +665,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: BATCHNBR
+            name: Batch Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -763,7 +679,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DRILAPP
+            name: Drill Down Application Source
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -777,7 +693,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: CONVRATE
+            name: Currency Rate for Conversion
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -791,7 +707,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: TRANSAMT
+            name: Journal Transaction Amoun
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -805,7 +721,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: TRANSQTY
+            name: Journal Transaction Quantity
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -819,7 +735,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: HCURNCODE
+            name: Home Currency Code
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -833,7 +749,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DATEMTCHCD
+            name: Code for Rate Date Matching
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -847,7 +763,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DRILSRCTY
+            name: Drill Down Type
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -861,7 +777,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DRILLDWNLK
+            name: Drill Down Link Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -875,7 +791,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SCURNAMT
+            name: Source Currency Amoun
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -889,7 +805,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: TRANSNBR
+            name: Journal Transaction Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -917,7 +833,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: RATETYPE
+            name: Currency Rate Table Type
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -945,7 +861,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: RATEOPER
+            name: Currency Rate Operator
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -959,7 +875,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: JNLDTLREF
+            name: Journal Detail Reference
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -987,7 +903,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ACCTGRPCOD
+            name: Account Group Code
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -1001,7 +917,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: GRPCOD
+            name: Group Category
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1029,7 +945,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ACCTGRPDES
+            name: Account Group Description
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1043,7 +959,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SORTCODE
+            name: Account Group Sort Code
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1057,7 +973,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ORGID
+            name: Database ID
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -1113,7 +1029,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: MULTICURSW
+            name: Multicurrency
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1127,7 +1043,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: PERDFSC
+            name: Number of Fiscal Periods
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1141,25 +1057,11 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: WARNDAYS
+            name: Warning Date Range
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: a5ff7258-d914-49ae-95e9-2b7846737647
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-          - columnReference:
-              columnCounter: 8f9267af-5ee2-46ec-bc16-73f6869648eb
-              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: USESMTP
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 0099cc7f-b507-4daa-84cd-776968396465
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:
@@ -1169,25 +1071,11 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: HNDINAACCT
+            name: Inactive G/L Account
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 6649218f-d370-45aa-b4ea-300c8671bd64
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-          - columnReference:
-              columnCounter: 147d7f30-8d80-4071-b8c6-8d7eeef8e65d
-              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
-            dataType: VARCHAR(50)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: EMAILADDR
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: e5693713-3472-4005-a57e-29dcfcc1937e
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:
@@ -1197,7 +1085,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SFPACOMP
+            name: Payments Acceptance Company
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1211,7 +1099,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: HNDNEXACCT
+            name: Non-existent G/L Account
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1225,7 +1113,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: QTR4PERD
+            name: Quarter with 4 Periods
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1239,7 +1127,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: HOMECUR
+            name: Functional Currency
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1253,7 +1141,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LEGALNAME
+            name: Legal Name
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1267,7 +1155,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: BRN
+            name: Business Registration Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1281,7 +1169,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SFPAORG
+            name: Payments Acceptance Organization
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1295,7 +1183,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LOCTYPE
+            name: Location Type
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1309,7 +1197,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: BRANCH
+            name: Branch
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1323,7 +1211,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: EUROCURSW
+            name: Euro
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1337,25 +1225,11 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: HNDLCKFSC
+            name: Locked Fiscal Period
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 0a929fdb-6ccd-4c06-9cc5-308d5156fbfa
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-          - columnReference:
-              columnCounter: 2b9eb27b-1289-4078-8613-39b35d4c8f8b
-              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
-            dataType: VARCHAR(20)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: TAXNBR
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 007071cb-aee3-4e97-930e-2cf453ab2dd2
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:
@@ -1365,7 +1239,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: COUNTRY
+            name: Country
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1379,7 +1253,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: REPORTCUR
+            name: Reporting Currency
             nullable: true
             sourceColumnReferences:
               - columnReferences:

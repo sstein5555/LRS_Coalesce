@@ -46,7 +46,7 @@ steps:
           - columnReference:
               columnCounter: 9c296b45-f78f-4e39-8337-19e2912d08af
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -66,7 +66,7 @@ steps:
           - columnReference:
               columnCounter: 2b8e384d-841b-4102-abd6-833a15730260
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -200,7 +200,7 @@ steps:
           - columnReference:
               columnCounter: 74a5cdd4-bfec-4003-959a-30c5b2fe3f1c
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(10)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -218,7 +218,7 @@ steps:
           - columnReference:
               columnCounter: 3ae00c5a-4c15-4a6f-9dd3-3d12061244a3
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(10)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -236,7 +236,7 @@ steps:
           - columnReference:
               columnCounter: fc6a91c2-c479-465a-a5d5-3cbd295698c5
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -254,7 +254,7 @@ steps:
           - columnReference:
               columnCounter: 2519d82e-c61d-4a7f-949c-df4c06e940cf
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: can join with CD07_CODE
             hashColumns: []
             hashDetails: null
@@ -334,12 +334,12 @@ steps:
           - columnReference:
               columnCounter: 2d4288a9-6ca4-4170-871c-be6d366f4d02
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(5)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
             name: Charge Interest Flag
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: eefe30ad-efe3-4c29-9f04-12b26244c22b
@@ -400,7 +400,7 @@ steps:
           - columnReference:
               columnCounter: a0bb196b-9562-441b-b158-d2939f29a4a7
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(7)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -588,7 +588,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Customer Bill To
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 57aadc71-87e5-4e0a-9bdc-95958503c663
@@ -599,7 +599,7 @@ steps:
           - columnReference:
               columnCounter: 24d8ad3b-5713-4ceb-b39d-a49af942b108
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(80)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -654,7 +654,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Surcharge Exemption Flag
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 5d41dc33-06d9-4381-8254-7232b383df89
@@ -731,7 +731,7 @@ steps:
           - columnReference:
               columnCounter: a66c458b-c74a-4e5a-96ba-6a419f8f7d6b
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(2)
+            dataType: VARCHAR
             description: Can Join to CD35_CODE
             hashColumns: []
             hashDetails: null
@@ -763,12 +763,12 @@ steps:
           - columnReference:
               columnCounter: 9b609789-0fe0-436e-b245-17913a5222cb
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(5)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
             name: Overdue Letter Flag
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 5300d2ac-fd71-4d7f-955f-a92db7983200
@@ -800,7 +800,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: National Account Flag
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 7e0edda8-679c-4a81-b252-9213f5cb43e7
@@ -811,7 +811,7 @@ steps:
           - columnReference:
               columnCounter: d8fc5bf7-df15-42fe-8363-94cbe665d3e8
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -834,7 +834,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Customer Cash on Demand Flag
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 6724b4ef-3c00-45cf-a9b1-4dfcd5a6ac89
@@ -845,7 +845,7 @@ steps:
           - columnReference:
               columnCounter: 5f35b0a8-3323-4527-a9e2-85d3deaecb0c
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -866,7 +866,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Cash Account
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 1563f250-a143-497a-8d6a-3d55b4335d9b
@@ -893,12 +893,12 @@ steps:
           - columnReference:
               columnCounter: 4bf4a8b9-ce90-4888-997d-52296b0aa8ac
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(5)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
             name: Global Suspend Flag
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 304fafc3-be36-4960-ab7a-22ef0a49ec72
@@ -909,12 +909,12 @@ steps:
           - columnReference:
               columnCounter: 504012fd-1b80-4985-8fce-2428eef8e5e1
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(5)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
             name: Address Verified
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: ae80a18d-86c2-4ace-a528-549c411e71e1
@@ -938,7 +938,7 @@ steps:
                     stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
                 transform: ""
               - columnReferences: []
-                transform: ""
+                transform: "'TOWER'"
           - acceptedValues:
               strictMatch: true
               values: []

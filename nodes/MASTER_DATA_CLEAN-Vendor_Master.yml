@@ -174,6 +174,42 @@ steps:
                     stepCounter: 7418c001-4ad4-45b4-ae82-debce39600ea
                 transform: ""
           - columnReference:
+              columnCounter: a03e8af1-a7a8-4f71-b59b-099d704e9d04
+              stepCounter: 74ee4388-f9d9-414f-aca5-25b5dccfa9fa
+            dataType: VARCHAR(60)
+            description: ""
+            name: Group Description
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8c193e1d-72ec-4ed5-92ec-6dbf7980b9d7
+                    stepCounter: 873fa56f-ee8e-469f-908d-af4880f36d65
+                transform: ""
+          - columnReference:
+              columnCounter: c993de14-39fa-40fd-b94d-8e897ebe3b8c
+              stepCounter: 74ee4388-f9d9-414f-aca5-25b5dccfa9fa
+            dataType: NUMBER(38,0)
+            description: ""
+            name: Vendor Group Status
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7a245ba-479c-40d7-8498-2b515c5ed8b7
+                    stepCounter: 873fa56f-ee8e-469f-908d-af4880f36d65
+                transform: ""
+          - columnReference:
+              columnCounter: 941c02be-91b1-4d1d-90b5-a32541d3cc68
+              stepCounter: 74ee4388-f9d9-414f-aca5-25b5dccfa9fa
+            dataType: VARCHAR(6)
+            description: ""
+            name: Vendor Group Terms
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6a198f28-543a-4a9c-9ec4-6a28a28f66e0
+                    stepCounter: 873fa56f-ee8e-469f-908d-af4880f36d65
+                transform: ""
+          - columnReference:
               columnCounter: 9aa60928-5bd5-4f74-97c0-109d7bf5c40e
               stepCounter: 74ee4388-f9d9-414f-aca5-25b5dccfa9fa
             dataType: NUMBER(38,0)
@@ -810,13 +846,19 @@ steps:
         sourceMapping:
           - aliases:
               APVEN_COMBINED: 7418c001-4ad4-45b4-ae82-debce39600ea
+              APVGR_COMBINED: 873fa56f-ee8e-469f-908d-af4880f36d65
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: SAGE_COMBINED
                 nodeName: APVEN_COMBINED
+              - locationName: SAGE_COMBINED
+                nodeName: APVGR_COMBINED
             join:
-              joinCondition: FROM {{ ref('SAGE_COMBINED', 'APVEN_COMBINED') }} "APVEN_COMBINED"
+              joinCondition: |-
+                FROM {{ ref('SAGE_COMBINED', 'APVEN_COMBINED') }} "APVEN_COMBINED"
+                INNER JOIN {{ ref('SAGE_COMBINED', 'APVGR_COMBINED') }} "APVGR_COMBINED"
+                ON "APVEN_COMBINED"."IDGRP" = "APVGR_COMBINED"."GROUPID" and "APVEN_COMBINED"."SOURCE" = "APVGR_COMBINED"."SOURCE"
             name: Vendor_Master
             noLinkRefs: []
       name: Vendor_Master
