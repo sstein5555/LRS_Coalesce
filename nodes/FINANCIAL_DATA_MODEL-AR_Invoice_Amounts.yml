@@ -163,7 +163,7 @@ steps:
                     stepCounter: "0"
                 transform: "\"DM01_COMBINED\".\"DM01_CUST\"||\"DM01_COMBINED\".\"SOURCE\""
               - columnReferences: []
-                transform: "\"INVOICE_COMBINED\".\"Customer Number\""
+                transform: "\"INVOICE_COMBINED\".\"Customer Number\"||'TOWER'"
             systemColumnType: None
             transform: ""
           - acceptedValues:
