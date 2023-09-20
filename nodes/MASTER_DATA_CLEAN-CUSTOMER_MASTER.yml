@@ -366,7 +366,7 @@ steps:
           - columnReference:
               columnCounter: 067775cd-db3c-4b0d-8a06-47735a36bd33
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: NUMBER(18,2)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -1070,6 +1070,7 @@ steps:
             dataType: varchar
             defaultValue: ""
             description: ""
+            isBusinessKey: true
             keyColumnType: None
             name: Customer_Source
             nullable: true
@@ -1079,7 +1080,7 @@ steps:
                     stepCounter: "0"
                 transform: concat("CM03_Combined"."CM03_CUST","CM03_Combined"."SOURCE")
               - columnReferences: []
-                transform: ""
+                transform: "\"CUSTOMER_COMBINED\".\"Customer ID\"||'TOWER'"
             systemColumnType: None
             transform: ""
         enabledColumnTestIDs: []

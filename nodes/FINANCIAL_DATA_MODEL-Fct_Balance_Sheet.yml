@@ -385,7 +385,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DEFCURNCODDefault Currency Code
+            name: Default Currency Code
             nullable: true
             sourceColumnReferences:
               - columnReferences:

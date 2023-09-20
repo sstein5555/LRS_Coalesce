@@ -6,7 +6,7 @@ steps:
         preSQL: ""
         testsEnabled: true
       database: ""
-      deployEnabled: true
+      deployEnabled: false
       description: ""
       isMultisource: false
       locationName: FINANCIAL_DATA_MODEL
