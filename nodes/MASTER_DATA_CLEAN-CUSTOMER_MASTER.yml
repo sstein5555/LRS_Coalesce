@@ -1094,14 +1094,66 @@ steps:
                 transform: "\"CUSTOMER_COMBINED\".\"Customer ID\"||'TOWER'"
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 238f275b-ee6a-47eb-b65d-1032c52aca63
+              stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Source_Name
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e965ad54-1824-4ecd-8536-79d0b14d88f2
+                    stepCounter: c2e3b305-d522-488b-bbc6-6ade93cd3385
+                transform: ""
+              - columnReferences: []
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0ba74a7b-9fc3-4e16-a1a3-044652f35255
+              stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Suspend Reason Desc
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e99d9bcb-a280-43c1-be6d-b11489821019
+                    stepCounter: 438b5c12-3ccb-4c0d-bce9-4a236319d37a
+                transform: ""
+              - columnReferences: []
+                transform: ""
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
+              CD03_COMBINED: 438b5c12-3ccb-4c0d-bce9-4a236319d37a
               CD11_COMBINED: 3131b480-711a-434f-be4a-e6e3315d3c0a
               CM03_Combined: 080d8ab0-3edf-4ee0-b848-dcc7364164df
+              TRUX_DATABASE_METADATA: c2e3b305-d522-488b-bbc6-6ade93cd3385
             customSQL:
               customSQL: ""
             dependencies:
+              - locationName: MASTER_DATA_CLEAN
+                nodeName: TRUX_DATABASE_METADATA
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: CD03_COMBINED
               - locationName: TRUXCOMBINED_RAW
                 nodeName: CD11_COMBINED
               - locationName: TRUXCOMBINED_RAW
@@ -1111,6 +1163,10 @@ steps:
                 FROM {{ ref('TRUXCOMBINED_RAW', 'CM03_Combined') }} "CM03_Combined"
                 INNER JOIN {{ ref('TRUXCOMBINED_RAW', 'CD11_COMBINED') }} "CD11_COMBINED"
                 ON "CM03_Combined"."CM03_CUSTTYPE" = "CD11_COMBINED"."CD11_CODE" and "CM03_Combined"."SOURCE" = "CD11_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('MASTER_DATA_CLEAN', 'TRUX_DATABASE_METADATA') }} "TRUX_DATABASE_METADATA"
+                ON "CM03_Combined"."SOURCE" = "TRUX_DATABASE_METADATA"."SNOWFLAKE_NAME"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CD03_COMBINED') }} "CD03_COMBINED"
+                ON "CM03_Combined"."CM03_SUSREA" = "CD03_COMBINED"."CD03_CODE" and "CM03_Combined"."SOURCE" = "CD03_COMBINED"."SOURCE"
             name: CM03_COMBINED_TRUX
             noLinkRefs: []
           - aliases:

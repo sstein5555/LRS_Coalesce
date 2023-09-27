@@ -1,0 +1,124 @@
+steps:
+  CD04-3c1bd063-9d39-4ae9-a7d6-7804a193dbaa:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_DF_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c571c59b-2f1a-4f3e-92ec-1afd62602a32
+              stepCounter: 3c1bd063-9d39-4ae9-a7d6-7804a193dbaa
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD04_CODE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 40a3cf24-7180-49d4-a871-816296d46556
+              stepCounter: 3c1bd063-9d39-4ae9-a7d6-7804a193dbaa
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: CD04_DESC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 78c78113-69e1-4c35-8e92-9ae0ed0a70a4
+              stepCounter: 3c1bd063-9d39-4ae9-a7d6-7804a193dbaa
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD04_ACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dd597b5b-342b-496a-b8df-12faa87e356e
+              stepCounter: 3c1bd063-9d39-4ae9-a7d6-7804a193dbaa
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CD04_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b5e224f8-970e-4a7e-9c54-4acf10cab28d
+              stepCounter: 3c1bd063-9d39-4ae9-a7d6-7804a193dbaa
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD04_REQWEI
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ae24503a-98db-44c5-8a94-3fdb4d29dc9e
+              stepCounter: 3c1bd063-9d39-4ae9-a7d6-7804a193dbaa
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d1693c58-25ef-4577-885b-7780fccb242f
+              stepCounter: 3c1bd063-9d39-4ae9-a7d6-7804a193dbaa
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_DF_COMP_RAW', 'CD04') }}
+      name: CD04
+      schema: ""
+      sqlType: Source
+      table: CD04
+      type: sourceInput
+    stepCounter: 3c1bd063-9d39-4ae9-a7d6-7804a193dbaa

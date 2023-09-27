@@ -50,7 +50,7 @@ steps:
           - columnReference:
               columnCounter: 4c17e5b5-2455-491a-9545-2041740d9c06
               stepCounter: 106c0503-bc82-4d45-940b-e5c0faa31a50
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -149,7 +149,7 @@ steps:
           - columnReference:
               columnCounter: 51906245-5785-4183-b5b3-7c2efb467e0a
               stepCounter: 106c0503-bc82-4d45-940b-e5c0faa31a50
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: Join to Customer Master
             hashColumns: []
             hashDetails: null

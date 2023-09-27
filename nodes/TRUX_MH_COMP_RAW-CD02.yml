@@ -1,0 +1,169 @@
+steps:
+  CD02-b1790ae2-061d-4be7-97b7-ce3dc15e9192:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_MH_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1f50dfe1-bd53-4f2d-b31c-149337c38809
+              stepCounter: b1790ae2-061d-4be7-97b7-ce3dc15e9192
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD02_CODE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ebcccfe4-bd73-40bb-9354-40bcedad8691
+              stepCounter: b1790ae2-061d-4be7-97b7-ce3dc15e9192
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: CD02_TYPE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7208f5c7-5935-46ca-b7df-2cc52895a200
+              stepCounter: b1790ae2-061d-4be7-97b7-ce3dc15e9192
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD02_NACOMP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 516e98ac-f9c3-4ac0-ac96-320092cb4d15
+              stepCounter: b1790ae2-061d-4be7-97b7-ce3dc15e9192
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD02_WEB
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bd8ee94a-fe4c-422f-a2ce-742b5cf56718
+              stepCounter: b1790ae2-061d-4be7-97b7-ce3dc15e9192
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: CD02_DESC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 954e963f-51c6-4bab-b2b6-ce0a2201b6ab
+              stepCounter: b1790ae2-061d-4be7-97b7-ce3dc15e9192
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD02_NAT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4dde99e3-fb08-4522-a0db-4c390c41b9a9
+              stepCounter: b1790ae2-061d-4be7-97b7-ce3dc15e9192
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD02_SCALE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b740a66c-05a6-4831-a0e6-f4f9b9994934
+              stepCounter: b1790ae2-061d-4be7-97b7-ce3dc15e9192
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD02_ACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b965e963-4a65-416f-8193-cb65590b35a5
+              stepCounter: b1790ae2-061d-4be7-97b7-ce3dc15e9192
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eba01259-73e4-4de9-b049-263d4998fa2a
+              stepCounter: b1790ae2-061d-4be7-97b7-ce3dc15e9192
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_MH_COMP_RAW', 'CD02') }}
+      name: CD02
+      schema: ""
+      sqlType: Source
+      table: CD02
+      type: sourceInput
+    stepCounter: b1790ae2-061d-4be7-97b7-ce3dc15e9192

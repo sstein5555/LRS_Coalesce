@@ -26,8 +26,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: d7e5df06-c42d-48f7-9423-164473c586e5
-                    stepCounter: 4db4aca4-5fea-4718-b761-1c7aa638e0c3
+                  - columnCounter: 211aa298-7f67-4322-9609-72bcc084a9d4
+                    stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
                 transform: ""
               - columnReferences:
                   - columnCounter: 111bad04-bc85-4134-87f5-94b50b73b88f
@@ -36,7 +36,7 @@ steps:
           - columnReference:
               columnCounter: f799cde5-2702-492d-be83-b43e55baefd9
               stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -45,8 +45,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: be34aa24-d92c-4f00-b2db-876b289ec1f5
-                    stepCounter: 4db4aca4-5fea-4718-b761-1c7aa638e0c3
+                  - columnCounter: 64cf6d67-23b9-4857-bcf4-9e015676ec29
+                    stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
                 transform: ""
               - columnReferences:
                   - columnCounter: 5956ecf5-eac0-452d-bff8-c0c0a4726079
@@ -55,7 +55,7 @@ steps:
           - columnReference:
               columnCounter: 5379cca1-7f0b-4e64-bbd8-c71aec741730
               stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -64,8 +64,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: f6d1bc36-8df3-49ee-8a55-f20a2724460b
-                    stepCounter: 4db4aca4-5fea-4718-b761-1c7aa638e0c3
+                  - columnCounter: 25f8fce1-ad43-4914-990f-a7c850570b9f
+                    stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
                 transform: ""
               - columnReferences:
                   - columnCounter: 51906245-5785-4183-b5b3-7c2efb467e0a
@@ -83,8 +83,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 9e4aa363-15b7-4450-9ff5-77a6308a3d67
-                    stepCounter: 4db4aca4-5fea-4718-b761-1c7aa638e0c3
+                  - columnCounter: 1f356938-0bc2-446d-8f1d-32b45a428e8d
+                    stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
                 transform: ""
               - columnReferences:
                   - columnCounter: 4c17e5b5-2455-491a-9545-2041740d9c06
@@ -101,8 +101,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 23e93a5c-89c7-41d0-bf72-70e214901c62
-                    stepCounter: 4db4aca4-5fea-4718-b761-1c7aa638e0c3
+                  - columnCounter: 12f3a20e-0e2b-4cad-b889-04b355254a1f
+                    stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
                 transform: ""
               - columnReferences:
                   - columnCounter: d38fccc5-a289-448d-9c0f-9adcfb1c4cd1
@@ -119,8 +119,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 96ddaeaa-ca18-4ae9-87cf-e8e26304f121
-                    stepCounter: 4db4aca4-5fea-4718-b761-1c7aa638e0c3
+                  - columnCounter: 2cf8791b-03b2-4140-873f-97915236e997
+                    stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
                 transform: ""
               - columnReferences:
                   - columnCounter: 7b76ad9f-a097-441f-a77e-720fc86e9fd4
@@ -130,7 +130,7 @@ steps:
               columnCounter: e4337c49-1766-460d-ad3f-94fbcba823cc
               stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
             dataType: VARCHAR
-            defaultValue: TOWER
+            defaultValue: ""
             description: ""
             hashColumns: []
             hashDetails: null
@@ -138,8 +138,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: bb31073d-6a03-4ae4-b11f-136ca78c5aa9
-                    stepCounter: 4db4aca4-5fea-4718-b761-1c7aa638e0c3
+                  - columnCounter: 98b82faf-041c-44af-9aa2-4c256b725e39
+                    stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
                 transform: ""
               - columnReferences: []
                 transform: "'TOWER'"
@@ -161,7 +161,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: "\"DM01_COMBINED\".\"DM01_CUST\"||\"DM01_COMBINED\".\"SOURCE\""
+                transform: "\"DM01_COMBINED_STREAM\".\"DM01_CUST\"||\"DM01_COMBINED_STREAM\".\"SOURCE\""
               - columnReferences: []
                 transform: "\"INVOICE_COMBINED\".\"Customer Number\"||'TOWER'"
             systemColumnType: None
@@ -184,7 +184,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: "\"DM01_COMBINED\".\"DM01_CUST\"||\"DM01_COMBINED\".\"DM01_SITE\"||\"DM01_COMBINED\".\"SOURCE\""
+                transform: "\"DM01_COMBINED_STREAM\".\"DM01_CUST\"||\"DM01_COMBINED_STREAM\".\"DM01_SITE\"||\"DM01_COMBINED_STREAM\".\"SOURCE\""
               - columnReferences: []
                 transform: "\"INVOICE_COMBINED\".\"Site Number\""
             systemColumnType: None
@@ -207,7 +207,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: "\"DM01_COMBINED\".\"DM01_ID\"||\"DM01_COMBINED\".\"SOURCE\""
+                transform: "\"DM01_COMBINED_STREAM\".\"DM01_ID\"||\"DM01_COMBINED_STREAM\".\"SOURCE\""
               - columnReferences: []
                 transform: "\"INVOICE_COMBINED\".\"Invoice Number\""
             systemColumnType: None
@@ -228,26 +228,56 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 23e93a5c-89c7-41d0-bf72-70e214901c62
-                    stepCounter: 4db4aca4-5fea-4718-b761-1c7aa638e0c3
-                transform: ""
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "CUSTOMER_MASTER"."Initial Term" is null then DM01_COMBINED_STREAM."DM01_DATE" else dateadd(day,CUSTOMER_MASTER."Initial Term",DM01_COMBINED_STREAM."DM01_DATE") end
               - columnReferences:
                   - columnCounter: c42361b3-22d2-49ed-a95c-d81598854894
                     stepCounter: 106c0503-bc82-4d45-940b-e5c0faa31a50
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bdbe539b-8400-4583-9c2a-3e4896958c2d
+              stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Customer Term
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d8fc5bf7-df15-42fe-8363-94cbe665d3e8
+                    stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
+                transform: ""
+              - columnReferences: []
+                transform: ""
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
-              DM01_COMBINED: 4db4aca4-5fea-4718-b761-1c7aa638e0c3
+              CUSTOMER_MASTER: a83e2043-c50d-4bf2-8f19-a0858a24d969
+              DM01_COMBINED_STREAM: af7d9a71-a790-437a-a79e-4fb3a178059a
             customSQL:
               customSQL: ""
             dependencies:
+              - locationName: MASTER_DATA_CLEAN
+                nodeName: CUSTOMER_MASTER
               - locationName: TRUXCOMBINED_RAW
-                nodeName: DM01_COMBINED
+                nodeName: DM01_COMBINED_STREAM
             join:
-              joinCondition: FROM {{ ref('TRUXCOMBINED_RAW', 'DM01_COMBINED') }} "DM01_COMBINED"
+              joinCondition: |-
+                FROM {{ ref('TRUXCOMBINED_RAW', 'DM01_COMBINED_STREAM') }} "DM01_COMBINED_STREAM"
+                LEFT JOIN {{ ref('MASTER_DATA_CLEAN', 'CUSTOMER_MASTER') }} "CUSTOMER_MASTER"
+                ON "DM01_COMBINED_STREAM"."DM01_CUST" = "CUSTOMER_MASTER"."Customer Number"
+                AND "DM01_COMBINED_STREAM"."SOURCE" = "CUSTOMER_MASTER"."SOURCE_NEW"
             name: DM01_COMBINED_TRUX
             noLinkRefs: []
           - aliases:

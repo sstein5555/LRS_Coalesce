@@ -1,0 +1,94 @@
+steps:
+  CD01-18a53acd-e1dc-49f3-ac51-3011e0ff8b94:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_HR_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8a0e5ea0-bb02-48ca-a3ad-b79ffea27d26
+              stepCounter: 18a53acd-e1dc-49f3-ac51-3011e0ff8b94
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD01_ACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 21b6ecdb-786f-46d3-adcf-696663676661
+              stepCounter: 18a53acd-e1dc-49f3-ac51-3011e0ff8b94
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD01_CODE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f51ade71-2ad6-47c8-85d9-c222f43131b8
+              stepCounter: 18a53acd-e1dc-49f3-ac51-3011e0ff8b94
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: CD01_DESC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13d38505-5cfc-47f6-ad1b-aff2b1f84bfb
+              stepCounter: 18a53acd-e1dc-49f3-ac51-3011e0ff8b94
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 80fdab2f-ece3-4074-84a2-911173a5dd51
+              stepCounter: 18a53acd-e1dc-49f3-ac51-3011e0ff8b94
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_HR_COMP_RAW', 'CD01') }}
+      name: CD01
+      schema: ""
+      sqlType: Source
+      table: CD01
+      type: sourceInput
+    stepCounter: 18a53acd-e1dc-49f3-ac51-3011e0ff8b94

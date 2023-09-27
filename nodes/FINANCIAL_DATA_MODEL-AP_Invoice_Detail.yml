@@ -220,6 +220,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Item Number
             nullable: true
             sourceColumnReferences:
@@ -346,6 +347,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: SOURCE
             nullable: true
             sourceColumnReferences:
