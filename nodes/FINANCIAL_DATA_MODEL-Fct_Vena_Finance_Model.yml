@@ -1,0 +1,313 @@
+steps:
+  Fct_Vena_Finance_Model-8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: FINANCIAL_DATA_MODEL
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d2c754c2-db79-4da4-9bc4-583e7608d28b
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _Account
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 290799e0-29d1-45b8-bcb8-efaf562a3fe5
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - columnReference:
+              columnCounter: 36c5797e-44de-44d5-819f-4ae402ac36b6
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _Location
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eef11d07-5e3d-4f80-8b46-5ca01a2bab66
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - columnReference:
+              columnCounter: e58352fb-c99f-4eed-9f1d-5d8d9e439117
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _Line/Dept
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 585b02d1-da16-438a-834b-07073973e05f
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - columnReference:
+              columnCounter: a6b4c9d3-0cb2-4ddf-ab4b-e225c55beb9d
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _Material Type/Customer
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 707d7c36-a9ef-4d2b-867b-7107da7aa716
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - columnReference:
+              columnCounter: 5adff389-05fe-446d-aeac-1686181fd16e
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _Data Source
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ebc6c00f-4ec7-4a6b-9755-2c2a254507f8
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - columnReference:
+              columnCounter: db265a36-6bb1-4993-ad13-712cc41f1358
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _Year
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2185484a-4cd3-47eb-80a6-7662635dcb91
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - columnReference:
+              columnCounter: 819fabfc-e5ee-46f2-94a6-22c9a3684315
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _Period
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3953b080-d3cf-40f0-9bcd-2fee06d371a3
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - columnReference:
+              columnCounter: fe6310e9-73b5-435c-af63-c663f6796f25
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _Scenario
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ca0b503-787f-4ced-a713-e02861febaed
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - columnReference:
+              columnCounter: 86aaae04-8911-4363-a46b-4b8c31182fc4
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _Measure
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cab92768-95d3-4d0b-94e7-3de4c6c7ffd2
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - columnReference:
+              columnCounter: 0227a28e-b8f2-48e8-a777-a5f6d2ca1785
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _value
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dbe57374-68f3-4515-b16f-dd1ca6bb66f6
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - columnReference:
+              columnCounter: be1ba510-2af8-4038-8e16-d290e8af53ef
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _etl_id
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7713885-72a1-457e-a32b-a4faa86dde9c
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - columnReference:
+              columnCounter: 43f0974a-335a-4ee9-8c24-017b8f11e580
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _File Name
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cf28564e-ffe5-4c44-815e-d3504459edb2
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - columnReference:
+              columnCounter: f58f4204-fda2-484b-8418-bddf22e8f5eb
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _Last Modified
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12bcfab1-0f63-4f04-b952-04cacfd70be9
+                    stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e7af6d57-aeec-4950-8d42-23b60bf089ae
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 76188a3c-f28d-4fa4-bfcb-3a161cba4ccc
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 01185bae-56ac-424b-b921-fc88beb53753
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: FiscalPeriod
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CAST (CASE WHEN ("VENA_FINANCE_MODEL"."_Year" = 'Undefined' OR "VENA_FINANCE_MODEL"."_Period" = 'Undefined') THEN NULL 
+                    ELSE
+                    CONCAT(
+                      "VENA_FINANCE_MODEL"."_Year",
+                      CONCAT(
+                        '-',
+                        CONCAT(
+                          LPAD("VENA_FINANCE_MODEL"."_Period", 2, '0'),
+                          CONCAT('-', '01')
+                        )
+                      )
+                    ) END AS DATE)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 422d154f-3ebc-4e8e-b624-b00bd6d3f36a
+              stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2
+            config: {}
+            dataType: VARCHAR(128)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: "Combo #"
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |2-
+                        CONCAT(
+                          "VENA_FINANCE_MODEL"."_Location",
+                          CONCAT('-', "VENA_FINANCE_MODEL"."_Line/Dept")
+                        )
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              VENA_FINANCE_MODEL: 402bca68-f597-4db4-a03f-027fee409428
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: VEN_RAW
+                nodeName: VENA_FINANCE_MODEL
+            join:
+              joinCondition: |
+                FROM {{ ref('VEN_RAW', 'VENA_FINANCE_MODEL') }} "VENA_FINANCE_MODEL"
+            name: Fct_Vena_Finance_Model
+            noLinkRefs: []
+      name: Fct_Vena_Finance_Model
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: 8a3330a8-bc76-4b65-86d2-5a67c0ad8ba2

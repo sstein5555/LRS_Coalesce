@@ -29,7 +29,7 @@ steps:
               - columnReferences:
                   - columnCounter: 64849e3a-f383-4b85-9748-58361f8b3b22
                     stepCounter: 3ada1ab7-c387-4212-a354-3152c14dbb7e
-                transform: ""
+                transform: rtrim("APOBL"."IDINVC",' ')
           - columnReference:
               columnCounter: 9406fcd6-b30c-4373-b35e-178b5855587b
               stepCounter: b1a36b93-908b-46a1-90c5-38769b0a2f43
@@ -43,7 +43,7 @@ steps:
               - columnReferences:
                   - columnCounter: 93a27e18-8b51-4898-9b77-67abda639bf5
                     stepCounter: 3ada1ab7-c387-4212-a354-3152c14dbb7e
-                transform: ""
+                transform: rtrim("APOBL"."IDVEND",' ')
           - columnReference:
               columnCounter: 4bbf7eee-3c89-4f90-b3f0-3b1dcad4a0ff
               stepCounter: b1a36b93-908b-46a1-90c5-38769b0a2f43
@@ -1372,20 +1372,6 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 559cd3cb-18bf-441e-b3cd-5bce5ce8fb3a
-                    stepCounter: 3ada1ab7-c387-4212-a354-3152c14dbb7e
-                transform: ""
-          - columnReference:
-              columnCounter: e7ee4c11-dc23-4271-bb6c-c99f13f94163
-              stepCounter: b1a36b93-908b-46a1-90c5-38769b0a2f43
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: VALUES
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3fbe51d4-a269-4f4e-ad44-c43a1d0ad878
                     stepCounter: 3ada1ab7-c387-4212-a354-3152c14dbb7e
                 transform: ""
           - columnReference:

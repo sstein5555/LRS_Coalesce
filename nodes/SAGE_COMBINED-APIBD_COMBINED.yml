@@ -885,20 +885,6 @@ steps:
                     stepCounter: 167139e0-eb72-4f9c-8854-aa5f67cef556
                 transform: ""
           - columnReference:
-              columnCounter: 3b5145ea-f53d-4b12-ac13-4ba862098115
-              stepCounter: 6dcbae0c-0f82-402e-b01d-c1a60b1c342b
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: VALUES
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1e4d2d06-6d09-4a1f-bcb5-d045f6d45015
-                    stepCounter: 167139e0-eb72-4f9c-8854-aa5f67cef556
-                transform: ""
-          - columnReference:
               columnCounter: e562c9a9-f0a4-4fe7-bbac-4a3ac8be2c5e
               stepCounter: 6dcbae0c-0f82-402e-b01d-c1a60b1c342b
             dataType: NUMBER(19,3)

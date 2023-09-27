@@ -4642,7 +4642,9 @@ steps:
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              SM01: 012c4647-115d-409f-8695-2bcc3a772511
+            customSQL:
               customSQL: ""
             dependencies:
               - locationName: TRUX_UA_COMP_RAW

@@ -138,7 +138,9 @@ steps:
                   - columnCounter: 2f51c9c4-9734-492c-bf16-7e3efc570415
                     stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: da5266e5-2257-4d4f-95ff-e56253333518
+                    stepCounter: fbe45288-4a07-432c-acda-23662c07ee60
                 transform: ""
           - columnReference:
               columnCounter: 752fa88e-5c1c-4783-9646-042adb5ff9bf
@@ -154,7 +156,9 @@ steps:
                   - columnCounter: 9f8e0e01-1035-41e0-ad39-a7dad6132f9b
                     stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 73d27bde-87d8-4468-94be-778d4e9acee0
+                    stepCounter: fbe45288-4a07-432c-acda-23662c07ee60
                 transform: ""
           - columnReference:
               columnCounter: 98b57d3c-db1d-4d74-8c8a-d34f927e9182
@@ -186,7 +190,9 @@ steps:
                   - columnCounter: f3cbbef7-3765-4395-9444-43af56c96472
                     stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 981b01ff-ca17-4c76-a1cf-8f9220275238
+                    stepCounter: fbe45288-4a07-432c-acda-23662c07ee60
                 transform: ""
           - columnReference:
               columnCounter: 2238af38-de43-4274-91b0-76655b857288
@@ -250,7 +256,9 @@ steps:
                   - columnCounter: c959112c-1262-471e-a01c-a26d021c6135
                     stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: a058ca85-7bc4-430c-aa76-fc9872a7dac6
+                    stepCounter: fbe45288-4a07-432c-acda-23662c07ee60
                 transform: ""
           - columnReference:
               columnCounter: d1d25fab-f6da-4147-af5b-158b8de5550e
@@ -266,7 +274,9 @@ steps:
                   - columnCounter: e3f0f6b6-b17d-4f7e-808c-3cdd1c43f3cd
                     stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 1ad85ce2-a28d-4b05-b879-ffe7459bb7dd
+                    stepCounter: fbe45288-4a07-432c-acda-23662c07ee60
                 transform: ""
           - columnReference:
               columnCounter: e03e1d26-8bb8-433c-a951-d0c768181a11
@@ -282,7 +292,9 @@ steps:
                   - columnCounter: 42951bc3-1345-45be-820a-a1d7932fe87d
                     stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: e3f9f7b7-6c36-45c9-9c39-d1a7148cfc53
+                    stepCounter: fbe45288-4a07-432c-acda-23662c07ee60
                 transform: ""
           - columnReference:
               columnCounter: d19e1ba0-f03e-4f05-b8dc-551ff6560e04
@@ -956,14 +968,20 @@ steps:
             name: CM04_COMBINED
             noLinkRefs: []
           - aliases:
-              SITE_COMBINED: a37f91a9-860b-4cd6-b131-1a436dfc5f28
+              ADDRESS_COMBINED: fbe45288-4a07-432c-acda-23662c07ee60
+              SITE_COMBINED: d0ee8791-10a2-4747-967f-b22621b20d21
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: TOWER_COMBINED
                 nodeName: SITE_COMBINED
+              - locationName: TOWER_RAW
+                nodeName: ADDRESS_COMBINED
             join:
-              joinCondition: FROM {{ ref('TOWER_COMBINED', 'SITE_COMBINED') }} "SITE_COMBINED"
+              joinCondition: |-
+                FROM {{ ref('TOWER_COMBINED', 'SITE_COMBINED') }} "SITE_COMBINED"
+                INNER JOIN {{ ref('TOWER_RAW', 'ADDRESS_COMBINED') }} "ADDRESS_COMBINED"
+                ON "SITE_COMBINED"."SITEADDRESSUID" = "ADDRESS_COMBINED"."ADDRESSUID"
             name: SITE_COMBINED_TOWER
             noLinkRefs: []
       name: CUSTOMER_SITE_MASTER

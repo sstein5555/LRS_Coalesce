@@ -102,11 +102,10 @@ steps:
           - columnReference:
               columnCounter: c1ddaaf7-c190-4264-a9a6-a8973ec1b8b7
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             isChangeTracking: true
             name: Address 1
             nullable: true
@@ -115,12 +114,14 @@ steps:
                   - columnCounter: cc6fb4d0-a024-414b-ba15-541f513b60af
                     stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 981b01ff-ca17-4c76-a1cf-8f9220275238
+                    stepCounter: fbe45288-4a07-432c-acda-23662c07ee60
                 transform: ""
           - columnReference:
               columnCounter: b1075c05-2cad-4866-8346-836ab9949692
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -131,12 +132,14 @@ steps:
                   - columnCounter: f2514c17-75ec-4a43-a7c3-7553082c8dc4
                     stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 6b01da3b-8412-4b31-9e0c-34e247773f2e
+                    stepCounter: fbe45288-4a07-432c-acda-23662c07ee60
                 transform: ""
           - columnReference:
               columnCounter: 46e7a37f-c714-4a8c-a8ef-8dce72979951
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -147,7 +150,9 @@ steps:
                   - columnCounter: f48ca9e5-0f89-4d0d-a116-7068630be0b7
                     stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 8675d3e5-3dd7-4471-978e-95422cf2a56a
+                    stepCounter: fbe45288-4a07-432c-acda-23662c07ee60
                 transform: ""
           - columnReference:
               columnCounter: f7f17161-2bb4-4a29-b461-b372a09a55ca
@@ -163,7 +168,9 @@ steps:
                   - columnCounter: 2d895dba-7912-4d1c-8e14-5e178c95810b
                     stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: a058ca85-7bc4-430c-aa76-fc9872a7dac6
+                    stepCounter: fbe45288-4a07-432c-acda-23662c07ee60
                 transform: ""
           - columnReference:
               columnCounter: 902cb996-e2b3-4b31-9b49-2f63648c9727
@@ -179,7 +186,9 @@ steps:
                   - columnCounter: b900d207-47af-4a42-8015-0427b7c9228d
                     stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 1ad85ce2-a28d-4b05-b879-ffe7459bb7dd
+                    stepCounter: fbe45288-4a07-432c-acda-23662c07ee60
                 transform: ""
           - columnReference:
               columnCounter: 531d87ef-6e32-47a8-892b-11f1800edba4
@@ -195,7 +204,9 @@ steps:
                   - columnCounter: 63d9c023-464f-41aa-a269-1986d7a3860a
                     stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: e3f9f7b7-6c36-45c9-9c39-d1a7148cfc53
+                    stepCounter: fbe45288-4a07-432c-acda-23662c07ee60
                 transform: ""
           - columnReference:
               columnCounter: 74a5cdd4-bfec-4003-959a-30c5b2fe3f1c
@@ -697,7 +708,7 @@ steps:
           - columnReference:
               columnCounter: 036dcfd9-6a33-4104-bd3a-f1cb22e5fcc4
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(500)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -1103,14 +1114,20 @@ steps:
             name: CM03_COMBINED_TRUX
             noLinkRefs: []
           - aliases:
+              ADDRESS_COMBINED: fbe45288-4a07-432c-acda-23662c07ee60
               CUSTOMER_COMBINED: af74a786-1641-4201-ad6f-8127eba08c06
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: TOWER_COMBINED
                 nodeName: CUSTOMER_COMBINED
+              - locationName: TOWER_RAW
+                nodeName: ADDRESS_COMBINED
             join:
-              joinCondition: FROM {{ ref('TOWER_COMBINED', 'CUSTOMER_COMBINED') }} "CUSTOMER_COMBINED"
+              joinCondition: |-
+                FROM {{ ref('TOWER_COMBINED', 'CUSTOMER_COMBINED') }} "CUSTOMER_COMBINED"
+                INNER JOIN {{ ref('TOWER_RAW', 'ADDRESS_COMBINED') }} "ADDRESS_COMBINED"
+                ON "CUSTOMER_COMBINED"."Address ID" = "ADDRESS_COMBINED"."ADDRESSUID"
             name: Customer_Combined_Tower
             noLinkRefs: []
       name: CUSTOMER_MASTER

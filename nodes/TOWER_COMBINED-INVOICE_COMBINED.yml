@@ -205,7 +205,7 @@ steps:
           - columnReference:
               columnCounter: 580ad80d-0697-426d-aa3e-49f7dbe695e3
               stepCounter: 106c0503-bc82-4d45-940b-e5c0faa31a50
-            dataType: VARCHAR(12)
+            dataType: VARCHAR
             description: Customer Master
             hashColumns: []
             hashDetails: null
@@ -219,7 +219,7 @@ steps:
           - columnReference:
               columnCounter: f5ab0c00-9c82-4d21-a2e0-6fbb2999455b
               stepCounter: 106c0503-bc82-4d45-940b-e5c0faa31a50
-            dataType: VARCHAR(12)
+            dataType: VARCHAR
             description: Customer Master
             hashColumns: []
             hashDetails: null

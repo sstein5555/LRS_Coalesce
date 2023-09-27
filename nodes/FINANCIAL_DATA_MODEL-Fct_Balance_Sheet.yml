@@ -64,7 +64,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Detail Count
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 30c296a7-e327-4e1b-a07b-fc1b549e6ceb
@@ -134,7 +134,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Posting Sequence Number
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: e13c6d69-015c-4a4e-b529-0375a15d26b0
@@ -442,7 +442,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Source Currency Code
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 8346b1d2-7e06-4cce-b07e-e1a517c86739
@@ -456,7 +456,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Source Ledger Code
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 190fd502-22b3-42ed-879f-caf1ebdbfa20
@@ -470,7 +470,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Source Type Code
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 899a823a-7063-4879-9593-f38a3b0cfa22
@@ -707,7 +707,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: Journal Transaction Amoun
+            name: Journal Transaction Amount
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -791,7 +791,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: Source Currency Amoun
+            name: Source Currency Amount
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -904,7 +904,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Account Group Code
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: fb6f3a7f-a37b-45d2-a689-1fed25353bf2
@@ -974,7 +974,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Database ID
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: a8a2674b-0f39-4dbc-a92c-bd609e877989
@@ -1015,7 +1015,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: COMBO
+            name: "Combo #"
             nullable: true
             sourceColumnReferences:
               - columnReferences:

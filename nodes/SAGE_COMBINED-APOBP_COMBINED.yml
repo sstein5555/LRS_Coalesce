@@ -197,7 +197,7 @@ steps:
               - columnReferences:
                   - columnCounter: 7913f2c2-f012-4c0d-befd-622178c1cd04
                     stepCounter: 26797fc1-f7c2-45da-8909-e1df191a57f4
-                transform: ""
+                transform: rtrim("APOBP_COMBINED"."IDMEMOXREF")
           - columnReference:
               columnCounter: 024e7f45-8867-4bef-aed8-60230170c4c2
               stepCounter: 1fd007ac-065a-4d6f-b9b7-afc4ec4da489

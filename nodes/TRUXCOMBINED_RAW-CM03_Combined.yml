@@ -6,6 +6,7 @@ steps:
         postSQL: ""
         preSQL: ""
         storageLocationSearchText: TRUX_
+        streamSelect: false
         truncateBefore: true
       database: ""
       deployEnabled: true

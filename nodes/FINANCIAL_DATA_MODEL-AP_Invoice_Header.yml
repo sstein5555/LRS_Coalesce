@@ -244,7 +244,7 @@ steps:
               - columnReferences:
                   - columnCounter: b9f7d3fe-0419-4e96-bc33-59fd3703ce79
                     stepCounter: 1cfd027f-37d6-4424-85e9-d9bed1c967a9
-                transform: ""
+                transform: rtrim("APIBH_COMBINED"."IDINVC")
           - columnReference:
               columnCounter: a49004fe-68db-42e9-8679-74532d9c5835
               stepCounter: a3896406-1f4e-4cd3-b272-68a164f19bf1
@@ -281,7 +281,7 @@ steps:
               - columnReferences:
                   - columnCounter: a247429a-38ef-4347-879c-74efbabdc7e9
                     stepCounter: 1cfd027f-37d6-4424-85e9-d9bed1c967a9
-                transform: ""
+                transform: RTRIM("APIBH_COMBINED"."IDVEND")
           - columnReference:
               columnCounter: 324c1fd6-3a86-4125-804b-6cd1b0dd2bb2
               stepCounter: a3896406-1f4e-4cd3-b272-68a164f19bf1
@@ -293,7 +293,7 @@ steps:
               - columnReferences:
                   - columnCounter: 84fe4f74-bcbe-4f0c-9a47-e920294f4f0b
                     stepCounter: 1cfd027f-37d6-4424-85e9-d9bed1c967a9
-                transform: ""
+                transform: RTRIM("APIBH_COMBINED"."TERMSDESC")
           - columnReference:
               columnCounter: b257ac2c-5c8e-4a27-948a-f8c7c40f445a
               stepCounter: a3896406-1f4e-4cd3-b272-68a164f19bf1
@@ -412,18 +412,6 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: a44aa82d-10b8-484c-99f0-642e30d8b03d
-                    stepCounter: 1cfd027f-37d6-4424-85e9-d9bed1c967a9
-                transform: ""
-          - columnReference:
-              columnCounter: 84bfd639-1334-4dc7-b778-af92c4f9f69e
-              stepCounter: a3896406-1f4e-4cd3-b272-68a164f19bf1
-            dataType: NUMBER(38,0)
-            description: ""
-            name: VALUES
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 4a4b9d5a-fb8b-48d1-84a4-87aede72b0d4
                     stepCounter: 1cfd027f-37d6-4424-85e9-d9bed1c967a9
                 transform: ""
           - columnReference:
@@ -549,7 +537,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: "\"APIBH_COMBINED\".\"IDVEND\"||\"APIBH_COMBINED\".\"SOURCE\""
+                transform: rtrim("APIBH_COMBINED"."IDVEND")||"APIBH_COMBINED"."SOURCE"
             systemColumnType: None
             transform: ""
           - acceptedValues:
@@ -570,7 +558,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: "\"APIBH_COMBINED\".\"IDINVC\"||'-'||\"APIBH_COMBINED\".\"CNTBTCH\"||\"APIBH_COMBINED\".\"SOURCE\""
+                transform: rtrim("APIBH_COMBINED"."IDINVC")||'-'||"APIBH_COMBINED"."CNTBTCH"||"APIBH_COMBINED"."SOURCE"
             systemColumnType: None
             transform: ""
           - acceptedValues:
@@ -606,7 +594,7 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: APOBP Doc Type
+            name: APOBL Doc Type
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -632,7 +620,7 @@ steps:
               joinCondition: |-
                 FROM {{ ref('SAGE_COMBINED', 'APIBH_COMBINED') }} "APIBH_COMBINED"
                 LEFT JOIN {{ ref('SAGE_COMBINED', 'APOBL_COMBINED') }} "APOBL_COMBINED"
-                ON "APIBH_COMBINED"."IDINVC" = "APOBL_COMBINED"."IDINVC"
+                ON "APIBH_COMBINED"."IDINVC" = "APOBL_COMBINED"."IDINVC" and "APIBH_COMBINED"."CNTBTCH" = "APOBL_COMBINED"."CNTBTCH" and "APIBH_COMBINED"."CNTITEM" = "APOBL_COMBINED"."CNTITEM"
             name: AP_Invoice_Header
             noLinkRefs: []
       name: AP_Invoice_Header

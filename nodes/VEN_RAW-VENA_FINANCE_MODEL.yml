@@ -1,0 +1,214 @@
+steps:
+  VENA_FINANCE_MODEL-402bca68-f597-4db4-a03f-027fee409428:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: VEN_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 290799e0-29d1-45b8-bcb8-efaf562a3fe5
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: _Account
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eef11d07-5e3d-4f80-8b46-5ca01a2bab66
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: _Location
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 585b02d1-da16-438a-834b-07073973e05f
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: _Line/Dept
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 707d7c36-a9ef-4d2b-867b-7107da7aa716
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: _Material Type/Customer
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ebc6c00f-4ec7-4a6b-9755-2c2a254507f8
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: _Data Source
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2185484a-4cd3-47eb-80a6-7662635dcb91
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: _Year
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3953b080-d3cf-40f0-9bcd-2fee06d371a3
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: _Period
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8ca0b503-787f-4ced-a713-e02861febaed
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: _Scenario
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cab92768-95d3-4d0b-94e7-3de4c6c7ffd2
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: _Measure
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dbe57374-68f3-4515-b16f-dd1ca6bb66f6
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: _value
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a7713885-72a1-457e-a32b-a4faa86dde9c
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: _etl_id
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cf28564e-ffe5-4c44-815e-d3504459edb2
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: _File Name
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12bcfab1-0f63-4f04-b952-04cacfd70be9
+              stepCounter: 402bca68-f597-4db4-a03f-027fee409428
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: _Last Modified
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('VEN_RAW', 'VENA_FINANCE_MODEL') }}
+      name: VENA_FINANCE_MODEL
+      schema: ""
+      sqlType: Source
+      table: VENA_FINANCE_MODEL
+      type: sourceInput
+    stepCounter: 402bca68-f597-4db4-a03f-027fee409428

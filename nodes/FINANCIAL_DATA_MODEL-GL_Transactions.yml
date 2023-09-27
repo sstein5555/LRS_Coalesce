@@ -74,7 +74,7 @@ steps:
             dataType: NUMBER(7,0)
             description: ""
             name: CNTDETAIL
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 02725f14-f4fd-4b4d-b41b-a25bbe41f670
@@ -86,7 +86,7 @@ steps:
             dataType: VARCHAR(2)
             description: ""
             name: FISCALPERD
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 7c5125e5-8978-4db0-9dff-407b666cf1e1
@@ -98,7 +98,7 @@ steps:
             dataType: VARCHAR(4)
             description: ""
             name: FISCALYR
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: ec876be1-feeb-4e17-950b-3c9a45bb3b3d
@@ -143,7 +143,7 @@ steps:
             dataType: NUMBER(7,0)
             description: ""
             name: POSTINGSEQ
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 64272164-a04d-43e6-81c1-d6742fc7b735
@@ -443,7 +443,7 @@ steps:
             dataType: VARCHAR(3)
             description: ""
             name: SRCECURN
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 467438f7-4176-450c-a383-357932a22bad
@@ -455,7 +455,7 @@ steps:
             dataType: VARCHAR(2)
             description: ""
             name: SRCELEDGER
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 7aa47b5b-67c9-47d5-9ce0-2bbb213631cc
@@ -467,7 +467,7 @@ steps:
             dataType: VARCHAR(2)
             description: ""
             name: SRCETYPE
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: c73eafb1-fbec-48ea-b990-a763f9809a58
@@ -917,7 +917,7 @@ steps:
             dataType: VARCHAR(12)
             description: ""
             name: ACCTGRPCOD
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: a9a672ee-decb-41d2-a836-1759eff0d674
@@ -977,7 +977,7 @@ steps:
             dataType: VARCHAR(6)
             description: ""
             name: ORGID
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 9653f82c-5797-4525-a70d-d467ab236a45
@@ -1645,11 +1645,11 @@ steps:
               joinCondition: |-
                 FROM {{ ref('SAGE_COMBINED', 'GLPOST_COMBINED') }} "GLPOST_COMBINED"
                 INNER JOIN {{ ref('SAGE_COMBINED', 'GLAMF_COMBINED') }} "GLAMF_COMBINED"
-                ON "GLPOST_COMBINED"."ACCTID"= "GLAMF_COMBINED"."ACCTID"
+                ON "GLPOST_COMBINED"."ACCTID"= "GLAMF_COMBINED"."ACCTID" AND "GLPOST_COMBINED"."SOURCE"= "GLAMF_COMBINED"."SOURCE"
                 LEFT JOIN {{ ref('SAGE_COMBINED', 'GLACGRP_COMBINED') }} "GLACGRP_COMBINED"
-                ON "GLAMF_COMBINED"."ACCTGRPCOD"= "GLACGRP_COMBINED"."ACCTGRPCOD"
+                ON "GLAMF_COMBINED"."ACCTGRPCOD"= "GLACGRP_COMBINED"."ACCTGRPCOD" AND "GLAMF_COMBINED"."SOURCE"= "GLACGRP_COMBINED"."SOURCE"
                 INNER JOIN {{ ref('SAGE_COMBINED', 'CSCOM_COMBINED') }} "CSCOM_COMBINED"
-                ON "GLPOST_COMBINED"."AUDTORG" = "CSCOM_COMBINED"."AUDTORG"
+                ON "GLPOST_COMBINED"."AUDTORG" = "CSCOM_COMBINED"."AUDTORG" AND "GLPOST_COMBINED"."SOURCE" = "CSCOM_COMBINED"."SOURCE"
                 WHERE CAST("GLPOST_COMBINED"."FISCALYR" AS INT) >= 2022
             name: GL_Transactions
             noLinkRefs: []

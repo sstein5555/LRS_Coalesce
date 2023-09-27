@@ -6,6 +6,7 @@ steps:
         postSQL: ""
         preSQL: ""
         storageLocationSearchText: TRUX_
+        streamSelect: false
         truncateBefore: false
       database: ""
       deployEnabled: true
@@ -226,34 +227,6 @@ steps:
                   - columnCounter: 2fdc76f4-35f6-4e0b-a763-79d6d5927d22
                     stepCounter: 051df941-da01-4818-97f8-61c1bbd49bbf
                 transform: ""
-          - columnReference:
-              columnCounter: c6ee2a76-f583-490d-969c-974643a96462
-              stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
-            dataType: INTEGER
-            description: specific CDC identifier based on a sequence.
-            hashColumns: []
-            hashDetails: null
-            name: CDC_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1738feea-49b4-4c13-b124-6ca91f4de626
-                    stepCounter: 051df941-da01-4818-97f8-61c1bbd49bbf
-                transform: ""
-          - columnReference:
-              columnCounter: 5036eeb4-ab56-4e84-ae74-cef0bd11b8d9
-              stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
-            dataType: TIMESTAMP
-            description: specific attribute containing the timestamp of storing the CDC record.
-            hashColumns: []
-            hashDetails: null
-            name: CDC_TIMESTAMP
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 74e529f2-647d-4057-a1f7-1288cc6ba5c3
-                    stepCounter: 051df941-da01-4818-97f8-61c1bbd49bbf
-                transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
@@ -283,14 +256,12 @@ steps:
               - locationName: TRUX_UB_COMP_RAW
                 nodeName: CDC_DM01
             join:
-              joinCondition: |-
-                FROM {{ ref('TRUX_UB_COMP_RAW', 'CDC_DM01') }} "CDC_DM01"
-                where "METADATA$ACTION" = 'INSERT'
+              joinCondition: FROM {{ ref('TRUX_UB_COMP_RAW', 'CDC_DM01') }} "CDC_DM01"
             name: DM01_CDC_COMBINED
             noLinkRefs: []
       name: DM01_CDC_COMBINED
       overrideSQL: false
       schema: ""
-      sqlType: "4"
+      sqlType: "7"
       type: sql
     stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
