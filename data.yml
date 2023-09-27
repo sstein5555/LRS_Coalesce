@@ -103,182 +103,182 @@ locations:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_AM_COMP_RAW
+        schema: TRX_AL_DBO
   TRUX_AM_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_AM_COMP_RAW
+        schema: TRX_AM_DBO
   TRUX_AS_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_AS_COMP_RAW
+        schema: TRX_AS_DBO
   TRUX_AT_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_AT_COMP_RAW
+        schema: TRX_AT_DBO
   TRUX_BC_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_BC_COMP_RAW
+        schema: TRX_BC_DBO
   TRUX_BH_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_BH_COMP_RAW
+        schema: TRX_BH_DBO
   TRUX_CD_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_CD_COMP_RAW
+        schema: TRX_CD_DBO
   TRUX_DC_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_DC_COMP_RAW
+        schema: TRX_DC_DBO
   TRUX_DF_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_DF_COMP_RAW
+        schema: TRX_DF_DBO
   TRUX_ES_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_ES_COMP_RAW
+        schema: TRX_ES_DBO
   TRUX_HA_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_HA_COMP_RAW
+        schema: TRX_HA_DBO
   TRUX_HR_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_HR_COMP_RAW
+        schema: TRX_HR_DBO
   TRUX_IC_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_IC_COMP_RAW
+        schema: TRX_IC_DBO
   TRUX_IP_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_IP_COMP_RAW
+        schema: TRX_IP_DBO
   TRUX_LR_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_LR_COMP_RAW
+        schema: TRX_LR_DBO
   TRUX_MH_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_MH_COMP_RAW
+        schema: TRX_MH_DBO
   TRUX_MO_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_MO_COMP_RAW
+        schema: TRX_MO_DBO
   TRUX_MP_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_MP_COMP_RAW
+        schema: TRX_MP_DBO
   TRUX_MW_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_MW_COMP_RAW
+        schema: TRX_MW_DBO
   TRUX_NI_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_NI_COMP_RAW
+        schema: TRX_NI_DBO
   TRUX_PS_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_PS_COMP_RAW
+        schema: TRX_PS_DBO
   TRUX_RT_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_RT_COMP_RAW
+        schema: TRX_RT_DBO
   TRUX_SH_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_SH_COMP_RAW
+        schema: TRX_SH_DBO
   TRUX_SW_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_SW_COMP_RAW
+        schema: TRX_SW_DBO
   TRUX_TP_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_TP_COMP_RAW
+        schema: TRX_TP_DBO
   TRUX_UA_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_UA_COMP_RAW
+        schema: TRX_UA_DBO
   TRUX_UB_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_UB_COMP_RAW
+        schema: TRX_UB_DBO
   TRUX_UC_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_UC_COMP_RAW
+        schema: TRX_UC_DBO
   TRUX_V9_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_V9_COMP_RAW
+        schema: TRX_V9_DBO
   TRUX_VA_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_VA_COMP_RAW
+        schema: TRX_VA_DBO
   TRUX_VB_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_VB_COMP_RAW
+        schema: TRX_VB_DBO
   TRUX_VC_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_VC_COMP_RAW
+        schema: TRX_VC_DBO
   TRUX_VE_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_VE_COMP_RAW
+        schema: TRX_VE_DBO
   TRUX_VI_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_VI_COMP_RAW
+        schema: TRX_VI_DBO
   TRUX_WA_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_WA_COMP_RAW
+        schema: TRX_WA_DBO
   TRUX_XI_COMP_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW
-        schema: TRUX_XI_COMP_RAW
+        schema: TRX_XI_DBO
   VEN_RAW:
     mappingDefinitions:
       "2":

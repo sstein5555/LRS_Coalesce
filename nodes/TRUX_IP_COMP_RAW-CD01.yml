@@ -1,0 +1,94 @@
+steps:
+  CD01-76452622-b248-4225-b83b-949276928c8e:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_IP_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 55d7086e-7ed2-4060-b3cf-eca36102dd30
+              stepCounter: 76452622-b248-4225-b83b-949276928c8e
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD01_CODE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b6a68d91-690e-4f78-929b-c81745740d57
+              stepCounter: 76452622-b248-4225-b83b-949276928c8e
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD01_ACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 906575ae-300d-410f-82e9-fa4e385b66ae
+              stepCounter: 76452622-b248-4225-b83b-949276928c8e
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: CD01_DESC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8a3441f0-d48d-45c9-a172-e51f7e0513af
+              stepCounter: 76452622-b248-4225-b83b-949276928c8e
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0257088f-7962-40b7-b937-6b4206cb3284
+              stepCounter: 76452622-b248-4225-b83b-949276928c8e
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_IP_COMP_RAW', 'CD01') }}
+      name: CD01
+      schema: ""
+      sqlType: Source
+      table: CD01
+      type: sourceInput
+    stepCounter: 76452622-b248-4225-b83b-949276928c8e

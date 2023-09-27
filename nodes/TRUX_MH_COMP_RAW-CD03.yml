@@ -1,0 +1,199 @@
+steps:
+  CD03-c4f36ce9-494c-45b0-96a3-ef7c85225956:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TRUX_MH_COMP_RAW
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 30963a8f-5180-4294-8380-5824af4f490f
+              stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: CD03_CODE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 71d02693-7c39-4d75-a720-a41f452fca48
+              stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD03_STOPBILL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 72826d95-f008-49ed-b1a7-7e5cbf030c8a
+              stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD03_NONPAY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14b937b2-cdb7-47b7-ae21-196d95ae824a
+              stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD03_CREDITSTOPDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ec7a8e11-906b-41b1-8e70-deaa99229d74
+              stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: CD03_DESC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1693cb3b-ac80-45e3-8553-d1de1e811d90
+              stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD03_REMOVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9fba08d6-30f3-46fd-a170-e3b3829e4305
+              stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD03_LOST
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e00e6810-dee3-42cd-94a5-a32434806c2b
+              stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD03_SEASONAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 54785148-7b14-4e2c-aa60-ccbbd4f4ffe9
+              stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD03_ACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 05655102-5988-46e0-acf9-cae90ca7e5e1
+              stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: CD03_CREDIT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2cdcd929-268e-4190-b8b1-728d2db06adf
+              stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c4f3d1f8-f9b0-44cf-a8a2-79a861c0619a
+              stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TRUX_MH_COMP_RAW', 'CD03') }}
+      name: CD03
+      schema: ""
+      sqlType: Source
+      table: CD03
+      type: sourceInput
+    stepCounter: c4f36ce9-494c-45b0-96a3-ef7c85225956

@@ -7,7 +7,7 @@ steps:
         samplePercent: "10"
         sampleRows: "1000"
       database: ""
-      deployEnabled: true
+      deployEnabled: false
       description: ""
       isMultisource: false
       locationName: FINANCIAL_DATA_MODEL

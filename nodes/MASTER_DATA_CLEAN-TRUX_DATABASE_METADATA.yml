@@ -1,0 +1,118 @@
+steps:
+  TRUX_DATABASE_METADATA-c2e3b305-d522-488b-bbc6-6ade93cd3385:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: true
+      locationName: MASTER_DATA_CLEAN
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9fffaca9-2874-4427-88c7-958880c87eca
+              stepCounter: c2e3b305-d522-488b-bbc6-6ade93cd3385
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SY03_CODE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b3339426-2f8c-4fee-9df0-402a03db75cd
+                    stepCounter: b77be2d5-379c-4efc-aacd-b5e7896bf012
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 79d1d19f-b448-4b4b-a213-4b84a2d44fcf
+                    stepCounter: 3d4ed0a5-349d-409c-bec4-338d77557a02
+                transform: ""
+          - columnReference:
+              columnCounter: e965ad54-1824-4ecd-8536-79d0b14d88f2
+              stepCounter: c2e3b305-d522-488b-bbc6-6ade93cd3385
+            dataType: VARCHAR(50)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SY03_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10e943a8-816a-4d5d-996c-03d01d0de5be
+                    stepCounter: b77be2d5-379c-4efc-aacd-b5e7896bf012
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 87186d13-e3e3-4b87-8c01-f62c68fe0b47
+                    stepCounter: 3d4ed0a5-349d-409c-bec4-338d77557a02
+                transform: ""
+          - columnReference:
+              columnCounter: a2179cc3-ae61-4c30-9876-ab3d9de7921f
+              stepCounter: c2e3b305-d522-488b-bbc6-6ade93cd3385
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SQL_DB_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6013d6bb-b58c-4974-a5a8-a16275c5837a
+                    stepCounter: b77be2d5-379c-4efc-aacd-b5e7896bf012
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 8ebdd40b-4bf2-4f6f-a11f-147d56ed13bb
+                    stepCounter: 3d4ed0a5-349d-409c-bec4-338d77557a02
+                transform: ""
+          - columnReference:
+              columnCounter: 0539cd47-31c6-4ddd-aa09-b5ebc12b2804
+              stepCounter: c2e3b305-d522-488b-bbc6-6ade93cd3385
+            dataType: VARCHAR(30)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SNOWFLAKE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b4679835-de41-4a83-87bd-e625005192d8
+                    stepCounter: b77be2d5-379c-4efc-aacd-b5e7896bf012
+                transform: ""
+              - columnReferences:
+                  - columnCounter: ddf98b3a-3d81-4a83-bed3-feee94a81100
+                    stepCounter: 3d4ed0a5-349d-409c-bec4-338d77557a02
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: MASTER_DATA
+                nodeName: STG_MIDWEST_SY03
+            join:
+              joinCondition: FROM {{ ref('MASTER_DATA', 'STG_MIDWEST_SY03') }} "STG_MIDWEST_SY03"
+            name: STG_MIDWEST_SY03
+            noLinkRefs: []
+          - aliases:
+              STG_LEGACY_SY03: 3d4ed0a5-349d-409c-bec4-338d77557a02
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: MASTER_DATA
+                nodeName: STG_LEGACY_SY03
+            join:
+              joinCondition: FROM {{ ref('MASTER_DATA', 'STG_LEGACY_SY03') }} "STG_LEGACY_SY03"
+            name: STG_LEGACY_SY03
+            noLinkRefs: []
+      name: TRUX_DATABASE_METADATA
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: c2e3b305-d522-488b-bbc6-6ade93cd3385
