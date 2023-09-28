@@ -39,6 +39,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: ARDETAILUID
             nullable: true
             sourceColumnReferences:
@@ -53,6 +54,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: SOURCEUID
             nullable: true
             sourceColumnReferences:
@@ -275,7 +277,7 @@ steps:
           - columnReference:
               columnCounter: 9a1704e4-97df-458b-af4a-ede7501626a6
               stepCounter: a8c9b0d1-88cf-47a4-800f-2121771f432b
-            dataType: VARCHAR(12)
+            dataType: VARCHAR
             description: ""
             name: BILLPHONE
             nullable: true
@@ -287,7 +289,7 @@ steps:
           - columnReference:
               columnCounter: 3bdbfd8b-17fe-4026-8532-b257311914c5
               stepCounter: a8c9b0d1-88cf-47a4-800f-2121771f432b
-            dataType: VARCHAR(12)
+            dataType: VARCHAR
             description: ""
             name: BILLFAX
             nullable: true
@@ -299,7 +301,7 @@ steps:
           - columnReference:
               columnCounter: 591dcdab-22a9-41a6-b196-f8c93b5e2b5c
               stepCounter: a8c9b0d1-88cf-47a4-800f-2121771f432b
-            dataType: VARCHAR(50)
+            dataType: VARCHAR
             description: ""
             name: BILLEMAIL
             nullable: true
@@ -371,7 +373,7 @@ steps:
           - columnReference:
               columnCounter: 5cd0384f-ced2-45d7-a209-7bf1c2afe1c5
               stepCounter: a8c9b0d1-88cf-47a4-800f-2121771f432b
-            dataType: VARCHAR(50)
+            dataType: VARCHAR
             description: ""
             name: CUSTCLASS
             nullable: true
@@ -599,7 +601,7 @@ steps:
           - columnReference:
               columnCounter: b1509b8a-da73-45fe-bef4-7d09a128529c
               stepCounter: a8c9b0d1-88cf-47a4-800f-2121771f432b
-            dataType: VARCHAR(10)
+            dataType: VARCHAR
             description: ""
             name: COMPANYID
             nullable: true
@@ -1017,7 +1019,7 @@ steps:
               joinCondition: |-
                 FROM {{ ref('TOWER_COMBINED', 'ARDETAIL_COMBINED') }} "ARDETAIL_COMBINED"
                 RIGHT JOIN {{ ref('TOWER_COMBINED', 'INVOICE_COMBINED') }} "INVOICE_COMBINED"
-                ON "ARDETAIL_COMBINED"."INVOICEUID" = "INVOICE_COMBINED"."INVOICEUID"
+                ON "ARDETAIL_COMBINED"."INVOICEUID" = "INVOICE_COMBINED"."Unique ID"
                 where "DETAILSOURCE" = 1
             name: Tower_Invoices
             noLinkRefs: []

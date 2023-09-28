@@ -227,20 +227,6 @@ steps:
                     stepCounter: 08ce7031-e623-4a68-9e54-e88c8317d902
                 transform: ""
           - columnReference:
-              columnCounter: ca2a3628-5e9d-4035-9372-0b0439c7f7fc
-              stepCounter: bbb8b9af-ce4e-46be-8004-032fd4ad599b
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: VALUES
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: a3251f59-783f-4d5f-8423-783475cf6d58
-                    stepCounter: 08ce7031-e623-4a68-9e54-e88c8317d902
-                transform: ""
-          - columnReference:
               columnCounter: e05e5937-c04b-47b1-b913-92b469f281b4
               stepCounter: bbb8b9af-ce4e-46be-8004-032fd4ad599b
             dataType: VARCHAR(8)

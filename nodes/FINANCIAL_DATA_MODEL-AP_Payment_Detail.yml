@@ -197,7 +197,7 @@ steps:
               - columnReferences:
                   - columnCounter: d3f6053a-6e4b-4f02-8f76-3c606ee6b754
                     stepCounter: 1fd007ac-065a-4d6f-b9b7-afc4ec4da489
-                transform: CASE WHEN left("APOBP_COMBINED"."IDINVC",2)='PY' then RTRIM()("APOBP_COMBINED"."IDINVC") else rtrim("APOBP_COMBINED"."IDMEMOXREF") END
+                transform: CASE WHEN left("APOBP_COMBINED"."IDINVC",2)='PY' then RTRIM("APOBP_COMBINED"."IDINVC") else rtrim("APOBP_COMBINED"."IDMEMOXREF") END
           - columnReference:
               columnCounter: 3ba14de7-8ecb-4588-b21f-4ba6307d72ba
               stepCounter: 96af660a-eea8-41f8-81c6-0abcead2ac26

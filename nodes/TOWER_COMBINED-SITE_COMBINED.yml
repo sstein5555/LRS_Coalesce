@@ -479,20 +479,6 @@ steps:
                     stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
                 transform: ""
           - columnReference:
-              columnCounter: 7665f3f6-0d4e-44b1-86a3-546eaa3f6b78
-              stepCounter: d0ee8791-10a2-4747-967f-b22621b20d21
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: YTDYEAR
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: b183896a-4e3f-4cd1-87ba-4db7c88ddd36
-                    stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
-                transform: ""
-          - columnReference:
               columnCounter: d1b2523b-161a-4e2c-ad2b-d9c8c8a0365e
               stepCounter: d0ee8791-10a2-4747-967f-b22621b20d21
             dataType: NUMBER(38,0)

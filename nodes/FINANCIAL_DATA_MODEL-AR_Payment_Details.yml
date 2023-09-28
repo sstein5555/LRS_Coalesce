@@ -292,7 +292,7 @@ steps:
                 nodeName: DM01P_COMBINED
             join:
               joinCondition: FROM {{ ref('TRUXCOMBINED_RAW', 'DM01P_COMBINED') }} "DM01P_COMBINED"
-            name: DM01_COMBINED_TRUX
+            name: DM01p_COMBINED_TRUX
             noLinkRefs: []
           - aliases:
               PAYMENT_COMBINED: b5b7fd7c-731a-4285-bbf1-f0334a25ac82

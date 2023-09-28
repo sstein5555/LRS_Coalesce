@@ -255,20 +255,6 @@ steps:
                     stepCounter: 1db314b5-8236-458f-a021-1d10c668bad3
                 transform: ""
           - columnReference:
-              columnCounter: d830bb0b-cdf7-4551-9415-625b9b1dc1a9
-              stepCounter: b68e5f03-ae6a-41b7-9ec4-ab1f01b71de4
-            dataType: VARCHAR(10)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: GROUP
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: db0b35c4-6fc1-4305-bb33-8fb4687ef9ae
-                    stepCounter: 1db314b5-8236-458f-a021-1d10c668bad3
-                transform: ""
-          - columnReference:
               columnCounter: 6d4eaa3a-e524-4e61-a901-469971dafa25
               stepCounter: b68e5f03-ae6a-41b7-9ec4-ab1f01b71de4
             dataType: NUMBER(9,0)

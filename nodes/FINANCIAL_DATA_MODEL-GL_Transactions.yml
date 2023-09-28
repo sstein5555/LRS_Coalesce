@@ -696,18 +696,6 @@ steps:
                     stepCounter: c1d89778-7812-4fc7-b0a0-e828c6fd0d1b
                 transform: ""
           - columnReference:
-              columnCounter: d7e39fc1-7fe3-4a40-bb1c-717eed3cb3e6
-              stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-            dataType: NUMBER(38,0)
-            description: ""
-            name: VALUES
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: dfa03e4f-ed01-496e-8878-5a00b231a38c
-                    stepCounter: c1d89778-7812-4fc7-b0a0-e828c6fd0d1b
-                transform: ""
-          - columnReference:
               columnCounter: e12983e7-199e-4dff-b5a8-32fa6f6954e2
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             dataType: VARCHAR(6)
