@@ -292,7 +292,7 @@ steps:
               - columnReferences:
                   - columnCounter: 7d4e5ec6-35d2-4582-9eae-df701d1604dd
                     stepCounter: 7418c001-4ad4-45b4-ae82-debce39600ea
-                transform: rtrim("APVEN_COMBINED"."IDCUST"
+                transform: rtrim("APVEN_COMBINED"."IDCUST")
           - columnReference:
               columnCounter: 7a09e85d-9230-4bb2-9c77-e988a58646ab
               stepCounter: 74ee4388-f9d9-414f-aca5-25b5dccfa9fa
