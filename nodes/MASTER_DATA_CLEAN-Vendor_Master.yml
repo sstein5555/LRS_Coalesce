@@ -46,7 +46,7 @@ steps:
               - columnReferences:
                   - columnCounter: 8188fc74-82f3-4112-ace6-0ef7b660268d
                     stepCounter: 7418c001-4ad4-45b4-ae82-debce39600ea
-                transform: ""
+                transform: RTRIM("APVEN_COMBINED"."VENDORID")
           - columnReference:
               columnCounter: 14bfa861-6b14-4e34-9078-8a201417870a
               stepCounter: 74ee4388-f9d9-414f-aca5-25b5dccfa9fa
@@ -60,7 +60,7 @@ steps:
               - columnReferences:
                   - columnCounter: 5de5e492-845e-47fa-831c-defc0c1a77db
                     stepCounter: 7418c001-4ad4-45b4-ae82-debce39600ea
-                transform: ""
+                transform: rtrim("APVEN_COMBINED"."IDPPNT")
           - columnReference:
               columnCounter: ef5903de-ac29-473b-a3fe-28982579c415
               stepCounter: 74ee4388-f9d9-414f-aca5-25b5dccfa9fa
@@ -292,7 +292,7 @@ steps:
               - columnReferences:
                   - columnCounter: 7d4e5ec6-35d2-4582-9eae-df701d1604dd
                     stepCounter: 7418c001-4ad4-45b4-ae82-debce39600ea
-                transform: ""
+                transform: rtrim("APVEN_COMBINED"."IDCUST"
           - columnReference:
               columnCounter: 7a09e85d-9230-4bb2-9c77-e988a58646ab
               stepCounter: 74ee4388-f9d9-414f-aca5-25b5dccfa9fa
@@ -825,7 +825,28 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: "\"APVEN_COMBINED\".\"VENDORID\"||\"APVEN_COMBINED\".\"SOURCE\""
+                transform: rtrim("APVEN_COMBINED"."VENDORID")||"APVEN_COMBINED"."SOURCE"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 75b2c408-b631-466d-995a-f857c6fce6ae
+              stepCounter: 74ee4388-f9d9-414f-aca5-25b5dccfa9fa
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Source
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2bd00b90-70c2-49d9-a9eb-62b858dff939
+                    stepCounter: 7418c001-4ad4-45b4-ae82-debce39600ea
+                transform: ""
             systemColumnType: None
             transform: ""
         enabledColumnTestIDs: []

@@ -273,7 +273,9 @@ steps:
             name: Payment Method
             nullable: true
             sourceColumnReferences:
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: d7832ba5-8bda-4e07-ab73-f3e885541973
+                    stepCounter: 72c275e5-48af-4bff-bc7f-5b0bccfbc514
                 transform: ""
               - columnReferences:
                   - columnCounter: bfb2105c-fd1e-47b9-a178-0ae6e871c039

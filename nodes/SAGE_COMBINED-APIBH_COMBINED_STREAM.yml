@@ -2961,7 +2961,9 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              CDC_APIBH: 0c386ef4-771e-4124-99b9-306e53073a27
+            customSQL:
               customSQL: ""
             dependencies:
               - locationName: SG_HRTDAT

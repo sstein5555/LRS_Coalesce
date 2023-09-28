@@ -603,6 +603,27 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cb3f3e82-40d8-4195-b717-b3f34bd7a421
+              stepCounter: a3896406-1f4e-4cd3-b272-68a164f19bf1
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Vendor_Invoice_Source
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: rtrim("APIBH_COMBINED"."IDVEND")||rtrim("APIBH_COMBINED"."IDINVC")||"APIBH_COMBINED"."SOURCE"
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -621,6 +642,7 @@ steps:
                 FROM {{ ref('SAGE_COMBINED', 'APIBH_COMBINED') }} "APIBH_COMBINED"
                 LEFT JOIN {{ ref('SAGE_COMBINED', 'APOBL_COMBINED') }} "APOBL_COMBINED"
                 ON "APIBH_COMBINED"."IDINVC" = "APOBL_COMBINED"."IDINVC" and "APIBH_COMBINED"."CNTBTCH" = "APOBL_COMBINED"."CNTBTCH" and "APIBH_COMBINED"."CNTITEM" = "APOBL_COMBINED"."CNTITEM"
+                where "APIBH_COMBINED"."ERRBATCH" = 0 and "APIBH_COMBINED"."_FIVETRAN_DELETED"=FALSE
             name: AP_Invoice_Header
             noLinkRefs: []
       name: AP_Invoice_Header

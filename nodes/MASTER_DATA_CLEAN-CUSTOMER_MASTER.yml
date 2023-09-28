@@ -106,7 +106,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            isChangeTracking: true
+            isBusinessKey: true
             name: Address 1
             nullable: true
             sourceColumnReferences:
@@ -261,22 +261,6 @@ steps:
               - columnReferences:
                   - columnCounter: 8de6ec46-81d6-4c4a-b224-dde0296c68ea
                     stepCounter: af74a786-1641-4201-ad6f-8127eba08c06
-                transform: ""
-          - columnReference:
-              columnCounter: 2519d82e-c61d-4a7f-949c-df4c06e940cf
-              stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR
-            description: can join with CD07_CODE
-            hashColumns: []
-            hashDetails: null
-            name: Customer Sales Representative
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: bf8e87d6-48ba-4dce-a149-290d30022853
-                    stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
-                transform: ""
-              - columnReferences: []
                 transform: ""
           - columnReference:
               columnCounter: eca7c1d2-e13b-4cd3-a777-0d9d115f284b
@@ -594,7 +578,7 @@ steps:
           - columnReference:
               columnCounter: 1d03946c-bcad-4dcb-b303-35d092dcc6cf
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: 1 = Consolidated, 2= Separate (A/R Customer), 3= Separate (A/R Site)
             hashColumns: []
             hashDetails: null
@@ -604,7 +588,7 @@ steps:
               - columnReferences:
                   - columnCounter: 57aadc71-87e5-4e0a-9bdc-95958503c663
                     stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
-                transform: ""
+                transform: CASE WHEN "CM03_Combined"."CM03_BILLTO" = 1 then 'Consolidated' when "CM03_Combined"."CM03_BILLTO" = 2 then 'Separate (A/R Customer)' else 'Separate (A/R Site)' end
               - columnReferences: []
                 transform: ""
           - columnReference:
@@ -1140,10 +1124,34 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2fa41b29-952e-4898-98df-9c75da473afb
+              stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Sales Representative
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6bdac00a-e452-4d6a-842c-2140fced5760
+                    stepCounter: bd4674f7-935e-485f-8433-a9a843dde723
+                transform: ""
+              - columnReferences: []
+                transform: ""
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
               CD03_COMBINED: 438b5c12-3ccb-4c0d-bce9-4a236319d37a
+              CD07_COMBINED: bd4674f7-935e-485f-8433-a9a843dde723
               CD11_COMBINED: 3131b480-711a-434f-be4a-e6e3315d3c0a
               CM03_Combined: 080d8ab0-3edf-4ee0-b848-dcc7364164df
               TRUX_DATABASE_METADATA: c2e3b305-d522-488b-bbc6-6ade93cd3385
@@ -1154,6 +1162,8 @@ steps:
                 nodeName: TRUX_DATABASE_METADATA
               - locationName: TRUXCOMBINED_RAW
                 nodeName: CD03_COMBINED
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: CD07_COMBINED
               - locationName: TRUXCOMBINED_RAW
                 nodeName: CD11_COMBINED
               - locationName: TRUXCOMBINED_RAW
@@ -1167,6 +1177,8 @@ steps:
                 ON "CM03_Combined"."SOURCE" = "TRUX_DATABASE_METADATA"."SNOWFLAKE_NAME"
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CD03_COMBINED') }} "CD03_COMBINED"
                 ON "CM03_Combined"."CM03_SUSREA" = "CD03_COMBINED"."CD03_CODE" and "CM03_Combined"."SOURCE" = "CD03_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CD07_COMBINED') }} "CD07_COMBINED"
+                ON "CM03_Combined"."CM03_SREP" = "CD07_COMBINED"."CD07_CODE" and "CM03_Combined"."SOURCE" = "CD07_COMBINED"."SOURCE"
             name: CM03_COMBINED_TRUX
             noLinkRefs: []
           - aliases:

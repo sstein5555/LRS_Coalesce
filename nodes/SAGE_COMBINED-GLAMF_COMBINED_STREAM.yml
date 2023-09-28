@@ -674,34 +674,6 @@ steps:
                   - columnCounter: 6eafe226-d2a2-4cca-b09d-038a9ebaa72a
                     stepCounter: 15bb5b11-a6de-41aa-beca-9ea0d60c4e06
                 transform: ""
-          - columnReference:
-              columnCounter: c225045f-1d0d-463f-9db9-f5829c112564
-              stepCounter: d5f1b179-6c29-4d3a-90e5-073d85804f92
-            dataType: INTEGER
-            description: specific CDC identifier based on a sequence.
-            hashColumns: []
-            hashDetails: null
-            name: CDC_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 9426c91c-aa42-47ff-a9d8-3116a5fa5a7d
-                    stepCounter: 15bb5b11-a6de-41aa-beca-9ea0d60c4e06
-                transform: ""
-          - columnReference:
-              columnCounter: 4c95ab8b-b1d4-4bea-9f17-2868fa286ac9
-              stepCounter: d5f1b179-6c29-4d3a-90e5-073d85804f92
-            dataType: TIMESTAMP
-            description: specific attribute containing the timestamp of storing the CDC record.
-            hashColumns: []
-            hashDetails: null
-            name: CDC_TIMESTAMP
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 8a547488-d78c-437c-837c-95b9a475d0fe
-                    stepCounter: 15bb5b11-a6de-41aa-beca-9ea0d60c4e06
-                transform: ""
           - acceptedValues:
               strictMatch: true
               values: []

@@ -954,17 +954,46 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 91269ccb-2b8e-41de-b3cd-ede340b16487
+              stepCounter: 56ae5e3c-c6cd-4eb5-a3ae-25d02a9ab031
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Business Type Description
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5703ca06-5df4-4a48-a60e-3b6c17cde0df
+                    stepCounter: 71001026-e5b6-431c-99fc-8c83d39aed33
+                transform: ""
+              - columnReferences: []
+                transform: ""
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
+              CD01_COMBINED: 71001026-e5b6-431c-99fc-8c83d39aed33
               CM04_Combined: f47180be-fdce-4312-84ff-04027f8092c0
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: TRUXCOMBINED_RAW
+                nodeName: CD01_COMBINED
+              - locationName: TRUXCOMBINED_RAW
                 nodeName: CM04_Combined
             join:
-              joinCondition: FROM {{ ref('TRUXCOMBINED_RAW', 'CM04_Combined') }} "CM04_Combined"
+              joinCondition: |-
+                FROM {{ ref('TRUXCOMBINED_RAW', 'CM04_Combined') }} "CM04_Combined"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CD01_COMBINED') }} "CD01_COMBINED"
+                ON "CM04_Combined"."CM04_BUCD" = "CD01_COMBINED"."CD01_CODE" and "CM04_Combined"."SOURCE" = "CD01_COMBINED"."SOURCE"
             name: CM04_COMBINED
             noLinkRefs: []
           - aliases:

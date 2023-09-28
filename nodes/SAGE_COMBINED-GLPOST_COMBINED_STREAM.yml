@@ -367,20 +367,6 @@ steps:
                     stepCounter: a1f7337e-fd47-4bd9-be53-aef9a992b2a5
                 transform: ""
           - columnReference:
-              columnCounter: 12271084-8040-4bd5-a4d5-e126497ca756
-              stepCounter: dd937ff1-00b0-4c58-a601-a7e4f5e12b79
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: VALUES
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1113327b-06a1-478b-be0b-b8a96214645b
-                    stepCounter: a1f7337e-fd47-4bd9-be53-aef9a992b2a5
-                transform: ""
-          - columnReference:
               columnCounter: b1690ee7-3a08-4f75-a2b6-2eb13f2f0fc2
               stepCounter: dd937ff1-00b0-4c58-a601-a7e4f5e12b79
             dataType: NUMBER(9,0)
@@ -672,34 +658,6 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 4f43b33d-ad19-490a-bbd9-8a229bad981e
-                    stepCounter: a1f7337e-fd47-4bd9-be53-aef9a992b2a5
-                transform: ""
-          - columnReference:
-              columnCounter: ae01b5c7-96ac-4c57-97ee-63e4f1b9daaa
-              stepCounter: dd937ff1-00b0-4c58-a601-a7e4f5e12b79
-            dataType: INTEGER
-            description: specific CDC identifier based on a sequence.
-            hashColumns: []
-            hashDetails: null
-            name: CDC_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: d7fa42f5-2048-42e6-a799-626e17e3ec7b
-                    stepCounter: a1f7337e-fd47-4bd9-be53-aef9a992b2a5
-                transform: ""
-          - columnReference:
-              columnCounter: 84f0e59b-670f-40ac-a254-03b8db5362c5
-              stepCounter: dd937ff1-00b0-4c58-a601-a7e4f5e12b79
-            dataType: TIMESTAMP
-            description: specific attribute containing the timestamp of storing the CDC record.
-            hashColumns: []
-            hashDetails: null
-            name: CDC_TIMESTAMP
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 9b06e884-4d82-43e3-babe-14d1e546fb21
                     stepCounter: a1f7337e-fd47-4bd9-be53-aef9a992b2a5
                 transform: ""
           - acceptedValues:
