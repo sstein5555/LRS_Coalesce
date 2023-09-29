@@ -256,7 +256,7 @@ steps:
               - locationName: TRUX_AL_COMP_RAW
                 nodeName: CDC_DM01
             join:
-              joinCondition: |
+              joinCondition: |-
                 FROM {{ ref('TRUX_AL_COMP_RAW', 'CDC_DM01') }} "CDC_DM01"
                 WHERE "CDC_DM01"."_FIVETRAN_SYNCED" >= (
                     SELECT CAST(MAX(SUBSTR( _FIVETRAN_SYNCED, 1, 16)) AS DATE) AS LATEST_DATE

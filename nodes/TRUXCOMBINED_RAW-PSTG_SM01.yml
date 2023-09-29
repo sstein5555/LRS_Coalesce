@@ -6,7 +6,7 @@ steps:
         preSQL: ""
         testsEnabled: true
       database: ""
-      deployEnabled: true
+      deployEnabled: false
       description: ""
       isMultisource: true
       locationName: TRUXCOMBINED_RAW

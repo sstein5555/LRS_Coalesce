@@ -130,6 +130,7 @@ steps:
               stepCounter: 96af660a-eea8-41f8-81c6-0abcead2ac26
             dataType: NUMBER(38,0)
             description: ""
+            isBusinessKey: true
             name: Document Type
             nullable: false
             sourceColumnReferences:
@@ -178,6 +179,7 @@ steps:
               stepCounter: 96af660a-eea8-41f8-81c6-0abcead2ac26
             dataType: NUMBER(38,0)
             description: ""
+            isBusinessKey: true
             name: Transaction Type
             nullable: true
             sourceColumnReferences:
@@ -363,6 +365,7 @@ steps:
             dataType: VARCHAR
             defaultValue: ""
             description: ""
+            isBusinessKey: true
             keyColumnType: None
             name: Vendor_Invoice_Source
             nullable: true

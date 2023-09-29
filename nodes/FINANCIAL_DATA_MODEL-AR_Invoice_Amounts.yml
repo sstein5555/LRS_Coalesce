@@ -134,6 +134,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: SOURCE
             nullable: true
             sourceColumnReferences:
@@ -154,6 +155,7 @@ steps:
             dataType: varchar
             defaultValue: ""
             description: ""
+            isBusinessKey: true
             keyColumnType: None
             name: Customer_Source
             nullable: true
@@ -200,6 +202,7 @@ steps:
             dataType: varchar
             defaultValue: ""
             description: ""
+            isBusinessKey: true
             keyColumnType: None
             name: ID_Source
             nullable: true

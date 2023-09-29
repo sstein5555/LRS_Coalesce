@@ -123,6 +123,7 @@ steps:
               stepCounter: a8c9b0d1-88cf-47a4-800f-2121771f432b
             dataType: NUMBER
             description: ""
+            isBusinessKey: true
             name: PSTG_INVOICE_KEY
             nullable: true
             sourceColumnReferences:
@@ -845,6 +846,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: DETAILSOURCE
             nullable: true
             sourceColumnReferences:
@@ -1020,7 +1022,7 @@ steps:
                 FROM {{ ref('TOWER_COMBINED', 'ARDETAIL_COMBINED') }} "ARDETAIL_COMBINED"
                 RIGHT JOIN {{ ref('TOWER_COMBINED', 'INVOICE_COMBINED') }} "INVOICE_COMBINED"
                 ON "ARDETAIL_COMBINED"."INVOICEUID" = "INVOICE_COMBINED"."Unique ID"
-                where "DETAILSOURCE" = 1
+                where "DETAILSOURCE" = 1 and "SYSTEM_CURRENT_FLAG" = 'Y'
             name: Tower_Invoices
             noLinkRefs: []
       name: Tower_Invoices
