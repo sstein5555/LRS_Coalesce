@@ -818,6 +818,7 @@ steps:
             dataType: VARCHAR
             defaultValue: ""
             description: ""
+            isBusinessKey: true
             keyColumnType: None
             name: Vendor_Source
             nullable: true
@@ -839,6 +840,7 @@ steps:
             dataType: VARCHAR
             defaultValue: ""
             description: ""
+            isBusinessKey: true
             keyColumnType: None
             name: Source
             nullable: true
