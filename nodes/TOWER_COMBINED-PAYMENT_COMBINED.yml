@@ -39,6 +39,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Unique ID
             nullable: true
             sourceColumnReferences:
@@ -81,6 +82,7 @@ steps:
             description: Source ID for payment, could be a workorder ID
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Source ID
             nullable: true
             sourceColumnReferences:
@@ -137,6 +139,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Customer Number
             nullable: true
             sourceColumnReferences:
