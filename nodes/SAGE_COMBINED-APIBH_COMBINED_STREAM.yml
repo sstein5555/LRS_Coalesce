@@ -2958,6 +2958,27 @@ steps:
                   - columnCounter: acf27abc-cd0a-4829-968a-2f6e929a2215
                     stepCounter: 0c386ef4-771e-4124-99b9-306e53073a27
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 628ea342-47f5-4411-bf85-7e176bc56a1d
+              stepCounter: 287b0558-49fd-4317-99a5-819ef560f1ba
+            config: {}
+            dataType: Boolean
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2bb264ea-4406-4a6c-afde-811d36702c21
+                    stepCounter: 0c386ef4-771e-4124-99b9-306e53073a27
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
