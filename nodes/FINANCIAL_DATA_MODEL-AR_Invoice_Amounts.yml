@@ -263,6 +263,29 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 02dd5865-c418-4848-81e4-df6f94e2bae7
+              stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Active Sort
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER(PARTITION BY "DM01_COMBINED_STREAM"."METADATA$ROW_ID" ORDER BY "DM01_COMBINED_STREAM"."_FIVETRAN_SYNCED")
+              - columnReferences: []
+                transform: ""
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
@@ -293,7 +316,7 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('TOWER_COMBINED', 'INVOICE_COMBINED') }} "INVOICE_COMBINED"
-                where "SYSTEM_CURRENT_FLAG" = 'Y'
+                where "SYSTEM_CURRENT_FLAG" = 'Y' and "INVOICE_COMBINED"."Amount"<>0
             name: Invoice_Combined_Tower
             noLinkRefs: []
       name: AR_Invoice_Amounts

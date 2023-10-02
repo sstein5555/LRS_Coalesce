@@ -4,13 +4,7 @@ steps:
       config:
         insertStrategy: INSERT
         postSQL: ""
-        preSQL: |
-          SELECT * FROM {{ ref('TRUX_AL_COMP_RAW', 'CDC_DM01') }} "CDC_DM01"
-          WHERE "CDC_DM01"."_FIVETRAN_SYNCED" >= (
-              SELECT CAST(MAX(SUBSTR( _FIVETRAN_SYNCED, 1, 16)) AS DATE) AS LATEST_DATE
-              FROM {{ ref('TRUX_AL_COMP_RAW', 'CDC_DM01') }} "CDC_DM01"
-              WHERE METADATA$ACTION = 'INSERT'
-          )
+        preSQL: ""
         storageLocationSearchText: TRUX_
         streamSelect: false
         truncateBefore: false
@@ -258,11 +252,7 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('TRUX_AL_COMP_RAW', 'CDC_DM01') }} "CDC_DM01"
-                WHERE "CDC_DM01"."_FIVETRAN_SYNCED" >= (
-                    SELECT CAST(MAX(SUBSTR( _FIVETRAN_SYNCED, 1, 16)) AS DATE) AS LATEST_DATE
-                    FROM {{ ref('TRUX_AL_COMP_RAW', 'CDC_DM01') }} "CDC_DM01"
-                    WHERE METADATA$ACTION = 'INSERT'
-                )
+                where "_FIVETRAN_DELETED" = FALSE
             name: DM01_COMBINED_STREAM
             noLinkRefs: []
       name: DM01_COMBINED_STREAM

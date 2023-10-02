@@ -302,7 +302,9 @@ steps:
               - locationName: TOWER_COMBINED
                 nodeName: PAYMENT_COMBINED
             join:
-              joinCondition: FROM {{ ref('TOWER_COMBINED', 'PAYMENT_COMBINED') }} "PAYMENT_COMBINED"
+              joinCondition: |-
+                FROM {{ ref('TOWER_COMBINED', 'PAYMENT_COMBINED') }} "PAYMENT_COMBINED"
+                where "PAYMENT_COMBINED"."SYSTEM_CURRENT_FLAG"='Y'
             name: Payment_COMBINED_TOWER
             noLinkRefs: []
       name: AR_Payment_Details
