@@ -509,8 +509,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3b218689-d951-4e14-9afe-22e3282982cc
-                    stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+                  - columnCounter: 021f6d86-c80a-4b29-9b85-f32c26f3bca3
+                    stepCounter: cd62b4e3-06b4-4cba-8f88-bcf5a192026c
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -530,8 +530,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: e4d2d89d-b198-4389-b796-208dc6bd6716
-                    stepCounter: 0a3426e9-de05-4197-9634-5ec4928f053d
+                  - columnCounter: 7ed18573-af12-4c79-8f4b-c21b7cb0e26c
+                    stepCounter: cd62b4e3-06b4-4cba-8f88-bcf5a192026c
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -539,7 +539,6 @@ steps:
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
-              ARDETAIL_COMBINED: 0a3426e9-de05-4197-9634-5ec4928f053d
               PAYMENT: c4f7ba07-d9fc-4326-82af-e609a77c9df2
             customSQL:
               customSQL: ""

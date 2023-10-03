@@ -30,7 +30,7 @@ steps:
               - columnReferences:
                   - columnCounter: 211aa298-7f67-4322-9609-72bcc084a9d4
                     stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
-                transform: ""
+                transform: rtrim("DM01_COMBINED_STREAM"."DM01_ID")
           - columnReference:
               columnCounter: 7c1c7b63-38e7-4986-93f0-c714b15a10ce
               stepCounter: 8e473efe-2de8-4255-bf7b-195f76a0318b
@@ -252,6 +252,27 @@ steps:
                   - columnCounter: "0"
                     stepCounter: "0"
                 transform: ROW_NUMBER() OVER(PARTITION BY "DM01_COMBINED_STREAM"."METADATA$ROW_ID" order by "DM01_COMBINED_STREAM"."_FIVETRAN_SYNCED")
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1f39a8b3-b424-44f6-902f-802379f20343
+              stepCounter: 8e473efe-2de8-4255-bf7b-195f76a0318b
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: METADATA$ACTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e0347d4f-d070-4ebb-a140-b3d990684239
+                    stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
+                transform: ""
             systemColumnType: None
             transform: ""
         cteString: ""
