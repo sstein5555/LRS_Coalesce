@@ -642,7 +642,7 @@ steps:
                 FROM {{ ref('SAGE_COMBINED', 'APIBH_COMBINED') }} "APIBH_COMBINED"
                 LEFT JOIN {{ ref('SAGE_COMBINED', 'APOBL_COMBINED') }} "APOBL_COMBINED"
                 ON "APIBH_COMBINED"."IDINVC" = "APOBL_COMBINED"."IDINVC" and "APIBH_COMBINED"."CNTBTCH" = "APOBL_COMBINED"."CNTBTCH" and "APIBH_COMBINED"."CNTITEM" = "APOBL_COMBINED"."CNTITEM"
-                where "APIBH_COMBINED"."ERRBATCH" = 0 and "APIBH_COMBINED"."_FIVETRAN_DELETED"=FALSE and "APIBH_COMBINED"."Active" = 1
+                where "APIBH_COMBINED"."ERRBATCH" = 0 and "APIBH_COMBINED"."_FIVETRAN_DELETED"=FALSE and "APIBH_COMBINED"."Active" = 1 and "APOBL_COMBINED"."Active"=1
             name: AP_Invoice_Header
             noLinkRefs: []
       name: AP_Invoice_Header

@@ -387,7 +387,9 @@ steps:
               - locationName: SAGE_COMBINED
                 nodeName: APOBP_COMBINED
             join:
-              joinCondition: FROM {{ ref('SAGE_COMBINED', 'APOBP_COMBINED') }} "APOBP_COMBINED"
+              joinCondition: |-
+                FROM {{ ref('SAGE_COMBINED', 'APOBP_COMBINED') }} "APOBP_COMBINED"
+                where "APOBP_COMBINED"."Active" = 1 and "APOBP_COMBINED"."METADATA$ACTION" = 'INSERT'
             name: AP_Payment_Detail
             noLinkRefs: []
       name: AP_Payment_Detail

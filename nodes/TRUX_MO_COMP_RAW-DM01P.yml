@@ -234,6 +234,21 @@ steps:
             nullable: true
             primaryKey: false
             uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ae32af63-43d4-42b1-92b1-92adad8cba1b
+              stepCounter: 74d94c5d-4c20-431b-b977-865fdff453c3
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: ADF_TIMESTAMP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
         join:
           joinCondition: FROM {{ ref('TRUX_MO_COMP_RAW', 'DM01P') }}
       name: DM01P

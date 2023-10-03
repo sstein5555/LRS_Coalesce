@@ -74,21 +74,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9dc0517f-0848-412d-a244-b40344d99d79
-              stepCounter: c3597db0-076f-45a1-b5e2-8f032f8cf4cd
-            config: {}
-            dataType: VARCHAR(70)
-            defaultValue: ""
-            description: ""
-            name: DM01P_REFN
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 8d9cd2e9-5c4c-41e9-8fca-763ecc807919
               stepCounter: c3597db0-076f-45a1-b5e2-8f032f8cf4cd
             config: {}
@@ -179,21 +164,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5578ed0c-7be1-4350-a0e8-569d4484c36c
-              stepCounter: c3597db0-076f-45a1-b5e2-8f032f8cf4cd
-            config: {}
-            dataType: VARCHAR(40)
-            defaultValue: ""
-            description: ""
-            name: DM01P_GLNU
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 57423f01-cfcf-41cc-ac97-fee5a6e6c9b8
               stepCounter: c3597db0-076f-45a1-b5e2-8f032f8cf4cd
             config: {}
@@ -231,6 +201,81 @@ steps:
             defaultValue: ""
             description: ""
             name: DM01P_GROUP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a2ed32f0-c2d7-48a1-9a98-819cae2bd3bc
+              stepCounter: c3597db0-076f-45a1-b5e2-8f032f8cf4cd
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: ADF_TIMESTAMP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 45dcf353-5e8d-45f5-b147-0118862a0d07
+              stepCounter: c3597db0-076f-45a1-b5e2-8f032f8cf4cd
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ca285859-830c-4b9e-9728-77442abd0897
+              stepCounter: c3597db0-076f-45a1-b5e2-8f032f8cf4cd
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9dc0517f-0848-412d-a244-b40344d99d79
+              stepCounter: c3597db0-076f-45a1-b5e2-8f032f8cf4cd
+            config: {}
+            dataType: VARCHAR(140)
+            defaultValue: ""
+            description: ""
+            name: DM01P_REFN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5578ed0c-7be1-4350-a0e8-569d4484c36c
+              stepCounter: c3597db0-076f-45a1-b5e2-8f032f8cf4cd
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: DM01P_GLNU
             nullable: true
             primaryKey: false
             uniqueKey: false
