@@ -1078,6 +1078,7 @@ steps:
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
+              ARDETAIL_COMBINED: cd62b4e3-06b4-4cba-8f88-bcf5a192026c
               INVOICE_COMBINED: 106c0503-bc82-4d45-940b-e5c0faa31a50
             customSQL:
               customSQL: ""
@@ -1091,7 +1092,7 @@ steps:
                 FROM {{ ref('TOWER_COMBINED', 'INVOICE_COMBINED') }} "INVOICE_COMBINED"
                 LEFT JOIN {{ ref('TOWER_COMBINED', 'ARDETAIL_COMBINED') }} "ARDETAIL_COMBINED"
                 ON "INVOICE_COMBINED"."Unique ID" = "ARDETAIL_COMBINED"."INVOICEUID"
-                where "SYSTEM_CURRENT_FLAG" = 'Y'
+                where "INVOICE_COMBINED"."SYSTEM_CURRENT_FLAG" = 'Y' and "ARDETAIL_COMBINED"."SYSTEM_CURRENT_FLAG"='Y'
             name: Tower_Invoices
             noLinkRefs: []
       name: Tower_Invoices
