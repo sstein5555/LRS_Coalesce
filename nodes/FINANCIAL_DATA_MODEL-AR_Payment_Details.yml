@@ -2,9 +2,11 @@ steps:
   AR_Payment_Details-b440fc4f-079f-4e49-96bf-221deac14011:
     operation:
       config:
+        insertStrategy: UNION
         postSQL: ""
         preSQL: ""
         testsEnabled: true
+        truncateBefore: true
       database: ""
       deployEnabled: true
       description: ""
@@ -195,50 +197,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5aa7a9ae-7d2f-4edb-83b9-b2ee037fc7de
-              stepCounter: b440fc4f-079f-4e49-96bf-221deac14011
-            config: {}
-            dataType: TIMESTAMP
-            defaultValue: ""
-            description: ""
-            hashColumns: []
-            isSystemCreateDate: true
-            name: SYSTEM_CREATE_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences: []
-                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-              - columnReferences:
-                  - columnCounter: 9e0c005d-310c-4ef1-bc01-b330efb3841c
-                    stepCounter: b5b7fd7c-731a-4285-bbf1-f0334a25ac82
-                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: d138165e-8366-4793-bac3-11c2d45c89b4
-              stepCounter: b440fc4f-079f-4e49-96bf-221deac14011
-            config: {}
-            dataType: TIMESTAMP
-            defaultValue: ""
-            description: ""
-            hashColumns: []
-            isSystemUpdateDate: true
-            name: SYSTEM_UPDATE_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences: []
-                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-              - columnReferences:
-                  - columnCounter: 6e4cdf06-71a2-4a8f-8b72-0d5006432c57
-                    stepCounter: b5b7fd7c-731a-4285-bbf1-f0334a25ac82
-                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 4c88547b-bcca-467c-a246-be621d5bc613
               stepCounter: b440fc4f-079f-4e49-96bf-221deac14011
             config: {}
@@ -310,6 +268,6 @@ steps:
       name: AR_Payment_Details
       overrideSQL: false
       schema: ""
-      sqlType: persistentStage
+      sqlType: Stage
       type: sql
     stepCounter: b440fc4f-079f-4e49-96bf-221deac14011

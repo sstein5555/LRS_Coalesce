@@ -150,7 +150,7 @@ steps:
           - columnReference:
               columnCounter: bfb2105c-fd1e-47b9-a178-0ae6e871c039
               stepCounter: b5b7fd7c-731a-4285-bbf1-f0334a25ac82
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: Needs to be included from TRUX too
             hashColumns: []
             hashDetails: null

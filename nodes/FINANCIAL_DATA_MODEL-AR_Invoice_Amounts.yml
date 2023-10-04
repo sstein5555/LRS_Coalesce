@@ -2,9 +2,11 @@ steps:
   AR_Invoice_Amounts-6cbdcc75-9616-48ec-95e9-b79240d9b295:
     operation:
       config:
+        insertStrategy: UNION
         postSQL: ""
         preSQL: ""
         testsEnabled: true
+        truncateBefore: true
       database: ""
       deployEnabled: true
       description: ""
@@ -300,6 +302,6 @@ steps:
       name: AR_Invoice_Amounts
       overrideSQL: false
       schema: ""
-      sqlType: persistentStage
+      sqlType: Stage
       type: sql
     stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
