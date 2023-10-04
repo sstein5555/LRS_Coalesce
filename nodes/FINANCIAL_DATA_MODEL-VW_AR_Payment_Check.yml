@@ -76,7 +76,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: COUNT(*)
+                transform: COUNT("AR_Payment_Details"."Link_Source")
             systemColumnType: None
             transform: ""
         cteString: ""

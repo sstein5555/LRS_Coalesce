@@ -1,5 +1,5 @@
 steps:
-  VW_INVOICE_AMOUNTS-f2727612-9da4-42ad-b163-1913229a4970:
+  VW_AR_INVOICE_AMOUNTS-f2727612-9da4-42ad-b163-1913229a4970:
     operation:
       config:
         postSQL: ""
@@ -220,10 +220,10 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('FINANCIAL_DATA_MODEL', 'vw_stg_Invoice_amounts') }} "vw_stg_Invoice_amounts"
-                where "Payment Flag" = 1
-            name: VW_INVOICE_AMOUNTS
+                where "vw_stg_Invoice_amounts"."Payment Flag" = 1
+            name: VW_AR_INVOICE_AMOUNTS
             noLinkRefs: []
-      name: VW_INVOICE_AMOUNTS
+      name: VW_AR_INVOICE_AMOUNTS
       overrideSQL: false
       schema: ""
       sqlType: Fact
