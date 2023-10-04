@@ -251,7 +251,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: ROW_NUMBER() OVER(PARTITION BY "DM01_COMBINED_STREAM"."METADATA$ROW_ID" order by "DM01_COMBINED_STREAM"."_FIVETRAN_SYNCED")
+                transform: ROW_NUMBER() OVER(PARTITION BY "DM01_COMBINED_STREAM"."METADATA$ROW_ID" order by "DM01_COMBINED_STREAM"."_FIVETRAN_SYNCED" desc)
             systemColumnType: None
             transform: ""
           - acceptedValues:

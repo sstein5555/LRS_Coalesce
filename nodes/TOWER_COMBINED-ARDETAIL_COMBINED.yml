@@ -39,6 +39,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: ARDETAILUID
             nullable: true
             sourceColumnReferences:
@@ -53,6 +54,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: SOURCEUID
             nullable: true
             sourceColumnReferences:

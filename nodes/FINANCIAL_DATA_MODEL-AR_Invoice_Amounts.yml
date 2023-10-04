@@ -283,7 +283,7 @@ steps:
                 LEFT JOIN {{ ref('MASTER_DATA_CLEAN', 'CUSTOMER_MASTER') }} "CUSTOMER_MASTER"
                 ON "DM01_COMBINED"."DM01_CUST" = "CUSTOMER_MASTER"."Customer Number"
                 AND "DM01_COMBINED"."SOURCE" = "CUSTOMER_MASTER"."SOURCE_NEW"
-                where "DM01_COMBINED"."Sort" =1 AND "DM01_COMBINED"."_FIVETRAN_DELETED"=FALSE
+                where "DM01_COMBINED"."Sort" =1 AND "DM01_COMBINED"."_FIVETRAN_DELETED"=FALSE and "DM01_COMBINED"."METADATA$ACTION" ='INSERT'
             name: DM01_COMBINED_TRUX
             noLinkRefs: []
           - aliases:
