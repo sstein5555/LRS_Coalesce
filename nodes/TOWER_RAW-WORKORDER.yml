@@ -74,21 +74,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: de19b6d9-fa1c-4721-a053-d8ebc314079e
-              stepCounter: fb8c3767-5063-4a02-b429-4240c37569cb
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: CODREQUIRED
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 3f788344-655c-410f-98fd-f118384c03b1
               stepCounter: fb8c3767-5063-4a02-b429-4240c37569cb
             config: {}
@@ -111,21 +96,6 @@ steps:
             defaultValue: ""
             description: ""
             name: INVOICEMESSAGE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: fd26e757-fc28-476a-bd41-92cecba4ffae
-              stepCounter: fb8c3767-5063-4a02-b429-4240c37569cb
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: PRINTED
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -171,21 +141,6 @@ steps:
             defaultValue: ""
             description: ""
             name: DESTINATION
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 3c5c0cd7-4a60-4cba-b2e5-d26318803791
-              stepCounter: fb8c3767-5063-4a02-b429-4240c37569cb
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: SERVICEQUANTITY
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -261,6 +216,51 @@ steps:
             defaultValue: ""
             description: ""
             name: ISNOCHARGEPICKUP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: de19b6d9-fa1c-4721-a053-d8ebc314079e
+              stepCounter: fb8c3767-5063-4a02-b429-4240c37569cb
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: CODREQUIRED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fd26e757-fc28-476a-bd41-92cecba4ffae
+              stepCounter: fb8c3767-5063-4a02-b429-4240c37569cb
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: PRINTED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3c5c0cd7-4a60-4cba-b2e5-d26318803791
+              stepCounter: fb8c3767-5063-4a02-b429-4240c37569cb
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: SERVICEQUANTITY
             nullable: true
             primaryKey: false
             uniqueKey: false

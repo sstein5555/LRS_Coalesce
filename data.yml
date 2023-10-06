@@ -279,7 +279,7 @@ locations:
       "2":
         database: LRS_RAW
         schema: TRX_XI_DBO
-  VEN_RAW:
+  VENA_RAW:
     mappingDefinitions:
       "2":
         database: LRS_RAW

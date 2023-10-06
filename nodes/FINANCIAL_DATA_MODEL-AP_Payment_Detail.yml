@@ -99,7 +99,7 @@ steps:
               - columnReferences:
                   - columnCounter: 2ae235e3-64a2-45a6-ace1-5431800efbcc
                     stepCounter: 1fd007ac-065a-4d6f-b9b7-afc4ec4da489
-                transform: CASE WHEN left("APOBP_COMBINED"."IDINVC",2)='PY' THEN rtrim("APOBP_COMBINED"."IDMEMOXREF") else rtrim("APOBP_COMBINED"."IDINVC") END
+                transform: rtrim("APOBP_COMBINED"."IDINVC")
           - columnReference:
               columnCounter: 989706cc-3442-4671-835e-025c604c233e
               stepCounter: 96af660a-eea8-41f8-81c6-0abcead2ac26
@@ -199,7 +199,7 @@ steps:
               - columnReferences:
                   - columnCounter: d3f6053a-6e4b-4f02-8f76-3c606ee6b754
                     stepCounter: 1fd007ac-065a-4d6f-b9b7-afc4ec4da489
-                transform: CASE WHEN left("APOBP_COMBINED"."IDINVC",2)='PY' then RTRIM("APOBP_COMBINED"."IDINVC") else rtrim("APOBP_COMBINED"."IDMEMOXREF") END
+                transform: rtrim("APOBP_COMBINED"."IDMEMOXREF")
           - columnReference:
               columnCounter: 3ba14de7-8ecb-4588-b21f-4ba6307d72ba
               stepCounter: 96af660a-eea8-41f8-81c6-0abcead2ac26
@@ -373,7 +373,70 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: rtrim("APOBP_COMBINED"."IDVEND")||CASE WHEN left("APOBP_COMBINED"."IDINVC",2)='PY' THEN rtrim("APOBP_COMBINED"."IDMEMOXREF") else rtrim("APOBP_COMBINED"."IDINVC") END||"APOBP_COMBINED"."SOURCE"
+                transform: rtrim("APOBP_COMBINED"."IDVEND")||rtrim("APOBP_COMBINED"."IDINVC")||"APOBP_COMBINED"."SOURCE"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7e91ece8-fd9e-4131-a0cc-64187e1135a9
+              stepCounter: 96af660a-eea8-41f8-81c6-0abcead2ac26
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Transaction Type Description
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE when "APOBP_COMBINED"."TRXTYPE" = '58' THEN 'Prepayment - Applied' when "APOBP_COMBINED"."TRXTYPE" = '59' then 'Prepayment - Reversed' when "APOBP_COMBINED"."TRXTYPE" = '51' then 'Payment - Posted' when "APOBP_COMBINED"."TRXTYPE" = '52' then 'Payment - Applied' when "APOBP_COMBINED"."TRXTYPE" = '53' then 'Payment - Reversed' when "APOBP_COMBINED"."TRXTYPE" = '61' then 'Discount - Posted' when "APOBP_COMBINED"."TRXTYPE" = '63' then 'Discount - Reversed' when "APOBP_COMBINED"."TRXTYPE" = '81' then 'Adjustment - Posted' when "APOBP_COMBINED"."TRXTYPE" = '83' then 'Adjustment - Reversed' when "APOBP_COMBINED"."TRXTYPE" = '41' then 'Debit Note Applied To' when "APOBP_COMBINED"."TRXTYPE" = '42' then 'Applied Debit Note' when "APOBP_COMBINED"."TRXTYPE" = '43' then 'Credit Note Applied to' when "APOBP_COMBINED"."TRXTYPE" = '44' then 'Applied Credit Note' when "APOBP_COMBINED"."TRXTYPE" = '94' then 'Payment - Invoice Reversed' else 'Other' end
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7fac7b58-a030-4cd5-a524-3c38dd00528e
+              stepCounter: 96af660a-eea8-41f8-81c6-0abcead2ac26
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Document Type Description
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "APOBP_COMBINED"."TRANSTYPE" = '10' then 'Prepayment' when "APOBP_COMBINED"."TRANSTYPE" ='11' then 'Payment' when "APOBP_COMBINED"."TRANSTYPE" = '12' then 'Discount' when "APOBP_COMBINED"."TRANSTYPE" = '14' then 'Adjustment' when "APOBP_COMBINED"."TRANSTYPE" ='6' then 'Debit Note Applied To' when "APOBP_COMBINED"."TRANSTYPE" = '7' then 'Applied Debit Note' when "APOBP_COMBINED"."TRANSTYPE"  = '8' then 'Credit Note Applied To' when "APOBP_COMBINED"."TRANSTYPE" = '9' then 'Applied Credit Note' Else 'Other' end
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 33ab5a4f-cc5c-402a-b33f-e5b5eff6acdd
+              stepCounter: 96af660a-eea8-41f8-81c6-0abcead2ac26
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Payment Flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN left("APOBP_COMBINED"."IDINVC",2) = 'PY' then 'Payment ID' else 'Invoice ID' END
             systemColumnType: None
             transform: ""
         cteString: ""

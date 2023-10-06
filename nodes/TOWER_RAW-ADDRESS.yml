@@ -74,21 +74,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b04eb798-c08c-4059-803f-231e86173f0a
-              stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: STREETNBRVAL
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 45c1f4b5-b6f9-4a7b-9e43-504129c5704f
               stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
             config: {}
@@ -284,36 +269,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: cea67a73-b44f-4c69-a930-2bf78aec152f
-              stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: LATITUDE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 85f7c2f5-ff01-4f78-a477-49ba56c2533b
-              stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: LONGITUDE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 11c110bb-b754-4ee0-96c7-15173040c5c2
               stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
             config: {}
@@ -321,51 +276,6 @@ steps:
             defaultValue: ""
             description: ""
             name: MAPGRID
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: fa44935f-eed6-4751-85d4-10748affbfd6
-              stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: VALIDATED
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 0e033cff-fa73-4e28-889d-0feb42e5ffeb
-              stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: MANUALLOCATION
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: efceaf1e-dc2a-4d1c-b189-5a21c83addf3
-              stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: VALIDATIONSTATUS
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -434,10 +344,100 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
+              columnCounter: b04eb798-c08c-4059-803f-231e86173f0a
+              stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: STREETNBRVAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cea67a73-b44f-4c69-a930-2bf78aec152f
+              stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: LATITUDE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 85f7c2f5-ff01-4f78-a477-49ba56c2533b
+              stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: LONGITUDE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fa44935f-eed6-4751-85d4-10748affbfd6
+              stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: VALIDATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0e033cff-fa73-4e28-889d-0feb42e5ffeb
+              stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: MANUALLOCATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: efceaf1e-dc2a-4d1c-b189-5a21c83addf3
+              stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: VALIDATIONSTATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
               columnCounter: 656724fb-6709-4751-93c3-ee61bd099f02
               stepCounter: 53c94106-a458-48cb-83ba-32e54b63230b
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: GEOCODETYPE

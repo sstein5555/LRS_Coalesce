@@ -104,36 +104,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d7a05e37-8e58-4354-8352-0920b817928a
-              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: DISPLAYONINVOICE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 01f584f8-e1cf-4b9a-ab73-e784e859bf98
-              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: ALLOWMODIFICATION
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: da2dea76-ff34-4043-901b-d230abb9f520
               stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
             config: {}
@@ -141,21 +111,6 @@ steps:
             defaultValue: ""
             description: ""
             name: DESCRIPTION
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: d020bfe7-865d-4391-b565-1984e0846d3d
-              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: STATUS
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -261,66 +216,6 @@ steps:
             defaultValue: ""
             description: ""
             name: ROUTE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 06f068ce-6b9e-4ebb-bcf0-2de417ef39a5
-              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: CHARGESOURCE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 66c47986-c2e2-4894-81c0-57cfc0da1590
-              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: LASTENTERED
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 0128d09b-6312-4b08-9b95-20d3af8fbb9b
-              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: COLLECTIONSNOTIFIED
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 507c0ae9-ba55-4238-a52c-8f7c1bc4b118
-              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: BADDEBTRECOVERY
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -531,6 +426,111 @@ steps:
             defaultValue: ""
             description: ""
             name: REVERSALREQUESTUSER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d7a05e37-8e58-4354-8352-0920b817928a
+              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: DISPLAYONINVOICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 01f584f8-e1cf-4b9a-ab73-e784e859bf98
+              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: ALLOWMODIFICATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d020bfe7-865d-4391-b565-1984e0846d3d
+              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 06f068ce-6b9e-4ebb-bcf0-2de417ef39a5
+              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: CHARGESOURCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 66c47986-c2e2-4894-81c0-57cfc0da1590
+              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: LASTENTERED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0128d09b-6312-4b08-9b95-20d3af8fbb9b
+              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: COLLECTIONSNOTIFIED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 507c0ae9-ba55-4238-a52c-8f7c1bc4b118
+              stepCounter: c8bcacf3-db48-4552-8cfb-7768285f828c
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: BADDEBTRECOVERY
             nullable: true
             primaryKey: false
             uniqueKey: false

@@ -74,21 +74,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: f9a2427c-5a19-425f-9206-d271dc4c22b8
-              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: CREDITTYPE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: cf93f18e-aa82-4b43-bef4-b424f250d7e7
               stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
             config: {}
@@ -119,36 +104,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 21e306eb-3855-43bc-898e-295ef93d15f7
-              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: DISPLAYONINVOICE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: abdd5fef-e012-4051-9f41-b34bac5439bc
-              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: ALLOWMODIFICATION
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 0379ed63-c3b9-4b2c-8ac9-225b2acb5107
               stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
             config: {}
@@ -156,21 +111,6 @@ steps:
             defaultValue: ""
             description: ""
             name: DESCRIPTION
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 12274bea-6ffb-42e7-accc-343956e72a0f
-              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: STATUS
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -254,36 +194,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 18928468-06a6-4a23-a3b2-5f69a98d389b
-              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: CREDITSOURCE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 8d2008f8-4a4c-4cc1-93c5-fc88b3c273e2
-              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: COLLECTIONSNOTIFIED
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 9a7cd59d-4742-47cf-a9e1-d7311e090212
               stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
             config: {}
@@ -291,21 +201,6 @@ steps:
             defaultValue: ""
             description: ""
             name: ROUTE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 17e374fb-aa24-4eae-bda1-874c24d0dd65
-              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: LASTENTERED
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -516,6 +411,111 @@ steps:
             defaultValue: ""
             description: ""
             name: APPROVALREQUESTUSER3
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f9a2427c-5a19-425f-9206-d271dc4c22b8
+              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: CREDITTYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 21e306eb-3855-43bc-898e-295ef93d15f7
+              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: DISPLAYONINVOICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: abdd5fef-e012-4051-9f41-b34bac5439bc
+              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: ALLOWMODIFICATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12274bea-6ffb-42e7-accc-343956e72a0f
+              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 18928468-06a6-4a23-a3b2-5f69a98d389b
+              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: CREDITSOURCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8d2008f8-4a4c-4cc1-93c5-fc88b3c273e2
+              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: COLLECTIONSNOTIFIED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 17e374fb-aa24-4eae-bda1-874c24d0dd65
+              stepCounter: 4e161b33-44c2-4dae-b235-152be4926ed5
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: LASTENTERED
             nullable: true
             primaryKey: false
             uniqueKey: false

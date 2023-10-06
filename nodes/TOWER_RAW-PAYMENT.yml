@@ -44,21 +44,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b905332f-c846-400d-a151-744e0be8ed65
-              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: BATCHSEQUENCE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: fcb2c970-a172-48c5-91b7-846c63c1d82b
               stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
             config: {}
@@ -81,21 +66,6 @@ steps:
             defaultValue: ""
             description: ""
             name: PAYMENTDATE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: cdb6583b-ef26-4e56-aa99-e8853c610705
-              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: STATUS
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -134,36 +104,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9d329c81-0850-4b23-afeb-427350db84bd
-              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: PAYMENTMETHOD
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 16ac4dc1-252d-48f2-8df8-5fca52d1f9cd
-              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: CREDITCARDTYPE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: e2875767-2d9c-4bdd-a5ed-e606f3dd061d
               stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
             config: {}
@@ -186,66 +126,6 @@ steps:
             defaultValue: ""
             description: ""
             name: PAYMENTIDNBR
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 4669d61b-acae-495a-aff2-3daa3d5b8d1c
-              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: AMOUNT
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 64d16f76-1301-4e11-83ba-46bfc962b22d
-              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: APPLICATIONMETHOD
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 886d2396-a2ef-43a9-a27b-db5c112555fc
-              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: REMOVECREDITHOLD
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 9cdd7578-c36f-480d-bb66-653bf28bfed5
-              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: CREDITAMOUNT
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -284,21 +164,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: acaae2d4-e8f2-4f02-89a1-d3bc8c53e6ed
-              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: CUSTOMERBALANCE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: b3f2ab6c-e2ac-47d1-b6d0-b73e2999e6fa
               stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
             config: {}
@@ -306,21 +171,6 @@ steps:
             defaultValue: ""
             description: ""
             name: BANKACCOUNTXREFUID
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: f19aa166-2265-450a-869c-1ef376b41092
-              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: COLLECTIONSNOTIFIED
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -381,6 +231,156 @@ steps:
             defaultValue: ""
             description: ""
             name: REVERSALREASONNOTE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b905332f-c846-400d-a151-744e0be8ed65
+              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: BATCHSEQUENCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cdb6583b-ef26-4e56-aa99-e8853c610705
+              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9d329c81-0850-4b23-afeb-427350db84bd
+              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: PAYMENTMETHOD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 16ac4dc1-252d-48f2-8df8-5fca52d1f9cd
+              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: CREDITCARDTYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4669d61b-acae-495a-aff2-3daa3d5b8d1c
+              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: AMOUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 64d16f76-1301-4e11-83ba-46bfc962b22d
+              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: APPLICATIONMETHOD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 886d2396-a2ef-43a9-a27b-db5c112555fc
+              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: REMOVECREDITHOLD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9cdd7578-c36f-480d-bb66-653bf28bfed5
+              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: CREDITAMOUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: acaae2d4-e8f2-4f02-89a1-d3bc8c53e6ed
+              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: CUSTOMERBALANCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f19aa166-2265-450a-869c-1ef376b41092
+              stepCounter: c4f7ba07-d9fc-4326-82af-e609a77c9df2
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: COLLECTIONSNOTIFIED
             nullable: true
             primaryKey: false
             uniqueKey: false
