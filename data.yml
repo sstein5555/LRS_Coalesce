@@ -27,7 +27,7 @@ locations:
   SAGE_COMBINED:
     mappingDefinitions:
       "2":
-        database: LRS_PRODUCTION
+        database: LRS_DEVELOPMENT
         schema: SAGE_COMBINED_RAW
   SG_BLDDAT:
     mappingDefinitions:
@@ -97,7 +97,7 @@ locations:
   TRUXCOMBINED_RAW:
     mappingDefinitions:
       "2":
-        database: LRS_PRODUCTION
+        database: LRS_DEVELOPMENT
         schema: TRUX_COMBINED_RAW
   TRUX_AL_COMP_RAW:
     mappingDefinitions:
