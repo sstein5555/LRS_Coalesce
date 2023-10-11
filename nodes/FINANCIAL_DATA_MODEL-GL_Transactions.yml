@@ -19,6 +19,7 @@ steps:
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             dataType: VARCHAR(45)
             description: ""
+            isBusinessKey: true
             name: ACCTID
             nullable: false
             sourceColumnReferences:
@@ -892,6 +893,7 @@ steps:
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             dataType: VARCHAR
             description: ""
+            isBusinessKey: true
             name: SOURCE
             nullable: true
             sourceColumnReferences:
@@ -1638,7 +1640,7 @@ steps:
                 ON "GLAMF_COMBINED"."ACCTGRPCOD"= "GLACGRP_COMBINED"."ACCTGRPCOD" AND "GLAMF_COMBINED"."SOURCE"= "GLACGRP_COMBINED"."SOURCE"
                 INNER JOIN {{ ref('SAGE_COMBINED', 'CSCOM_COMBINED') }} "CSCOM_COMBINED"
                 ON "GLPOST_COMBINED"."AUDTORG" = "CSCOM_COMBINED"."AUDTORG" AND "GLPOST_COMBINED"."SOURCE" = "CSCOM_COMBINED"."SOURCE"
-                WHERE CAST("GLPOST_COMBINED"."FISCALYR" AS INT) >= 2022
+                WHERE CAST("GLPOST_COMBINED"."FISCALYR" AS INT) >= 2022 and "GLPOST_COMBINED"."Sort" =1 AND "GLPOST_COMBINED"."_FIVETRAN_DELETED"=FALSE and "GLPOST_COMBINED"."METADATA$ACTION" ='INSERT'
             name: GL_Transactions
             noLinkRefs: []
       name: GL_Transactions

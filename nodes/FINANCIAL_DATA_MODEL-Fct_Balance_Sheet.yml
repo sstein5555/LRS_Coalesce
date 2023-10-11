@@ -21,6 +21,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Account Number
             nullable: false
             sourceColumnReferences:
@@ -49,6 +50,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Account Name
             nullable: true
             sourceColumnReferences:
@@ -889,6 +891,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: SOURCE
             nullable: true
             sourceColumnReferences:
