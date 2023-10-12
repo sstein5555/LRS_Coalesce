@@ -50,7 +50,6 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: Account Name
             nullable: true
             sourceColumnReferences:
@@ -65,6 +64,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Detail Count
             nullable: true
             sourceColumnReferences:
@@ -79,6 +79,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Fiscal Period
             nullable: false
             sourceColumnReferences:
@@ -93,6 +94,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Fiscal Year
             nullable: false
             sourceColumnReferences:
@@ -135,6 +137,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Posting Sequence Number
             nullable: true
             sourceColumnReferences:
@@ -471,6 +474,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Source Ledger Code
             nullable: true
             sourceColumnReferences:
@@ -485,6 +489,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Source Type Code
             nullable: true
             sourceColumnReferences:
@@ -527,6 +532,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: Source Currency Code
             nullable: true
             sourceColumnReferences:
@@ -1166,20 +1172,6 @@ steps:
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:
-              columnCounter: 86f324e8-bbb5-4965-82fc-6f9314cbe853
-              stepCounter: ad50121b-cd29-4ff6-b532-972885f8a276
-            dataType: BINARY(256)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Payments Acceptance Company
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 32bf7f5c-23c5-42ae-aa99-e1ccd9aa38d9
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-          - columnReference:
               columnCounter: a5313dff-c57e-4bc0-8c01-6d8fdc2c99d1
               stepCounter: ad50121b-cd29-4ff6-b532-972885f8a276
             dataType: NUMBER(38,0)
@@ -1247,20 +1239,6 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 3bbbb74e-83c3-478f-846b-ce4e837cd58a
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-          - columnReference:
-              columnCounter: 1bbfe8b4-818f-42b4-836a-f7e843d5b07e
-              stepCounter: ad50121b-cd29-4ff6-b532-972885f8a276
-            dataType: BINARY(512)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SFPAORG
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2612c670-a064-4386-b851-1deb8208106c
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:

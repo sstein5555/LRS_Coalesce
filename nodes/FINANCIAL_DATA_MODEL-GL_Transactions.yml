@@ -74,6 +74,7 @@ steps:
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             dataType: NUMBER(7,0)
             description: ""
+            isBusinessKey: true
             name: CNTDETAIL
             nullable: true
             sourceColumnReferences:
@@ -86,6 +87,7 @@ steps:
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             dataType: VARCHAR(2)
             description: ""
+            isBusinessKey: true
             name: FISCALPERD
             nullable: true
             sourceColumnReferences:
@@ -98,6 +100,7 @@ steps:
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             dataType: VARCHAR(4)
             description: ""
+            isBusinessKey: true
             name: FISCALYR
             nullable: true
             sourceColumnReferences:
@@ -143,6 +146,7 @@ steps:
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             dataType: NUMBER(7,0)
             description: ""
+            isBusinessKey: true
             name: POSTINGSEQ
             nullable: true
             sourceColumnReferences:
@@ -443,6 +447,7 @@ steps:
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             dataType: VARCHAR(3)
             description: ""
+            isBusinessKey: true
             name: SRCECURN
             nullable: true
             sourceColumnReferences:
@@ -455,6 +460,7 @@ steps:
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             dataType: VARCHAR(2)
             description: ""
+            isBusinessKey: true
             name: SRCELEDGER
             nullable: true
             sourceColumnReferences:
@@ -467,6 +473,7 @@ steps:
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             dataType: VARCHAR(2)
             description: ""
+            isBusinessKey: true
             name: SRCETYPE
             nullable: true
             sourceColumnReferences:
@@ -1205,18 +1212,6 @@ steps:
                     stepCounter: c1a0e120-a9df-4289-8e63-29d19f072eff
                 transform: ""
           - columnReference:
-              columnCounter: 32bf7f5c-23c5-42ae-aa99-e1ccd9aa38d9
-              stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-            dataType: BINARY(256)
-            description: ""
-            name: SFPACOMP
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 7db71642-cf48-44d8-aa65-6629e4ef4f18
-                    stepCounter: c1a0e120-a9df-4289-8e63-29d19f072eff
-                transform: ""
-          - columnReference:
               columnCounter: 0348bd8b-a3cd-4a18-8702-6c46196b1658
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             dataType: NUMBER(38,0)
@@ -1310,18 +1305,6 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 33fdc558-f044-4c24-872f-d0c2ae295741
-                    stepCounter: c1a0e120-a9df-4289-8e63-29d19f072eff
-                transform: ""
-          - columnReference:
-              columnCounter: 2612c670-a064-4386-b851-1deb8208106c
-              stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-            dataType: BINARY(512)
-            description: ""
-            name: SFPAORG
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: eacd1bb3-d9c4-435b-8dfc-2cd5e83dd5c0
                     stepCounter: c1a0e120-a9df-4289-8e63-29d19f072eff
                 transform: ""
           - columnReference:
@@ -1502,18 +1485,6 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 949a91cc-806e-4534-aed6-6831eff0190c
-                    stepCounter: c1a0e120-a9df-4289-8e63-29d19f072eff
-                transform: ""
-          - columnReference:
-              columnCounter: 144c39bd-2d85-4d6c-9799-32b29aeda8bc
-              stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-            dataType: BINARY(256)
-            description: ""
-            name: EMAILPSWD
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 9015c407-71cf-492e-9525-c4048a5ebc0f
                     stepCounter: c1a0e120-a9df-4289-8e63-29d19f072eff
                 transform: ""
           - columnReference:
