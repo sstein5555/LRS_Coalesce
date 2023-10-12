@@ -590,7 +590,7 @@ steps:
               columnCounter: 84395521-c967-4b45-82c2-29dc453d1a34
               stepCounter: a3896406-1f4e-4cd3-b272-68a164f19bf1
             config: {}
-            dataType: VARCHAR
+            dataType: NUMBER
             defaultValue: ""
             description: ""
             keyColumnType: None
@@ -622,6 +622,69 @@ steps:
                   - columnCounter: "0"
                     stepCounter: "0"
                 transform: rtrim("APIBH_COMBINED"."IDVEND")||rtrim("APIBH_COMBINED"."IDINVC")||"APIBH_COMBINED"."SOURCE"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8f3263bb-7751-4774-88be-945652f8579a
+              stepCounter: a3896406-1f4e-4cd3-b272-68a164f19bf1
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Transaction Type Description
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "APIBH_COMBINED"."IDTRX" = '12' then 'Invoice - Summary Entered' when "APIBH_COMBINED"."IDTRX" = '13' then 'Invoice - Recurring Charge' when "APIBH_COMBINED"."IDTRX" = '22' then 'Debit Note - Summary Entered' when "APIBH_COMBINED"."IDTRX" = '32' then 'Credit Note - Summary Entered' when "APIBH_COMBINED"."IDTRX" ='40' then 'Interest Charge' ELSE 'Other' End
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ed099d82-d6a2-452f-b16f-4123bb096a1e
+              stepCounter: a3896406-1f4e-4cd3-b272-68a164f19bf1
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Account Set
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 46ac4a09-e092-4d76-8d20-a98e402c70ba
+                    stepCounter: 1cfd027f-37d6-4424-85e9-d9bed1c967a9
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bbd54c24-1fcf-4d6c-a745-dc7a25a004b2
+              stepCounter: a3896406-1f4e-4cd3-b272-68a164f19bf1
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: APOBL Document Type Description
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "APOBL_COMBINED"."TXTTRXTYPE" = '1' then 'Invoice' when "APOBL_COMBINED"."TXTTRXTYPE" = '2' then 'Debit Note' when "APOBL_COMBINED"."TXTTRXTYPE" = '3' then 'Credit Note' when "APOBL_COMBINED"."TXTTRXTYPE" = '4' then 'Interest' when "APOBL_COMBINED"."TXTTRXTYPE" = '10' then 'Prepayment' when "APOBL_COMBINED"."TXTTRXTYPE" = '11' then 'Payment' else 'Other' End
             systemColumnType: None
             transform: ""
         cteString: ""

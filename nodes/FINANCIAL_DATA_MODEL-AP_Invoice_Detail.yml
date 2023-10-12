@@ -391,16 +391,87 @@ steps:
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2b279153-34e6-4ecc-b969-609bded2fd0f
+              stepCounter: 91acd8e4-4f17-43eb-a108-14026770d1fd
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: GL Account
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 41f8256c-a3d4-4c52-9c55-5828a1ff6967
+                    stepCounter: 6dcbae0c-0f82-402e-b01d-c1a60b1c342b
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 93b801c5-5e95-463e-87b0-673b051a5e95
+              stepCounter: 91acd8e4-4f17-43eb-a108-14026770d1fd
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Invoice Number
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b9f7d3fe-0419-4e96-bc33-59fd3703ce79
+                    stepCounter: 1cfd027f-37d6-4424-85e9-d9bed1c967a9
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d2bcc122-31f2-44da-a769-3a0cc0b6ef72
+              stepCounter: 91acd8e4-4f17-43eb-a108-14026770d1fd
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Invoice Number-Source
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "\"APIBH_COMBINED\".\"IDINVC\"||'_'||\"APIBD_COMBINED\".\"SOURCE\""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              APIBD_COMBINED: 6dcbae0c-0f82-402e-b01d-c1a60b1c342b
+              APIBH_COMBINED: 1cfd027f-37d6-4424-85e9-d9bed1c967a9
+            customSQL:
               customSQL: ""
             dependencies:
               - locationName: SAGE_COMBINED
                 nodeName: APIBD_COMBINED
+              - locationName: SAGE_COMBINED
+                nodeName: APIBH_COMBINED
             join:
-              joinCondition: FROM {{ ref('SAGE_COMBINED', 'APIBD_COMBINED') }} "APIBD_COMBINED"
+              joinCondition: |-
+                FROM {{ ref('SAGE_COMBINED', 'APIBD_COMBINED') }} "APIBD_COMBINED"
+                LEFT JOIN {{ ref('SAGE_COMBINED', 'APIBH_COMBINED') }} "APIBH_COMBINED"
+                ON "APIBD_COMBINED"."CNTBTCH" = "APIBH_COMBINED"."CNTBTCH" and "APIBD_COMBINED"."CNTITEM" = "APIBH_COMBINED"."CNTITEM" and "APIBD_COMBINED"."SOURCE" = "APIBH_COMBINED"."SOURCE"
             name: AP_Invoice_Detail
             noLinkRefs: []
       name: AP_Invoice_Detail

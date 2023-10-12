@@ -31,10 +31,6 @@ steps:
                   - columnCounter: 35566dc6-dda3-48ca-a2f6-c1c74b12254a
                     stepCounter: 72c275e5-48af-4bff-bc7f-5b0bccfbc514
                 transform: ""
-              - columnReferences:
-                  - columnCounter: 170ec3eb-562c-4f2c-beab-55b728d70cd6
-                    stepCounter: b5b7fd7c-731a-4285-bbf1-f0334a25ac82
-                transform: ""
           - columnReference:
               columnCounter: 6124fe49-29e5-42d3-b99c-32e4e0f6bb74
               stepCounter: b440fc4f-079f-4e49-96bf-221deac14011
@@ -50,10 +46,6 @@ steps:
                   - columnCounter: e81b7535-b778-4ec9-a0ac-788fe58b44ce
                     stepCounter: 72c275e5-48af-4bff-bc7f-5b0bccfbc514
                 transform: ""
-              - columnReferences:
-                  - columnCounter: 7f840487-e23a-4eb6-bb89-2ca02b68f468
-                    stepCounter: b5b7fd7c-731a-4285-bbf1-f0334a25ac82
-                transform: ""
           - columnReference:
               columnCounter: 89140966-dbd3-4e10-a71f-6e5110261a65
               stepCounter: b440fc4f-079f-4e49-96bf-221deac14011
@@ -68,8 +60,6 @@ steps:
                   - columnCounter: c6d65ebe-f1c6-4565-a0b8-278424c111ae
                     stepCounter: 72c275e5-48af-4bff-bc7f-5b0bccfbc514
                 transform: ""
-              - columnReferences: []
-                transform: "'P'"
           - columnReference:
               columnCounter: fbe18ab5-8dd8-49b6-a6aa-3d5af435c0be
               stepCounter: b440fc4f-079f-4e49-96bf-221deac14011
@@ -83,10 +73,6 @@ steps:
               - columnReferences:
                   - columnCounter: f5fb53c7-24fe-484a-864d-64e1e1429de7
                     stepCounter: 72c275e5-48af-4bff-bc7f-5b0bccfbc514
-                transform: ""
-              - columnReferences:
-                  - columnCounter: dfad5791-d8f9-4526-9717-4532738fc0ed
-                    stepCounter: b5b7fd7c-731a-4285-bbf1-f0334a25ac82
                 transform: ""
           - columnReference:
               columnCounter: e1afa3ed-dc59-467b-9031-bb8e7b7e0c35
@@ -102,10 +88,6 @@ steps:
                   - columnCounter: 09d05557-c0eb-42f7-b260-6791224f5c91
                     stepCounter: 72c275e5-48af-4bff-bc7f-5b0bccfbc514
                 transform: ""
-              - columnReferences:
-                  - columnCounter: 048d1e33-9e68-4101-a0c3-9998002abfdb
-                    stepCounter: b5b7fd7c-731a-4285-bbf1-f0334a25ac82
-                transform: ""
           - columnReference:
               columnCounter: ff96233a-18ac-4505-9874-bd8c4c18eab8
               stepCounter: b440fc4f-079f-4e49-96bf-221deac14011
@@ -119,8 +101,6 @@ steps:
               - columnReferences:
                   - columnCounter: 58d1e057-9295-4ba8-a7e8-fffa1d78d6fb
                     stepCounter: 72c275e5-48af-4bff-bc7f-5b0bccfbc514
-                transform: ""
-              - columnReferences: []
                 transform: ""
           - columnReference:
               columnCounter: 31ebb542-ad45-4b58-99c3-0fae0efb42fa
@@ -136,10 +116,6 @@ steps:
                   - columnCounter: cd5e96a3-fee1-44dc-b453-b6857c3700e5
                     stepCounter: 72c275e5-48af-4bff-bc7f-5b0bccfbc514
                 transform: ""
-              - columnReferences:
-                  - columnCounter: bd868778-0795-47df-8d71-d84100dcfbf4
-                    stepCounter: b5b7fd7c-731a-4285-bbf1-f0334a25ac82
-                transform: ""
           - columnReference:
               columnCounter: 0ccea02f-c6a7-436d-b305-89cfff25e8d1
               stepCounter: b440fc4f-079f-4e49-96bf-221deac14011
@@ -153,10 +129,6 @@ steps:
               - columnReferences:
                   - columnCounter: 082f8507-47df-4417-b332-dea913e34aa1
                     stepCounter: 72c275e5-48af-4bff-bc7f-5b0bccfbc514
-                transform: ""
-              - columnReferences:
-                  - columnCounter: 14b8683e-a70c-4ac5-8948-985e799e020b
-                    stepCounter: b5b7fd7c-731a-4285-bbf1-f0334a25ac82
                 transform: ""
           - columnReference:
               columnCounter: 990e7222-72ba-46fe-9324-d7070b2c649d
@@ -172,10 +144,6 @@ steps:
                   - columnCounter: 6faddb2d-98b4-4ed8-89e6-bc9bde41350a
                     stepCounter: 72c275e5-48af-4bff-bc7f-5b0bccfbc514
                 transform: ""
-              - columnReferences:
-                  - columnCounter: 78a7e490-f724-455c-95ab-ad0d0e70923e
-                    stepCounter: b5b7fd7c-731a-4285-bbf1-f0334a25ac82
-                transform: ""
           - columnReference:
               columnCounter: e8d9996c-bd50-44ab-9dd9-7851e4a95582
               stepCounter: b440fc4f-079f-4e49-96bf-221deac14011
@@ -190,8 +158,6 @@ steps:
                   - columnCounter: ad739087-52d8-4163-b6b9-c807e8ed4743
                     stepCounter: 72c275e5-48af-4bff-bc7f-5b0bccfbc514
                 transform: ""
-              - columnReferences: []
-                transform: "'TOWER'"
           - acceptedValues:
               strictMatch: true
               values: []
@@ -212,8 +178,6 @@ steps:
                   - columnCounter: "0"
                     stepCounter: "0"
                 transform: "\"DM01P_COMBINED\".\"DM01P_LINK\"||\"DM01P_COMBINED\".\"SOURCE\""
-              - columnReferences: []
-                transform: "\"PAYMENT_COMBINED\".\"Link to Invoice\""
             systemColumnType: None
             transform: ""
           - acceptedValues:
@@ -235,10 +199,6 @@ steps:
                   - columnCounter: d7832ba5-8bda-4e07-ab73-f3e885541973
                     stepCounter: 72c275e5-48af-4bff-bc7f-5b0bccfbc514
                 transform: ""
-              - columnReferences:
-                  - columnCounter: bfb2105c-fd1e-47b9-a178-0ae6e871c039
-                    stepCounter: b5b7fd7c-731a-4285-bbf1-f0334a25ac82
-                transform: ""
             systemColumnType: None
             transform: ""
         enabledColumnTestIDs: []
@@ -251,19 +211,6 @@ steps:
             join:
               joinCondition: FROM {{ ref('TRUXCOMBINED_RAW', 'DM01P_COMBINED') }} "DM01P_COMBINED"
             name: DM01p_COMBINED_TRUX
-            noLinkRefs: []
-          - aliases:
-              PAYMENT_COMBINED: b5b7fd7c-731a-4285-bbf1-f0334a25ac82
-            customSQL:
-              customSQL: ""
-            dependencies:
-              - locationName: TOWER_COMBINED
-                nodeName: PAYMENT_COMBINED
-            join:
-              joinCondition: |-
-                FROM {{ ref('TOWER_COMBINED', 'PAYMENT_COMBINED') }} "PAYMENT_COMBINED"
-                where "PAYMENT_COMBINED"."SYSTEM_CURRENT_FLAG"='Y'
-            name: Payment_COMBINED_TOWER
             noLinkRefs: []
       name: AR_Payment_Details
       overrideSQL: false
