@@ -110,7 +110,7 @@ steps:
           - columnReference:
               columnCounter: ad251460-54b0-4b2c-a4a8-2ed433f20390
               stepCounter: 926de0bb-edd5-4689-b171-81b4c6a87565
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -120,7 +120,7 @@ steps:
               - columnReferences:
                   - columnCounter: 1a017c67-0b03-4cfb-9218-21528a09f934
                     stepCounter: 6f531235-8623-4802-b122-469fc3588b72
-                transform: ""
+                transform: rtrim("INVOICE_COMBINED"."INVOICEID",'.00')
           - columnReference:
               columnCounter: 814bacc1-8a87-4bb4-9571-d769eeac7e44
               stepCounter: 926de0bb-edd5-4689-b171-81b4c6a87565

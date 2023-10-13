@@ -649,7 +649,9 @@ steps:
             name: SOURCE
             nullable: true
             sourceColumnReferences:
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 86784522-c4d0-482a-a257-16ffb4b2be86
+                    stepCounter: d5f1b179-6c29-4d3a-90e5-073d85804f92
                 transform: ""
           - acceptedValues:
               strictMatch: true
