@@ -220,7 +220,7 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('FINANCIAL_DATA_MODEL', 'vw_stg_Invoice_amounts') }} "vw_stg_Invoice_amounts"
-                where "vw_stg_Invoice_amounts"."Payment Flag" = 1
+                where "vw_stg_Invoice_amounts"."Payment Flag" = 1 and "SOURCE" <> 'TOWER'
             name: VW_AR_INVOICE_AMOUNTS
             noLinkRefs: []
       name: VW_AR_INVOICE_AMOUNTS

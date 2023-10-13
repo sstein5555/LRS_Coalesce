@@ -401,6 +401,31 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 769635a5-7661-40a0-85a4-fbf34cca755f
+              stepCounter: 5f0caff1-7f4e-4c9d-a9ea-32e79e04cbc4
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Payment Method
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: e0aac030-30af-487c-b772-cbdcb7cbc53c
+                    stepCounter: cb6c4838-0344-4d76-8e79-cb9520b893be
+                transform: ""
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:
