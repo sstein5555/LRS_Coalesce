@@ -21,7 +21,6 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: Account Number
             nullable: false
             sourceColumnReferences:
@@ -64,7 +63,6 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: Detail Count
             nullable: true
             sourceColumnReferences:
@@ -79,7 +77,6 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: Fiscal Period
             nullable: false
             sourceColumnReferences:
@@ -94,7 +91,6 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: Fiscal Year
             nullable: false
             sourceColumnReferences:
@@ -137,7 +133,6 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: Posting Sequence Number
             nullable: true
             sourceColumnReferences:
@@ -474,7 +469,6 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: Source Ledger Code
             nullable: true
             sourceColumnReferences:
@@ -489,7 +483,6 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: Source Type Code
             nullable: true
             sourceColumnReferences:
@@ -532,7 +525,6 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: Source Currency Code
             nullable: true
             sourceColumnReferences:
@@ -925,7 +917,6 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: SOURCE
             nullable: true
             sourceColumnReferences:
