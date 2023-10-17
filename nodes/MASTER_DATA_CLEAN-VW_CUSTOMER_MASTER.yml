@@ -727,7 +727,7 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: f38fb855-7f25-4851-98fb-95c2b3c4603a
+                  - columnCounter: 572eebbb-f136-453e-9032-c5b33c6e3adf
                     stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
                 transform: ""
           - columnReference:

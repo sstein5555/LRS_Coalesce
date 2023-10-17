@@ -1,0 +1,96 @@
+steps:
+  CUST_SITE_PAYMENT_TERMS-828f44ad-9ea8-4f17-8021-698a7dd934d1:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRUXCOMBINED_RAW
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b54f21b4-bc75-46d1-ba2e-30dea147f18f
+              stepCounter: 828f44ad-9ea8-4f17-8021-698a7dd934d1
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Site
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 91be9554-51f2-493a-9e11-d72295463676
+                    stepCounter: 83f237e0-2bb1-4230-bef1-d6b54576823f
+                transform: distinct "CP01_COMBINED"."CP01_SITE"
+          - columnReference:
+              columnCounter: 17e5ae1c-7507-457f-8471-193af742b00f
+              stepCounter: 828f44ad-9ea8-4f17-8021-698a7dd934d1
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Customer
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c7cf425f-6667-495d-b51b-aed4121159af
+                    stepCounter: 83f237e0-2bb1-4230-bef1-d6b54576823f
+                transform: ""
+          - columnReference:
+              columnCounter: 791c5c11-e0e2-4f15-9bb8-4884f440200d
+              stepCounter: 828f44ad-9ea8-4f17-8021-698a7dd934d1
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Payment Terms
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fec664e4-3042-4817-a97b-ff6c4cac7cda
+                    stepCounter: 83f237e0-2bb1-4230-bef1-d6b54576823f
+                transform: ""
+          - columnReference:
+              columnCounter: c5e323eb-b1f6-4cd0-b40c-1b62f73faa27
+              stepCounter: 828f44ad-9ea8-4f17-8021-698a7dd934d1
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 69355b57-209e-477f-999c-f142302970cd
+                    stepCounter: 83f237e0-2bb1-4230-bef1-d6b54576823f
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              CP01_COMBINED: 83f237e0-2bb1-4230-bef1-d6b54576823f
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: CP01_COMBINED
+            join:
+              joinCondition: |-
+                FROM {{ ref('TRUXCOMBINED_RAW', 'CP01_COMBINED') }} "CP01_COMBINED"
+                WHERE "CP01_COMBINED"."CP01_SITE" IS NOT NULL and "CP01_COMBINED"."CP01_PAYTERMS" IS NOT NULL
+            name: CUST_SITE_PAYMENT_TERMS
+            noLinkRefs: []
+      name: CUST_SITE_PAYMENT_TERMS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 828f44ad-9ea8-4f17-8021-698a7dd934d1

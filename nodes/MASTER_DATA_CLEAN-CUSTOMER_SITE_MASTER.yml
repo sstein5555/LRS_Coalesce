@@ -42,7 +42,6 @@ steps:
             hashColumns: []
             hashDetails: null
             isBusinessKey: true
-            isChangeTracking: true
             name: Customer Number
             nullable: true
             sourceColumnReferences:
@@ -62,7 +61,6 @@ steps:
             hashColumns: []
             hashDetails: null
             isBusinessKey: true
-            isChangeTracking: true
             name: Site Number
             nullable: true
             sourceColumnReferences:
@@ -856,7 +854,6 @@ steps:
             dataType: VARCHAR
             defaultValue: ""
             description: ""
-            isBusinessKey: true
             keyColumnType: None
             name: Customer_Site_Source
             nullable: true

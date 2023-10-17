@@ -423,6 +423,7 @@ steps:
             dataType: VARCHAR
             defaultValue: ""
             description: ""
+            isBusinessKey: true
             keyColumnType: None
             name: Invoice Number
             nullable: true
@@ -471,7 +472,7 @@ steps:
               joinCondition: |-
                 FROM {{ ref('SAGE_COMBINED', 'APIBD_COMBINED') }} "APIBD_COMBINED"
                 LEFT JOIN {{ ref('SAGE_COMBINED', 'APIBH_COMBINED') }} "APIBH_COMBINED"
-                ON "APIBD_COMBINED"."CNTBTCH" = "APIBH_COMBINED"."CNTBTCH" and "APIBD_COMBINED"."CNTITEM" = "APIBH_COMBINED"."CNTITEM" and "APIBD_COMBINED"."SOURCE" = "APIBH_COMBINED"."SOURCE"
+                ON "APIBD_COMBINED"."CNTBTCH" = "APIBH_COMBINED"."CNTBTCH" and "APIBD_COMBINED"."CNTITEM" = "APIBH_COMBINED"."CNTITEM" and "APIBD_COMBINED"."SOURCE" = "APIBH_COMBINED"."SOURCE" and "APIBH_COMBINED"."Active" ='1'
             name: AP_Invoice_Detail
             noLinkRefs: []
       name: AP_Invoice_Detail

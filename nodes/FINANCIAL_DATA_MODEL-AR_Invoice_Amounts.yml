@@ -237,7 +237,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: CASE WHEN "CUSTOMER_MASTER"."Initial Term" is null then DM01_COMBINED."DM01_DATE" else dateadd(day,CUSTOMER_MASTER."Initial Term",DM01_COMBINED."DM01_DATE") end
+                transform: "\"DM01_COMBINED\".\"DM01_DATE\""
               - columnReferences:
                   - columnCounter: 40667035-d9fe-4b6d-8297-34eb08255553
                     stepCounter: 926de0bb-edd5-4689-b171-81b4c6a87565
@@ -256,12 +256,12 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: Customer Term
+            name: Payment Term 1
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: d8fc5bf7-df15-42fe-8363-94cbe665d3e8
-                    stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
+                  - columnCounter: "0"
+                    stepCounter: "0"
                 transform: ""
               - columnReferences: []
                 transform: TO_VARCHAR(DATEDIFF(DAY,"STG_INVOICE_COMBINED"."Invoice Date","STG_INVOICE_COMBINED"."Due Date"))
@@ -270,21 +270,22 @@ steps:
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
-              CUSTOMER_MASTER: a83e2043-c50d-4bf2-8f19-a0858a24d969
+              CUSTOMER_SITE_MASTER: 56ae5e3c-c6cd-4eb5-a3ae-25d02a9ab031
               DM01_COMBINED: 8e473efe-2de8-4255-bf7b-195f76a0318b
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: MASTER_DATA_CLEAN
-                nodeName: CUSTOMER_MASTER
+                nodeName: CUSTOMER_SITE_MASTER
               - locationName: TRUXCOMBINED_RAW
                 nodeName: DM01_COMBINED
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'DM01_COMBINED') }} "DM01_COMBINED"
-                LEFT JOIN {{ ref('MASTER_DATA_CLEAN', 'CUSTOMER_MASTER') }} "CUSTOMER_MASTER"
-                ON "DM01_COMBINED"."DM01_CUST" = "CUSTOMER_MASTER"."Customer Number"
-                AND "DM01_COMBINED"."SOURCE" = "CUSTOMER_MASTER"."SOURCE_NEW"
+                LEFT JOIN {{ ref('MASTER_DATA_CLEAN', 'CUSTOMER_SITE_MASTER') }} "CUSTOMER_SITE_MASTER"
+                ON "DM01_COMBINED"."DM01_CUST" = "CUSTOMER_SITE_MASTER"."Customer Number"
+                AND "DM01_COMBINED"."DM01_SITE" = "CUSTOMER_SITE_MASTER"."Site Number"
+                AND "DM01_COMBINED"."SOURCE" = "CUSTOMER_SITE_MASTER"."SOURCE_DIM"
                 where "DM01_COMBINED"."Sort" =1 AND "DM01_COMBINED"."_FIVETRAN_DELETED"=FALSE and "DM01_COMBINED"."METADATA$ACTION" ='INSERT'
             name: DM01_COMBINED_TRUX
             noLinkRefs: []
