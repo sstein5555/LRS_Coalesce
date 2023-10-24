@@ -1,0 +1,250 @@
+steps:
+  MSLOOP_CM12-91cf4a75-5c91-40df-ad4b-636b733478f1:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        storageLocationSearchText: TRUX_
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRUXCOMBINED_RAW
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b38315ca-6664-4fd6-83b4-4ec433e559c1
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CM12_STAGED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e3062978-e151-433d-8181-281c2515bf83
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 212c9b6f-de92-4b9f-8ec1-f0bec5140830
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CM12_CODE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bb47df6e-1f8b-4742-87e9-1ac480e29df2
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 5f3f6a50-3216-453f-bb47-2f4a04dd2304
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CM12_TERM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8676d78c-4686-45b4-b1fe-64a4c3e02610
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 18fc6468-f74b-4144-b676-fbc82fe6e0e9
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CM12_UNIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 30a2377c-5fb2-43fd-a727-b1190ad62094
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: ef7690ad-e897-4a5e-aa6f-9ad5b0bb716d
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: NUMBER(18,3)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CM12_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73120750-460d-40f2-8c61-09b0c09397b4
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 3ba4e631-7864-427b-bcc9-1c89568751e9
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CM12_INVN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66e5280c-7d92-4d1f-8b04-a02e2a13ad90
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: d5d6f4d7-168f-453c-a4cd-95501d850249
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CM12_DEMC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 39716f36-fb38-4c64-9bfd-364232ec9211
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: cebf586a-8f22-4de7-b020-f22af97d88ec
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CM12_BININSTALL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 69e6db68-4706-4897-96d6-104789e306de
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 91ebb0d4-bc5b-4357-a1cf-2bfda33e3488
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: VARCHAR(80)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CM12_DESC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 244abff4-d7c3-4119-b0e0-85f72445e568
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 1acbb3de-3155-480e-b101-96dbe865dee6
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CM12_ACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 785d5361-61c1-41b2-acd9-5c5fe2ff4662
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 89767793-b533-4c47-96cc-3be74513c813
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CM12_FACT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 56800d79-759d-4bf9-8b0e-729aa0a38af2
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: adb0d275-d69b-4ece-990b-8fb12d4ba649
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CM12_ROUTABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6fc0a804-70b6-45d7-a60a-64da52b8421f
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 02b099fa-7dee-4075-8a94-577289cc9b39
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bf6d819d-d145-4194-86ff-30058964a516
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 13923e71-d3e3-42ac-9038-3162c1d19af3
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c88635e-57cc-45c2-b950-22fcd5cd7f47
+                    stepCounter: 12101149-c2d3-45f6-8725-6ee51fedcfb8
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3805e0a4-8a10-4144-ac1c-defa14ff417e
+              stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemSource: true
+            name: SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRUX_AL_COMP_RAW
+                nodeName: CM12
+            join:
+              joinCondition: FROM {{ ref('TRUX_AL_COMP_RAW', 'CM12') }} "CM12"
+            name: MSLOOP_CM12
+            noLinkRefs: []
+      name: MSLOOP_CM12
+      overrideSQL: false
+      schema: ""
+      sqlType: "4"
+      type: sql
+    stepCounter: 91cf4a75-5c91-40df-ad4b-636b733478f1

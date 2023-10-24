@@ -244,7 +244,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: cbb9126e-7455-407b-ab68-a05379ac2d22
+              columnCounter: 69b9e5e5-6fd3-4c53-b3fd-2ab90b3c18ae
               stepCounter: b440fc4f-079f-4e49-96bf-221deac14011
             config: {}
             dataType: VARCHAR
