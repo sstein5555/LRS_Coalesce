@@ -1,4 +1,4 @@
-name: Refresh Data
+name: Refresh Data in Development
 
 on:
   # Set a schedule using cron
