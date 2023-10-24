@@ -435,7 +435,7 @@ steps:
                 nodeName: STG_CHARGE_COMBINED
             join:
               joinCondition: FROM {{ ref('TOWER_COMBINED', 'STG_CHARGE_COMBINED') }} "STG_CHARGE_COMBINED"
-            name: STG_CHARGE_PAYMENT_COMBINED
+            name: STG_CHARGE_COMBINED
             noLinkRefs: []
           - aliases:
               STG_PAYMENT_COMBINED: cb6c4838-0344-4d76-8e79-cb9520b893be
