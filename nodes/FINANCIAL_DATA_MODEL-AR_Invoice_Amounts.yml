@@ -216,7 +216,7 @@ steps:
                     stepCounter: "0"
                 transform: "\"DM01_COMBINED\".\"DM01_ID\"||\"DM01_COMBINED\".\"SOURCE\""
               - columnReferences: []
-                transform: ""
+                transform: "\"STG_INVOICE_COMBINED\".\"Unique Invoice ID\"||\"STG_INVOICE_COMBINED\".\"Source\""
             systemColumnType: None
             transform: ""
           - acceptedValues:
