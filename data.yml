@@ -34,6 +34,56 @@ locations:
       "2":
         database: LRS_RAW
         schema: SG_BLDDAT_DBO
+  SG_CDC_BLDDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_BLDDAT
+  SG_CDC_ECODAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_ECODAT
+  SG_CDC_HRTDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_HRTDAT
+  SG_CDC_LAKDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LAKDAT
+  SG_CDC_LAKPDA:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LAKPDA
+  SG_CDC_LAKSDA:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LAKSDA
+  SG_CDC_LIADAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LIADAT
+  SG_CDC_LRSDCT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LRSDCT
+  SG_CDC_MANDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_MANDAT
+  SG_CDC_RAMDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_RAMDAT
   SG_ECODAT:
     mappingDefinitions:
       "2":
@@ -279,6 +329,211 @@ locations:
       "2":
         database: LRS_RAW
         schema: TRX_XI_DBO
+  TRX_CDC_AL:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_AL
+  TRX_CDC_AM:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_AM
+  TRX_CDC_AS:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_AS
+  TRX_CDC_AT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_AT
+  TRX_CDC_BC:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_BC
+  TRX_CDC_BH:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_BH
+  TRX_CDC_CD:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_CD
+  TRX_CDC_DC:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_DC
+  TRX_CDC_DF:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_DF
+  TRX_CDC_ES:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_ES
+  TRX_CDC_HA:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_HA
+  TRX_CDC_HR:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_HR
+  TRX_CDC_IC:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_IC
+  TRX_CDC_IP:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_IP
+  TRX_CDC_LR:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_LR
+  TRX_CDC_MD:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_MD
+  TRX_CDC_ME:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_ME
+  TRX_CDC_MF:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_MF
+  TRX_CDC_MH:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_MH
+  TRX_CDC_MM:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_MM
+  TRX_CDC_MN:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_MN
+  TRX_CDC_MO:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_MO
+  TRX_CDC_MP:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_MP
+  TRX_CDC_MW:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_MW
+  TRX_CDC_NI:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_NI
+  TRX_CDC_PS:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_PS
+  TRX_CDC_RT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_RT
+  TRX_CDC_SH:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_SH
+  TRX_CDC_SW:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_SW
+  TRX_CDC_TP:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_TP
+  TRX_CDC_UA:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_UA
+  TRX_CDC_UB:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_UB
+  TRX_CDC_UC:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_UC
+  TRX_CDC_V9:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_V9
+  TRX_CDC_VA:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_VA
+  TRX_CDC_VB:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_VB
+  TRX_CDC_VC:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_VC
+  TRX_CDC_VE:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_VE
+  TRX_CDC_VI:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_VI
+  TRX_CDC_WA:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_WA
+  TRX_CDC_XI:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: TRX_CDC_XI
   VENA_RAW:
     mappingDefinitions:
       "2":
