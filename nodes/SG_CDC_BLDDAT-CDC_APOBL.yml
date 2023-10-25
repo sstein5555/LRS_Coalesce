@@ -7,7 +7,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: SG_BLDDAT
+      locationName: SG_CDC_BLDDAT
       materializationType: table
       metadata:
         appliedNodeTests: []
