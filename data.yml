@@ -69,6 +69,11 @@ locations:
       "2":
         database: LRS_CDC_PROD
         schema: SG_CDC_LIADAT
+  SG_CDC_LINDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LINDAT
   SG_CDC_LRSDCT:
     mappingDefinitions:
       "2":

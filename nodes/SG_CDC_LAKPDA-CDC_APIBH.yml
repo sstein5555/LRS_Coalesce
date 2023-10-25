@@ -7,7 +7,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: SG_LAKPDA
+      locationName: SG_CDC_LAKPDA
       materializationType: table
       metadata:
         appliedNodeTests: []

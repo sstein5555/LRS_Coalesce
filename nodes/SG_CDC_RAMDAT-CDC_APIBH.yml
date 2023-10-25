@@ -7,7 +7,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: SG_RAMDAT
+      locationName: SG_CDC_RAMDAT
       materializationType: table
       metadata:
         appliedNodeTests: []

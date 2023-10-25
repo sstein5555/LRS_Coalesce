@@ -7,7 +7,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: SG_LIADAT
+      locationName: SG_CDC_LIADAT
       materializationType: table
       metadata:
         appliedNodeTests: []

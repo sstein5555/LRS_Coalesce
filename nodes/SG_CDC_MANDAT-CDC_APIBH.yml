@@ -7,7 +7,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: SG_MANDAT
+      locationName: SG_CDC_MANDAT
       materializationType: table
       metadata:
         appliedNodeTests: []
