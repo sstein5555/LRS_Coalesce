@@ -698,6 +698,27 @@ steps:
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 740fadda-3af9-4182-88c9-ba9ae3d4f08f
+              stepCounter: b115a4d7-fe98-4a7f-bf2a-2e233a3e9114
+            config: {}
+            dataType: Varchar
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Batch Entry Invoice Source
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "\"AP_Invoice_Header\".\"Batch Number\"||'_'||\"AP_Invoice_Header\".\"Entry Number\"||'_'||\"AP_Invoice_Header\".\"Invoice ID\"||'_'||\"AP_Invoice_Header\".\"SOURCE\""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
