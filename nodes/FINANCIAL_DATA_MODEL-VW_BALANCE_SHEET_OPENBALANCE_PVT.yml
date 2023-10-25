@@ -30,20 +30,23 @@ steps:
               - columnReferences: []
                 transform: ""
             transform: ""
-          - columnReference:
-              columnCounter: 35fcbb9a-c651-4d86-a629-843b3edbeb6f
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 99c6261b-c475-4a80-bf22-1f8e7051a509
               stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
-            dataType: VARCHAR(16777216)
+            config: {}
+            dataType: VARCHAR(45)
+            defaultValue: ""
             description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SOURCE
-            nullable: true
+            name: Account Number
+            nullable: false
             sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: ebc12d8a-6b53-4a2c-b818-d3eb89def2d4
-                    stepCounter: 60575ce5-d395-4889-95fc-dd8963ddd1d6
+              - columnReferences: []
                 transform: ""
+            transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
@@ -66,18 +69,32 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ed9ca685-f6f5-4e55-a183-1063d665a1ce
+              columnCounter: f5557d0e-25a1-448d-9bd7-a4122d4ffe14
               stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(6)
             defaultValue: ""
             description: ""
-            name: Period Month
+            name: AUDTORG
             nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
             transform: ""
+          - columnReference:
+              columnCounter: 35fcbb9a-c651-4d86-a629-843b3edbeb6f
+              stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ebc12d8a-6b53-4a2c-b818-d3eb89def2d4
+                    stepCounter: 60575ce5-d395-4889-95fc-dd8963ddd1d6
+                transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
@@ -100,14 +117,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 99c6261b-c475-4a80-bf22-1f8e7051a509
+              columnCounter: 9b0f3a3a-259d-4b75-9095-736383dda385
               stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
             config: {}
-            dataType: VARCHAR(45)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Account Number
-            nullable: false
+            name: Fiscal Month
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
@@ -134,6 +151,23 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
+              columnCounter: e30fc926-469b-4612-a10f-de146a91fd80
+              stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: PERIODENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
               columnCounter: 142ca2dc-5645-4e55-82cc-70bb29a9943e
               stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
             config: {}
@@ -150,99 +184,42 @@ steps:
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:
-              customSQL: |
+              customSQL: |-
                 {{ stage('Override Create SQL') }}
-                	CREATE OR REPLACE VIEW {{ ref('FINANCIAL_DATA_MODEL', 'VW_BALANCE_SHEET_OPENBALANCE_PVT')}} AS (
-                WITH SNAPSHOTOPENBAL AS (
+                	CREATE OR REPLACE VIEW {{ ref('FINANCIAL_DATA_MODEL', 'VW_BALANCE_SHEET_OPENBALANCE_PVT')}} AS 
+                    (
                 SELECT 
-                AUDTORG AS "Database ID",
-                SOURCE,
+                LTRIM(RTRIM(AUDTORG)) AS "Database ID",
+                LTRIM(RTRIM(ACCTID)) AS "Account Number",
                 FSCSYR as "Fiscal Year",
-                CASE "Fiscal Period"
-                    WHEN 'OPENBAL' THEN '00'
-                    WHEN 'NETPERD1' THEN '01'
-                    WHEN 'NETPERD2' THEN '02'
-                    WHEN 'NETPERD3' THEN '03'
-                    WHEN 'NETPERD4' THEN '04'
-                    WHEN 'NETPERD5' THEN '05'
-                    WHEN 'NETPERD6' THEN '06'
-                    WHEN 'NETPERD7' THEN '07'
-                    WHEN 'NETPERD8' THEN '08'
-                    WHEN 'NETPERD9' THEN '09'
-                    WHEN 'NETPERD10' THEN '10'
-                    WHEN 'NETPERD11' THEN '11'
-                    WHEN 'NETPERD12' THEN '12'
-                    WHEN 'NETPERD13' THEN '13'
-                    WHEN 'NETPERD14' THEN '14'
+                AUDTORG,
+                SOURCE,
+                --CONCAT(ACCTID, CONCAT(' - ', ACCTDESC)) AS "Account Name",
+                CASE "Fiscal Month"
+                    WHEN 'OPENBAL' THEN 'OPENBALANCE'
                 ELSE NULL
                 END AS "Fiscal Period",
-                CASE "Period Month"
+                CASE "Fiscal Month"
                     WHEN 'OPENBAL' THEN 'OPENBALANCE'
-                    WHEN 'NETPERD1' THEN 'JANUARY'
-                    WHEN 'NETPERD2' THEN 'FEBRUARY'
-                    WHEN 'NETPERD3' THEN 'MARCH'
-                    WHEN 'NETPERD4' THEN 'ARPIL'
-                    WHEN 'NETPERD5' THEN 'MAY'
-                    WHEN 'NETPERD6' THEN 'JUNE'
-                    WHEN 'NETPERD7' THEN 'JULY'
-                    WHEN 'NETPERD8' THEN 'AUGUST'
-                    WHEN 'NETPERD9' THEN 'SEPTEMBER'
-                    WHEN 'NETPERD10' THEN 'OCTOBER'
-                    WHEN 'NETPERD11' THEN 'NOVEMBER'
-                    WHEN 'NETPERD12' THEN 'DECEMBER'
-                    WHEN 'NETPERD13' THEN 'PERIOD13'
-                    WHEN 'NETPERD14' THEN 'PERIOD14'
                 ELSE NULL
-                END AS "Period Month",
-                ACCTID AS "Account Number",
+                END AS "Fiscal Month",
                 CAST(
                 CASE 
-                WHEN "Fiscal Period" NOT IN (00, 13, 14) THEN CONCAT("Fiscal Year", '-',"Fiscal Period", '-','01')
-                    ELSE '1901-01-01' END AS DATE) AS DATE,
+                WHEN "Fiscal Period" = 'OPENBALANCE' THEN CONCAT("Fiscal Year", '-','01', '-','01')
+                WHEN "Fiscal Period" NOT IN ( 13, 14) THEN CONCAT("Fiscal Year", '-',"Fiscal Period", '-','01')
+                    ELSE NULL END AS DATE) AS DATE,
+                LAST_DAY(DATE) AS PERIODENDDATE,
                 PERIODBALANCE
                 FROM 
-                 {{ ref('SAGE_COMBINED', 'GLAFS_COMBINED') }}
-                    UNPIVOT (PERIODBALANCE FOR "Fiscal Period" IN (
-                OPENBAL,
-                NETPERD1,
-                NETPERD2,
-                NETPERD3,
-                NETPERD4,
-                NETPERD5,
-                NETPERD6,
-                NETPERD7,
-                NETPERD8,
-                NETPERD9,
-                NETPERD10,
-                NETPERD11,
-                NETPERD12,
-                NETPERD13,
-                NETPERD14
+                 {{ ref('SAGE_COMBINED', 'GLAFS_COMBINED') }} GLAF
+                    -- INNER JOIN "SAGE_COMBINED"."GLAMF_COMBINED" GLAMF
+                   -- ON GLAF.ACCTID = GLAMF.ACCTID AND GLAF.SOURCE = GLAMF.SOURCE
+                    UNPIVOT (PERIODBALANCE FOR "Fiscal Month" IN (
+                OPENBAL
                 ))
-                ORDER BY "Fiscal Period" asc
-                )
-                SELECT 
-                	"Database ID",
-                	S.SOURCE,
-                	"Fiscal Year",
-                	"Fiscal Period",
-                	"Account Number",
-                    CONCAT (ACCTFMTTD, CONCAT(' - '), ACCTDESC) AS "Account Name",
-                    ACCTGRPSCD AS "Account Group Code",
-                    ACCTDESC AS "Account Group Description",
-                    '' AS "Journal Detail Description",
-                    '' AS "Journal Detail Reference",
-                	DATE,
-                    LEGALNAME AS "Legal Name",
-                    CAST(
-                    LAST_DAY(DATE) AS DATE) AS PERIODENDDATE,
-                	PERIODBALANCE
-                 FROM SNAPSHOTOPENBAL S
-                    INNER JOIN {{ ref('SAGE_COMBINED', 'GLAMF_COMBINED') }} A
-                    ON A.ACCTID = S."Account Number"
-                    INNER JOIN  {{ ref('SAGE_COMBINED', 'CSCOM_COMBINED') }} C
-                    ON C.AUDTORG = S."Database ID"
-                    )
+                WHERE FSCSYR >=2022
+                ORDER BY "Fiscal Period" asc)
+                    
             dependencies:
               - locationName: SAGE_COMBINED
                 nodeName: GLAFS_COMBINED

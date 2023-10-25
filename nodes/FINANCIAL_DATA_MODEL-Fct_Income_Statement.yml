@@ -105,7 +105,7 @@ steps:
           - columnReference:
               columnCounter: e2f36b38-19f5-4d04-bbb3-3b155a64ee41
               stepCounter: ad50121b-cd29-4ff6-b532-972885f8a276
-            dataType: VARCHAR(30)
+            dataType: DATE
             description: ""
             hashColumns: []
             hashDetails: null
