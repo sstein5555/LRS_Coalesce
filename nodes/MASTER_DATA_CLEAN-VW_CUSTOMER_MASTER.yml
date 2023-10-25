@@ -912,6 +912,27 @@ steps:
                   - columnCounter: 2fa41b29-952e-4898-98df-9c75da473afb
                     stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 594fd864-c688-4f11-8b12-066a443005c0
+              stepCounter: 343a2abd-4687-4718-be4c-21a2e7cfdfec
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Customer Filter
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "\"CUSTOMER_MASTER\".\"Customer Number\"||' - '||\"CUSTOMER_MASTER\".\"Customer Name\""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

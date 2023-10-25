@@ -786,6 +786,27 @@ steps:
                   - columnCounter: 91269ccb-2b8e-41de-b3cd-ede340b16487
                     stepCounter: 56ae5e3c-c6cd-4eb5-a3ae-25d02a9ab031
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 734fdd43-6c8d-4f05-a452-a1297ef9962f
+              stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Site Filter
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "\"CUSTOMER_SITE_MASTER\".\"Site Number\"||' - '||\"CUSTOMER_SITE_MASTER\".\"Site Name\""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

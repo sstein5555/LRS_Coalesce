@@ -1096,7 +1096,7 @@ steps:
                     stepCounter: c2e3b305-d522-488b-bbc6-6ade93cd3385
                 transform: ""
               - columnReferences: []
-                transform: ""
+                transform: "'TOWER'"
             systemColumnType: None
             transform: ""
           - acceptedValues:

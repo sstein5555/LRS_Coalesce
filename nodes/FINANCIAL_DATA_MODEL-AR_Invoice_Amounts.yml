@@ -169,7 +169,7 @@ steps:
                     stepCounter: "0"
                 transform: "\"DM01_COMBINED\".\"DM01_CUST\"||\"DM01_COMBINED\".\"SOURCE\""
               - columnReferences: []
-                transform: ""
+                transform: "\"STG_INVOICE_COMBINED\".\"Customer UID\"||'TOWER'"
             systemColumnType: None
             transform: ""
           - acceptedValues:
