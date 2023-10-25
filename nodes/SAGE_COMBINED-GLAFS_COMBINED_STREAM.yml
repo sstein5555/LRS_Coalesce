@@ -5,7 +5,7 @@ steps:
         insertStrategy: INSERT
         postSQL: ""
         preSQL: ""
-        storageLocationSearchText: SG_
+        storageLocationSearchText: SAGE_CDC
         truncateBefore: true
       database: ""
       deployEnabled: true
@@ -513,13 +513,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              CDC_GLAFS: 1a9e9e8b-9e6f-4fa2-acaf-42ae1dc983e0
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SG_LAKDAT
+              - locationName: SAGE_CDC_LAKDAT
                 nodeName: CDC_GLAFS
             join:
-              joinCondition: FROM {{ ref('SG_LAKDAT', 'CDC_GLAFS') }} "CDC_GLAFS"
+              joinCondition: FROM {{ ref('SAGE_CDC_LAKDAT', 'CDC_GLAFS') }} "CDC_GLAFS"
             name: GLAFS_COMBINED_STREAM
             noLinkRefs: []
       name: GLAFS_COMBINED_STREAM

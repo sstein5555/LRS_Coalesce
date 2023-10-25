@@ -5,7 +5,7 @@ steps:
         insertStrategy: INSERT
         postSQL: ""
         preSQL: ""
-        storageLocationSearchText: SG_
+        storageLocationSearchText: SAGE_CDC
         truncateBefore: false
       database: ""
       deployEnabled: true
@@ -695,13 +695,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              CDC_GLAMF: 15bb5b11-a6de-41aa-beca-9ea0d60c4e06
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SG_ECODAT
+              - locationName: SAGE_CDC_ECODAT
                 nodeName: CDC_GLAMF
             join:
-              joinCondition: FROM {{ ref('SG_ECODAT', 'CDC_GLAMF') }} "CDC_GLAMF"
+              joinCondition: FROM {{ ref('SAGE_CDC_ECODAT', 'CDC_GLAMF') }} "CDC_GLAMF"
             name: GLAMF_COMBINED_STREAM
             noLinkRefs: []
       name: GLAMF_COMBINED_STREAM

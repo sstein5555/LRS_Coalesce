@@ -5,7 +5,7 @@ steps:
         insertStrategy: INSERT
         postSQL: ""
         preSQL: ""
-        storageLocationSearchText: TRUX_
+        storageLocationSearchText: TRX_CDC_
         truncateBefore: false
       database: ""
       deployEnabled: true
@@ -310,13 +310,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              CDC_DM01P: 039cc226-b900-456c-816a-06ae05f85584
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: TRUX_MW_COMP_RAW
+              - locationName: TRX_CDC_MW
                 nodeName: CDC_DM01P
             join:
-              joinCondition: FROM {{ ref('TRUX_MW_COMP_RAW', 'CDC_DM01P') }} "CDC_DM01P"
+              joinCondition: FROM {{ ref('TRX_CDC_MW', 'CDC_DM01P') }} "CDC_DM01P"
             name: DM01P_COMBINED_STREAM
             noLinkRefs: []
       name: DM01P_COMBINED_STREAM

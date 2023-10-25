@@ -5,7 +5,7 @@ steps:
         insertStrategy: INSERT
         postSQL: ""
         preSQL: ""
-        storageLocationSearchText: SG_
+        storageLocationSearchText: SAGE_CDC
         truncateBefore: false
       database: ""
       deployEnabled: true
@@ -2179,13 +2179,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              CDC_APOBL: 00895bd5-8322-41a9-b817-dacc21de17fe
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SG_LAKSDA
+              - locationName: SAGE_CDC_LAKSDA
                 nodeName: CDC_APOBL
             join:
-              joinCondition: FROM {{ ref('SG_LAKSDA', 'CDC_APOBL') }} "CDC_APOBL"
+              joinCondition: FROM {{ ref('SAGE_CDC_LAKSDA', 'CDC_APOBL') }} "CDC_APOBL"
             name: APOBL_COMBINED_STREAM
             noLinkRefs: []
       name: APOBL_COMBINED_STREAM

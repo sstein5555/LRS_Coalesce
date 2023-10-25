@@ -211,7 +211,7 @@ steps:
                     stepCounter: "0"
                 transform: "\"DM01P_COMBINED\".\"DM01P_LINK\"||\"DM01P_COMBINED\".\"SOURCE\""
               - columnReferences: []
-                transform: "\"STG_CHARGE_PAYMENT_COMBINED\".\"Unique ID\"||\"STG_CHARGE_PAYMENT_COMBINED\".\"Source\""
+                transform: "\"STG_CHARGE_PAYMENT_COMBINED\".\"Link to Invoice\"||\"STG_CHARGE_PAYMENT_COMBINED\".\"Source\""
             systemColumnType: None
             transform: ""
           - acceptedValues:
@@ -279,8 +279,8 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'DM01P_COMBINED') }} "DM01P_COMBINED"
-                INNER JOIN {{ ref('TRUXCOMBINED_RAW', 'CD02_COMBINED') }} "CD02_COMBINED"
-                ON "DM01P_COMBINED"."DM01P_ADJR" = "CD02_COMBINED"."CD02_CODE" and "DM01P_COMBINED"."SOURCE" = "CD02_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CD02_COMBINED') }} "CD02_COMBINED"
+                ON "DM01P_COMBINED"."DM01P_ADJR" = "CD02_COMBINED"."CD02_CODE" and "DM01P_COMBINED"."SOURCE" = "CD02_COMBINED"."SOURCE" and "DM01P_COMBINED"."DM01P_TYPE" = "CD02_COMBINED"."CD02_TYPE"
             name: DM01p_COMBINED_TRUX
             noLinkRefs: []
           - aliases:

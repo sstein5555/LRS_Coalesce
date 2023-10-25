@@ -5,7 +5,7 @@ steps:
         insertStrategy: INSERT
         postSQL: ""
         preSQL: ""
-        storageLocationSearchText: SG_
+        storageLocationSearchText: SAGE_CDC
         truncateBefore: false
       database: ""
       deployEnabled: true
@@ -2987,10 +2987,10 @@ steps:
             customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SG_HRTDAT
+              - locationName: SAGE_CDC_HRTDAT
                 nodeName: CDC_APIBH
             join:
-              joinCondition: FROM {{ ref('SG_HRTDAT', 'CDC_APIBH') }} "CDC_APIBH"
+              joinCondition: FROM {{ ref('SAGE_CDC_HRTDAT', 'CDC_APIBH') }} "CDC_APIBH"
             name: APIBH_COMBINED_STREAM
             noLinkRefs: []
       name: APIBH_COMBINED_STREAM
