@@ -227,7 +227,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 53f29e49-608b-4ce0-9d7e-9fb431030202
+              columnCounter: b1173624-c077-40e7-8527-30eb9c6a0ef2
               stepCounter: deb65bbc-1b90-4a8c-8533-e671766312bf
             config: {}
             dataType: VARCHAR
@@ -238,8 +238,29 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 69b9e5e5-6fd3-4c53-b3fd-2ab90b3c18ae
+                  - columnCounter: cbb9126e-7455-407b-ab68-a05379ac2d22
                     stepCounter: b440fc4f-079f-4e49-96bf-221deac14011
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 53f29e49-608b-4ce0-9d7e-9fb431030202
+              stepCounter: deb65bbc-1b90-4a8c-8533-e671766312bf
+            config: {}
+            dataType: ""
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ""
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
                 transform: ""
             systemColumnType: None
             transform: ""
