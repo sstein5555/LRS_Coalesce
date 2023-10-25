@@ -116,7 +116,7 @@ steps:
               columnCounter: 92512a0c-acc6-4ce0-89b2-22b066d25aed
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             config: {}
-            dataType: VARCHAR(30)
+            dataType: DATE
             defaultValue: ""
             description: ""
             keyColumnType: None
