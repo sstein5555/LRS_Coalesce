@@ -5,7 +5,7 @@ steps:
         insertStrategy: INSERT
         postSQL: ""
         preSQL: ""
-        storageLocationSearchText: SG_
+        storageLocationSearchText: SAGE_CDC
         truncateBefore: false
       database: ""
       deployEnabled: true
@@ -686,10 +686,10 @@ steps:
             customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SG_CDC_LINDAT
+              - locationName: SAGE_CDC_LINDAT
                 nodeName: CDC_GLPOST
             join:
-              joinCondition: FROM {{ ref('SG_CDC_LINDAT', 'CDC_GLPOST') }} "CDC_GLPOST"
+              joinCondition: FROM {{ ref('SAGE_CDC_LINDAT', 'CDC_GLPOST') }} "CDC_GLPOST"
             name: GLPOST_COMBINED_STREAM
             noLinkRefs: []
       name: GLPOST_COMBINED_STREAM

@@ -24,6 +24,61 @@ locations:
       "2":
         database: LRS_PRODUCTION
         schema: MASTER_DATA_CLEAN
+  SAGE_CDC_BLDDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_BLDDAT
+  SAGE_CDC_ECODAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_ECODAT
+  SAGE_CDC_HRTDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_HRTDAT
+  SAGE_CDC_LAKDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LAKDAT
+  SAGE_CDC_LAKPDA:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LAKPDA
+  SAGE_CDC_LAKSDA:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LAKSDA
+  SAGE_CDC_LIADAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LIADAT
+  SAGE_CDC_LINDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LINDAT
+  SAGE_CDC_LRSDCT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LRSDCT
+  SAGE_CDC_MANDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_MANDAT
+  SAGE_CDC_RAMDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_RAMDAT
   SAGE_COMBINED:
     mappingDefinitions:
       "2":
