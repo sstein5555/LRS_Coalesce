@@ -681,13 +681,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              CDC_GLPOST: a1f7337e-fd47-4bd9-be53-aef9a992b2a5
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SG_LINDAT
+              - locationName: SG_CDC_LINDAT
                 nodeName: CDC_GLPOST
             join:
-              joinCondition: FROM {{ ref('SG_LINDAT', 'CDC_GLPOST') }} "CDC_GLPOST"
+              joinCondition: FROM {{ ref('SG_CDC_LINDAT', 'CDC_GLPOST') }} "CDC_GLPOST"
             name: GLPOST_COMBINED_STREAM
             noLinkRefs: []
       name: GLPOST_COMBINED_STREAM

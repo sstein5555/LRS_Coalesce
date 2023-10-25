@@ -588,13 +588,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              CDC_APOBP: 13e259e3-9546-41b1-9a94-e5829bee811f
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SG_ECODAT
+              - locationName: SG_CDC_ECODAT
                 nodeName: CDC_APOBP
             join:
-              joinCondition: FROM {{ ref('SG_ECODAT', 'CDC_APOBP') }} "CDC_APOBP"
+              joinCondition: FROM {{ ref('SG_CDC_ECODAT', 'CDC_APOBP') }} "CDC_APOBP"
             name: APOBP_COMBINED_STREAM
             noLinkRefs: []
       name: APOBP_COMBINED_STREAM

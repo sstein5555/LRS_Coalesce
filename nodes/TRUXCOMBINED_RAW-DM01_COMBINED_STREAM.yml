@@ -5,7 +5,7 @@ steps:
         insertStrategy: INSERT
         postSQL: ""
         preSQL: ""
-        storageLocationSearchText: TRUX_
+        storageLocationSearchText: TRX_CDC_
         streamSelect: false
         truncateBefore: false
       database: ""
@@ -247,11 +247,11 @@ steps:
             customSQL:
               customSQL: ""
             dependencies:
-              - locationName: TRUX_AL_COMP_RAW
+              - locationName: TRX_CDC_AL
                 nodeName: CDC_DM01
             join:
               joinCondition: |-
-                FROM {{ ref('TRUX_AL_COMP_RAW', 'CDC_DM01') }} "CDC_DM01"
+                FROM {{ ref('TRX_CDC_AL', 'CDC_DM01') }} "CDC_DM01"
                 where "_FIVETRAN_DELETED" = FALSE
             name: DM01_COMBINED_STREAM
             noLinkRefs: []

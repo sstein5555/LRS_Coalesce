@@ -211,7 +211,7 @@ steps:
                     stepCounter: "0"
                 transform: "\"DM01P_COMBINED\".\"DM01P_LINK\"||\"DM01P_COMBINED\".\"SOURCE\""
               - columnReferences: []
-                transform: "\"STG_CHARGE_PAYMENT_COMBINED\".\"Unique ID\"||\"STG_CHARGE_PAYMENT_COMBINED\".\"Source\""
+                transform: "\"STG_CHARGE_PAYMENT_COMBINED\".\"Link to Invoice\"||\"STG_CHARGE_PAYMENT_COMBINED\".\"Source\""
             systemColumnType: None
             transform: ""
           - acceptedValues:
