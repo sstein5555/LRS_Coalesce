@@ -102,7 +102,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: LAST_DAY("GL_Transactions"."DATE")
+                transform: LAST_DAY(TO_DATE("GL_Transactions"."DATE"))
             systemColumnType: None
             transform: ""
           - columnReference:
