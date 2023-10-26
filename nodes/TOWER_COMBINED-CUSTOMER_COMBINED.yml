@@ -1290,16 +1290,71 @@ steps:
                   - columnCounter: ad70bf64-1198-4f12-a095-5f9bd9a4d3d0
                     stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 971eabb8-bb07-415c-81fe-c2f3150a2a10
+              stepCounter: af74a786-1641-4201-ad6f-8127eba08c06
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Customer Class Description
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c6ead59b-b890-4f74-8191-d5415d155ebc
+                    stepCounter: 8b8f16d3-daaf-433f-9107-3f3558437a9a
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c3678862-41f2-4cd1-b4c0-65363e429609
+              stepCounter: af74a786-1641-4201-ad6f-8127eba08c06
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Customer Type Description
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a2fd2c15-5a45-4e8a-a3b0-0abdf7bad52e
+                    stepCounter: 8ad45caf-9e12-4785-8947-74853b02a513
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              CUSTOMER: 5809bc50-5456-426a-85bb-c8308c93f535
+              CUSTOMERCLASS_COMBINED: 8b8f16d3-daaf-433f-9107-3f3558437a9a
+              CUSTTYPE_COMBINED: 8ad45caf-9e12-4785-8947-74853b02a513
+            customSQL:
               customSQL: ""
             dependencies:
+              - locationName: TOWER_COMBINED
+                nodeName: CUSTOMERCLASS_COMBINED
+              - locationName: TOWER_COMBINED
+                nodeName: CUSTTYPE_COMBINED
               - locationName: TOWER_RAW
                 nodeName: CUSTOMER
             join:
-              joinCondition: FROM {{ ref('TOWER_RAW', 'CUSTOMER') }} "CUSTOMER"
+              joinCondition: |-
+                FROM {{ ref('TOWER_RAW', 'CUSTOMER') }} "CUSTOMER"
+                LEFt JOIN {{ ref('TOWER_COMBINED', 'CUSTOMERCLASS_COMBINED') }} "CUSTOMERCLASS_COMBINED"
+                ON "CUSTOMER"."CUSTCLASS" = "CUSTOMERCLASS_COMBINED"."CUSTCLASS"
+                LEFT JOIN {{ ref('TOWER_COMBINED', 'CUSTTYPE_COMBINED') }} "CUSTTYPE_COMBINED"
+                ON "CUSTOMERCLASS_COMBINED"."CUSTTYPE" = "CUSTTYPE_COMBINED"."CUSTTYPE"
             name: CUSTOMER_COMBINED
             noLinkRefs: []
       name: CUSTOMER_COMBINED

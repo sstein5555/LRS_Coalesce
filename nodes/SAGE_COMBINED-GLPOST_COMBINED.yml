@@ -638,7 +638,7 @@ steps:
               - columnReferences:
                   - columnCounter: 6308eb7c-cc59-4ad3-94f3-2b5f78d021b7
                     stepCounter: dd937ff1-00b0-4c58-a601-a7e4f5e12b79
-                transform: ""
+                transform: "'SG'||RIGHT(\"GLPOST_COMBINED_STREAM\".\"SOURCE\",7)"
           - acceptedValues:
               strictMatch: true
               values: []
