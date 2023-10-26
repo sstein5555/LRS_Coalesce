@@ -466,6 +466,27 @@ steps:
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c87a7e60-cde2-49bf-b528-102b2d3d6c4e
+              stepCounter: 04aa6c9b-5f87-4933-97af-6a1123c321ad
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e3e14461-56ca-4c18-b191-b8cfd51d00d3
+                    stepCounter: cc679548-ade7-4cb2-a514-d0fcd8002e34
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

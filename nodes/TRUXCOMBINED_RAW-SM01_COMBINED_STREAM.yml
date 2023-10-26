@@ -440,6 +440,27 @@ steps:
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: aef1183f-e918-4472-8eab-b140987f9b86
+              stepCounter: 70359394-06e9-4ed9-8d8d-47c93d07a392
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c87a7e60-cde2-49bf-b528-102b2d3d6c4e
+                    stepCounter: 04aa6c9b-5f87-4933-97af-6a1123c321ad
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

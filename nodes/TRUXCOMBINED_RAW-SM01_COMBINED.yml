@@ -6,6 +6,7 @@ steps:
         postSQL: ""
         preSQL: ""
         storageLocationSearchText: TRUX_
+        testsEnabled: false
         truncateBefore: true
       database: ""
       deployEnabled: true
@@ -400,21 +401,65 @@ steps:
                   - columnCounter: a6d368df-7039-4c2a-b264-4c4d7a4a5a75
                     stepCounter: 70359394-06e9-4ed9-8d8d-47c93d07a392
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b8996b69-cec6-4030-8ff8-8155dd71b73d
+              stepCounter: 82475639-b6b5-4ad7-b9c0-98cffc711fcb
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Sort
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER(PARTITION BY "SM01_COMBINED_STREAM"."METADATA$ROW_ID" order by "SM01_COMBINED_STREAM"."_FIVETRAN_SYNCED" desc)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: de8ff51e-3be9-4c3e-9bc9-de474b58a295
+              stepCounter: 82475639-b6b5-4ad7-b9c0-98cffc711fcb
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: METADATA$ACTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 45c18867-0017-4ffe-b034-c04af3109c66
+                    stepCounter: 70359394-06e9-4ed9-8d8d-47c93d07a392
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              SM01_COMBINED_STREAM: 70359394-06e9-4ed9-8d8d-47c93d07a392
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: TRUX_UA_COMP_RAW
-                nodeName: SM01
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: SM01_COMBINED_STREAM
             join:
-              joinCondition: FROM {{ ref('TRUX_UA_COMP_RAW', 'SM01') }} "SM01"
+              joinCondition: FROM {{ ref('TRUXCOMBINED_RAW', 'SM01_COMBINED_STREAM') }} "SM01_COMBINED_STREAM"
             name: SM01_COMBINED
             noLinkRefs: []
       name: SM01_COMBINED
       overrideSQL: false
       schema: ""
-      sqlType: "4"
+      sqlType: Stage
       type: sql
     stepCounter: 82475639-b6b5-4ad7-b9c0-98cffc711fcb
