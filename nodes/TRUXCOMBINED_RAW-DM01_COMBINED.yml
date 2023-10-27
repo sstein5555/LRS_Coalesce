@@ -232,7 +232,7 @@ steps:
               - columnReferences:
                   - columnCounter: 98b82faf-041c-44af-9aa2-4c256b725e39
                     stepCounter: af7d9a71-a790-437a-a79e-4fb3a178059a
-                transform: ""
+                transform: "'TRUX_'||right(\"DM01_COMBINED_STREAM\".\"SOURCE\",2)||'_COMP_RAW'"
           - acceptedValues:
               strictMatch: true
               values: []

@@ -11,7 +11,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: TOWER_RAW
+      locationName: TOWER_COMBINED
       materializationType: table
       metadata:
         appliedNodeTests: []

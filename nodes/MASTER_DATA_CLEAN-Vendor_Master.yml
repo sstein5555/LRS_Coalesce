@@ -130,7 +130,7 @@ steps:
               - columnReferences:
                   - columnCounter: da3b3c35-56fb-494f-aa48-588bc0c33bab
                     stepCounter: 7418c001-4ad4-45b4-ae82-debce39600ea
-                transform: ""
+                transform: rtrim("APVEN_COMBINED"."NAMECITY")
           - columnReference:
               columnCounter: d37df99f-478e-42f2-b6eb-cd1d0b46bc66
               stepCounter: 74ee4388-f9d9-414f-aca5-25b5dccfa9fa
@@ -849,6 +849,27 @@ steps:
                   - columnCounter: 2bd00b90-70c2-49d9-a9eb-62b858dff939
                     stepCounter: 7418c001-4ad4-45b4-ae82-debce39600ea
                 transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 075a9169-b913-44a5-b184-d403c8bdf4e4
+              stepCounter: 74ee4388-f9d9-414f-aca5-25b5dccfa9fa
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Vendor Filter
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: rtrim("APVEN_COMBINED"."VENDORID")||' - '||"APVEN_COMBINED"."VENDNAME"
             systemColumnType: None
             transform: ""
         enabledColumnTestIDs: []

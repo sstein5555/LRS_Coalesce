@@ -2136,7 +2136,7 @@ steps:
               - columnReferences:
                   - columnCounter: dc4e5be3-57c9-47ef-97dd-979ed1af06b3
                     stepCounter: 0d949654-3563-4b8a-88bc-fe94bc806966
-                transform: ""
+                transform: "'SG'||RIGHT(\"APOBL_COMBINED_STREAM\".\"SOURCE\",7)"
           - acceptedValues:
               strictMatch: true
               values: []

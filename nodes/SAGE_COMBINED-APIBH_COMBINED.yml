@@ -2920,7 +2920,7 @@ steps:
               - columnReferences:
                   - columnCounter: 74eef4f9-b5ec-4060-ad88-a4ac39a0e146
                     stepCounter: 287b0558-49fd-4317-99a5-819ef560f1ba
-                transform: ""
+                transform: "'SG'||RIGHT(\"APIBH_COMBINED_STREAM\".\"SOURCE\",7)"
           - acceptedValues:
               strictMatch: true
               values: []

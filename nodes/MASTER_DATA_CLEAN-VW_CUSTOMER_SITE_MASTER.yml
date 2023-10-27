@@ -810,13 +810,17 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              CUSTOMER_SITE_MASTER: 56ae5e3c-c6cd-4eb5-a3ae-25d02a9ab031
+            customSQL:
               customSQL: ""
             dependencies:
               - locationName: MASTER_DATA_CLEAN
                 nodeName: CUSTOMER_SITE_MASTER
             join:
-              joinCondition: FROM {{ ref('MASTER_DATA_CLEAN', 'CUSTOMER_SITE_MASTER') }} "CUSTOMER_SITE_MASTER"
+              joinCondition: |-
+                FROM {{ ref('MASTER_DATA_CLEAN', 'CUSTOMER_SITE_MASTER') }} "CUSTOMER_SITE_MASTER"
+                where "SOURCE_DIM" <>'TOWER'
             name: VW_CUSTOMER_SITE_MASTER
             noLinkRefs: []
       name: VW_CUSTOMER_SITE_MASTER

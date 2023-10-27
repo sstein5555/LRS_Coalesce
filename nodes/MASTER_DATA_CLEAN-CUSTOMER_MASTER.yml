@@ -521,7 +521,9 @@ steps:
                   - columnCounter: 4de06533-a7c4-4c8d-8b21-67dc33ea6e83
                     stepCounter: 3131b480-711a-434f-be4a-e6e3315d3c0a
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: c3678862-41f2-4cd1-b4c0-65363e429609
+                    stepCounter: af74a786-1641-4201-ad6f-8127eba08c06
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -587,8 +589,10 @@ steps:
                   - columnCounter: 57aadc71-87e5-4e0a-9bdc-95958503c663
                     stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
                 transform: CASE WHEN "CM03_Combined"."CM03_BILLTO" = 1 then 'Consolidated' when "CM03_Combined"."CM03_BILLTO" = 2 then 'Separate (A/R Customer)' else 'Separate (A/R Site)' end
-              - columnReferences: []
-                transform: ""
+              - columnReferences:
+                  - columnCounter: c287e0b7-f7e1-47be-a141-ec5d40c1b572
+                    stepCounter: af74a786-1641-4201-ad6f-8127eba08c06
+                transform: CASE WHEN "CUSTOMER_COMBINED"."INVOICEBYSITE" = '1' then 'Separate (A/R Site)' when "CUSTOMER_COMBINED"."INVOICEBYSITE" = '0' then 'Separate (A/R Customer)' else 'Consolidated' end
           - columnReference:
               columnCounter: 24d8ad3b-5713-4ceb-b39d-a49af942b108
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
@@ -870,7 +874,7 @@ steps:
           - columnReference:
               columnCounter: f38fb855-7f25-4851-98fb-95c2b3c4603a
               stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
-            dataType: VARCHAR(2)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -881,7 +885,9 @@ steps:
                   - columnCounter: 8116419d-a440-4d7c-9631-479f3977c8c5
                     stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 9301a2c3-3989-4e2a-bf1e-3fe1d37c940b
+                    stepCounter: af74a786-1641-4201-ad6f-8127eba08c06
                 transform: ""
           - columnReference:
               columnCounter: 4bf4a8b9-ce90-4888-997d-52296b0aa8ac
@@ -1141,7 +1147,9 @@ steps:
                   - columnCounter: 6bdac00a-e452-4d6a-842c-2140fced5760
                     stepCounter: bd4674f7-935e-485f-8433-a9a843dde723
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 451225d1-344a-42f7-9294-650f89b574b5
+                    stepCounter: af74a786-1641-4201-ad6f-8127eba08c06
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -1164,7 +1172,9 @@ steps:
                   - columnCounter: ffe8a23f-9b80-47db-92ae-6b015779fabb
                     stepCounter: af2cc5f9-03e6-4b06-a245-b0719b2aa432
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 9301a2c3-3989-4e2a-bf1e-3fe1d37c940b
+                    stepCounter: af74a786-1641-4201-ad6f-8127eba08c06
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -1214,13 +1224,13 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: TOWER_COMBINED
-                nodeName: CUSTOMER_COMBINED
-              - locationName: TOWER_RAW
                 nodeName: ADDRESS_COMBINED
+              - locationName: TOWER_COMBINED
+                nodeName: CUSTOMER_COMBINED
             join:
               joinCondition: |-
                 FROM {{ ref('TOWER_COMBINED', 'CUSTOMER_COMBINED') }} "CUSTOMER_COMBINED"
-                INNER JOIN {{ ref('TOWER_RAW', 'ADDRESS_COMBINED') }} "ADDRESS_COMBINED"
+                INNER JOIN {{ ref('TOWER_COMBINED', 'ADDRESS_COMBINED') }} "ADDRESS_COMBINED"
                 ON "CUSTOMER_COMBINED"."Address ID" = "ADDRESS_COMBINED"."ADDRESSUID"
             name: Customer_Combined_Tower
             noLinkRefs: []

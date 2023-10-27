@@ -540,7 +540,7 @@ steps:
               - columnReferences:
                   - columnCounter: 5a69664c-ec25-44ec-9582-4381c7f5665f
                     stepCounter: c2690ddb-feba-4d96-b2bf-ee7d4caac8f0
-                transform: ""
+                transform: "'SG'||RIGHT(\"APOBP_COMBINED_STREAM\".\"SOURCE\",7)"
           - acceptedValues:
               strictMatch: true
               values: []

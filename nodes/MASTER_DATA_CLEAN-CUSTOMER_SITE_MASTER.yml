@@ -1000,13 +1000,13 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: TOWER_COMBINED
-                nodeName: SITE_COMBINED
-              - locationName: TOWER_RAW
                 nodeName: ADDRESS_COMBINED
+              - locationName: TOWER_COMBINED
+                nodeName: SITE_COMBINED
             join:
               joinCondition: |-
                 FROM {{ ref('TOWER_COMBINED', 'SITE_COMBINED') }} "SITE_COMBINED"
-                INNER JOIN {{ ref('TOWER_RAW', 'ADDRESS_COMBINED') }} "ADDRESS_COMBINED"
+                INNER JOIN {{ ref('TOWER_COMBINED', 'ADDRESS_COMBINED') }} "ADDRESS_COMBINED"
                 ON "SITE_COMBINED"."SITEADDRESSUID" = "ADDRESS_COMBINED"."ADDRESSUID"
             name: SITE_COMBINED_TOWER
             noLinkRefs: []
