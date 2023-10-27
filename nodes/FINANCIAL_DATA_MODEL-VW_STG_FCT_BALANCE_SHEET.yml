@@ -48,7 +48,9 @@ steps:
                   - columnCounter: 9d6412f1-1459-4ac0-b519-dfa954dd319a
                     stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 1a1de5be-8c87-4f22-9c77-a3a25061a6b0
+                    stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
                 transform: ""
           - columnReference:
               columnCounter: 6adafc92-6c61-416d-bfb7-fbee88c3f6ca
@@ -136,7 +138,9 @@ steps:
                   - columnCounter: 7073b0cb-d4b5-40fe-8d02-3066062176bd
                     stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 48d3191a-814e-402e-aae1-73c42670f81d
+                    stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
                 transform: ""
           - columnReference:
               columnCounter: 553c6e42-b49b-4615-a5b0-22d6bffb6735
@@ -153,9 +157,9 @@ steps:
                     stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
                 transform: ""
               - columnReferences:
-                  - columnCounter: 142ca2dc-5645-4e55-82cc-70bb29a9943e
-                    stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
-                transform: ""
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "0"
           - columnReference:
               columnCounter: 96b46ef4-0ae2-4004-aa55-3737fb97a1ed
               stepCounter: c04033ca-3273-43e7-811f-9783933da7ca
@@ -252,7 +256,9 @@ steps:
                   - columnCounter: 935331e7-ad6f-4648-895a-796cb2e9de8e
                     stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: a1f56378-4945-46b4-80d0-f64fc4c56358
+                    stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
                 transform: ""
           - columnReference:
               columnCounter: 25a217e7-4352-48d8-a58a-60aeb6a8bf04
@@ -284,7 +290,9 @@ steps:
                   - columnCounter: dc1d5748-a486-400f-8e61-67418a23e125
                     stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 69869c22-50e6-4740-8bf3-d7ec921c6822
+                    stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
                 transform: ""
           - columnReference:
               columnCounter: e15efbab-24c6-47cc-8296-2ec9b66e768f
@@ -300,7 +308,9 @@ steps:
                   - columnCounter: dd65d588-44b2-4930-9e38-48718464bb45
                     stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 9d0e5fc4-8d63-43d3-90d7-456735e6be19
+                    stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
                 transform: ""
           - columnReference:
               columnCounter: 552ff6a0-16c0-4479-9fcb-1bf2135d7dbf
@@ -316,7 +326,9 @@ steps:
                   - columnCounter: cecc5e3c-1361-4dc8-acc9-4d06b7708750
                     stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
                 transform: ""
           - columnReference:
               columnCounter: f9539c08-0eaa-4063-b6fc-59807cb679e0
@@ -350,7 +362,9 @@ steps:
                   - columnCounter: f02754d2-9c5a-449b-8065-9fd59997e1f0
                     stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
                 transform: ""
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 2e6bde71-2a67-4cd8-8d70-8e2a574f9a9f
+                    stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
                 transform: ""
           - columnReference:
               columnCounter: b07c25c7-4f7a-41e7-8fb0-2be3dc7f9f20
@@ -416,6 +430,75 @@ steps:
                 transform: ""
               - columnReferences: []
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a4baa365-e2db-4fa1-a669-efb78a24fdf0
+              stepCounter: c04033ca-3273-43e7-811f-9783933da7ca
+            config: {}
+            dataType: ""
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ACCTTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4e8e170e-dd1a-4a1f-9a90-2761c0efe1a1
+                    stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
+                transform: ""
+              - columnReferences: []
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 51bd1433-49b6-4803-bcea-63d76abf0dea
+              stepCounter: c04033ca-3273-43e7-811f-9783933da7ca
+            config: {}
+            dataType: ""
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: "COMBO #"
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c0205fb7-695f-4c41-ad4b-a148d0d26ebd
+                    stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
+                transform: ""
+              - columnReferences: []
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 40281481-ca25-490a-bad5-d6a20743645a
+              stepCounter: c04033ca-3273-43e7-811f-9783933da7ca
+            config: {}
+            dataType: ""
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Batch Number
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6209f351-a951-461f-9897-33a51f97369d
+                    stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
+                transform: ""
+              - columnReferences: []
+                transform: ""
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
@@ -466,18 +549,20 @@ steps:
             noLinkRefs: []
           - aliases:
               VW_BALANCE_SHEET_OPENBALANCE_PVT: 35279c8a-5c83-41da-99e6-e22ed2ca166a
-              VW_FCT_BALANCE_SHEET_TRANSACTIONS: 35279c8a-5c83-41da-99e6-e22ed2ca166a
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: FINANCIAL_DATA_MODEL
                 nodeName: VW_BALANCE_SHEET_OPENBALANCE_PVT
+              - locationName: FINANCIAL_DATA_MODEL
+                nodeName: VW_FCT_BALANCE_SHEET_TRANSACTIONS
             join:
               joinCondition: |
-                FROM {{ ref('FINANCIAL_DATA_MODEL', 'VW_BALANCE_SHEET_OPENBALANCE_PVT') }} "VW_BALANCE_SHEET_OPENBALANCE_PVT"INNER JOIN {{ ref('FINANCIAL_DATA_MODEL', 'VW_BALANCE_SHEET_OPENBALANCE_PVT') }} "VW_FCT_BALANCE_SHEET_TRANSACTIONS"
-                ON "VW_BALANCE_SHEET_OPENBALANCE_PVT"."Account Number"= "VW_FCT_BALANCE_SHEET_TRANSACTIONS"."Account Number" 
-                AND "VW_BALANCE_SHEET_OPENBALANCE_PVT"."SOURCE"= "VW_FCT_BALANCE_SHEET_TRANSACTIONS"."SOURCE"
-                AND "VW_BALANCE_SHEET_OPENBALANCE_PVT"."DATE"= "VW_FCT_BALANCE_SHEET_TRANSACTIONS"."DATE"
+                FROM {{ ref('FINANCIAL_DATA_MODEL', 'VW_BALANCE_SHEET_OPENBALANCE_PVT') }} "VW_BALANCE_SHEET_OPENBALANCE_PVT"
+                --INNER JOIN {{ ref('FINANCIAL_DATA_MODEL', 'VW_FCT_BALANCE_SHEET_TRANSACTIONS') }} "VW_FCT_BALANCE_SHEET_TRANSACTIONS"
+                --ON "VW_BALANCE_SHEET_OPENBALANCE_PVT"."Account Number"= "VW_FCT_BALANCE_SHEET_TRANSACTIONS"."Account Number" 
+                --AND "VW_BALANCE_SHEET_OPENBALANCE_PVT"."SOURCE"= "VW_FCT_BALANCE_SHEET_TRANSACTIONS"."SOURCE"
+                --AND "VW_BALANCE_SHEET_OPENBALANCE_PVT"."DATE"= "VW_FCT_BALANCE_SHEET_TRANSACTIONS"."DATE"
             name: VW_BALANCE_SHEET_OPENBALANCE_PVT
             noLinkRefs: []
       name: VW_STG_FCT_BALANCE_SHEET

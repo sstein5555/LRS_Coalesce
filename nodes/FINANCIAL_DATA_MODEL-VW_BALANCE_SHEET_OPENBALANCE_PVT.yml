@@ -18,6 +18,91 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
+              columnCounter: 1a1de5be-8c87-4f22-9c77-a3a25061a6b0
+              stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
+            config: {}
+            dataType: VARCHAR(108)
+            defaultValue: ""
+            description: ""
+            name: Account Name
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a1f56378-4945-46b4-80d0-f64fc4c56358
+              stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
+            config: {}
+            dataType: VARCHAR(12)
+            defaultValue: ""
+            description: ""
+            name: Account Group Code
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9d0e5fc4-8d63-43d3-90d7-456735e6be19
+              stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
+            config: {}
+            dataType: VARCHAR(60)
+            defaultValue: ""
+            description: ""
+            name: Account Group Description
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 69869c22-50e6-4740-8bf3-d7ec921c6822
+              stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
+            config: {}
+            dataType: VARCHAR(60)
+            defaultValue: ""
+            description: ""
+            name: CONAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2e6bde71-2a67-4cd8-8d70-8e2a574f9a9f
+              stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
+            config: {}
+            dataType: VARCHAR(60)
+            defaultValue: ""
+            description: ""
+            name: Legal Name
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
               columnCounter: 05354c53-0361-42f9-8113-1c2bb807f362
               stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
             config: {}
@@ -60,23 +145,6 @@ steps:
             description: ""
             name: Fiscal Year
             nullable: false
-            sourceColumnReferences:
-              - columnReferences: []
-                transform: ""
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: f5557d0e-25a1-448d-9bd7-a4122d4ffe14
-              stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
-            config: {}
-            dataType: VARCHAR(6)
-            defaultValue: ""
-            description: ""
-            name: AUDTORG
-            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
@@ -168,13 +236,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 142ca2dc-5645-4e55-82cc-70bb29a9943e
+              columnCounter: 48d3191a-814e-402e-aae1-73c42670f81d
               stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
             config: {}
             dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: PERIODBALANCE
+            name: Journal Transaction Amount
             nullable: true
             sourceColumnReferences:
               - columnReferences: []
@@ -186,15 +254,14 @@ steps:
           - customSQL:
               customSQL: |-
                 {{ stage('Override Create SQL') }}
-                	CREATE OR REPLACE VIEW {{ ref('FINANCIAL_DATA_MODEL', 'VW_BALANCE_SHEET_OPENBALANCE_PVT')}} AS 
+                	CREATE OR REPLACE VIEW {{ ref('FINANCIAL_DATA_MODEL', 'VW_BALANCE_SHEET_OPENBALANCE_PVT')}} AS (
+                    with Bal as
                     (
-                SELECT 
+                SELECT distinct
                 LTRIM(RTRIM(AUDTORG)) AS "Database ID",
                 LTRIM(RTRIM(ACCTID)) AS "Account Number",
                 FSCSYR as "Fiscal Year",
-                AUDTORG,
                 SOURCE,
-                --CONCAT(ACCTID, CONCAT(' - ', ACCTDESC)) AS "Account Name",
                 CASE "Fiscal Month"
                     WHEN 'OPENBAL' THEN 'OPENBALANCE'
                 ELSE NULL
@@ -209,17 +276,25 @@ steps:
                 WHEN "Fiscal Period" NOT IN ( 13, 14) THEN CONCAT("Fiscal Year", '-',"Fiscal Period", '-','01')
                     ELSE NULL END AS DATE) AS DATE,
                 LAST_DAY(DATE) AS PERIODENDDATE,
-                PERIODBALANCE
+                "Journal Transaction Amount"
                 FROM 
                  {{ ref('SAGE_COMBINED', 'GLAFS_COMBINED') }} GLAF
-                    -- INNER JOIN "SAGE_COMBINED"."GLAMF_COMBINED" GLAMF
-                   -- ON GLAF.ACCTID = GLAMF.ACCTID AND GLAF.SOURCE = GLAMF.SOURCE
-                    UNPIVOT (PERIODBALANCE FOR "Fiscal Month" IN (
+                    UNPIVOT ("Journal Transaction Amount" FOR "Fiscal Month" IN (
                 OPENBAL
                 ))
                 WHERE FSCSYR >=2022
-                ORDER BY "Fiscal Period" asc)
-                    
+                ORDER BY "Fiscal Period" asc)--CTE
+
+                select DISTINCT  CONCAT(LTRIM(RTRIM(ACCTID)), CONCAT(' - ', ACCTDESC)) AS "Account Name", LTRIM(RTRIM(GLACGRP.ACCTGRPCOD)) AS "Account Group Code" ,
+                TRIM(GLACGRP.ACCTGRPDES) AS "Account Group Description" , CSCOM.CONAME, CSCOM.LEGALNAME AS "Legal Name", GLAFS.* 
+                from Bal GLAFS
+                   INNER JOIN {{ ref('SAGE_COMBINED', 'GLAMF_COMBINED') }} GLAMF
+                  ON GLAFS."Account Number" = LTRIM(RTRIM(GLAMF.ACCTID)) AND GLAFS."Database ID" = GLAMF.AUDTORG
+                    LEFT JOIN {{ ref('SAGE_COMBINED', 'GLACGRP_COMBINED') }} GLACGRP
+                  ON LTRIM(RTRIM(GLAMF.ACCTGRPCOD)) = LTRIM(RTRIM(GLACGRP.ACCTGRPCOD)) AND GLACGRP.AUDTORG = GLAMF.AUDTORG
+                      LEFT JOIN {{ ref('SAGE_COMBINED', 'CSCOM_COMBINED') }} CSCOM
+                  ON LTRIM(RTRIM(CSCOM.AUDTORG)) = LTRIM(RTRIM(GLAFS."Database ID"))
+                    )
             dependencies:
               - locationName: SAGE_COMBINED
                 nodeName: GLAFS_COMBINED

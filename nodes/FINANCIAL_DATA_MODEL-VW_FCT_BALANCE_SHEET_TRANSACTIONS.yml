@@ -4,7 +4,9 @@ steps:
       config:
         postSQL: ""
         preSQL: ""
+        selectDistinct: false
         testsEnabled: true
+        truncateBefore: false
       database: ""
       deployEnabled: true
       description: ""
@@ -137,7 +139,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: sum("GL_Transactions"."TRANSAMT") over (partition by "GL_Transactions"."ACCTGRPCOD","GL_Transactions"."ACCTGRPDES", "GL_Transactions"."ACCTID","GL_Transactions"."ACCOUNTNAME", "GL_Transactions"."ORGID" order by "GL_Transactions"."DATE" ASC)
+                transform: SUM("GL_Transactions"."TRANSAMT") over (partition by "GL_Transactions"."ACCTGRPCOD","GL_Transactions"."ACCTGRPDES", "GL_Transactions"."ACCTID","GL_Transactions"."ACCOUNTNAME", "GL_Transactions"."ORGID" order by "GL_Transactions"."DATE" ASC)
             systemColumnType: None
             transform: ""
           - columnReference:
@@ -239,6 +241,20 @@ steps:
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
           - columnReference:
+              columnCounter: f02754d2-9c5a-449b-8065-9fd59997e1f0
+              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
+            dataType: VARCHAR(60)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Legal Name
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 417f3d6e-6993-4995-8a41-e2a298b8d7a0
+                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
+                transform: ""
+          - columnReference:
               columnCounter: dc1d5748-a486-400f-8e61-67418a23e125
               stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
             dataType: VARCHAR(60)
@@ -294,20 +310,69 @@ steps:
                   - columnCounter: a8a2674b-0f39-4dbc-a92c-bd609e877989
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
-          - columnReference:
-              columnCounter: f02754d2-9c5a-449b-8065-9fd59997e1f0
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4e8e170e-dd1a-4a1f-9a90-2761c0efe1a1
               stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
-            dataType: VARCHAR(60)
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
             description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Legal Name
+            keyColumnType: None
+            name: ACCTTYPE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 417f3d6e-6993-4995-8a41-e2a298b8d7a0
+                  - columnCounter: a0e81a95-958b-4f37-9591-c464ee8def96
                     stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
                 transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c0205fb7-695f-4c41-ad4b-a148d0d26ebd
+              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
+            config: {}
+            dataType: ""
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: "COMBO #"
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d959725-cf7a-4339-b550-2cd553bb3552
+                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6209f351-a951-461f-9897-33a51f97369d
+              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
+            config: {}
+            dataType: ""
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Batch Number
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e12983e7-199e-4dff-b5a8-32fa6f6954e2
+                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
+                transform: ""
+            systemColumnType: None
+            transform: ""
           - columnReference:
               columnCounter: 1b441b87-f42f-4842-9336-7f6d5ff71dbb
               stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
@@ -378,14 +443,55 @@ steps:
           - aliases:
               GL_Transactions: c14fdbd6-d766-4a00-874f-fde28b8f6636
             customSQL:
-              customSQL: ""
+              customSQL: |-
+                {{ stage('Override Create SQL') }}
+                	CREATE OR REPLACE VIEW {{ ref('FINANCIAL_DATA_MODEL', 'VW_FCT_BALANCE_SHEET_TRANSACTIONS')}} AS (
+                SELECT
+                  "GL_Transactions"."ACCTID" AS "Account Number",
+                  "GL_Transactions"."ACCOUNTNAME" AS "Account Name",
+                  "GL_Transactions"."FISCALPERD" AS "Fiscal Period",
+                  "GL_Transactions"."FISCALYR" AS "Fiscal Year",
+                  "GL_Transactions"."DATE" AS "DATE",
+                  LAST_DAY("GL_Transactions"."DATE") AS "PERIODENDDATE",
+                  "GL_Transactions"."TRANSAMT" AS "Journal Transaction Amount",
+                  sum("GL_Transactions"."TRANSAMT") over (
+                    partition by
+                      "GL_Transactions"."ACCTGRPCOD",
+                      "GL_Transactions"."ACCTGRPDES",
+                      "GL_Transactions"."ACCTID",
+                      "GL_Transactions"."ACCOUNTNAME",
+                      "GL_Transactions"."ORGID"
+                    order by
+                      "GL_Transactions"."DATE" ASC
+                  ) AS "PERIODBALANCE",
+                  "GL_Transactions"."JRNLDATE" AS "Journal Date",
+                  "GL_Transactions"."AUDTDATE" AS "AUDTDATE",
+                  "GL_Transactions"."JNLDTLDESC" AS "Journal Detail Description",
+                  "GL_Transactions"."JNLDTLREF" AS "Journal Detail Reference",
+                  "GL_Transactions"."SOURCE" AS "SOURCE",
+                  "GL_Transactions"."ACCTGRPCOD" AS "Account Group Code",
+                  "GL_Transactions"."GRPCOD" AS "Group Category",
+                  "GL_Transactions"."CONAME" AS "CONAME",
+                  "GL_Transactions"."ACCTGRPDES" AS "Account Group Description",
+                  "GL_Transactions"."SORTCODE" AS "Account Group Sort Code",
+                  "GL_Transactions"."ORGID" AS "Database ID",
+                  "GL_Transactions"."LEGALNAME" AS "Legal Name",
+                  "GL_Transactions"."_FIVETRAN_SYNCED" AS "_FIVETRAN_SYNCED",
+                  "GL_Transactions"."_FIVETRAN_DELETED" AS "_FIVETRAN_DELETED",
+                  CAST(CURRENT_TIMESTAMP AS TIMESTAMP) AS "SYSTEM_CREATE_DATE",
+                  CAST(CURRENT_TIMESTAMP AS TIMESTAMP) AS "SYSTEM_UPDATE_DATE"
+                FROM
+                  "LRS_DEVELOPMENT"."FINANCIAL_DATA_MODEL"."GL_Transactions" "GL_Transactions"
+                where
+                  "GL_Transactions"."ACCTTYPE" = 'B'
+                	)
             dependencies:
               - locationName: FINANCIAL_DATA_MODEL
                 nodeName: GL_Transactions
             join:
               joinCondition: |-
                 FROM {{ ref('FINANCIAL_DATA_MODEL', 'GL_Transactions') }} "GL_Transactions"
-                where "GL_Transactions"."ACCTTYPE" = 'B'
+                where "GL_Transactions"."ACCTTYPE" IN ( 'B', 'I')
             name: VW_FCT_BALANCE_SHEET_TRANSACTIONS
             noLinkRefs: []
       name: VW_FCT_BALANCE_SHEET_TRANSACTIONS
