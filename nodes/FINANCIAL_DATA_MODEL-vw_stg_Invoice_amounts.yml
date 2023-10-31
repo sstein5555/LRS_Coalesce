@@ -202,7 +202,7 @@ steps:
               - columnReferences:
                   - columnCounter: a7bcfa93-b715-482b-9b26-c9eb5162e756
                     stepCounter: a4418938-9502-4ab1-a682-8ae8b004992d
-                transform: case when "VW_AR_Payment_Check"."Record Count">=1 then 1 when "AR_Invoice_Amounts"."Amount"<> 0 then 1 else 0 end
+                transform: case when "AR_Invoice_Amounts"."SOURCE" = 'TOWER' then 1 when "VW_AR_Payment_Check"."Record Count">=1 then 1 when "AR_Invoice_Amounts"."Amount"<> 0 then 1 else 0 end
             systemColumnType: None
             transform: ""
         cteString: ""

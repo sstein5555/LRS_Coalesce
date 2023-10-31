@@ -61,7 +61,7 @@ steps:
           - columnReference:
               columnCounter: b79e1911-a5e7-4627-8cae-ef165a732411
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: Customer Name
             hashColumns: []
             hashDetails: null
@@ -89,7 +89,7 @@ steps:
           - columnReference:
               columnCounter: ebca2149-6f07-40f4-ab21-75965f2cd472
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(6)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -103,7 +103,7 @@ steps:
           - columnReference:
               columnCounter: 540ed5b9-620c-40b9-a8f1-03acba09b7f2
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(2)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -117,7 +117,7 @@ steps:
           - columnReference:
               columnCounter: e38c2a5c-de8d-450a-99f9-a65ef65b2915
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -131,7 +131,7 @@ steps:
           - columnReference:
               columnCounter: 5da6baa2-156f-46de-a13c-2879c55fa362
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(2)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -145,7 +145,7 @@ steps:
           - columnReference:
               columnCounter: d54be54e-d0c8-405f-bb88-d8cb76d91539
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -159,7 +159,7 @@ steps:
           - columnReference:
               columnCounter: 9622ad3c-6934-4f9f-ab6e-0d9f6814715d
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -173,7 +173,7 @@ steps:
           - columnReference:
               columnCounter: 358909c4-eba6-4d7d-bfc2-bcdf15780e74
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -187,7 +187,7 @@ steps:
           - columnReference:
               columnCounter: 50bcc3f9-99ad-4882-a1c0-42fae87512da
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -201,7 +201,7 @@ steps:
           - columnReference:
               columnCounter: 15622558-7a73-43ff-abe5-a59ea81232af
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -215,7 +215,7 @@ steps:
           - columnReference:
               columnCounter: ecb8c18b-1fa0-4787-a0b4-cb07923eab66
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(2)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -229,7 +229,7 @@ steps:
           - columnReference:
               columnCounter: 8ea06ae4-6f39-4d44-b83e-7bfd1363f8ed
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(9)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -243,7 +243,7 @@ steps:
           - columnReference:
               columnCounter: c78b5976-377f-42ed-8a45-4bc2f106ba02
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(10)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -257,7 +257,7 @@ steps:
           - columnReference:
               columnCounter: e3620410-821d-4a75-a776-c120a583eb5f
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(10)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -285,7 +285,7 @@ steps:
           - columnReference:
               columnCounter: 42940f71-c613-499f-971e-aedd8602b634
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(2)
+            dataType: VARCHAR
             description: Join with CD01 for Business Code
             hashColumns: []
             hashDetails: null
@@ -341,7 +341,7 @@ steps:
           - columnReference:
               columnCounter: 08cce447-7b4a-45bd-80e6-d027551e78fd
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(20)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -383,7 +383,7 @@ steps:
           - columnReference:
               columnCounter: 6a5a19c9-6606-4520-a8d0-a303ab1ab8b5
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(2)
+            dataType: VARCHAR
             description: Joins with CD03
             hashColumns: []
             hashDetails: null
@@ -411,7 +411,7 @@ steps:
           - columnReference:
               columnCounter: 4f98e1b4-edc4-4f4c-9231-12b73f4d3c3c
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(2)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -425,7 +425,7 @@ steps:
           - columnReference:
               columnCounter: 4f727f7d-2889-46a1-9fad-069752eec0c9
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(25)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -439,7 +439,7 @@ steps:
           - columnReference:
               columnCounter: 13ac1216-40cb-48ee-8e02-98de5831b90d
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(5)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -467,7 +467,7 @@ steps:
           - columnReference:
               columnCounter: 059e5cc5-58e5-44af-9340-46fcfc40740c
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -509,7 +509,7 @@ steps:
           - columnReference:
               columnCounter: c1f3a1c7-d09e-4afb-b8b3-685a1c425392
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(10)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -523,7 +523,7 @@ steps:
           - columnReference:
               columnCounter: 818c9ec9-7199-468a-894b-443428e56d1e
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(80)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -579,7 +579,7 @@ steps:
           - columnReference:
               columnCounter: c29edf98-7d66-44fd-87f1-89680bac86cb
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(50)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -593,7 +593,7 @@ steps:
           - columnReference:
               columnCounter: 8e672679-96b3-4bf8-8257-cf2810dbb80e
               stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
-            dataType: VARCHAR(2)
+            dataType: VARCHAR
             description: Join with CD29
             hashColumns: []
             hashDetails: null
@@ -818,9 +818,7 @@ steps:
               - locationName: MASTER_DATA_CLEAN
                 nodeName: CUSTOMER_SITE_MASTER
             join:
-              joinCondition: |-
-                FROM {{ ref('MASTER_DATA_CLEAN', 'CUSTOMER_SITE_MASTER') }} "CUSTOMER_SITE_MASTER"
-                where "SOURCE_DIM" <>'TOWER'
+              joinCondition: FROM {{ ref('MASTER_DATA_CLEAN', 'CUSTOMER_SITE_MASTER') }} "CUSTOMER_SITE_MASTER"
             name: VW_CUSTOMER_SITE_MASTER
             noLinkRefs: []
       name: VW_CUSTOMER_SITE_MASTER
