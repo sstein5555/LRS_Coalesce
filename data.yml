@@ -139,6 +139,11 @@ locations:
       "2":
         database: LRS_RAW
         schema: SG_RAMDAT_DBO
+  SOFTPAK_RAW:
+    mappingDefinitions:
+      "2":
+        database: LRS_RAW
+        schema: SOFTPAK_RAW
   TOWER_COMBINED:
     mappingDefinitions:
       "2":
