@@ -275,9 +275,7 @@ steps:
               - locationName: FINANCIAL_DATA_MODEL
                 nodeName: AR_Payment_Details
             join:
-              joinCondition: |-
-                FROM {{ ref('FINANCIAL_DATA_MODEL', 'AR_Payment_Details') }} "AR_Payment_Details"
-                where "SOURCE" <> 'TOWER'
+              joinCondition: FROM {{ ref('FINANCIAL_DATA_MODEL', 'AR_Payment_Details') }} "AR_Payment_Details"
             name: VW_AR_PAYMENT_DETAILS
             noLinkRefs: []
       name: VW_AR_PAYMENT_DETAILS

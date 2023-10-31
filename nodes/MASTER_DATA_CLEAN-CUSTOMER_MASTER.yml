@@ -1079,7 +1079,7 @@ steps:
                     stepCounter: "0"
                 transform: concat("CM03_Combined"."CM03_CUST","CM03_Combined"."SOURCE")
               - columnReferences: []
-                transform: "\"CUSTOMER_COMBINED\".\"Customer ID\"||'TOWER'"
+                transform: "\"CUSTOMER_COMBINED\".\"Customer Number\"||'TOWER'"
             systemColumnType: None
             transform: ""
           - acceptedValues:
@@ -1174,6 +1174,31 @@ steps:
                 transform: ""
               - columnReferences:
                   - columnCounter: 9301a2c3-3989-4e2a-bf1e-3fe1d37c940b
+                    stepCounter: af74a786-1641-4201-ad6f-8127eba08c06
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d63bbd52-90c5-4e98-8678-d21241eba6bf
+              stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Customer ID (Tower only)
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2fbdc29f-b8dc-4d23-8965-1658b046d487
+                    stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 325d2647-1081-4807-9d73-4b59f4e0af9c
                     stepCounter: af74a786-1641-4201-ad6f-8127eba08c06
                 transform: ""
             systemColumnType: None

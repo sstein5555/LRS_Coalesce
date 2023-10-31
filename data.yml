@@ -24,6 +24,11 @@ locations:
       "2":
         database: LRS_PRODUCTION
         schema: MASTER_DATA_CLEAN
+  OPERATIONS_DATA_MODEL:
+    mappingDefinitions:
+      "2":
+        database: LRS_PRODUCTION
+        schema: OPERATIONS_DATA_MODEL
   SAGE_CDC_BLDDAT:
     mappingDefinitions:
       "2":

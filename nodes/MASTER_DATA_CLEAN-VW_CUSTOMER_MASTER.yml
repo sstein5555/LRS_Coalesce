@@ -928,9 +928,9 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
-                transform: "\"CUSTOMER_MASTER\".\"Customer Number\"||' - '||\"CUSTOMER_MASTER\".\"Customer Name\""
+                  - columnCounter: d63bbd52-90c5-4e98-8678-d21241eba6bf
+                    stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
+                transform: "\"CUSTOMER_MASTER\".\"Customer ID (Tower only)\"||' - '||\"CUSTOMER_MASTER\".\"Customer Name\""
             systemColumnType: None
             transform: ""
         cteString: ""
