@@ -1,12 +1,12 @@
 steps:
-  SITE-06c17e01-8615-4210-b096-423e43ef46ac:
+  APOBL-860c8974-a8ec-4fb3-ab3e-b3e9c13471b5:
     operation:
       database: ""
       dataset: ""
       deployEnabled: true
       description: ""
       locationID: ""
-      locationName: TOWER_RAW
+      locationName: SG_ACTDAT
       metadata:
         columns:
           - acceptedValues:
@@ -14,13 +14,418 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e098aaa7-3521-4745-a7cf-8b7d03eb97b1
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: a0e98b9c-2172-4b2a-a51a-cab002aeb283
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(22)
             defaultValue: ""
             description: ""
-            name: SITEID
+            name: IDINVC
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fc0e54d7-ca18-4415-86e5-b172f38638ba
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: VARCHAR(12)
+            defaultValue: ""
+            description: ""
+            name: IDVEND
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 159cbe25-ba39-4cae-8176-25f7e0882245
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(5,0)
+            defaultValue: ""
+            description: ""
+            name: CNTLSTPAYM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 954a97d3-7dd9-41d9-87fe-cfd6a34c84bd
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(9,0)
+            defaultValue: ""
+            description: ""
+            name: DATELSTACT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a493d4ff-b351-48f3-82eb-908bf30da781
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: TXAMTRT5TC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8b10d18f-4705-4f2a-a347-8e87da1a9843
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(9,0)
+            defaultValue: ""
+            description: ""
+            name: DATEPAID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d488e299-0838-44ea-a9eb-abd55bc71e44
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: AMTBASE2TC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1475250e-57d3-4429-9151-e67da8f06d61
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: VARCHAR(22)
+            defaultValue: ""
+            description: ""
+            name: IDORDERNBR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ffdaff98-c1a4-46a0-a0f0-9b90d9fc5b66
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: AMTTXBLTC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 86b95d0c-c291-48e1-872c-002cbf7095f9
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: AMTDUEHC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e92732f7-a6e9-4e5b-a9ed-516f4540f65d
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: TAXCLASS4
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 554c77e6-72f9-4d54-9e23-36313be7b60c
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: AMTBASE1HC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e0c575ba-1aba-440f-b639-dec6f7250101
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: AMTTAX5HC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12b148d6-6487-48d5-8287-2ee1d9e151fa
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: TAXCLASS1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f3365624-7c48-4657-b1fa-d0d206875a06
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: RATETYPERC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a81de876-16cf-4859-9182-88fdc3317b48
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: AMT1099REM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 435c168a-6480-4b75-8733-f0d5af773b4a
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: RTGOAMTTC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 00f60383-9300-4231-aa37-d1886d292583
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: AMTBASE1TC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 94be6112-612a-4f33-8075-176e42bb0939
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: FISCYR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8dd56794-7624-4ba2-a83d-9b55c7375878
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SWTXBSECTL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e1fabf11-bb9f-4a34-b103-8938829e1374
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(9,0)
+            defaultValue: ""
+            description: ""
+            name: DATEASOF
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d4dcbb38-a0b9-422c-ab47-d29ae14b345f
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(9,0)
+            defaultValue: ""
+            description: ""
+            name: AUDTTIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dd1fb353-d3d3-4b0f-881e-30a07e5961a5
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: SRCEAPPL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 10604dd6-46ad-4d4d-9e6c-32f6f41755df
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: AMTBASE4TC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4f60123c-f7c7-4e4e-af32-1960bca0533a
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: AMTTAXTC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e1fc1b5e-c842-4bcf-977e-9e9cd64914ce
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: TXAMTRT3TC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 657421bd-081d-4834-8475-b2953b76b808
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(5,0)
+            defaultValue: ""
+            description: ""
+            name: CNTTOTPAYM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2a8aae0e-80eb-4450-a339-6544eebb5913
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
+            config: {}
+            dataType: NUMBER(19,3)
+            defaultValue: ""
+            description: ""
+            name: AMTTXBLHC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -29,13 +434,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 590a3ba1-610e-42aa-8e54-cc99288c2504
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 2f379c5e-8bee-4ce6-bba9-a5e569229670
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: SITEUID
+            name: AMTBASE2HC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -44,13 +449,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5828a52c-7e8d-44ad-bc27-ff352f42f060
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 69c2f7ef-86b3-42fc-b1c1-72edc6f45107
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(12)
             defaultValue: ""
             description: ""
-            name: CUSTID
+            name: CODETAX1
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -59,13 +464,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ffdace76-7365-4049-922b-68be058d0550
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: a93cc859-1ebd-45c1-b7ea-da0e7d47fc72
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: BILLTOCUSTID
+            name: SWTAXINCL2
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -74,13 +479,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 03e9a733-3044-4a9a-9c9a-6be2c6aba799
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 746f2688-4974-48a6-a7f8-fbc89fbc0f7a
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: PREVIOUSSITEID
+            name: SWTXCTLRC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -89,13 +494,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a531f26d-5cb5-44e6-b9c2-7c670acf4390
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: dc254a15-8cde-4a17-a98c-a7aa951bee9a
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: SITENAME
+            name: ORATEDATE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -104,13 +509,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 53ac4bfa-3d11-4988-8b92-9c78b33b0061
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 6943f157-480c-40ca-95e7-8d4141ae6c5b
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: DESCRIPTION
+            name: DATEPYSTTS
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -119,13 +524,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6cf923d6-99f5-4dc3-af52-e49fef83016d
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 1205245b-188d-4231-a06a-ad460c1fe0ea
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: CONTACT
+            name: AMTTAX3HC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -134,13 +539,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 40a98d18-afb3-46df-8763-834ac78dcd85
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 61f7c8d2-86bd-4047-b9f2-db3b805c0d96
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(6)
             defaultValue: ""
             description: ""
-            name: SITEADDRESSUID
+            name: RTGTERMS
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -149,13 +554,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 8156c547-68fd-4e1f-b905-21d63249fa73
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 630489e7-91bf-419e-ab33-558b3acb6f8f
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(12)
             defaultValue: ""
             description: ""
-            name: SERVICELOCATION
+            name: CODETAX2
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -164,13 +569,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e7f2d8f2-1fde-4903-83f2-d44bd591af09
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: ac8f2c27-6b20-44f3-8c10-64b6dd1249db
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: EMAIL
+            name: SWRATEOVRD
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -179,13 +584,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6db19b33-7a86-4751-aa3c-a6f8519bf46c
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: d7c3f7af-ec3c-4993-817b-8adef3e86ec5
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(22)
             defaultValue: ""
             description: ""
-            name: PHONE
+            name: RTGAPPLYTO
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -194,13 +599,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6f4be16e-d8d7-4475-8d51-3201c482912d
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 1b67e7d0-9efd-4b26-bd4c-16ac0d03e636
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(7,0)
             defaultValue: ""
             description: ""
-            name: FAX
+            name: CNTITEM
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -209,13 +614,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ed45729f-9360-40f9-b894-83e592fdf031
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 81235906-0eac-410e-beaa-7ff4d52b4c3a
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: MOBILE
+            name: RATEOPRC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -224,13 +629,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3727fe49-b934-4976-91a4-40b4e6cc84bd
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 2968b246-dd32-4420-8a6c-6c4fa007dc48
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: SVCAREA
+            name: OAMTWHT1TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -239,13 +644,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: cf7635f2-9a0a-4d11-845e-6e37b9ce9288
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 9f5c59a0-ee05-4972-9c48-95602f15d0de
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(3)
             defaultValue: ""
             description: ""
-            name: SALESPERSON
+            name: CODECURNRC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -254,13 +659,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2c5d3d05-08d2-4b99-b4a3-d0cdcdf865a6
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 85f83aa3-1b3b-4b4f-92dd-0b90e28434ef
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR(18)
             defaultValue: ""
             description: ""
-            name: NOTIFYBYEMAIL
+            name: IDRMIT
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -269,13 +674,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: c948af53-13ef-42dd-8e02-6b49e423ec1a
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 56b3ebb8-861b-47e3-9256-8a58c2fa9c25
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(19,0)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: SIGNATUREREQUIRED
+            name: AUDTDATE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -284,13 +689,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9104a65d-f392-4ed2-bc3b-ec50cf96dfb1
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: a2a233a5-0b13-44cb-bc9d-d1ab7c4c7a5d
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: BLANKETPONBR
+            name: AMTREMIT
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -299,13 +704,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 31093bfd-aa3a-4c38-950a-dd68f26fce18
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 8a7cf1c3-80fb-485a-b5c0-92edd5cdad00
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: TIMESTAMP_NTZ(9)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: BLANKETPODATE
+            name: IDTRXTYPE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -314,13 +719,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6c52625a-e125-436b-b8c6-b5cd423ba207
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 20b2f713-b09e-4b6c-8a06-b539415cd3f5
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: TIMESTAMP_NTZ(9)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: BLANKETPOEXPIRATIONDATE
+            name: RTGDATEDUE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -329,13 +734,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 8c8cead3-6cf5-409c-a8a1-2887643cdf21
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: b154723f-cc21-458c-9fd5-073c83a8c945
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(15,7)
             defaultValue: ""
             description: ""
-            name: POREQUIRED
+            name: EXCHRATEHC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -344,13 +749,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 8721412e-29ea-498b-be8c-d4f38dfe7406
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: e72598cd-e065-453b-b937-7595bc490b32
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: POREQUIREDMESSAGE
+            name: AMTDISCTC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -359,13 +764,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: f155de87-cc08-4b8f-b3eb-9fbbf386c315
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 4cca09c4-1d0b-465d-a5c8-d2438c7f2d96
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: TAXGROUP
+            name: TAXCLASS2
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -374,13 +779,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d95512d6-ff70-4221-ae77-3a2ae36e05ef
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 8af47218-7a93-471c-8da5-85d68df2b31b
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: TAXEXEMPT
+            name: AMTBASE5TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -389,13 +794,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2e245af1-e7ba-4b91-80c7-8c7b194f90a1
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: dc0587ab-25e2-4d02-ae57-26f0540026ab
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: TAXEXEMPTNBR
+            name: SWPYSTTS
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -404,13 +809,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d4f59504-1bc8-4618-8964-00b7dd417e51
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 5c1b45f6-1b56-425b-8b73-85694ff90a90
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: TIMESTAMP_NTZ(9)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: AUDITDATE
+            name: SWTAXINCL1
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -419,13 +824,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5109d3fa-f91e-4393-87ad-8ba296b26a4b
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: a8a724d5-fc95-4ef5-9603-24fa110304f2
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR(3)
             defaultValue: ""
             description: ""
-            name: MINUTESPERUNITQUANTITY
+            name: APVERSION
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -434,13 +839,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2dc0b968-cc67-433a-89d0-7fcbad89afdc
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 0b2009f3-13de-4933-9ae8-21be6f70bcc5
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR(2)
             defaultValue: ""
             description: ""
-            name: MATERIALDENSITY
+            name: IDRATETYPE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -449,13 +854,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 52613d37-413c-47c4-8c11-2af29d604b5c
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 39f12d38-5b8b-4050-97c6-28250e62ded9
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: VOLUMEUOM
+            name: SWRTGOUT
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -464,13 +869,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2d390f99-b909-41b4-ba2c-c53819cf0f1d
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 1728eabe-7e1c-4be0-b4f9-996eb011d606
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(2)
             defaultValue: ""
             description: ""
-            name: WEIGHTUOM
+            name: FISCPER
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -479,13 +884,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a0dceb25-c525-4188-91cb-8633b4a0b8a3
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 540548b6-5504-4644-847a-7de733ac8030
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: COMMENT
+            name: AMTINVCTC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -494,13 +899,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ec9cd663-f9a5-42cd-88e4-73206dd7c5b8
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 475a5fc9-175f-4908-96f0-10caf3c0fff2
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: DETAILEDNOTES
+            name: AMTBASE4HC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -509,13 +914,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b183896a-4e3f-4cd1-87ba-4db7c88ddd36
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 1671d8d9-addb-43fc-b835-a3ee6d69a2ca
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(19,0)
+            dataType: VARCHAR(2)
             defaultValue: ""
             description: ""
-            name: YTDYEAR
+            name: ORATETYPE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -524,13 +929,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a144c87e-3761-4e67-a077-c0d5a3f90b0b
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: feabb711-579c-4ea8-859d-c4961f63e49a
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: YTDREVENUE
+            name: TXAMTRT2TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -539,13 +944,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a34dc2cf-9318-4d04-8294-5230f1e2523c
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 5780e5dd-5b2b-4186-a8b0-63b3e4390ceb
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: TOTALREVENUE
+            name: AMTTAX4HC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -554,13 +959,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0e588800-80d4-4d49-b4ac-e154574c2594
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 1caa7ed0-1b2a-4ac8-a431-8c5f287a6c38
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: TIMESTAMP_NTZ(9)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: ANALYSISFROMDATE
+            name: TXBSERT2TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -569,13 +974,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5723f6c6-5e8b-4116-9f43-f7f64e51e5d9
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: fd58db9d-bae6-431f-b1f9-78f0b871aa89
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: TIMESTAMP_NTZ(9)
+            dataType: VARCHAR(8)
             defaultValue: ""
             description: ""
-            name: ANALYSISTODATE
+            name: IDBANK
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -584,13 +989,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2b8ceaef-0bca-45ce-a50b-2d5ac76af4ba
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: fd5cccdb-d010-4334-8869-ba2f966d0931
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: ANALYSISREVENUE
+            name: SWPAID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -599,13 +1004,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a2429521-d1ee-406a-ada7-e2df0ac541c4
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 3da1286a-bf8d-4932-bb70-bddf3d875167
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(15,7)
             defaultValue: ""
             description: ""
-            name: ANALYSISCOST
+            name: RATERC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -614,13 +1019,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 14a68b49-6957-499d-a562-8386cafe957a
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 5773a20c-cd8d-4242-a601-d9429872ce07
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: OLDSITEID
+            name: CNTBTCH
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -629,13 +1034,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0a97e7bc-377d-4d84-a47e-d5723f810a8b
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: a6830350-9541-4eb8-bf22-d006c979f734
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: ASSESSSURCHARGE
+            name: AMTDUETC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -644,13 +1049,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 51797b6f-602a-43fc-888a-478c8961ccd8
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 799f6365-acaa-4870-bc00-00ec6b5612cf
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR(12)
             defaultValue: ""
             description: ""
-            name: ASSESSFRANCHISEFEE
+            name: CODETAX4
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -659,13 +1064,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 70c6d870-f08c-4eb6-8dc7-c73cc1e1cfa9
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: c6aec15e-24de-4477-85bb-fb216d885314
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: REQUIREINVENTORYMOVECOMPLETION
+            name: RTGAMTHC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -674,13 +1079,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9f8a7d10-098c-4776-89b4-1b840b124161
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: e9464dc6-1a17-4382-9503-27ee0822e391
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: INSURANCECERTIFICATEREQUIRED
+            name: TXAMTRT1TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -689,13 +1094,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 94a15c4b-abde-4ade-bfdb-223ca6ea13a4
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: f5a0c1a1-8aed-44b9-84a8-109355232719
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: DEFAULTTRANSPORTER
+            name: SWRTGRATE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -704,13 +1109,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e0fbfad3-2e00-4859-8c46-107e21a024d4
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 00e8fda8-c36a-40e0-8412-e337fe465f32
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: HIDEPRICINGONDESTINATIONTICKETS
+            name: SWJOB
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -719,13 +1124,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a0beecb7-8829-45fa-8685-1e37500584a2
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: ee923e56-aa06-4b80-800a-5ee06f9c636d
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR(8)
             defaultValue: ""
             description: ""
-            name: MANIFESTLABELCOUNT
+            name: AUDTUSER
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -734,13 +1139,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0215b7b1-da19-421b-82e7-c42f1f4b4476
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: b0d2215c-8c89-44a9-a3cd-595bf6843b03
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(6)
             defaultValue: ""
             description: ""
-            name: DEFAULTDESTINATION
+            name: IDACCTSET
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -749,13 +1154,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: c49634c7-fe68-4625-8378-19a44ff092d9
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 6fb0e01e-1082-4995-8efd-0e00087b8994
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: STATEPERMITID
+            name: RTGAMTTC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -764,13 +1169,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2b9ff8ce-7f5f-4234-9251-8902402583ba
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 020db2eb-172c-4dc4-8efc-b213101014f9
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(12)
             defaultValue: ""
             description: ""
-            name: EPAID
+            name: CODETAX5
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -779,13 +1184,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d442141a-3069-4d12-a64d-6501a782f9af
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 343e88fa-738b-4015-ae72-57932dcb7cc1
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: COMPANYID
+            name: AMTTAXHC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -794,13 +1199,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 13a16f48-f9f1-40d8-815e-2d8369b874cc
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 8df3a6fe-e58f-43b8-a64a-ffa1f5b7bf73
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: TRADEWASTEREPORTABLE
+            name: AMTBASE3HC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -809,13 +1214,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d08e8a40-9e05-40f9-a9e0-208c5fe0f154
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 67fe09de-a482-4921-863f-41894e63f6c2
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: LOCALINVOICEHANDLING
+            name: OSWRATE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -824,13 +1229,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5a995406-bf8a-422f-8528-ecbfbadd4477
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 31f608a0-89f4-4809-811e-988165e47841
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(22)
             defaultValue: ""
             description: ""
-            name: BILLINGCYCLE
+            name: IDPREPAY
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -839,13 +1244,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3660faf8-cde3-4cdf-906f-386af5938de6
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: fce7108b-462a-407e-b8b4-50ad9b76a553
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: ROUNDSCALECHARGES
+            name: AMT1099ORG
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -854,13 +1259,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0fd4e762-2ce7-45f8-950e-5799ce38052f
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 61f3563e-03c7-43e9-af12-645d685220b3
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR(6)
             defaultValue: ""
             description: ""
-            name: SCALEPRINTTICKET
+            name: IDRMITTO
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -869,13 +1274,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 118d5731-c84c-4a25-9160-ae683c965997
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: afcfa8c3-aedf-4090-a30e-dabe61a982db
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: SCALEPRINTSTAGETICKET
+            name: SWTAXOVRD
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -884,13 +1289,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 31b8b617-c436-45fa-bbd1-89047ed6508d
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: b506ed82-3d0b-47ac-91cc-d41c6a444bd6
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: SCALEREQUIREWORKORDER
+            name: TXBSERT4TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -899,13 +1304,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 430862ab-67ac-422b-97df-f6b602bff30b
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: a6555831-d99d-49ff-91f1-ad2191f26647
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: SCALETRAFFICDIRECTION
+            name: AMTTAX1TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -914,13 +1319,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: dc758cc9-fad2-4e62-a67c-4c07c17d0b67
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 8d881806-6a60-49de-b87c-4def327aff5f
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: RATEREVIEWMONTH
+            name: OAMTWHT5TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -929,13 +1334,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 8e153576-f2df-45c9-b3b5-86133b3e8c47
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: a7399e8e-a3b1-49f0-b57d-a5e92b86c9bf
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(5,0)
             defaultValue: ""
             description: ""
-            name: SCALETICKETSITE
+            name: CNTLASTSCH
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -944,13 +1349,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a42cae7f-a761-4338-914a-19a08ca81d47
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 4d984546-5a4d-423b-8c97-e65426aff994
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: DISPLAYTOUSER
+            name: RTGOAMTHC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -959,13 +1364,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e5279d67-67c4-4655-888e-90f6610dfc97
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 7abe5736-7955-4db0-a9c5-04a80f5ea0ca
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(12)
             defaultValue: ""
             description: ""
-            name: SITENAME2
+            name: CODETAX3
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -974,13 +1379,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a9c7c3b3-907a-4196-8159-691023309f02
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: bfe11e75-5c05-42e0-b98c-efb3979a4862
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: PENDINGDUNANDBRADSTREET
+            name: AMTINVCHC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -989,13 +1394,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2bdc8091-6b89-40a6-912b-90a66542b2ed
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: c3ebc9a2-53f6-4dfd-bbd4-7e5290a6b8d1
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(2)
             defaultValue: ""
             description: ""
-            name: PENDINGNOTES
+            name: TYPEBTCH
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1004,13 +1409,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ed183bb1-de3a-4f19-a928-703624d72daf
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: d34417c9-5427-420e-bdd1-68cbe3c43102
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: PENDINGOTHER
+            name: ORATEOP
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1019,13 +1424,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: cdb4debf-fbc3-4688-b24e-0e331f90308a
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 8c07b9c2-7dd8-4a41-bae3-71c424188a09
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: PENDINGPREPAYMENT
+            name: AMTTAX2TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1034,13 +1439,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 07a93aec-ee72-483c-91bd-dff985e282b3
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 9efbbfcb-ac44-465a-829f-d4c504076710
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: PENDINGPREPAYMENTAMOUNT
+            name: DATEINVCDU
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1049,13 +1454,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 541bf956-71a9-4450-882a-b2c3732d06ec
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 7705eb78-ebac-4501-9422-c9264f88a742
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: PENDINGSIGNEDCONTRACT
+            name: SWTXRTGRPT
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1064,13 +1469,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 59d19055-7caf-4314-a01d-505791e95511
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 25d72c06-acf7-43e0-abb3-92e48f2c0fd6
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: PARCEL
+            name: RATEOP
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1079,13 +1484,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ec098691-5056-4f43-98ac-8b67dbcae97b
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 41cef333-3864-4ac3-a6a5-97ee00eb1d10
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: DEFAULTTRANSPORTER2
+            name: TXBSERT3TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1094,13 +1499,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3268e658-57c0-471e-b643-dc618540b672
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 625a75a7-0129-40ea-9d7c-d3b8a45181ea
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(3)
             defaultValue: ""
             description: ""
-            name: DEFAULTTRANSPORTER3
+            name: CODECURN
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1109,13 +1514,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 4a6f7b74-8677-48b5-99aa-2b74cbd7750f
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: e440fc7b-9def-48f5-96e5-75a2b86a9683
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(5,0)
             defaultValue: ""
             description: ""
-            name: BROKERACCT
+            name: CNTLSTPYST
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1124,13 +1529,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ef8a593c-1a12-43df-a819-1028621b20bd
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: b62fe271-8028-42d9-9a04-d981fa044b24
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(6)
             defaultValue: ""
             description: ""
-            name: REBATERATELEVEL
+            name: IDVENDGRP
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1139,13 +1544,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 44655aad-599d-4020-9ee5-97712b4a7d94
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 3b3bb697-a6de-4173-b187-6b6910d7b588
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(6)
             defaultValue: ""
             description: ""
-            name: CONTACTUID
+            name: AUDTORG
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1154,13 +1559,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e8eea890-d031-4d99-aadc-c2cd1bb1433f
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 6dd50a55-deca-4c96-9290-71f7d7f5d32b
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: CREDITLIMITWARNINGLEVEL
+            name: POSTSEQNCE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1169,13 +1574,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: f2de8261-969a-470e-bc4a-2c3f0b6ed59c
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 8a660881-fd35-4126-bc7f-aca8532e0fbe
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: INACTIVEMESSAGE
+            name: RATEDATE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1184,13 +1589,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2d79e6cc-3ff3-41d6-b495-02947b569724
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: c0209a08-712c-41eb-bf45-8f01391b189c
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: INTERCOMPANY
+            name: AMTBASE5HC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1199,13 +1604,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9b9ee4e4-4ce5-4d85-9ebc-596da02d3f48
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 84d7fa64-105c-43c6-a52b-77c0355c6b1f
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: ISCARRIER
+            name: LONGSERIAL
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1214,13 +1619,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a103e8e9-caa8-4aa5-8eca-642f050db222
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 4e3b76e4-99a5-4427-aca8-de1b968a0e9b
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: ISGENERATOR
+            name: AMTTAX3TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1229,13 +1634,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: dd0b9ee7-afd7-4299-83f2-d8d0e582b883
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: db2ee15f-d097-4856-8614-f1037e367cb2
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR(6)
             defaultValue: ""
             description: ""
-            name: PRINTBALANCEONTICKET
+            name: ID1099CLAS
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1244,13 +1649,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 51888698-2d71-4de5-95aa-0d2e455b6f56
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 953c61fb-e976-4de7-9e84-cf1eb7a373fd
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: PRINTBILLOFLADING
+            name: AMTDISCHC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1259,13 +1664,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e4bfa184-cb58-4eac-9b50-322d74b23a6d
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 436575f9-eaf1-4ab3-a321-af7399f74693
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: PRINTPRICEONTICKET
+            name: AMTNONTXTC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1274,13 +1679,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5c662568-49ef-44b6-a665-e5effb6d5f3d
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: e3c1eba4-6fc7-4213-a181-d266745ffbdb
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: PRINTWEIGHTSONTICKET
+            name: DATEBUS
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1289,13 +1694,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 8e1e350b-c32d-405c-b1ee-50e51009fdcf
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 1bdfddd1-5897-4fcb-8b02-9b6052665726
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: PROMPTFORADDRESS
+            name: TXBSERT1TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1304,13 +1709,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b8c98a91-a7c5-40b0-913c-f1cb17a41040
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 1c3e21b2-0218-4107-9edc-264c23a088fd
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: REQUIREPO
+            name: OAMTWHT4TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1319,13 +1724,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 67b083b8-181b-4024-845a-7f426d45cddc
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 95c72e80-bd4b-4588-b037-68af80af3453
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: RESTRICTMATERIAL
+            name: SWTAXINCL3
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1334,13 +1739,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: dd674bce-d778-4293-8584-00ef13004302
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: f9da4a5a-8928-4048-b3a1-394690fb4b5d
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: RESTRICTMATERIALTOPRICESHEET
+            name: TAXCLASS3
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1349,13 +1754,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 8ccb25ee-1188-4de3-91fc-6ebb4dfe20f9
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: a86d218f-19a1-4f87-9726-e835f0613b21
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: TICKETSCREENMESSAGE
+            name: RATEDATERC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1364,13 +1769,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d75a8fa0-52b4-42d0-b2c6-6eeceec1a652
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: c46e1269-a10e-42c2-99b2-96028856e2c8
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR(6)
             defaultValue: ""
             description: ""
-            name: TOTALCUTOFFTONS
+            name: CODETERM
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1379,13 +1784,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5a44c93c-74de-4358-9c36-9d04dd3ffa44
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 27b8c4d7-94d8-4a6a-8306-7f7037e7d322
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: TOTALTONS
+            name: SWNONRCVBL
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1394,13 +1799,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9f73d1e0-db11-44d5-9968-a14234e04437
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: a626def3-4c40-4b25-b299-20acaf81d795
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: TOTALWARNINGTONS
+            name: TAXCLASS5
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1409,13 +1814,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ac8e3fce-a1a7-4b00-8d4d-7fb68af8c2dc
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: b9ea086c-3c7b-4730-882c-4782947c0701
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: BICBILLINGMETHOD
+            name: OAMTWHT2TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1424,13 +1829,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: be8ffe9c-3094-43d9-9c5f-ef4c7d02bac2
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 9f8aacbf-73bc-4a1b-ab2b-9430d248db9d
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(6)
             defaultValue: ""
             description: ""
-            name: BICBUSINESSTYPE
+            name: YPLASTACT
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1439,13 +1844,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 8eb2bc73-37ed-457a-9f58-4fb298ec8c2e
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: ee06f012-7b31-43c9-9389-5b36e7c9e806
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: BICCOMMENTS
+            name: DATEDISC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1454,13 +1859,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: c89454d2-7e11-4e46-9c34-1c0edf8c4693
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 9b69c5aa-f52e-4fc9-ac94-2380ab92b1c8
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: TIMESTAMP_NTZ(9)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: BICLASTWASTESTREAMSURVEYDATE
+            name: SWTAXINCL4
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1469,13 +1874,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: f967a3a5-8b32-41ce-8670-e25811b04c2c
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 1262961a-c6ca-4aea-8699-b1afa56454df
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: BICSOURCETYPE
+            name: DATELSTSTM
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1484,13 +1889,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e31155ba-3151-4a37-a229-c2fa90ecc4b0
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 8678a9db-733a-423a-a67a-561c04411735
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: BICSPECIALCONDITION
+            name: AMTTAX2HC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1499,13 +1904,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a946f7e9-a74b-4587-bdfd-10c4dbfc28c5
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 242507ec-ee81-4ea5-a289-2e0c1b463823
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: BICWASTEPROFILEMETHOD
+            name: VALUES
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1514,13 +1919,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 92eff740-67df-4285-a9d7-11c1866b5b28
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: ad536422-e6a3-4847-86b6-c3be6aaff7c4
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: BUILDINGACCOUNTLINK
+            name: AMTTAX5TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1529,13 +1934,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 95d02f22-2230-407d-9e7f-1d0fd5700ae0
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: f93d5275-f1f4-449c-8ec2-772076ff1d23
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: ISBUILDINGACCOUNT
+            name: DATELSTRVL
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1544,13 +1949,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 7d97bd65-827e-4a36-827b-7dd7d208eab5
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 8142e469-262d-42f7-8812-784c673aa001
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: SCALEALLOWRATEOVERRIDE
+            name: TXTTRXTYPE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1559,13 +1964,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5ba5b366-6372-46b5-a1d2-7372b377013e
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 8e496d10-b5b8-440f-8ebc-fb2ef0f24d76
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: SERIALIZEDPROGRAM
+            name: SWTAXINCL5
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1574,13 +1979,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 01a84d50-b80f-422d-aafb-cbe7e90b07de
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 59b3244f-78c5-42fc-9416-c8411c25fece
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR(12)
             defaultValue: ""
             description: ""
-            name: ALLOWWORKORDERCHARGESFORTAXESANDFEES
+            name: CODETAXGRP
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1589,13 +1994,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5b2567ee-3fb0-452a-ba38-a1620efc09f4
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: bb11bde3-36cc-46f5-8cd1-fac041850042
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(128)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: CALLAHEAD
+            name: SWRATERC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1604,13 +2009,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 61c72a87-f31d-411e-857f-18aeb4ca470a
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: dbb1a233-690c-438e-84de-b4f3d32d2248
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: SALESTERRITORY
+            name: OAMTWHT3TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1619,13 +2024,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 8bd69930-f9fb-4697-8dfc-10728d3739f4
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: c81aac26-b625-4ae3-b8ed-3de3b90b3887
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(15,7)
             defaultValue: ""
             description: ""
-            name: SITECLASS
+            name: ORATE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1634,13 +2039,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e8312b47-8ba3-4505-96e9-2003a52bc27d
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 3c06b669-cc3c-4273-8925-23ec47f48924
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: ACQUISITIONSOURCE
+            name: AMTTAX1HC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1649,13 +2054,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0f0b4106-ac44-4bc0-867c-b03de614dfc3
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 4bf1cbda-db86-40f1-812a-19534c24e6a4
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: ANNUALNOCHARGEPICKUPSQUANTITY
+            name: SWRTG
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1664,13 +2069,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: bed08cc5-e28e-4b20-8f47-81da2359cd4c
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 4d1f88c0-a68d-4409-a9f4-5fe7adf490a9
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: ANNUALNOCHARGEPICKUPSQUANTITYUSED
+            name: DATEINVC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1679,13 +2084,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ee59d0b0-2a0d-466f-b8ba-81f16e652dce
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 507e15f4-a391-4334-b084-8d00b9c10adf
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: BILLFREQUENCY
+            name: AMTNONTXHC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1694,13 +2099,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6a00ff7c-db9b-421a-99d2-b87e4bda7049
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 4ca43ebe-24b7-4889-b4ca-d29dd7145f67
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: BILLRECURRINGCYCLEOFFSET
+            name: DATEBTCH
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1709,13 +2114,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ec5beed9-cc94-4cd2-9dda-384504a3961e
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 01ba21d7-6fde-426c-88c1-3db5144247f2
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: TIMESTAMP_NTZ(9)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: BILLTHRUDATE
+            name: AMTTAX4TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1724,13 +2129,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: c1226d4e-db95-4141-8b0e-093d18b64bdd
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 8e6ff509-d4be-47a8-a34b-abc7b3cfae6c
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(60)
             defaultValue: ""
             description: ""
-            name: INVOICENOTE
+            name: DESCINVC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1739,13 +2144,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: c8cbf4ba-e5cd-4510-8ee4-a62437a0497f
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: cadbdc0f-9a16-4aff-bdbc-a79eed609e3b
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: TIMESTAMP_NTZ(9)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: NEXTBILLDATE
+            name: DATEFRSTBK
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1754,13 +2159,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e4e6f0c4-2cc1-424b-911a-cd4102bd121d
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 85346b5d-cf9e-4f9a-a21f-36df294f3004
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: SHIPPINGADDRESSLINE1
+            name: AMTBASE3TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1769,13 +2174,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 81eddaa7-4242-42eb-a6fc-d7f736bc6e31
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 7bc972b5-af87-47d4-9b85-1e3afe70822d
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: SHIPPINGADDRESSLINE2
+            name: TXAMTRT4TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1784,13 +2189,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d7491e20-2e67-48cd-876b-fc7ca41a8cb2
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 05b3dc59-1a64-443b-92d3-0434c37c86ac
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(19,3)
             defaultValue: ""
             description: ""
-            name: SHIPPINGCITY
+            name: TXBSERT5TC
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1799,13 +2204,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 22c06152-a7e8-41e4-9187-ee4f1ae08302
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 3d8a8dd1-8133-41f9-ba87-0558d58cfc58
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(22)
             defaultValue: ""
             description: ""
-            name: SHIPPINGNAME
+            name: IDPONBR
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1814,13 +2219,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ceda91e6-9340-4d26-bda3-74d5ca9a9412
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 3652912d-16c7-4d80-add8-f54a50958c7a
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: SHIPPINGPOSTALCODE
+            name: TAXVERSION
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1829,13 +2234,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: be9259e8-0034-4ecc-afcd-dcdaf17de7ee
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 804fc14e-d68a-4f37-80b6-2f8952df6144
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: SHIPPINGSTATE
+            name: CNTOBLJ
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1844,13 +2249,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 71a45482-185b-4e6b-b645-e3e69c2bed9b
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 65239d46-e1cb-4102-87ba-9bf3821569fd
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(128)
+            dataType: BOOLEAN
             defaultValue: ""
             description: ""
-            name: USECUSTOMERANNIVERSARYSETTINGS
+            name: _FIVETRAN_DELETED
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -1859,21 +2264,21 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: cd292d01-57b9-4b74-9452-4814821fdf17
-              stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+              columnCounter: 14d50942-115a-48a9-adbf-a57ee1e6433b
+              stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: TIMESTAMP_TZ(9)
             defaultValue: ""
             description: ""
-            name: BICREFUSALTOSIGNWASTESTREAMSURVEY
+            name: _FIVETRAN_SYNCED
             nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('TOWER_RAW', 'SITE') }}
-      name: SITE
+          joinCondition: FROM {{ ref('SG_ACTDAT', 'APOBL') }}
+      name: APOBL
       schema: ""
       sqlType: Source
-      table: SITE
+      table: APOBL
       type: sourceInput
-    stepCounter: 06c17e01-8615-4210-b096-423e43ef46ac
+    stepCounter: 860c8974-a8ec-4fb3-ab3e-b3e9c13471b5

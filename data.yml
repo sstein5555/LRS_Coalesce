@@ -29,6 +29,11 @@ locations:
       "2":
         database: LRS_PRODUCTION
         schema: OPERATIONS_DATA_MODEL
+  SAGE_CDC_ACTDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_ACTDAT
   SAGE_CDC_BLDDAT:
     mappingDefinitions:
       "2":
@@ -39,6 +44,16 @@ locations:
       "2":
         database: LRS_CDC_PROD
         schema: SG_CDC_ECODAT
+  SAGE_CDC_EXCDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_EXCDAT
+  SAGE_CDC_HOVDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_HOVDAT
   SAGE_CDC_HRTDAT:
     mappingDefinitions:
       "2":
@@ -49,6 +64,11 @@ locations:
       "2":
         database: LRS_CDC_PROD
         schema: SG_CDC_LAKDAT
+  SAGE_CDC_LAKDIS:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LAKDIS
   SAGE_CDC_LAKPDA:
     mappingDefinitions:
       "2":
@@ -59,6 +79,11 @@ locations:
       "2":
         database: LRS_CDC_PROD
         schema: SG_CDC_LAKSDA
+  SAGE_CDC_LECDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_LECDAT
   SAGE_CDC_LIADAT:
     mappingDefinitions:
       "2":
@@ -84,11 +109,21 @@ locations:
       "2":
         database: LRS_CDC_PROD
         schema: SG_CDC_RAMDAT
+  SAGE_CDC_RECDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_CDC_PROD
+        schema: SG_CDC_RECDAT
   SAGE_COMBINED:
     mappingDefinitions:
       "2":
         database: LRS_PRODUCTION
         schema: SAGE_COMBINED_RAW
+  SG_ACTDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_RAW
+        schema: SG_ACTDAT_DBO
   SG_BLDDAT:
     mappingDefinitions:
       "2":
@@ -99,6 +134,16 @@ locations:
       "2":
         database: LRS_RAW
         schema: SG_ECODAT_DBO
+  SG_EXCDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_RAW
+        schema: SG_EXCDAT_DBO
+  SG_HOVDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_RAW
+        schema: SG_HOVDAT_DBO
   SG_HRTDAT:
     mappingDefinitions:
       "2":
@@ -109,6 +154,11 @@ locations:
       "2":
         database: LRS_RAW
         schema: SG_LAKDAT_DBO
+  SG_LAKDIS:
+    mappingDefinitions:
+      "2":
+        database: LRS_RAW
+        schema: SG_LAKDIS_DBO
   SG_LAKPDA:
     mappingDefinitions:
       "2":
@@ -119,6 +169,11 @@ locations:
       "2":
         database: LRS_RAW
         schema: SG_LAKSDA_DBO
+  SG_LECDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_RAW
+        schema: SG_LECDAT_DBO
   SG_LIADAT:
     mappingDefinitions:
       "2":
@@ -144,6 +199,11 @@ locations:
       "2":
         database: LRS_RAW
         schema: SG_RAMDAT_DBO
+  SG_RECDAT:
+    mappingDefinitions:
+      "2":
+        database: LRS_RAW
+        schema: SG_RECDAT_DBO
   TOWER_COMBINED:
     mappingDefinitions:
       "2":
@@ -3828,4 +3888,40 @@ subgraphs:
       - ec3fe0f8-d91e-4324-a8d1-11764e663e5f
       - f654542a-14e0-4dc5-a55a-764877adc6f2
       - fb37b7f2-b5bd-4dd7-9f1f-9bc96b0d717c
+      - 099ef148-7ef0-486f-acf7-70b4650104f3
+      - 26dcc8de-7ebe-4713-9157-d25a7d7f3b8f
+      - 9fcb1fb1-155a-4350-9399-e144784f5434
+      - bdf0a9fa-1a0c-4456-aeaf-af8bc5f92ac1
+      - bfb0db40-e477-412f-9891-df4b210a3e6e
+      - f8197cee-b651-4ee2-bfb7-356d4a8e8284
+      - 05b98de8-0d08-41ea-b085-a55daa0e0257
+      - 0ba3ab98-8bc8-4608-9630-598d6e55b2ef
+      - 1411c760-9d9a-4252-b3e2-0ee6f41b8aaf
+      - ae689b19-05f2-4ad2-9f0f-847a74da9d76
+      - cd4a489a-546b-4450-a48a-cfae6e8ecbf3
+      - e66700eb-abed-42dc-b1c5-676d2259cd3e
+      - 2f90f034-c3b4-4ad6-8616-d0bde6d15dea
+      - 34328b25-c0e1-4a67-9566-55288ead1e10
+      - 804f5541-3c62-41c0-afd5-b039544a500a
+      - aed58010-da33-4818-a20f-236c022d5103
+      - cd926ed3-1501-4c2b-a746-82ef0925d553
+      - f4a99f16-902e-4fa5-ac56-6473b24ecd05
+      - 1befdf11-db6c-47c8-a6a0-c9898af30afa
+      - 2dad1ff5-4f6b-423b-9499-e0a62602b10e
+      - 75030a27-abc3-4e88-a314-4aba935f0752
+      - 9b54eece-827a-4489-a648-a555c07ff62f
+      - a66bd610-cd19-4fd8-b0a4-653793747081
+      - ddfba638-0694-430f-9116-8a8b317cfed3
+      - 38e3470c-a96e-4120-8445-5ae95c4a5117
+      - 4cd15666-05c7-4d0e-a304-a8cc4b4c2363
+      - 4e31b021-511c-49be-b6b4-c6aceaaace31
+      - 8e4d2a42-4bd7-4753-a8df-cfa024971612
+      - ae380bf2-0dab-4a56-8160-e6c36d96bf28
+      - ca7a5aec-91c1-4835-ac7f-4b9c203d0da2
+      - 7a9f50be-9d18-436e-95f0-255fd9e64b75
+      - 7c5be66e-fe88-4759-bd74-41c94808c021
+      - 8e59682e-42d9-460e-96c4-ae67498c0ce1
+      - a7c1907b-00a2-457f-9d87-2c6ad4198d52
+      - c5b5f476-85fa-46ee-bd88-218d6ac1f4d5
+      - f9269962-52f4-41a0-ac69-2f90d3038afc
 version: 2
