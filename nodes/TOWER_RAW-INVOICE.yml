@@ -29,6 +29,51 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
+              columnCounter: ca31628d-2dd9-4432-9d13-cc7605b48f65
+              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cca3ed2e-b0cd-49f9-a615-a4ad392188bf
+              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: INVOICECONTENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c4df8f23-8c7e-452c-9336-37a873106ef1
+              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PRINTINVOICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
               columnCounter: 2f1de34b-5abd-458c-94b6-2088bf9dc19b
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
@@ -96,6 +141,36 @@ steps:
             defaultValue: ""
             description: ""
             name: BILLADDRESSUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 196a79d4-7342-4320-bb6d-c5ceb6facc46
+              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: BILLPHONE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 518366d6-6c94-4067-bb65-3b2d3bcac6c7
+              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: BILLFAX
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -212,7 +287,7 @@ steps:
               columnCounter: 6db8a385-cec3-48e0-9ef7-ce78df0a5848
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: BALFORWARD
@@ -227,7 +302,7 @@ steps:
               columnCounter: 5c248fbc-86c2-441b-9870-4ad34563e370
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: AGINGBAL00
@@ -242,7 +317,7 @@ steps:
               columnCounter: f946b9b5-a3ee-4c2f-8488-5c4904dba7a6
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: AGINGBAL01
@@ -257,7 +332,7 @@ steps:
               columnCounter: e410bd1a-fc79-42a9-bab5-3138de2ab0b3
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: AGINGBAL02
@@ -272,7 +347,7 @@ steps:
               columnCounter: 641fbbbb-30e8-420c-a16f-6fd98e28cc93
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: AGINGBAL03
@@ -287,7 +362,7 @@ steps:
               columnCounter: a2016387-da73-4672-a8bc-645b2dc1ee0b
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: AGINGBAL04
@@ -302,7 +377,7 @@ steps:
               columnCounter: 7248ec03-3ceb-4672-86d0-bb66a23544ea
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: NEWBALANCE
@@ -317,7 +392,7 @@ steps:
               columnCounter: 35ae87ee-0513-44fd-a45f-456decf933a5
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: TOTSVCONETIME
@@ -332,7 +407,7 @@ steps:
               columnCounter: d6b8774f-51cd-41eb-bd4d-0ff84c55e997
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: TOTSVCRECURRING
@@ -347,7 +422,7 @@ steps:
               columnCounter: 666cdb01-f3d0-44d7-bcea-e6f2af325486
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: TOTSVCONCALL
@@ -362,7 +437,7 @@ steps:
               columnCounter: d31b4c0c-47e0-4468-8c34-102602d0f3b4
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: TOTSVCTAXES
@@ -377,7 +452,7 @@ steps:
               columnCounter: fd36956f-3678-4689-b7fa-f89f1a642a31
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: TOTFINCHARGES
@@ -392,7 +467,7 @@ steps:
               columnCounter: a4466c30-95f3-4f5d-a5d3-f963bd30e665
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: TOTCHARGES
@@ -407,7 +482,7 @@ steps:
               columnCounter: 62da3c89-453e-4a75-b5c1-f90c364e4362
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: TOTCHARGETAXES
@@ -422,7 +497,7 @@ steps:
               columnCounter: b5b0efeb-86ce-44a0-93ea-624ec358bb88
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: TOTCREDITS
@@ -437,7 +512,7 @@ steps:
               columnCounter: c68d0b61-a8ca-42c2-9e23-8a4f62f59d76
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: TOTCREDITTAXES
@@ -452,10 +527,40 @@ steps:
               columnCounter: 222e6910-22e6-4fca-8885-81513a057f27
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(9,2)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
             name: TOTPAYMENTS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 78a98c53-fa93-4447-a3e0-1c1896ae94fc
+              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: AUTOMATICPAYMENTTYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b57dd803-0a02-441a-89ca-a0fca2dadc69
+              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: COMPANYID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -542,7 +647,7 @@ steps:
               columnCounter: bfbae81e-e322-41b8-8234-082a52daecb8
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
             name: INVOICEID
@@ -554,55 +659,10 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ca31628d-2dd9-4432-9d13-cc7605b48f65
-              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: STATUS
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: cca3ed2e-b0cd-49f9-a615-a4ad392188bf
-              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: INVOICECONTENT
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: c4df8f23-8c7e-452c-9336-37a873106ef1
-              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: PRINTINVOICE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: c8bd9b60-3d12-40a9-aaf8-a7d0cd64f668
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
             name: BILLCUSTID
@@ -617,70 +677,10 @@ steps:
               columnCounter: c3e9a0fb-f715-4170-9a57-dc541082eefa
               stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
             name: BILLSITEID
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 196a79d4-7342-4320-bb6d-c5ceb6facc46
-              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: BILLPHONE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 518366d6-6c94-4067-bb65-3b2d3bcac6c7
-              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: BILLFAX
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 78a98c53-fa93-4447-a3e0-1c1896ae94fc
-              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: AUTOMATICPAYMENTTYPE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: b57dd803-0a02-441a-89ca-a0fca2dadc69
-              stepCounter: 6adcf33e-b2d4-4e17-8534-7b8ef5c6071e
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: COMPANYID
             nullable: true
             primaryKey: false
             uniqueKey: false

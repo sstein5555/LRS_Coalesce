@@ -237,56 +237,47 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: "\"DM01_COMBINED\".\"DM01_DATE\""
+                transform: CASE WHEN "CUSTOMER_MASTER"."Customer Bill To" = 'Separate (A/R Site)' then DATEADD(DAY,"CUST_SITE_PREFERENCES"."Payment Terms","DM01_COMBINED"."DM01_DATE") WHEN "CUSTOMER_MASTER"."Customer Bill To" IN ('Separate (A/R Customer)','Consolidated') THEN dateadd(DAY,"CUSTOMER_PREFERENCES"."Payment Terms 2","DM01_COMBINED"."DM01_DATE") else "DM01_COMBINED"."DM01_DATE" END
               - columnReferences:
                   - columnCounter: 40667035-d9fe-4b6d-8297-34eb08255553
                     stepCounter: 926de0bb-edd5-4689-b171-81b4c6a87565
                 transform: ""
             systemColumnType: None
             transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: bdbe539b-8400-4583-9c2a-3e4896958c2d
-              stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
-            config: {}
-            dataType: VARCHAR
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: Payment Term 1
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
-                transform: ""
-              - columnReferences: []
-                transform: TO_VARCHAR(DATEDIFF(DAY,"STG_INVOICE_COMBINED"."Invoice Date","STG_INVOICE_COMBINED"."Due Date"))
-            systemColumnType: None
-            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
-              CUSTOMER_SITE_MASTER: 56ae5e3c-c6cd-4eb5-a3ae-25d02a9ab031
+              CUSTOMER_MASTER: a83e2043-c50d-4bf2-8f19-a0858a24d969
+              CUSTOMER_PREFERENCES: 52e3dc99-9f19-4d86-a9b4-89bca60d3eef
+              CUST_SITE_PREFERENCES: 828f44ad-9ea8-4f17-8021-698a7dd934d1
               DM01_COMBINED: 8e473efe-2de8-4255-bf7b-195f76a0318b
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: MASTER_DATA_CLEAN
-                nodeName: CUSTOMER_SITE_MASTER
+                nodeName: CUSTOMER_MASTER
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: CUST_SITE_PREFERENCES
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: CUSTOMER_PREFERENCES
               - locationName: TRUXCOMBINED_RAW
                 nodeName: DM01_COMBINED
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'DM01_COMBINED') }} "DM01_COMBINED"
-                LEFT JOIN {{ ref('MASTER_DATA_CLEAN', 'CUSTOMER_SITE_MASTER') }} "CUSTOMER_SITE_MASTER"
-                ON "DM01_COMBINED"."DM01_CUST" = "CUSTOMER_SITE_MASTER"."Customer Number"
-                AND "DM01_COMBINED"."DM01_SITE" = "CUSTOMER_SITE_MASTER"."Site Number"
-                AND "DM01_COMBINED"."SOURCE" = "CUSTOMER_SITE_MASTER"."SOURCE_DIM"
-                where "DM01_COMBINED"."Sort" =1 AND "DM01_COMBINED"."_FIVETRAN_DELETED"=FALSE and "DM01_COMBINED"."METADATA$ACTION" ='INSERT'
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CUST_SITE_PREFERENCES') }} "CUST_SITE_PREFERENCES"
+                ON "DM01_COMBINED"."DM01_SITE" = "CUST_SITE_PREFERENCES"."Site" 
+                and "DM01_COMBINED"."DM01_CUST" = "CUST_SITE_PREFERENCES"."Customer" 
+                and "DM01_COMBINED"."SOURCE"="CUST_SITE_PREFERENCES"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CUSTOMER_PREFERENCES') }} "CUSTOMER_PREFERENCES"
+                ON "DM01_COMBINED"."DM01_CUST" = "CUSTOMER_PREFERENCES"."Customer" 
+                and "DM01_COMBINED"."SOURCE" = "CUSTOMER_PREFERENCES"."SOURCE"
+                LEFT JOIN {{ ref('MASTER_DATA_CLEAN', 'CUSTOMER_MASTER') }} "CUSTOMER_MASTER"
+                ON "DM01_COMBINED"."DM01_CUST"= "CUSTOMER_MASTER"."Customer Number"
+                AND "DM01_COMBINED"."SOURCE" = "CUSTOMER_MASTER"."SOURCE_NEW"
+                where "DM01_COMBINED"."Sort" =1 
+                AND "DM01_COMBINED"."_FIVETRAN_DELETED"=FALSE 
+                and "DM01_COMBINED"."METADATA$ACTION" ='INSERT'
             name: DM01_COMBINED_TRUX
             noLinkRefs: []
           - aliases:
