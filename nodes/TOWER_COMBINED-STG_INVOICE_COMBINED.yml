@@ -203,12 +203,54 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
+            name: Site ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 50892497-b42b-438b-83fe-3754d9a57fb0
+                    stepCounter: 6f531235-8623-4802-b122-469fc3588b72
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b5d0d0a3-6a16-4469-a491-137b3e029678
+              stepCounter: 926de0bb-edd5-4689-b171-81b4c6a87565
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
             name: Site UID
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
+                  - columnCounter: 1a6058b9-0457-4d65-8384-7d6650b026f8
+                    stepCounter: d0ee8791-10a2-4747-967f-b22621b20d21
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 62237e4b-5ec1-4b1a-ae88-9a7ec2cec2ec
+              stepCounter: 926de0bb-edd5-4689-b171-81b4c6a87565
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Customer Number
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e239987-221a-4e2a-b1e5-b37b2da4a7b7
+                    stepCounter: 6f531235-8623-4802-b122-469fc3588b72
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -218,6 +260,7 @@ steps:
           - aliases:
               CUSTOMER_COMBINED: af74a786-1641-4201-ad6f-8127eba08c06
               INVOICE_COMBINED: 6f531235-8623-4802-b122-469fc3588b72
+              SITE_COMBINED: d0ee8791-10a2-4747-967f-b22621b20d21
             customSQL:
               customSQL: ""
             dependencies:
@@ -225,11 +268,15 @@ steps:
                 nodeName: CUSTOMER_COMBINED
               - locationName: TOWER_COMBINED
                 nodeName: INVOICE_COMBINED
+              - locationName: TOWER_COMBINED
+                nodeName: SITE_COMBINED
             join:
               joinCondition: |-
                 FROM {{ ref('TOWER_COMBINED', 'INVOICE_COMBINED') }} "INVOICE_COMBINED"
-                INNER JOIN {{ ref('TOWER_COMBINED', 'CUSTOMER_COMBINED') }} "CUSTOMER_COMBINED"
+                LEFT JOIN {{ ref('TOWER_COMBINED', 'CUSTOMER_COMBINED') }} "CUSTOMER_COMBINED"
                 ON "INVOICE_COMBINED"."BILLCUSTID" = "CUSTOMER_COMBINED"."Customer ID"
+                LEFT JOIN {{ ref('TOWER_COMBINED', 'SITE_COMBINED') }} "SITE_COMBINED"
+                ON "INVOICE_COMBINED"."BILLSITEID" = "SITE_COMBINED"."Site ID" and "INVOICE_COMBINED"."BILLCUSTID" = "SITE_COMBINED"."Customer Number"
             name: STG_INVOICE_COMBINED
             noLinkRefs: []
       name: STG_INVOICE_COMBINED

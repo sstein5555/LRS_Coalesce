@@ -434,6 +434,21 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
+              columnCounter: 23167f6a-a229-4a61-bc29-ee98cc81b9a9
+              stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: MAXIMUMAUTOPAYMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
               columnCounter: 07854781-e31a-45c9-91be-f086b58481de
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
@@ -531,6 +546,21 @@ steps:
             defaultValue: ""
             description: ""
             name: DEBITROUTING
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 11fc6d7a-c974-4640-b0a8-b41bce04732c
+              stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: CREDITLIMIT
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -854,6 +884,21 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
+              columnCounter: 9844144e-f747-4d9a-bf25-1f9de028c089
+              stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: PREPAYMENTMINIMUM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
               columnCounter: ad70bf64-1198-4f12-a095-5f9bd9a4d3d0
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
@@ -872,7 +917,7 @@ steps:
               columnCounter: 0f3435c1-cf29-4b77-ac84-4315646536b9
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: BILLRECURRINGCYCLEOFFSET
@@ -887,7 +932,7 @@ steps:
               columnCounter: a85e5c77-5660-4880-a588-dbda9d5650c1
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: CODREQUIRED
@@ -902,7 +947,7 @@ steps:
               columnCounter: 6694de7a-6ca4-4650-8804-05b75049ae5d
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: AUTOMATICPAYMENTTYPE
@@ -914,25 +959,10 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 23167f6a-a229-4a61-bc29-ee98cc81b9a9
-              stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: MAXIMUMAUTOPAYMENT
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 766ee197-2829-4653-941e-640a1c6ea287
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: CREDITCARDTYPE
@@ -947,7 +977,7 @@ steps:
               columnCounter: 5f0ecd83-8b25-4f1e-8637-40df495a98de
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: DEBITACCOUNTTYPE
@@ -959,25 +989,10 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11fc6d7a-c974-4640-b0a8-b41bce04732c
-              stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: CREDITLIMIT
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 1cb46da8-d604-48e7-a71b-efa2d37b6397
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: NOTIFYBYEMAIL
@@ -992,7 +1007,7 @@ steps:
               columnCounter: 6b7f9e35-858d-41af-bc32-88a0a85c2cab
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: INVOICEBYEMAIL
@@ -1007,7 +1022,7 @@ steps:
               columnCounter: 2eefce97-6e49-4475-a288-f31757d15ab5
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: INVOICEBYSITE
@@ -1022,7 +1037,7 @@ steps:
               columnCounter: 3c626081-364b-4808-9de8-54a79cfc1ea2
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: SENDINVOICETOSITE
@@ -1037,7 +1052,7 @@ steps:
               columnCounter: eb14efe7-b55f-4384-8b47-9db24803f6b6
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: PRINTDUNNINGMSG
@@ -1052,7 +1067,7 @@ steps:
               columnCounter: 6336ca41-ae3e-4866-a528-f255ce071d56
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: ASSESSFINANCECHARGE
@@ -1067,7 +1082,7 @@ steps:
               columnCounter: 8862ba8c-8bc4-4368-8906-6e89af2ceec0
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: ASSESSSURCHARGE
@@ -1082,7 +1097,7 @@ steps:
               columnCounter: ed071791-1ad7-4b45-b31b-8f4b6bf6210c
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: ASSESSFRANCHISEFEE
@@ -1097,7 +1112,7 @@ steps:
               columnCounter: 5f12340c-a7c0-49ff-8940-2769cc6e0231
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: BILLZERORATE
@@ -1112,7 +1127,7 @@ steps:
               columnCounter: cb364778-7efb-46e7-b46f-88a2d0659dcd
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: AUTOAPPLY
@@ -1127,7 +1142,7 @@ steps:
               columnCounter: 136ed684-f527-413a-afc9-36eb67e6d195
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,6)
             defaultValue: ""
             description: ""
             name: AVGDAYSTOPAY
@@ -1142,7 +1157,7 @@ steps:
               columnCounter: 0138713d-0b32-41d5-979f-1132fa3d5634
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: ALLOWAUTOMATICCREDITHOLD
@@ -1157,7 +1172,7 @@ steps:
               columnCounter: 92824b22-f4f5-494e-a266-e665b97a5129
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: ALLOWAUTOMATICPASTDUENOTIFICATIONS
@@ -1172,7 +1187,7 @@ steps:
               columnCounter: 81a9d6ea-f5a6-463d-bb21-41e23eab64e8
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: ISVIP
@@ -1187,7 +1202,7 @@ steps:
               columnCounter: 6ba7a79e-dc73-4676-97be-be3cd3cac322
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: LOCALINVOICEHANDLING
@@ -1202,7 +1217,7 @@ steps:
               columnCounter: ac344490-a96a-4ab6-ac68-d11446d82fb4
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: DISPLAYTOUSER
@@ -1217,7 +1232,7 @@ steps:
               columnCounter: cf3354b4-8da1-4e42-a574-8fafa40410a1
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: INVOICEMAILINGOPTION
@@ -1232,7 +1247,7 @@ steps:
               columnCounter: 73c10852-cf0c-4a74-a185-1d12a1862f2f
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: AUTOMATEDCOLLECTIONSLETTERS
@@ -1247,7 +1262,7 @@ steps:
               columnCounter: 645da24d-fa67-4a8e-be6a-2b1ccb93d4a2
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: ELIGIBLEFORREBATEREFUNDS
@@ -1262,7 +1277,7 @@ steps:
               columnCounter: e5223382-2a6d-442f-a0c7-b0ce13862e58
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: INVOICEDETAILFORMAT
@@ -1277,7 +1292,7 @@ steps:
               columnCounter: c93ceeda-aaeb-478f-945a-790757a09c0d
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: SITELEVELAUTOMATICCREDITHOLD
@@ -1292,7 +1307,7 @@ steps:
               columnCounter: 79645236-344d-4677-aae3-2d9783306525
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: SUPPRESSSTATEMENTPRINTING
@@ -1307,7 +1322,7 @@ steps:
               columnCounter: 9c947cf4-72d1-4604-acf4-0eee692f8636
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: RESTRICTINCLUSIONONRATEUPDATEBATCHES
@@ -1322,7 +1337,7 @@ steps:
               columnCounter: f3de5ede-2635-4287-8da8-35a1a35ea54d
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: ETOWERDISPLAYWOIMAGES
@@ -1337,7 +1352,7 @@ steps:
               columnCounter: 31e84c42-032b-490c-a0b3-7cf0a4380daa
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: INCLUDEWOIMAGESONINVOICE
@@ -1352,7 +1367,7 @@ steps:
               columnCounter: fd81fe3f-08af-4bf0-aae9-f8a025e0e4ed
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: PAPERBILLFEE
@@ -1367,7 +1382,7 @@ steps:
               columnCounter: 73cd95d7-9ad4-46dc-b649-5515f8b0f4ea
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: APPLYCONVENIENCEFEE
@@ -1382,7 +1397,7 @@ steps:
               columnCounter: 470f9ba6-4b14-41b5-ba23-e33eb9ff834c
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: DONOTPRORATESERVICES
@@ -1397,7 +1412,7 @@ steps:
               columnCounter: bbb91546-ada5-44ea-9b71-bbe879afad36
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: SMSINVOICESTATUS
@@ -1412,7 +1427,7 @@ steps:
               columnCounter: f717fbb6-ccaa-40a3-8fb8-772a80be1910
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: SMSPAYMENTSTATUS
@@ -1427,7 +1442,7 @@ steps:
               columnCounter: 016dc0bb-eedb-4a84-adaa-cd58ef38c94b
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: ALLOWBANKDEBITPAYMENTS
@@ -1442,7 +1457,7 @@ steps:
               columnCounter: eadbe55d-1520-4dfd-ab42-53098afcccdc
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: ALLOWCREDITCARDPAYMENTS
@@ -1457,25 +1472,10 @@ steps:
               columnCounter: 8815396a-bb09-47d2-a7eb-74f2258f90ea
               stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
             config: {}
-            dataType: NUMBER(38,2)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
             name: ENABLEAUTOMATICPAYMENTNOTIFICATIONEMAILS
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 9844144e-f747-4d9a-bf25-1f9de028c089
-              stepCounter: 5809bc50-5456-426a-85bb-c8308c93f535
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: PREPAYMENTMINIMUM
             nullable: true
             primaryKey: false
             uniqueKey: false

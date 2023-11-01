@@ -321,7 +321,7 @@ steps:
               - columnReferences:
                   - columnCounter: dd8dea10-fc0b-47c0-8029-4fe978240ff2
                     stepCounter: cd62b4e3-06b4-4cba-8f88-bcf5a192026c
-                transform: ""
+                transform: CASE WHEN "ARDETAIL_COMBINED"."INVOICEUID" IS NULL THEN "STG_LAST_INVOICE_CUSTOMER_TOWER"."Unique Invoice ID" ELSE "ARDETAIL_COMBINED"."INVOICEUID" END
             systemColumnType: None
             transform: ""
         cteString: ""
@@ -330,6 +330,7 @@ steps:
           - aliases:
               ARDETAIL_COMBINED: cd62b4e3-06b4-4cba-8f88-bcf5a192026c
               PAYMENT_COMBINED: cb34bb59-0419-4c1b-b3db-0d491487d533
+              STG_LAST_INVOICE_CUSTOMER_TOWER: 4536f375-af92-48b1-97f3-f52df520daa2
             customSQL:
               customSQL: ""
             dependencies:
@@ -337,11 +338,15 @@ steps:
                 nodeName: ARDETAIL_COMBINED
               - locationName: TOWER_COMBINED
                 nodeName: PAYMENT_COMBINED
+              - locationName: TOWER_COMBINED
+                nodeName: STG_LAST_INVOICE_CUSTOMER_TOWER
             join:
               joinCondition: |-
                 FROM {{ ref('TOWER_COMBINED', 'PAYMENT_COMBINED') }} "PAYMENT_COMBINED"
                 LEFT JOIN {{ ref('TOWER_COMBINED', 'ARDETAIL_COMBINED') }} "ARDETAIL_COMBINED"
                 ON "PAYMENT_COMBINED"."PAYMENTUID" = "ARDETAIL_COMBINED"."SOURCEUID"
+                LEFT JOIN {{ ref('TOWER_COMBINED', 'STG_LAST_INVOICE_CUSTOMER_TOWER') }} "STG_LAST_INVOICE_CUSTOMER_TOWER"
+                ON "PAYMENT_COMBINED"."CUSTID" = "STG_LAST_INVOICE_CUSTOMER_TOWER"."Customer Number"
             name: STG_PAYMENT_COMBINED
             noLinkRefs: []
       name: STG_PAYMENT_COMBINED
