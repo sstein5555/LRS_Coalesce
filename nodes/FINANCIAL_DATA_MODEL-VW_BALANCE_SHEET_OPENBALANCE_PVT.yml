@@ -103,6 +103,23 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
+              columnCounter: 1043588b-60a6-41d0-b202-7cb14272e7df
+              stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
+            config: {}
+            dataType: VARCHAR(15)
+            defaultValue: ""
+            description: ""
+            name: ACCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
               columnCounter: 05354c53-0361-42f9-8113-1c2bb807f362
               stepCounter: 35279c8a-5c83-41da-99e6-e22ed2ca166a
             config: {}
@@ -286,7 +303,7 @@ steps:
                 ORDER BY "Fiscal Period" asc)--CTE
 
                 select DISTINCT  CONCAT(LTRIM(RTRIM(ACCTID)), CONCAT(' - ', ACCTDESC)) AS "Account Name", LTRIM(RTRIM(GLACGRP.ACCTGRPCOD)) AS "Account Group Code" ,
-                TRIM(GLACGRP.ACCTGRPDES) AS "Account Group Description" , CSCOM.CONAME, CSCOM.LEGALNAME AS "Legal Name", GLAFS.* 
+                TRIM(GLACGRP.ACCTGRPDES) AS "Account Group Description" , CSCOM.CONAME, CSCOM.LEGALNAME AS "Legal Name", GLAMF.ACCTSEGVAL AS ACCT, GLAFS.* 
                 from Bal GLAFS
                    INNER JOIN {{ ref('SAGE_COMBINED', 'GLAMF_COMBINED') }} GLAMF
                   ON GLAFS."Account Number" = LTRIM(RTRIM(GLAMF.ACCTID)) AND GLAFS."Database ID" = GLAMF.AUDTORG
