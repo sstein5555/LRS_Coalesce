@@ -24,7 +24,7 @@ steps:
               columnCounter: ce248fcc-c34d-463c-8ff3-731e9e091113
               stepCounter: c04033ca-3273-43e7-811f-9783933da7ca
             config: {}
-            dataType: ""
+            dataType: VARCHAR
             defaultValue: ""
             description: ""
             keyColumnType: None
@@ -463,7 +463,7 @@ steps:
               columnCounter: a4baa365-e2db-4fa1-a669-efb78a24fdf0
               stepCounter: c04033ca-3273-43e7-811f-9783933da7ca
             config: {}
-            dataType: ""
+            dataType: VARCHAr
             defaultValue: ""
             description: ""
             keyColumnType: None
@@ -486,7 +486,7 @@ steps:
               columnCounter: 51bd1433-49b6-4803-bcea-63d76abf0dea
               stepCounter: c04033ca-3273-43e7-811f-9783933da7ca
             config: {}
-            dataType: ""
+            dataType: VARCHAR
             defaultValue: ""
             description: ""
             keyColumnType: None
@@ -509,7 +509,7 @@ steps:
               columnCounter: 40281481-ca25-490a-bad5-d6a20743645a
               stepCounter: c04033ca-3273-43e7-811f-9783933da7ca
             config: {}
-            dataType: ""
+            dataType: VARCHAR
             defaultValue: ""
             description: ""
             keyColumnType: None
