@@ -1,5 +1,5 @@
 steps:
-  CUST_SITE_PREFERENCES-828f44ad-9ea8-4f17-8021-698a7dd934d1:
+  CUSTTYPE_PAYMENT_TERMS-52e3dc99-9f19-4d86-a9b4-89bca60d3eef:
     operation:
       config:
         insertStrategy: INSERT
@@ -17,22 +17,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: b54f21b4-bc75-46d1-ba2e-30dea147f18f
-              stepCounter: 828f44ad-9ea8-4f17-8021-698a7dd934d1
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Site
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 91be9554-51f2-493a-9e11-d72295463676
-                    stepCounter: 83f237e0-2bb1-4230-bef1-d6b54576823f
-                transform: distinct "CP01_COMBINED"."CP01_SITE"
-          - columnReference:
-              columnCounter: 17e5ae1c-7507-457f-8471-193af742b00f
-              stepCounter: 828f44ad-9ea8-4f17-8021-698a7dd934d1
+              columnCounter: 9df06740-28a3-4a76-9fd3-bc6af40a3990
+              stepCounter: 52e3dc99-9f19-4d86-a9b4-89bca60d3eef
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -45,22 +31,8 @@ steps:
                     stepCounter: 83f237e0-2bb1-4230-bef1-d6b54576823f
                 transform: ""
           - columnReference:
-              columnCounter: 791c5c11-e0e2-4f15-9bb8-4884f440200d
-              stepCounter: 828f44ad-9ea8-4f17-8021-698a7dd934d1
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Payment Terms
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: fec664e4-3042-4817-a97b-ff6c4cac7cda
-                    stepCounter: 83f237e0-2bb1-4230-bef1-d6b54576823f
-                transform: ""
-          - columnReference:
-              columnCounter: c5e323eb-b1f6-4cd0-b40c-1b62f73faa27
-              stepCounter: 828f44ad-9ea8-4f17-8021-698a7dd934d1
+              columnCounter: 10fb386b-f8e9-4133-beb3-f3639e7ce345
+              stepCounter: 52e3dc99-9f19-4d86-a9b4-89bca60d3eef
             dataType: VARCHAR
             description: ""
             hashColumns: []
@@ -77,19 +49,40 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 892752a7-9489-4802-914f-c5240105d131
-              stepCounter: 828f44ad-9ea8-4f17-8021-698a7dd934d1
+              columnCounter: 6e21df20-8754-4f59-8300-46165c2271cc
+              stepCounter: 52e3dc99-9f19-4d86-a9b4-89bca60d3eef
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Payment Terms 2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fec664e4-3042-4817-a97b-ff6c4cac7cda
+                    stepCounter: 83f237e0-2bb1-4230-bef1-d6b54576823f
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f56c7812-19c0-410d-bb47-b1abb62c2e60
+              stepCounter: 52e3dc99-9f19-4d86-a9b4-89bca60d3eef
             config: {}
             dataType: VARCHAR
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: Intercompany Flag
+            name: Customer Type
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 340c7fb6-b7d8-43be-9fd5-703a8af375b1
-                    stepCounter: 83f237e0-2bb1-4230-bef1-d6b54576823f
+                  - columnCounter: 7cf95b62-1b75-404e-a0c4-cf44e583a8c2
+                    stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -97,21 +90,26 @@ steps:
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
+              CM03_Combined: 080d8ab0-3edf-4ee0-b848-dcc7364164df
               CP01_COMBINED: 83f237e0-2bb1-4230-bef1-d6b54576823f
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: TRUXCOMBINED_RAW
+                nodeName: CM03_Combined
+              - locationName: TRUXCOMBINED_RAW
                 nodeName: CP01_COMBINED
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'CP01_COMBINED') }} "CP01_COMBINED"
-                WHERE "CP01_COMBINED"."CP01_SITE" IS NOT NULL and "CP01_COMBINED"."CP01_PAYTERMS" IS NOT NULL and ("CP01_COMBINED"."CP01_SITE"<>37 and "CP01_COMBINED"."CP01_CUST" <>6648)
-            name: CUST_SITE_PREFERENCES
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CM03_Combined') }} "CM03_Combined"
+                ON "CP01_COMBINED"."CP01_CUST" = "CM03_Combined"."CM03_CUST" and "CP01_COMBINED"."SOURCE" = "CM03_Combined"."SOURCE"
+                where "CP01_COMBINED"."CP01_SITE" IS NULL and "CP01_COMBINED"."CP01_PAYTERMS" IS NOT NULL
+            name: CUSTTYPE_PAYMENT_TERMS
             noLinkRefs: []
-      name: CUST_SITE_PREFERENCES
+      name: CUSTTYPE_PAYMENT_TERMS
       overrideSQL: false
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: 828f44ad-9ea8-4f17-8021-698a7dd934d1
+    stepCounter: 52e3dc99-9f19-4d86-a9b4-89bca60d3eef

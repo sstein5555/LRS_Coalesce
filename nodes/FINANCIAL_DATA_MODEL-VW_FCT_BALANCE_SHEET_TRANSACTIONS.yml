@@ -16,27 +16,6 @@ steps:
       metadata:
         appliedNodeTests: []
         columns:
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 2fdf85bc-b7d0-4416-a754-c3b9c9158303
-              stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
-            config: {}
-            dataType: ""
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: ACCT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1e7cb5be-fd85-4710-93a7-50c2147699dc
-                    stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
-                transform: ""
-            systemColumnType: None
-            transform: ""
           - columnReference:
               columnCounter: 107ae4e7-87ae-42d5-a553-92f638ba8218
               stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
@@ -512,7 +491,7 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('FINANCIAL_DATA_MODEL', 'GL_Transactions') }} "GL_Transactions"
-                where "GL_Transactions"."ACCTTYPE" =  'B'
+                where "GL_Transactions"."ACCTTYPE" IN ( 'B', 'I')
             name: VW_FCT_BALANCE_SHEET_TRANSACTIONS
             noLinkRefs: []
       name: VW_FCT_BALANCE_SHEET_TRANSACTIONS

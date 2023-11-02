@@ -170,6 +170,20 @@ steps:
                   - columnCounter: 6c02cb13-aac2-4697-8a30-eee9804bcb6b
                     stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
                 transform: ""
+          - columnReference:
+              columnCounter: 76f19bed-1ba3-4d8f-a914-cff10a99e28d
+              stepCounter: cd6babd1-6b13-444d-aeee-aec81afac6f6
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Customer Term
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bdbe539b-8400-4583-9c2a-3e4896958c2d
+                    stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
+                transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
