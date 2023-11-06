@@ -933,6 +933,27 @@ steps:
                 transform: "\"CUSTOMER_MASTER\".\"Customer ID (Tower only)\"||' - '||\"CUSTOMER_MASTER\".\"Customer Name\""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 22f9853b-2280-47e7-a1df-df8f92c01d1a
+              stepCounter: 343a2abd-4687-4718-be4c-21a2e7cfdfec
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Customer Small Key
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d63bbd52-90c5-4e98-8678-d21241eba6bf
+                    stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

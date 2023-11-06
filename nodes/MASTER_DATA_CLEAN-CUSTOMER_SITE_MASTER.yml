@@ -974,6 +974,56 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e922e06e-e262-479b-a8c6-2dae5e1dd2d8
+              stepCounter: 56ae5e3c-c6cd-4eb5-a3ae-25d02a9ab031
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Customer Small Key
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73066796-bdd0-4d2e-9731-5689e42e40fa
+                    stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 1a8f02ec-6c91-4406-b462-ba1d391996aa
+                    stepCounter: d0ee8791-10a2-4747-967f-b22621b20d21
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 91c2c769-711e-49d0-bccf-97441acd7009
+              stepCounter: 56ae5e3c-c6cd-4eb5-a3ae-25d02a9ab031
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Site Small Key
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 112edb7e-c114-4829-bb58-6e8264e56247
+                    stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
+                transform: ""
+              - columnReferences:
+                  - columnCounter: bfc35555-4937-4379-b681-cd530e1bd787
+                    stepCounter: d0ee8791-10a2-4747-967f-b22621b20d21
+                transform: ""
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:

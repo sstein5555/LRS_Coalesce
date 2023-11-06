@@ -1,12 +1,12 @@
 steps:
-  TRIPMATERIAL-933d49a9-32bd-4ae7-b74f-cafae476d1d4:
+  DM01P-224f382e-f732-494b-a0c0-5a4b9bdd8511:
     operation:
       database: ""
       dataset: ""
       deployEnabled: true
       description: ""
       locationID: ""
-      locationName: TOWER_RAW
+      locationName: TRUX_MD_COMP_RAW
       metadata:
         columns:
           - acceptedValues:
@@ -14,13 +14,43 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: f80385cd-6714-4ec8-aaa0-6393db3cf0e2
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
+              columnCounter: 870f536a-9d8b-468d-b48b-0afc37b97f0a
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: TRIPMATERIALUID
+            name: DM01P_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c9746ae5-96d4-437d-ad5b-5971d5a62bc2
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DM01P_LINK
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b36beed5-ca7b-401b-86bc-712a259cec5a
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: DM01P_TYPE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -29,13 +59,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 54665690-6166-4664-9ec8-f86180749944
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
+              columnCounter: a6dedffd-855b-4e31-9301-1f3c18022f07
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: TIMESTAMP_NTZ(9)
             defaultValue: ""
             description: ""
-            name: TRIPUID
+            name: DM01P_DATE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -44,13 +74,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5fde3f5d-0da5-4bdd-9b3f-ec46a2e704a4
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
+              columnCounter: 6cd5a854-8076-4d73-9cc7-148953fa4106
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(70)
             defaultValue: ""
             description: ""
-            name: SCALETICKETDETAILUID
+            name: DM01P_REFN
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -59,13 +89,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6778d21c-dea4-4cde-b51d-44a3e666e86e
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
+              columnCounter: a9dd756f-3d7f-4ffc-a260-eab818ad3f65
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(18,2)
             defaultValue: ""
             description: ""
-            name: SYNCROWVERSION
+            name: DM01P_AMNT
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -74,13 +104,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: bf13861b-0d37-40a7-9cd2-02e9bc398f36
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
+              columnCounter: 73ae86de-6935-40fa-be7f-210c658944e8
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(2)
             defaultValue: ""
             description: ""
-            name: WEIGHTUOM
+            name: DM01P_ADJR
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -89,13 +119,58 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1ad680f6-fc5d-470b-bfef-a7eb44593a8a
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
+              columnCounter: 04e03dcd-fd3e-4a01-ac4f-3c866bad6355
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: VOLUMEUOM
+            name: DM01P_PERIODCLOSEID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5bd13032-7aaa-4178-89b0-1974b9a200ac
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: DM01P_USER
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ccb95fd5-af3a-444e-92fb-24dac1d34b9c
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: DM01P_RDATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c7aba1da-09d4-49ab-b038-be204952df39
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DM01P_BATCH
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -104,13 +179,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 8521bab0-63d3-44ab-965d-cecb949fd152
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
+              columnCounter: e77b5def-b10a-41dd-99f6-0c52f1759986
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
             config: {}
-            dataType: NUMBER(38,6)
+            dataType: VARCHAR(40)
             defaultValue: ""
             description: ""
-            name: GROSSWEIGHT
+            name: DM01P_GLNU
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -119,13 +194,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: da029b2a-2e12-4f8e-a86d-6627c7273240
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
+              columnCounter: e2d54c37-400c-4c7a-9947-63a4c726444e
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
             config: {}
-            dataType: NUMBER(38,6)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: TAREWEIGHT
+            name: DM01P_NOTEID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -134,13 +209,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3ab99377-d9cd-49a2-a250-c9ae90f28885
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
+              columnCounter: 5767f8ee-30f0-4651-a341-7ac71b47c52e
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: MATERIAL
+            name: DM01P_LINKID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -149,13 +224,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2ae6da2e-7801-449d-984e-b5cac76eebbb
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
+              columnCounter: 5ef3f77c-f9c9-4ac1-b53f-4adebdb87896
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
             config: {}
-            dataType: NUMBER(38,6)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: WEIGHT
+            name: DM01P_GROUP
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -164,66 +239,21 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d4588e47-b66f-4a3a-bc50-c542169dc428
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
+              columnCounter: 10e4da64-6a8e-419b-9a0b-e7111109e8d6
+              stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
             config: {}
-            dataType: NUMBER(38,6)
+            dataType: TIMESTAMP_NTZ(9)
             defaultValue: ""
             description: ""
-            name: VOLUME
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: ef572f97-8d8e-42ca-9a15-9c87c05e6371
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: PAYABLEUNITS
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 5f5e6f1a-6665-47ca-9994-9cecf9ca9d91
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: MATERIALVALUE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 609d99fe-ef7c-4821-8e2b-d9483cdfeec5
-              stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: FEE
+            name: ADF_TIMESTAMP
             nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('TOWER_RAW', 'TRIPMATERIAL') }}
-      name: TRIPMATERIAL
+          joinCondition: FROM {{ ref('TRUX_MD_COMP_RAW', 'DM01P') }}
+      name: DM01P
       schema: ""
       sqlType: Source
-      table: TRIPMATERIAL
+      table: DM01P
       type: sourceInput
-    stepCounter: 933d49a9-32bd-4ae7-b74f-cafae476d1d4
+    stepCounter: 224f382e-f732-494b-a0c0-5a4b9bdd8511
