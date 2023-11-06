@@ -23,7 +23,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_ROUT
+            name: Route Number
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -37,7 +37,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_DATE
+            name: Route Date
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -51,7 +51,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_SEQU
+            name: Sequence
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -65,7 +65,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_CUST
+            name: Customer Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -79,7 +79,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_SITE
+            name: Site Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -93,7 +93,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_SERV
+            name: Service Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -107,7 +107,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_QTY
+            name: Number of Lifts
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -121,7 +121,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_ACTV
+            name: Activity
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -135,7 +135,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_AMNT
+            name: Billing Amount
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -149,7 +149,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_IDTE
+            name: Invoice Date
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -160,10 +160,10 @@ steps:
               columnCounter: 62f9197c-3371-4f7c-b6bb-0be4a4a9766c
               stepCounter: 1ceb9520-3ebf-41f0-9f15-6e9aa674243c
             dataType: VARCHAR(200)
-            description: ""
+            description: might be an invoice number
             hashColumns: []
             hashDetails: null
-            name: SM01_REFN
+            name: Reference
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -177,7 +177,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_TIME
+            name: Time
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -191,7 +191,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_WONU
+            name: Work Order Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -205,7 +205,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_DATA
+            name: Work Order Notes
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -219,7 +219,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_LOGID
+            name: Log ID
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -233,7 +233,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_ARATEID
+            name: Rate ID
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -247,7 +247,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_CALLID
+            name: Call ID
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -261,7 +261,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_USER
+            name: User
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -275,7 +275,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_CDTE
+            name: Completed Date
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -289,7 +289,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_TIM2
+            name: Time 2
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -303,53 +303,11 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_CALLNUMBER
+            name: Call Number
             nullable: false
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: f7d642cf-bce6-42e7-a1d3-fa60b50bc71d
-                    stepCounter: 82475639-b6b5-4ad7-b9c0-98cffc711fcb
-                transform: ""
-          - columnReference:
-              columnCounter: 3309a3d6-64fb-44c6-853e-8b1d6746b2b9
-              stepCounter: 1ceb9520-3ebf-41f0-9f15-6e9aa674243c
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SM01_STORIG
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: de9da80d-7e39-45f5-93f5-efc2ee8e24fd
-                    stepCounter: 82475639-b6b5-4ad7-b9c0-98cffc711fcb
-                transform: ""
-          - columnReference:
-              columnCounter: ec06e538-9a28-4111-a6ce-50f92e34dc4e
-              stepCounter: 1ceb9520-3ebf-41f0-9f15-6e9aa674243c
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SM01_STPREV
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 140ccf6a-a55c-4f9d-9a17-f5dbf4b1ac53
-                    stepCounter: 82475639-b6b5-4ad7-b9c0-98cffc711fcb
-                transform: ""
-          - columnReference:
-              columnCounter: 6b81582b-a92c-48cc-8783-5d595c1ed477
-              stepCounter: 1ceb9520-3ebf-41f0-9f15-6e9aa674243c
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SM01_STNEXT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 5524e964-ead6-467d-8306-367f247f74c8
                     stepCounter: 82475639-b6b5-4ad7-b9c0-98cffc711fcb
                 transform: ""
           - columnReference:
@@ -359,7 +317,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_PCHG
+            name: Period Charges
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -373,7 +331,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SM01_ORIG_SEQU
+            name: Original Sequence Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:

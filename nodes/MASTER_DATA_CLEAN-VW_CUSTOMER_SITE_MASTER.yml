@@ -807,6 +807,48 @@ steps:
                 transform: "\"CUSTOMER_SITE_MASTER\".\"Site Number\"||' - '||\"CUSTOMER_SITE_MASTER\".\"Site Name\""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5e52d543-6baa-46da-822f-254091419027
+              stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Customer Small Key
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e922e06e-e262-479b-a8c6-2dae5e1dd2d8
+                    stepCounter: 56ae5e3c-c6cd-4eb5-a3ae-25d02a9ab031
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6bc79d2b-3e1d-403c-a8d5-de632ada8a7f
+              stepCounter: 8d64677b-58ad-4200-8781-ce77a8c7b4dd
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Site Small Key
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 91c2c769-711e-49d0-bccf-97441acd7009
+                    stepCounter: 56ae5e3c-c6cd-4eb5-a3ae-25d02a9ab031
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
