@@ -352,19 +352,48 @@ steps:
                   - columnCounter: a1615b68-b197-45ac-807b-ed79b2be982a
                     stepCounter: 82475639-b6b5-4ad7-b9c0-98cffc711fcb
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4b29c220-2a4f-4f74-bd3d-8af263bed519
+              stepCounter: 1ceb9520-3ebf-41f0-9f15-6e9aa674243c
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Service Type
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 47f7a7b7-9627-44d6-97be-04a3aceab913
+                    stepCounter: cd02e258-8f28-4971-8f0b-ba70c7e2d8c4
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
+              CUSTOMER_SITE_SERVICE_MASTER: cd02e258-8f28-4971-8f0b-ba70c7e2d8c4
               SM01_COMBINED: 82475639-b6b5-4ad7-b9c0-98cffc711fcb
             customSQL:
               customSQL: ""
             dependencies:
+              - locationName: MASTER_DATA_CLEAN
+                nodeName: CUSTOMER_SITE_SERVICE_MASTER
               - locationName: TRUXCOMBINED_RAW
                 nodeName: SM01_COMBINED
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'SM01_COMBINED') }} "SM01_COMBINED"
+                LEFT JOIN {{ ref('MASTER_DATA_CLEAN', 'CUSTOMER_SITE_SERVICE_MASTER') }} "CUSTOMER_SITE_SERVICE_MASTER"
+                ON "SM01_COMBINED"."SM01_CUST" = "CUSTOMER_SITE_SERVICE_MASTER"."Customer Number"
+                AND "SM01_COMBINED"."SM01_SITE" = "CUSTOMER_SITE_SERVICE_MASTER"."Site Number"
+                AND "SM01_COMBINED"."SM01_SERV" = "CUSTOMER_SITE_SERVICE_MASTER"."Service Number"
+                AND "SM01_COMBINED"."SOURCE" = "CUSTOMER_SITE_SERVICE_MASTER"."SOURCE"
                 where "Sort" = 1 and "METADATA$ACTION" = 'INSERT'
             name: STG_CUSTOMER_SERVICE_STATISTICS
             noLinkRefs: []

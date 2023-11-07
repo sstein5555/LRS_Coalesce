@@ -3612,7 +3612,6 @@ subgraphs:
     id: "6"
     name: Combined Subgraph
     steps:
-      - b68e5f03-ae6a-41b7-9ec4-ab1f01b71de4
       - ee2987e6-6a41-4509-8d86-d9e111ec3db9
       - 6dcbae0c-0f82-402e-b01d-c1a60b1c342b
       - 613e8d92-a190-42e3-8e87-25ce2ef23d04

@@ -400,7 +400,7 @@ steps:
               - columnReferences:
                   - columnCounter: a6d368df-7039-4c2a-b264-4c4d7a4a5a75
                     stepCounter: 70359394-06e9-4ed9-8d8d-47c93d07a392
-                transform: ""
+                transform: "'TRUX_'||right(\"SM01_COMBINED_STREAM\".\"SOURCE\",2)||'_COMP_RAW'"
           - acceptedValues:
               strictMatch: true
               values: []
