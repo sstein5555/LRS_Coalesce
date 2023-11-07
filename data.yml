@@ -9,6 +9,16 @@ jobs:
     steps: []
     subgraphs: []
 locations:
+  ADP_RAW:
+    mappingDefinitions:
+      "2":
+        database: LRS_RAW
+        schema: ADP_RAW
+  ADP_WORKFORCE_NOW:
+    mappingDefinitions:
+      "2":
+        database: LRS_RAW
+        schema: ADP_WORKFORCE_NOW
   FINANCIAL_DATA_MODEL:
     mappingDefinitions:
       "2":
