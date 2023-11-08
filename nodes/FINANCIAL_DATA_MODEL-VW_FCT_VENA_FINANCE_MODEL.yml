@@ -1,5 +1,5 @@
 steps:
-  FCT_VENA_FINANCE_MODEL-14be6bfd-5f3c-4b95-aa3f-4a8f46602f7c:
+  VW_FCT_VENA_FINANCE_MODEL-14be6bfd-5f3c-4b95-aa3f-4a8f46602f7c:
     operation:
       config:
         insertStrategy: INSERT
@@ -240,9 +240,9 @@ steps:
                 nodeName: VENA_FINANCE_MODEL
             join:
               joinCondition: FROM {{ ref('VENA_RAW', 'VENA_FINANCE_MODEL') }} "VENA_FINANCE_MODEL"
-            name: FCT_VENA_FINANCE_MODEL
+            name: VW_FCT_VENA_FINANCE_MODEL
             noLinkRefs: []
-      name: FCT_VENA_FINANCE_MODEL
+      name: VW_FCT_VENA_FINANCE_MODEL
       overrideSQL: false
       schema: ""
       sqlType: Stage
