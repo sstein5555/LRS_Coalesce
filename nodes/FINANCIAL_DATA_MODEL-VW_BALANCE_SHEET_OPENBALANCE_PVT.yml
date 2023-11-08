@@ -295,7 +295,7 @@ steps:
                 LAST_DAY(DATE) AS PERIODENDDATE,
                 "Journal Transaction Amount"
                 FROM 
-                 {{ ref('SAGE_COMBINED', 'GLAFS_COMBINED') }} GLAF
+                 {{ ref('SAGE_COMBINED', 'GLAFS_COMBINED') }} GLAFS
                     UNPIVOT ("Journal Transaction Amount" FOR "Fiscal Month" IN (
                 OPENBAL
                 ))

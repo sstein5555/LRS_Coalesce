@@ -6,6 +6,7 @@ steps:
         preSQL: ""
         selectDistinct: false
         testsEnabled: true
+        truncateBefore: false
       database: ""
       deployEnabled: true
       description: ""
@@ -280,6 +281,6 @@ steps:
       name: FCT_VARIABLE_DISPOSAL_SITE_REPORT
       overrideSQL: false
       schema: ""
-      sqlType: View
+      sqlType: Stage
       type: sql
     stepCounter: 7f3cb626-abd3-460d-879b-4f520edfe8be

@@ -35,7 +35,7 @@ steps:
               columnCounter: 1e7cb5be-fd85-4710-93a7-50c2147699dc
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR(250)
             defaultValue: ""
             description: ""
             keyColumnType: None
@@ -1583,6 +1583,27 @@ steps:
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 080b25cc-9c62-4559-8cad-9561af11e624
+              stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SORT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df84ca69-88c9-4f1b-ac06-3e4d38612b10
+                    stepCounter: c1d89778-7812-4fc7-b0a0-e828c6fd0d1b
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -1610,8 +1631,11 @@ steps:
                 LEFT JOIN {{ ref('SAGE_COMBINED', 'GLACGRP_COMBINED') }} "GLACGRP_COMBINED"  --Account Groups
                 ON "GLAMF_COMBINED"."ACCTGRPCOD"= "GLACGRP_COMBINED"."ACCTGRPCOD" AND "GLAMF_COMBINED"."AUDTORG"= "GLACGRP_COMBINED"."AUDTORG"
                 INNER JOIN {{ ref('SAGE_COMBINED', 'CSCOM_COMBINED') }} "CSCOM_COMBINED"  --Company Profile
-                ON "GLPOST_COMBINED"."AUDTORG" = "CSCOM_COMBINED"."AUDTORG" AND "GLPOST_COMBINED"."AUDTORG" = "CSCOM_COMBINED"."AUDTORG"
-                WHERE CAST("GLPOST_COMBINED"."FISCALYR" AS INT) >= 2022 and "GLPOST_COMBINED"."Sort" =1 AND "GLPOST_COMBINED"."_FIVETRAN_DELETED"=FALSE and "GLPOST_COMBINED"."METADATA$ACTION" ='INSERT'
+                ON "GLPOST_COMBINED"."AUDTORG" = "CSCOM_COMBINED"."ORGID"
+                WHERE CAST("GLPOST_COMBINED"."FISCALYR" AS INT) >= 2022 
+                    AND "GLPOST_COMBINED"."Sort" ='1'
+                    AND "GLPOST_COMBINED"."_FIVETRAN_DELETED"=FALSE 
+                    AND "GLPOST_COMBINED"."METADATA$ACTION" ='INSERT'
             name: GL_Transactions
             noLinkRefs: []
       name: GL_Transactions
