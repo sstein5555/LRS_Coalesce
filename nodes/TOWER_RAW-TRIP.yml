@@ -5,7 +5,6 @@ steps:
       dataset: ""
       deployEnabled: true
       description: ""
-      locationID: ""
       locationName: TOWER_RAW
       metadata:
         columns:
@@ -51,21 +50,6 @@ steps:
             defaultValue: ""
             description: ""
             name: ROUTE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 9092a989-73f2-493f-a478-28f7432acd7b
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: TRIPTYPE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -179,36 +163,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 27751818-eb3f-4e0d-a930-dc2463eeb4db
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: TRIPSTARTODOMETER
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: ed8d7652-5c45-41a0-b5a3-32d89aef37db
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: TRIPENDODOMETER
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: d0518270-0273-4f2e-b9a4-cc3f814da93c
               stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
             config: {}
@@ -246,21 +200,6 @@ steps:
             defaultValue: ""
             description: ""
             name: DESTINATIONLEAVETIME
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 387aa3ae-c61c-4acc-ab9e-3e51c082f7a2
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: DESTINATIONODOMETER
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -314,21 +253,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: f51f46e7-f5b1-4aa5-bf1e-5e3202574f0e
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: GROSSWEIGHT
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 27ab0487-38c8-4181-8ec0-92d945304b44
               stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
             config: {}
@@ -351,126 +275,6 @@ steps:
             defaultValue: ""
             description: ""
             name: MATERIAL1
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 2be9ff72-4bb6-466d-a990-e31c52464e62
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: WEIGHT1
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: e1dd9206-59f3-45ee-8c87-1878a98ffd87
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: WEIGHT1ENTRYMODE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 0aafd930-817b-423d-b10d-2adc0178faf7
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: WEIGHTIN1
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: a0372752-4015-4bf9-99ac-b31cbd98db4d
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: WEIGHTIN1ENTRYMODE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 7a4607be-e26e-4751-8d15-d92e5e8bdbfd
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: WEIGHTOUT1
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 5e40d494-165e-4579-9552-5a6356a178f6
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: WEIGHTOUT1ENTRYMODE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 6bf9df14-7b11-4296-b071-9c7ab5d09c3f
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: VOLUME1
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 10951875-8f15-4666-87c5-8f3582c341a9
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: PAYABLEUNITS1
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -509,51 +313,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5aaaaa52-28e3-40c8-b702-c381e4514953
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: WEIGHT2
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: fc4c838c-cb9a-46a6-8bb3-084ee481d8e8
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: VOLUME2
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: adad4638-6d52-45ab-b458-e06a9fce841d
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: PAYABLEUNITS2
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: c3f9e073-458a-4a6c-aa1e-ce2097ccc59b
               stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
             config: {}
@@ -576,51 +335,6 @@ steps:
             defaultValue: ""
             description: ""
             name: MATERIAL3
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: eda1b550-3d91-438a-b6b4-9fb603bfe943
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: WEIGHT3
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: a02db101-9662-4d78-8580-551c616b01c6
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: VOLUME3
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: df21389f-e8c4-4be6-809a-b649031cf03d
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: PAYABLEUNITS3
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -794,21 +508,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5fc80fcf-25de-4dd4-be4a-f3ff87759657
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: ENDINGSEQUENCE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 4582aa03-e203-4dcf-8645-8ec45537925c
               stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
             config: {}
@@ -831,51 +530,6 @@ steps:
             defaultValue: ""
             description: ""
             name: SCALE_TARE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 75362cb0-3f59-42d5-9126-c0c37e298c0f
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: STARTINGSEQUENCE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 287ea48a-2863-4763-8999-f1a72d626c29
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: TAREWEIGHT
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 72b4dfab-0e83-4615-aca2-d309ecd97fbf
-              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
-            config: {}
-            dataType: NUMBER(38,2)
-            defaultValue: ""
-            description: ""
-            name: WEIGHTOUT
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -959,13 +613,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 53d76309-01da-41ee-ba5f-b50355c29cfe
+              columnCounter: 8aec48f7-f6f2-488a-bdc4-ba721bcd4e8b
               stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
             config: {}
-            dataType: TIMESTAMP_NTZ(9)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: SYNCROWVERSION
+            name: OBCUID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -974,13 +628,358 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 8aec48f7-f6f2-488a-bdc4-ba721bcd4e8b
+              columnCounter: 9092a989-73f2-493f-a478-28f7432acd7b
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: TRIPTYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 27751818-eb3f-4e0d-a930-dc2463eeb4db
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: TRIPSTARTODOMETER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ed8d7652-5c45-41a0-b5a3-32d89aef37db
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: TRIPENDODOMETER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 387aa3ae-c61c-4acc-ab9e-3e51c082f7a2
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: DESTINATIONODOMETER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f51f46e7-f5b1-4aa5-bf1e-5e3202574f0e
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: GROSSWEIGHT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2be9ff72-4bb6-466d-a990-e31c52464e62
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: WEIGHT1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e1dd9206-59f3-45ee-8c87-1878a98ffd87
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: WEIGHT1ENTRYMODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0aafd930-817b-423d-b10d-2adc0178faf7
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: WEIGHTIN1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a0372752-4015-4bf9-99ac-b31cbd98db4d
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: WEIGHTIN1ENTRYMODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7a4607be-e26e-4751-8d15-d92e5e8bdbfd
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: WEIGHTOUT1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5e40d494-165e-4579-9552-5a6356a178f6
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: WEIGHTOUT1ENTRYMODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6bf9df14-7b11-4296-b071-9c7ab5d09c3f
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: VOLUME1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 10951875-8f15-4666-87c5-8f3582c341a9
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: PAYABLEUNITS1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5aaaaa52-28e3-40c8-b702-c381e4514953
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: WEIGHT2
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fc4c838c-cb9a-46a6-8bb3-084ee481d8e8
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: VOLUME2
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: adad4638-6d52-45ab-b458-e06a9fce841d
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: PAYABLEUNITS2
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eda1b550-3d91-438a-b6b4-9fb603bfe943
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: WEIGHT3
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a02db101-9662-4d78-8580-551c616b01c6
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: VOLUME3
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: df21389f-e8c4-4be6-809a-b649031cf03d
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: PAYABLEUNITS3
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5fc80fcf-25de-4dd4-be4a-f3ff87759657
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: ENDINGSEQUENCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 75362cb0-3f59-42d5-9126-c0c37e298c0f
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: STARTINGSEQUENCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 287ea48a-2863-4763-8999-f1a72d626c29
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: TAREWEIGHT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 72b4dfab-0e83-4615-aca2-d309ecd97fbf
+              stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            name: WEIGHTOUT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 53d76309-01da-41ee-ba5f-b50355c29cfe
               stepCounter: 1e079b7f-77cd-4f87-b6f0-b514a6dd6183
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: OBCUID
+            name: SYNCROWVERSION
             nullable: true
             primaryKey: false
             uniqueKey: false

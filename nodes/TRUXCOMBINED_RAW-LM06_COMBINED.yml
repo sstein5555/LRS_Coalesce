@@ -1,0 +1,82 @@
+steps:
+  LM06_COMBINED-dc31a7c7-7fbd-472a-a56f-e8c1249a7773:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRUXCOMBINED_RAW
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 142200c9-9858-48d0-aea8-306a619de6cb
+              stepCounter: dc31a7c7-7fbd-472a-a56f-e8c1249a7773
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LM06_UOM1
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4044839e-7988-46c8-a32a-c89e17b1cec2
+                    stepCounter: da9a4a87-9377-46ec-a792-0e43903a79c3
+                transform: ""
+          - columnReference:
+              columnCounter: 85ecea1f-5016-4bde-8abf-a36f9eef7ff2
+              stepCounter: dc31a7c7-7fbd-472a-a56f-e8c1249a7773
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LM06_UOM2
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c39fd0f6-7f2e-4a0a-ad3c-3aa446ee8a83
+                    stepCounter: da9a4a87-9377-46ec-a792-0e43903a79c3
+                transform: ""
+          - columnReference:
+              columnCounter: d749a491-dd86-48d2-8a9f-c03bfd779eb9
+              stepCounter: dc31a7c7-7fbd-472a-a56f-e8c1249a7773
+            dataType: NUMBER(18,8)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LM06_FACT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e6f3400-ae3c-4341-be1d-6e6cf61ba63b
+                    stepCounter: da9a4a87-9377-46ec-a792-0e43903a79c3
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              LM06: da9a4a87-9377-46ec-a792-0e43903a79c3
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRUX_LR_COMP_RAW
+                nodeName: LM06
+            join:
+              joinCondition: |-
+                FROM {{ ref('TRUX_LR_COMP_RAW', 'LM06') }} "LM06"
+                WHERE "_FIVETRAN_DELETED" = FALSE
+            name: LM06_COMBINED
+            noLinkRefs: []
+      name: LM06_COMBINED
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: dc31a7c7-7fbd-472a-a56f-e8c1249a7773
