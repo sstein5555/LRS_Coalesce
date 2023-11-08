@@ -417,9 +417,30 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
+                  - columnCounter: b593d11a-5d96-4e32-a8da-7308010f4560
+                    stepCounter: bcc56605-9b2f-4640-99de-4dcb0b7d1dce
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9d71d30b-0535-4b76-a027-5d410e64eceb
+              stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Number of Stops
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: ""
+                transform: "\"RM05_COMBINED\".\"RM05_SEQ2\"-\"RM05_COMBINED\".\"RM05_SEQ1\""
             systemColumnType: None
             transform: ""
         cteString: ""
@@ -427,14 +448,20 @@ steps:
         sourceMapping:
           - aliases:
               RM05_COMBINED: c9f0cfc1-14e2-43ce-9e3b-a4ac9f6ac743
+              ROUTE_MASTER: bcc56605-9b2f-4640-99de-4dcb0b7d1dce
             customSQL:
               customSQL: ""
             dependencies:
+              - locationName: MASTER_DATA_CLEAN
+                nodeName: ROUTE_MASTER
               - locationName: TRUXCOMBINED_RAW
                 nodeName: RM05_COMBINED
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'RM05_COMBINED') }} "RM05_COMBINED"
+                LEFT JOIN {{ ref('MASTER_DATA_CLEAN', 'ROUTE_MASTER') }} "ROUTE_MASTER"
+                ON "RM05_COMBINED"."RM05_ROUT" = "ROUTE_MASTER"."Route Number"
+                AND "RM05_COMBINED"."SOURCE" = "ROUTE_MASTER"."SOURCE"
                 WHERE "SORT" =1 and "_FIVETRAN_DELETED" = FALSE and "METADATA$ACTION" = 'INSERT'
             name: Route_Production_Statistics
             noLinkRefs: []

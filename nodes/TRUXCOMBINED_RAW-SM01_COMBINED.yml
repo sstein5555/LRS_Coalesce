@@ -443,6 +443,27 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c9093525-6146-46ae-8029-4f74ee3950a2
+              stepCounter: 82475639-b6b5-4ad7-b9c0-98cffc711fcb
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 95429ef8-6a4d-436e-94f6-49912e99ff3e
+                    stepCounter: 70359394-06e9-4ed9-8d8d-47c93d07a392
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

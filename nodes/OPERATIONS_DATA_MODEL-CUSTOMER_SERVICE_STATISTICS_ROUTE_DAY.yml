@@ -30,6 +30,48 @@ steps:
                   - columnCounter: 875f01c9-e093-49ce-b75c-9f3d047f81e8
                     stepCounter: 1ceb9520-3ebf-41f0-9f15-6e9aa674243c
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d60595fc-76e0-4f16-bfd6-ee3cb040ec7c
+              stepCounter: 9a2dc56b-951d-4d6f-b9d3-9fa4bc6209d1
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Customer Number
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2473b69b-4627-40c2-b17c-70a48f5b0462
+                    stepCounter: 1ceb9520-3ebf-41f0-9f15-6e9aa674243c
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 818949fd-78f6-46a8-b546-ca1f3b30dc50
+              stepCounter: 9a2dc56b-951d-4d6f-b9d3-9fa4bc6209d1
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Site Number
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0ac06334-67c3-4236-af20-3f4f1f847bb6
+                    stepCounter: 1ceb9520-3ebf-41f0-9f15-6e9aa674243c
+                transform: ""
+            systemColumnType: None
+            transform: ""
           - columnReference:
               columnCounter: 0c08eb6d-7de9-4746-8edd-7b86b3f22416
               stepCounter: 9a2dc56b-951d-4d6f-b9d3-9fa4bc6209d1
@@ -182,48 +224,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 818949fd-78f6-46a8-b546-ca1f3b30dc50
-              stepCounter: 9a2dc56b-951d-4d6f-b9d3-9fa4bc6209d1
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: Number of Sites
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 0ac06334-67c3-4236-af20-3f4f1f847bb6
-                    stepCounter: 1ceb9520-3ebf-41f0-9f15-6e9aa674243c
-                transform: COUNT(DISTINCT "STG_CUSTOMER_SERVICE_STATISTICS"."Site Number")
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: d60595fc-76e0-4f16-bfd6-ee3cb040ec7c
-              stepCounter: 9a2dc56b-951d-4d6f-b9d3-9fa4bc6209d1
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: Number of Customers
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2473b69b-4627-40c2-b17c-70a48f5b0462
-                    stepCounter: 1ceb9520-3ebf-41f0-9f15-6e9aa674243c
-                transform: COUNT(DISTINCT "STG_CUSTOMER_SERVICE_STATISTICS"."Customer Number")
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 2770a00a-169c-4d8a-b426-2699fc6d5360
               stepCounter: 9a2dc56b-951d-4d6f-b9d3-9fa4bc6209d1
             config: {}
@@ -253,7 +253,7 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('OPERATIONS_DATA_MODEL', 'STG_CUSTOMER_SERVICE_STATISTICS') }} "STG_CUSTOMER_SERVICE_STATISTICS"
-                GROUP BY "Route Number", "Route Date","Service Number","Activity","SOURCE", "Service Type"
+                GROUP BY "Route Number", "Route Date","Service Number","Activity","SOURCE", "Service Type", "Customer Number","Site Number"
                 HAVING SUM("Billing Amount") > 0
             name: CUSTOMER_SERVICE_STATISTICS_ROUTE_DAY
             noLinkRefs: []
