@@ -223,13 +223,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 13673249-80c1-4773-b976-1fc416019964
+              columnCounter: 4730cd6e-14aa-418a-8933-0557e331b8d9
               stepCounter: 15c39153-9708-427d-b198-ad6eada46d5c
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: FILENAME
+            name: ADF_TIMESTAMP
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -238,13 +238,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 4730cd6e-14aa-418a-8933-0557e331b8d9
+              columnCounter: 831fe375-c8d7-4955-abf4-de6f599fa1ec
               stepCounter: 15c39153-9708-427d-b198-ad6eada46d5c
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: ADF_TIMESTAMP
+            name: FILE NAME
             nullable: true
             primaryKey: false
             uniqueKey: false

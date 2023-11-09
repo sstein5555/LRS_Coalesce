@@ -12,7 +12,7 @@ steps:
       description: ""
       isMultisource: false
       locationName: FINANCIAL_DATA_MODEL
-      materializationType: view
+      materializationType: table
       metadata:
         appliedNodeTests: []
         columns:
@@ -198,31 +198,6 @@ steps:
                   - columnCounter: 93dfb780-b1ed-4c52-8cfc-15862c52082f
                     stepCounter: ea3eb248-45f1-4c1b-a0c6-cbd483f8964c
                 transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 87698914-f0a4-44b9-b3ff-866887d3a234
-              stepCounter: af080977-b05a-4f1c-8b2c-b8a653890f19
-            config: {}
-            dataType: VARCHAR
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: "Combo #"
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
-                transform: |-
-                  CONCAT(
-                          "VENA_FINANCE_MODEL"."_Location",
-                          CONCAT('-', "VENA_FINANCE_MODEL"."_Line/Dept")
-                        )
-            systemColumnType: None
-            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

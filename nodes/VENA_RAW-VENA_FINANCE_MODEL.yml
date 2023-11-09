@@ -193,13 +193,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a77d504e-d597-48eb-8c18-4ee8007665fd
+              columnCounter: 93dfb780-b1ed-4c52-8cfc-15862c52082f
               stepCounter: ea3eb248-45f1-4c1b-a0c6-cbd483f8964c
             config: {}
             dataType: TIMESTAMP_NTZ(9)
             defaultValue: ""
             description: ""
-            name: ADF_TIMESTAMP
+            name: _Last Modified
             nullable: true
             primaryKey: false
             uniqueKey: false

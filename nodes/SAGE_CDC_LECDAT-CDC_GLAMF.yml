@@ -1,8 +1,7 @@
 steps:
   CDC_GLAMF-05b98de8-0d08-41ea-b085-a55daa0e0257:
     operation:
-      config:
-        undefined: null
+      config: {}
       database: ""
       deployEnabled: true
       description: ""
