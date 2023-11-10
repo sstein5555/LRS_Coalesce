@@ -114,6 +114,27 @@ steps:
                   - columnCounter: 945406da-9ce4-44e0-a175-8f7c3cded4e9
                     stepCounter: ea3eb248-45f1-4c1b-a0c6-cbd483f8964c
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eeab0e5f-7ea9-4253-8175-24f2621cb60e
+              stepCounter: af080977-b05a-4f1c-8b2c-b8a653890f19
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: FiscalPeriod
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CONCAT("VENA_FINANCE_MODEL"."_Year", CONCAT('-', CONCAT("VENA_FINANCE_MODEL"."_Period", CONCAT('-', '01'))))
+            systemColumnType: None
+            transform: ""
           - columnReference:
               columnCounter: 9ea7233e-df42-41a5-9867-58c7d9b27422
               stepCounter: af080977-b05a-4f1c-8b2c-b8a653890f19
