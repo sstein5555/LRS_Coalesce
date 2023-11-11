@@ -3,7 +3,7 @@ name: Refresh Data
 on:
   # Set a schedule using cron
   schedule:
-  - cron: "0 8-20/2 * * *"
+  - cron: "0 2-14/2 * * *"
   
   # This option allows the workflow to be triggered manually
   workflow_dispatch:
