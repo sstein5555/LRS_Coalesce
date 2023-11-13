@@ -1,11 +1,11 @@
 steps:
-  ADP_TERMINATION-2f3a12ca-f99a-41d2-a6e8-3a5807f051fe:
+  INVOICESITE-6ac93d53-d67d-40f2-98a7-47626cbc7d35:
     operation:
       database: ""
       dataset: ""
       deployEnabled: true
       description: ""
-      locationName: ADP_RAW
+      locationName: TOWER_RAW
       metadata:
         columns:
           - acceptedValues:
@@ -13,13 +13,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 889a7759-6ad9-4767-86ec-b4ac3cb87e55
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: 8e731554-bbc5-4544-a265-2bfd91d0f2bd
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Position ID
+            name: INVOICESITEUID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -28,13 +28,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6317addd-bbbe-4046-bd0d-b4811670a335
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: 6b00c791-7da8-4c85-afff-082cf58a4a5a
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Legal Last Name
+            name: INVOICEUID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -43,13 +43,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3461ba11-6d37-4949-bc31-f94d35051486
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: d2a81b8c-5bc3-4f11-83cb-570795cd7a25
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Legal First Name
+            name: SITEID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -58,13 +58,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a2dabff6-f742-4b99-9e0b-c0130b9729cd
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: c3287a6c-c67f-49f1-8284-230bdcc9d850
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Position Status
+            name: SITENAME
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -73,13 +73,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: f6071190-0766-4e4e-b8a0-c3ba87cb274a
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: b96a1dd8-8eaa-4e3b-ba0b-153ba95b24e4
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Home Department Description
+            name: SITENAME2
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -88,13 +88,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6a34a05e-963b-4830-8c97-0316c8672003
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: ddedeedd-cd6e-4f1e-bac4-0e8e1041333b
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Union Local Code
+            name: CONTACT
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -103,13 +103,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 282f33ee-13f6-4712-940d-eaa59e591b61
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: 63bb7fe9-7d8c-4f8b-a0a3-d129a2e8cdd7
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Job Title Description
+            name: EMAIL
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -118,13 +118,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d0d64f94-b922-4694-bd13-0b85d89301db
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: 4002b5ef-79c6-49a5-8d10-eea522d2eb2c
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Location Code
+            name: PHONE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -133,13 +133,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: f4e9a654-b903-4a67-8269-425b4a9ade29
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: e075f2cb-0fe6-405c-80bf-d4b9e476a3e0
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Location Description
+            name: FAX
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -148,13 +148,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5dd5daec-7341-4459-a1fe-d9f19d9e1112
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: 31c9e282-00ce-4396-b8d5-fcd67e7ee998
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Reports To Legal Name
+            name: MOBILE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -163,43 +163,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5c1f7cc5-e6f8-4c51-86f1-57a09025e620
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
-            config: {}
-            dataType: TIMESTAMP_NTZ(9)
-            defaultValue: ""
-            description: ""
-            name: Hire Date
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 381ea9c5-a5f0-438d-91f2-8bc63cda2322
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
-            config: {}
-            dataType: TIMESTAMP_NTZ(9)
-            defaultValue: ""
-            description: ""
-            name: Termination Date
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: f5519e42-f09f-4c4b-8312-35312fcc2fdd
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: 67561a7d-0522-48e9-b99d-cc7bb0fbd597
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Termination Reason Description12
+            name: SITEADDRESSUID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -208,13 +178,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 34705984-f0b1-4477-aa20-a60dd5027fda
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: 52c8040b-ddd2-466a-bcee-ac1037bca782
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Termination Reason Description13
+            name: COMPANYID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -223,13 +193,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 84b19dac-b544-4a72-ad25-131f284c8c44
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: 93832a5a-6781-424c-a27f-5e4ed146ef65
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: Worked in State Code
+            name: SVCAREA
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -238,13 +208,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 214c7b67-d0a5-41d8-85d4-c6a25de715c3
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: c5b2fb67-7f59-4281-b171-d56355b91466
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: "Personal Contact: Home Phone"
+            name: SALESPERSON
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -253,13 +223,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0a21f47d-4598-4791-93b9-945695ee87c0
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: 434e33af-cb0d-464e-9bb9-d03edd63a0ee
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: "Personal Contact: Personal Email"
+            name: TAXGROUP
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -268,81 +238,36 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d21530f8-d4f3-4a73-b782-95ca5b6c29d0
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+              columnCounter: 22e33e76-5065-435d-b4b0-cfd27e06ea09
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: TAXEXEMPT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 97214f21-68c7-4a2f-bfc0-4934a5554dab
+              stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: "Personal Contact: Personal Mobile"
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 6b4d9f40-e51e-4822-9741-935cb0e4d1a1
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: Tax Withholdings - Effective Date
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 7b35ab1e-5b05-4ccc-9867-3c39c9097326
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: Employment Profile - Effective Date
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 9acee3ce-9a0a-44e7-be28-acfd5522fe44
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: File Name
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 264634b0-1a54-442b-8eb3-b3c9bc0d36f3
-              stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
-            config: {}
-            dataType: TIMESTAMP_NTZ(9)
-            defaultValue: ""
-            description: ""
-            name: Last Modified
+            name: TAXEXEMPTNBR
             nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('ADP_RAW', 'ADP_TERMINATION') }}
-      name: ADP_TERMINATION
+          joinCondition: FROM {{ ref('TOWER_RAW', 'INVOICESITE') }}
+      name: INVOICESITE
       schema: ""
       sqlType: Source
-      table: ADP_TERMINATION
+      table: INVOICESITE
       type: sourceInput
-    stepCounter: 2f3a12ca-f99a-41d2-a6e8-3a5807f051fe
+    stepCounter: 6ac93d53-d67d-40f2-98a7-47626cbc7d35

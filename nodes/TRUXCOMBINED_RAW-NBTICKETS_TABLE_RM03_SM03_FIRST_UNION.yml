@@ -330,14 +330,17 @@ steps:
             transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - aliases: {}
+          - aliases:
+              RM03_UNION_ROUTE_AUDIT: 043aaf15-b102-4309-9ffc-383530c972a5
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: TRUXCOMBINED_RAW
                 nodeName: RM03_UNION_ROUTE_AUDIT
             join:
-              joinCondition: FROM {{ ref('TRUXCOMBINED_RAW', 'RM03_UNION_ROUTE_AUDIT') }} "RM03_UNION_ROUTE_AUDIT"
+              joinCondition: |-
+                FROM {{ ref('TRUXCOMBINED_RAW', 'RM03_UNION_ROUTE_AUDIT') }} "RM03_UNION_ROUTE_AUDIT"
+                WHERE "RM03_DATE" >='2023-01-01'
             name: RM03_UNION_ROUTE_AUDIT
             noLinkRefs: []
           - aliases:
@@ -348,7 +351,9 @@ steps:
               - locationName: TRUXCOMBINED_RAW
                 nodeName: SM01_UNION_ROUTE_AUDIT
             join:
-              joinCondition: FROM {{ ref('TRUXCOMBINED_RAW', 'SM01_UNION_ROUTE_AUDIT') }} "SM01_UNION_ROUTE_AUDIT"
+              joinCondition: |-
+                FROM {{ ref('TRUXCOMBINED_RAW', 'SM01_UNION_ROUTE_AUDIT') }} "SM01_UNION_ROUTE_AUDIT"
+                WHERE "SM01_DATE" >= '2023-01-01'
             name: SM01_UNION_ROUTE_AUDIT
             noLinkRefs: []
       name: NBTICKETS_TABLE_RM03_SM03_FIRST_UNION
