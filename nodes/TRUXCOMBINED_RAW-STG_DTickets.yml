@@ -1,0 +1,233 @@
+steps:
+  STG_DTickets-e911133f-feb6-4f66-9537-59195f8648a3:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: false
+      description: DTickets step of the query for route audit report. Similar to nbtickets but different joins
+      isMultisource: false
+      locationName: TRUXCOMBINED_RAW
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 15d2e8b2-127e-4307-8170-a6a4a08a285a
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            dataType: VARCHAR(12)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Ticket Number
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8c7a7ea2-fc31-4acd-9d9b-b8e9e8eab256
+                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
+                transform: ""
+          - columnReference:
+              columnCounter: d718ce35-b8b4-4186-85b1-8adabe817f39
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Route Date
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 311347ce-7b9f-44e0-8186-4f880b58da5a
+                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
+                transform: ""
+          - columnReference:
+              columnCounter: 98ab3af5-f6e3-4c9b-9843-62a939bfbe46
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            dataType: VARCHAR(4)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Destination
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 85848b9e-703f-4e92-ae9c-0960e10fe0e3
+                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
+                transform: ""
+          - columnReference:
+              columnCounter: 3dd5da31-87e9-4d3c-a29b-003cb017584c
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LM02_DUOM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1a5645db-7042-46d6-b29f-010e3f120948
+                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
+                transform: ""
+          - columnReference:
+              columnCounter: a6647cac-02b3-4317-beb5-e27767195176
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LM02_BAMT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2720487a-839b-427f-b6a5-0633be6ea1c3
+                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
+                transform: ""
+          - columnReference:
+              columnCounter: 2df91efe-1cc6-4227-862e-6216164aab63
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LM02_MATL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e99cfcf7-e237-49ae-ae49-2b5a019bc904
+                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
+                transform: ""
+          - columnReference:
+              columnCounter: 1d0c3398-e2de-4b2f-924e-a944ff5636e4
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LM02_ROUT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 34ed75d2-e384-4a4c-bcff-a30c5d02a2b9
+                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
+                transform: ""
+          - columnReference:
+              columnCounter: 4e8e1710-4dab-4c43-bcd4-aa5fa66278f1
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LM02_DAMT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0833b4c9-765a-46bb-ba33-430538e3225a
+                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
+                transform: ""
+          - columnReference:
+              columnCounter: 905467fd-e44f-422f-a968-75129c5f9138
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Disposal Quantity
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ffb2fddf-0470-44f6-a910-088814808559
+                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
+                transform: ""
+          - columnReference:
+              columnCounter: af54c01d-c46d-4e05-8011-91fc67c52ad3
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LM02_BQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0affa7e2-a90f-49ab-8365-c665e511a54f
+                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
+                transform: ""
+          - columnReference:
+              columnCounter: d61c7459-240a-46ce-b8d3-cf226d8b2b98
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3d41dc0a-e51c-4812-871d-2997228cdd15
+                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
+                transform: ""
+          - columnReference:
+              columnCounter: ee1a5237-0521-4dd0-aa77-466312ac7070
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Route Sequence
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0617e278-6ff7-46f6-8f88-2ffb8999b933
+                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 30eda0a2-5d91-4a1c-99d0-71964708df93
+              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Material Description
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29e98454-68c4-4414-8685-8bae91617e75
+                    stepCounter: d1220fe5-c7b7-4bb4-9a94-fc3d3c6e1c27
+                transform: ""
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              LM04_COMBINED: d1220fe5-c7b7-4bb4-9a94-fc3d3c6e1c27
+              STG_NBTickets_Join_Collections_Disposal: 5e465d11-50ae-43e7-9c9b-69f255759192
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: LM04_COMBINED
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: STG_NBTickets_Join_Collections_Disposal
+            join:
+              joinCondition: |-
+                FROM {{ ref('TRUXCOMBINED_RAW', 'STG_NBTickets_Join_Collections_Disposal') }} "STG_NBTickets_Join_Collections_Disposal"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM04_COMBINED') }} "LM04_COMBINED"
+                ON "STG_NBTickets_Join_Collections_Disposal"."LM02_MATL" = "LM04_COMBINED"."LM04_CODE" and "STG_NBTickets_Join_Collections_Disposal"."SOURCE" = "LM04_COMBINED"."SOURCE"
+            name: STG_DTickets
+            noLinkRefs: []
+      name: STG_DTickets
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
