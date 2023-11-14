@@ -1,11 +1,11 @@
 steps:
-  PERSON_HISTORY-7da60e33-2492-4741-8758-979a8e0c2c45:
+  TOWERFOREIGNKEY-cee7a4ff-d5f3-4ada-838d-93f9a30ca523:
     operation:
       database: ""
       dataset: ""
       deployEnabled: true
       description: ""
-      locationName: ADP_WORKFORCE_NOW
+      locationName: TOWER_RAW
       metadata:
         columns:
           - acceptedValues:
@@ -13,28 +13,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: de56b0dc-402c-4a39-aaad-1b526e4f5a7d
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: f1403575-d85e-4d7b-ad05-e9c128e3292e
+              stepCounter: cee7a4ff-d5f3-4ada-838d-93f9a30ca523
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: _FIVETRAN_ID
-            nullable: false
-            primaryKey: true
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: fd29b277-23a1-4d04-8dcb-fd5ea3eff4aa
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
-            config: {}
-            dataType: VARCHAR(256)
-            defaultValue: ""
-            description: ""
-            name: WORKER_ID
+            name: TOWERFOREIGNKEYUID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -43,13 +28,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 75244966-f0ff-407e-99b8-4534936c7bd2
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: 4238d73a-d59c-48ce-aaf8-579ff1795e74
+              stepCounter: cee7a4ff-d5f3-4ada-838d-93f9a30ca523
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: LEGAL_NAME_FAMILY_NAME_1
+            name: FOREIGNKEYNAME
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -58,13 +43,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5b849a0d-e982-4e2b-9d11-b47daf05ca1b
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: 9a8ebdf2-de3f-47a6-9d34-6f6597034f9e
+              stepCounter: cee7a4ff-d5f3-4ada-838d-93f9a30ca523
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: LEGAL_NAME_FAMILY_NAME_2
+            name: TOWERCOLUMNUID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -73,13 +58,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: af89611a-6d3a-46fc-a791-43362492601b
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: e888125c-ed51-49f7-988e-e923852d0e8a
+              stepCounter: cee7a4ff-d5f3-4ada-838d-93f9a30ca523
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: LEGAL_NAME_FORMATTED_NAME
+            name: REFTOWERCOLUMNUID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -88,43 +73,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3fe01ce4-e51a-4ab4-beb3-c744f91e9468
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
-            config: {}
-            dataType: VARCHAR(256)
-            defaultValue: ""
-            description: ""
-            name: LEGAL_NAME_FAMILY_NAME_1_PREFIX
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 1381dbb4-a683-4ff3-a2bf-19615617b11b
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
-            config: {}
-            dataType: VARCHAR(256)
-            defaultValue: ""
-            description: ""
-            name: LEGAL_NAME_FAMILY_NAME_2_PREFIX
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 4d4d99e6-2542-40dd-852b-3463d95c939a
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: c92cfef9-b852-41cb-9250-cd89dae1aeab
+              stepCounter: cee7a4ff-d5f3-4ada-838d-93f9a30ca523
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: CUSTOM_TIMECLOCK_
+            name: CREATEINDEX
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -133,21 +88,81 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9cf4f5c6-81c3-456f-b7d1-fd0db0a87992
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: fface7b8-c4c3-4065-b34f-dcddca756219
+              stepCounter: cee7a4ff-d5f3-4ada-838d-93f9a30ca523
             config: {}
-            dataType: TIMESTAMP_TZ(9)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: _FIVETRAN_SYNCED
+            name: REBUILDINDEX
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 46447d49-ca81-4514-a174-bba6b1f9268b
+              stepCounter: cee7a4ff-d5f3-4ada-838d-93f9a30ca523
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DEPRECATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 76cbfb63-1c93-49d3-8779-fba5a2f774d6
+              stepCounter: cee7a4ff-d5f3-4ada-838d-93f9a30ca523
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: FRIENDLYNAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c5bb9ad6-363c-46cd-979c-23aed42213df
+              stepCounter: cee7a4ff-d5f3-4ada-838d-93f9a30ca523
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 85396763-35be-45c4-9efb-329e5ee94cf5
+              stepCounter: cee7a4ff-d5f3-4ada-838d-93f9a30ca523
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CUSTOM
             nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('ADP_WORKFORCE_NOW', 'PERSON_HISTORY') }}
-      name: PERSON_HISTORY
+          joinCondition: FROM {{ ref('TOWER_RAW', 'TOWERFOREIGNKEY') }}
+      name: TOWERFOREIGNKEY
       schema: ""
       sqlType: Source
-      table: PERSON_HISTORY
+      table: TOWERFOREIGNKEY
       type: sourceInput
-    stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+    stepCounter: cee7a4ff-d5f3-4ada-838d-93f9a30ca523

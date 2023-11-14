@@ -1,11 +1,11 @@
 steps:
-  PERSON_HISTORY-7da60e33-2492-4741-8758-979a8e0c2c45:
+  EQUIPMENT-04457b89-9e89-40e6-8202-9fd4a3eb8c9e:
     operation:
       database: ""
       dataset: ""
       deployEnabled: true
       description: ""
-      locationName: ADP_WORKFORCE_NOW
+      locationName: TOWER_RAW
       metadata:
         columns:
           - acceptedValues:
@@ -13,28 +13,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: de56b0dc-402c-4a39-aaad-1b526e4f5a7d
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: a51e279c-61dd-463d-80e9-153195912497
+              stepCounter: 04457b89-9e89-40e6-8202-9fd4a3eb8c9e
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: _FIVETRAN_ID
-            nullable: false
-            primaryKey: true
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: fd29b277-23a1-4d04-8dcb-fd5ea3eff4aa
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
-            config: {}
-            dataType: VARCHAR(256)
-            defaultValue: ""
-            description: ""
-            name: WORKER_ID
+            name: EQUIPMENTUID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -43,13 +28,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 75244966-f0ff-407e-99b8-4534936c7bd2
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: 25fb492f-63c0-4ca6-bdbc-ca8853824a0d
+              stepCounter: 04457b89-9e89-40e6-8202-9fd4a3eb8c9e
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: LEGAL_NAME_FAMILY_NAME_1
+            name: EQUIPMENTTYPE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -58,13 +43,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5b849a0d-e982-4e2b-9d11-b47daf05ca1b
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: 7169f99d-100d-43c9-b403-e0fdfd403a44
+              stepCounter: 04457b89-9e89-40e6-8202-9fd4a3eb8c9e
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: LEGAL_NAME_FAMILY_NAME_2
+            name: SERIALNBR
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -73,13 +58,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: af89611a-6d3a-46fc-a791-43362492601b
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: 495bf979-bbcc-4304-a27a-7a37c7762208
+              stepCounter: 04457b89-9e89-40e6-8202-9fd4a3eb8c9e
             config: {}
-            dataType: VARCHAR(256)
+            dataType: DATE
             defaultValue: ""
             description: ""
-            name: LEGAL_NAME_FORMATTED_NAME
+            name: DATEPURCHASED
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -88,13 +73,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3fe01ce4-e51a-4ab4-beb3-c744f91e9468
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: 3a4f568e-094b-49d6-ba58-7738b9440cfe
+              stepCounter: 04457b89-9e89-40e6-8202-9fd4a3eb8c9e
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: LEGAL_NAME_FAMILY_NAME_1_PREFIX
+            name: RFIDTAGNBR
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -103,13 +88,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1381dbb4-a683-4ff3-a2bf-19615617b11b
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: c7bb2cf8-ffff-4b0c-9dc1-531b0ef0fc26
+              stepCounter: 04457b89-9e89-40e6-8202-9fd4a3eb8c9e
             config: {}
-            dataType: VARCHAR(256)
+            dataType: NUMBER(19,2)
             defaultValue: ""
             description: ""
-            name: LEGAL_NAME_FAMILY_NAME_2_PREFIX
+            name: COST
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -118,13 +103,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 4d4d99e6-2542-40dd-852b-3463d95c939a
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: 1b9e29d3-c000-40bf-8ee2-fd5c487f0ec4
+              stepCounter: 04457b89-9e89-40e6-8202-9fd4a3eb8c9e
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: CUSTOM_TIMECLOCK_
+            name: OWNEDBYCUSTOMER
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -133,21 +118,51 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9cf4f5c6-81c3-456f-b7d1-fd0db0a87992
-              stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+              columnCounter: 146a67ed-dada-4626-9c55-3579c69628fe
+              stepCounter: 04457b89-9e89-40e6-8202-9fd4a3eb8c9e
             config: {}
-            dataType: TIMESTAMP_TZ(9)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: _FIVETRAN_SYNCED
+            name: PROPERTYLISTUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1b77ff53-74ca-4322-a5e8-f2ffb604646e
+              stepCounter: 04457b89-9e89-40e6-8202-9fd4a3eb8c9e
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: PAINTDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9609a575-39cb-49c6-a53a-e96315551107
+              stepCounter: 04457b89-9e89-40e6-8202-9fd4a3eb8c9e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SERIALIZEDPROGRAM
             nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('ADP_WORKFORCE_NOW', 'PERSON_HISTORY') }}
-      name: PERSON_HISTORY
+          joinCondition: FROM {{ ref('TOWER_RAW', 'EQUIPMENT') }}
+      name: EQUIPMENT
       schema: ""
       sqlType: Source
-      table: PERSON_HISTORY
+      table: EQUIPMENT
       type: sourceInput
-    stepCounter: 7da60e33-2492-4741-8758-979a8e0c2c45
+    stepCounter: 04457b89-9e89-40e6-8202-9fd4a3eb8c9e

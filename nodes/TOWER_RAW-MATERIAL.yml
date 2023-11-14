@@ -1,11 +1,11 @@
 steps:
-  BUSINESS_COMMUNICATION-e76a6a5b-72f7-41b2-a52b-d876e23bff30:
+  MATERIAL-83e4161b-bcf5-4864-8521-322af5bfc767:
     operation:
       database: ""
       dataset: ""
       deployEnabled: true
       description: ""
-      locationName: ADP_WORKFORCE_NOW
+      locationName: TOWER_RAW
       metadata:
         columns:
           - acceptedValues:
@@ -13,58 +13,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b42497c7-2cb2-4146-8bad-d553e4688b1e
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: 32165d0e-9674-4d4c-bf5d-eae5107767f2
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: TYPE
-            nullable: false
-            primaryKey: true
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: c548ca18-d8c4-47a6-b694-0c39763a682b
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
-            config: {}
-            dataType: VARCHAR(256)
-            defaultValue: ""
-            description: ""
-            name: WORKER_ID
-            nullable: false
-            primaryKey: true
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 285c713b-62ba-4bac-a25e-42f107aa66b4
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
-            config: {}
-            dataType: VARCHAR(256)
-            defaultValue: ""
-            description: ""
-            name: ID
-            nullable: false
-            primaryKey: true
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: d2cd148a-59e5-41c1-9d76-486a2e9b35ed
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
-            config: {}
-            dataType: VARCHAR(256)
-            defaultValue: ""
-            description: ""
-            name: NAME_SHORT_NAME
+            name: MATERIAL
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -73,13 +28,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 4d52f8ea-fa49-4107-a1c9-cb1e224e1c4c
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: dfdd5e0b-8250-42a3-98a0-f6b8df376997
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: NAME_LONG_NAME
+            name: MATERIALUID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -88,13 +43,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a3534594-7c39-42a9-b417-17b527d64d61
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: 19c0ac3d-b5c8-4696-97dd-75ce3e5b0366
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: NAME_SUBDIVISION_TYPE
+            name: MATERIALCAT
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -103,13 +58,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 49a81d14-9620-4714-801b-06cde97f0152
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: 02b7f4a3-b187-4e87-afdc-0b5f50e165e6
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: DATE
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: NAME_EFFECTIVE_DATE
+            name: DESCRIPTION
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -118,13 +73,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2eb5a52e-762a-4d83-af8a-df2960a5d139
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: 0191e513-0318-401b-ba30-ca6ead3af0e7
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: VARCHAR(256)
+            dataType: NUMBER(38,2)
             defaultValue: ""
             description: ""
-            name: COUNTRY_DIALING
+            name: LOOSEDENSITY
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -133,13 +88,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ed7c8b47-0ec4-44b4-b2c9-9eb4f61228b0
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: 39e7bbce-f66e-48bc-9961-cb7b5ee222fa
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: AREA_DIALING
+            name: WEIGHTUOM
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -148,13 +103,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 4e2b58b3-853b-42d3-a143-76930a270d28
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: 4b0c5688-030c-416b-aaa5-3c58dd22e3c3
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: VARCHAR(256)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: DIAL_NUMBER
+            name: VOLUMEUOM
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -163,13 +118,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: eef480a8-48b6-4949-80b7-65bc7e63d168
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: 44704fba-13c4-4cbc-84c6-a3f5193ec651
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: VARCHAR(256)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: EXTENSION
+            name: COMPACTIONRATIO
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -178,13 +133,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d04971e9-7a35-46c6-81a2-971a3830181c
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: 179db9d7-8219-4185-82b0-516a7b100e05
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: VARCHAR(256)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: ACCESS
+            name: HAZARDOUS
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -193,13 +148,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 4130ea15-80b6-468f-8832-7bc7e3ed7996
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: 1a3df67a-1ea8-4475-8a1a-8059dfef29d8
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: VARCHAR(256)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: FORMATTED_NUMBER
+            name: ACTIVE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -208,13 +163,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: dfb1693a-c167-498c-a72c-5f58e3b0911b
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: f870b351-dcec-42c0-86f7-9ed53c902722
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: VARCHAR(256)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: EMAIL_URI
+            name: REQUIRESITEWASTEPROFILE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -223,13 +178,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a5428aac-22b8-4c49-ae0f-3f0f6532309e
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: 239d3773-b967-4cf6-9e8f-16e7ca600af9
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: VARCHAR(256)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: URI
+            name: REQUIRESITEWASTEPROFILEAPPROVALLEVEL2
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -238,13 +193,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 17c2c3e9-b0db-4b65-a071-786ef856dbe4
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: 9158de5d-e3b3-4d28-b4a1-95d6bed4dba4
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: BOOLEAN
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: NOTIFICATION_INDICATOR
+            name: DEFAULTSVCCODE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -253,13 +208,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 4bebe27e-b1bc-4e3f-a3ba-9b2061a36585
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: fedbeb0b-4a76-44c7-9797-f4c3f61e6962
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: VARCHAR(256)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: NAME
+            name: ENABLECOMMODITYRATEMANAGEMENT
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -268,21 +223,51 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 41f28aaf-9692-4c61-982f-947dcf370d99
-              stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+              columnCounter: b8a9707f-63bb-4842-942e-875c2227ad22
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
             config: {}
-            dataType: TIMESTAMP_TZ(9)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: _FIVETRAN_SYNCED
+            name: OBCDISPLAYORDER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f9788e4c-cdf2-4dda-915e-1fecefbf0b74
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: BICMATERIAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a09eea5e-ad77-4ca0-8a1e-2d5c649c93ba
+              stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: RECYCLABLE
             nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('ADP_WORKFORCE_NOW', 'BUSINESS_COMMUNICATION') }}
-      name: BUSINESS_COMMUNICATION
+          joinCondition: FROM {{ ref('TOWER_RAW', 'MATERIAL') }}
+      name: MATERIAL
       schema: ""
       sqlType: Source
-      table: BUSINESS_COMMUNICATION
+      table: MATERIAL
       type: sourceInput
-    stepCounter: e76a6a5b-72f7-41b2-a52b-d876e23bff30
+    stepCounter: 83e4161b-bcf5-4864-8521-322af5bfc767

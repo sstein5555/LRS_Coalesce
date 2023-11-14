@@ -19,7 +19,7 @@ steps:
           - columnReference:
               columnCounter: 73066796-bdd0-4d2e-9731-5689e42e40fa
               stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -33,7 +33,7 @@ steps:
           - columnReference:
               columnCounter: 112edb7e-c114-4829-bb58-6e8264e56247
               stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
