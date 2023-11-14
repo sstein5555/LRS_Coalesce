@@ -35,7 +35,7 @@ steps:
               columnCounter: 1e7cb5be-fd85-4710-93a7-50c2147699dc
               stepCounter: c14fdbd6-d766-4a00-874f-fde28b8f6636
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR(45)
             defaultValue: ""
             description: ""
             keyColumnType: None
@@ -1611,7 +1611,13 @@ steps:
                 ON "GLAMF_COMBINED"."ACCTGRPCOD"= "GLACGRP_COMBINED"."ACCTGRPCOD" AND "GLAMF_COMBINED"."AUDTORG"= "GLACGRP_COMBINED"."AUDTORG"
                 INNER JOIN {{ ref('SAGE_COMBINED', 'CSCOM_COMBINED') }} "CSCOM_COMBINED"  --Company Profile
                 ON "GLPOST_COMBINED"."AUDTORG" = "CSCOM_COMBINED"."AUDTORG" AND "GLPOST_COMBINED"."AUDTORG" = "CSCOM_COMBINED"."AUDTORG"
-                WHERE CAST("GLPOST_COMBINED"."FISCALYR" AS INT) >= 2022 and "GLPOST_COMBINED"."Sort" =1 AND "GLPOST_COMBINED"."_FIVETRAN_DELETED"=FALSE and "GLPOST_COMBINED"."METADATA$ACTION" ='INSERT'
+                WHERE CAST("GLPOST_COMBINED"."FISCALYR" AS INT) >= 2022 
+                    AND "GLPOST_COMBINED"."Sort" =1 
+                    AND "GLPOST_COMBINED"."_FIVETRAN_DELETED"=FALSE 
+                    AND "GLPOST_COMBINED"."METADATA$ACTION" ='INSERT'
+                    AND "GLAMF_COMBINED"."Sort" =1 
+                    AND "GLAMF_COMBINED"."_FIVETRAN_DELETED"=FALSE 
+                    AND "GLAMF_COMBINED"."METADATA$ACTION" ='INSERT'
             name: GL_Transactions
             noLinkRefs: []
       name: GL_Transactions

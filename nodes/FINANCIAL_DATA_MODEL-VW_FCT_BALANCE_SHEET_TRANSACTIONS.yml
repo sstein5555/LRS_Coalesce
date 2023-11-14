@@ -24,7 +24,7 @@ steps:
               columnCounter: 2fdf85bc-b7d0-4416-a754-c3b9c9158303
               stepCounter: b3404e25-18c6-495c-bcff-6e4e60d12443
             config: {}
-            dataType: ""
+            dataType: VARCHAR
             defaultValue: ""
             description: ""
             keyColumnType: None
