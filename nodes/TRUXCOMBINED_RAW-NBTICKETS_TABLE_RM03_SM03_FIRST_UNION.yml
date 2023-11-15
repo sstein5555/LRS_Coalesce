@@ -328,6 +328,29 @@ steps:
                 transform: "0"
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ac1240d8-2b71-4da0-8199-cad88e180ec5
+              stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Invoice Date
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: b1e00118-6287-4f1c-914e-c57eb11afc1b
+                    stepCounter: d56e4580-13ee-4929-b4c5-4aa24202b8c0
+                transform: ""
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
