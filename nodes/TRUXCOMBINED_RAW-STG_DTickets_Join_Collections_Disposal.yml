@@ -27,7 +27,7 @@ steps:
               - columnReferences:
                   - columnCounter: 880ee742-a975-4c57-b8b0-b3e9aa42ca4f
                     stepCounter: f3e5c614-4177-4bd4-aca0-cb4086788c20
-                transform: ""
+                transform: DISTINCT "STG_COLLECTIONS_DISPOSAL_TICKETS"."LM02_ID"
           - columnReference:
               columnCounter: 48b2350a-c657-4938-a900-5d6644d122a1
               stepCounter: 6813012c-649c-442a-8a67-4a7693ab2dc2

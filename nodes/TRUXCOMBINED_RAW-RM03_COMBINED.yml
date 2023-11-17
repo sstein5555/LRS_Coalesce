@@ -513,7 +513,8 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - aliases: {}
+          - aliases:
+              RM03: ebbb30ea-d812-450a-bbe2-8e1b7766100f
             customSQL:
               customSQL: ""
             dependencies:

@@ -16,51 +16,6 @@ steps:
       metadata:
         appliedNodeTests: []
         columns:
-          - columnReference:
-              columnCounter: c8c724bd-76b3-4c34-b56b-002edca684ed
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(38,0)
-            description: ""
-            name: Work Order Number
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 550e5100-358a-4619-a849-d8eab36a14ac
-                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
-                transform: ""
-          - columnReference:
-              columnCounter: c2c40fa1-4b53-45ba-9e1b-9750dc6ece4c
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: VARCHAR
-            description: ""
-            name: Site Name
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 71f2b13a-b8ca-41f4-88e2-d0e2bacb512a
-                    stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
-                transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: db3d2b03-b644-4657-a2bd-c85c9d445a62
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: VARCHAR
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: Service Type
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 0e093458-031f-46dd-9558-b9c03d80fe86
-                    stepCounter: f36a5cd1-f2d3-4e7f-b35c-8626d19408ac
-                transform: ""
-            systemColumnType: None
-            transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
@@ -100,6 +55,484 @@ steps:
               - columnReferences:
                   - columnCounter: 8ef05d91-eae6-4cbc-9a62-63829523e79f
                     stepCounter: 4f923860-b405-4745-ab70-88d5ff0d6d40
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a408c19d-8bcf-4e0d-8098-3f8386189619
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: allticketcount
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b0f22ff6-0f50-4443-910c-16996ba6800e
+                    stepCounter: c5369d7d-49c5-4a63-bccf-17c717d738e4
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 773045f1-dbfb-41eb-8000-ae6c6437f8c8
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: MT02 first join
+            keyColumnType: None
+            name: MT02_AMNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2e81202c-a8c9-4a75-86a2-495edc2a0508
+                    stepCounter: 2b98c4d9-8de1-44b6-bd96-592c01efdd4c
+                transform: IFNULL("STG_MT02A_ROUTE_AUDIT_SEQUENCE"."MT02_AMNT",0)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5e62204e-40df-479d-8c2d-a70e93cd26e1
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: MT02 second join
+            keyColumnType: None
+            name: MT02_AMNTa
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6c636bb6-2f37-4213-9cfb-041840c10f1d
+                    stepCounter: bf0fc769-5935-4faf-bb22-89d94252cede
+                transform: IFNULL("STG_MT02B_ROUTE_AUDIT"."MT02_AMNT",0)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 54359aa0-4d51-47ad-a14a-2bc5c6c5796c
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: cost
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5735749a-50e9-4898-82fe-9e7eef39e6ee
+                    stepCounter: 367df4bd-6291-4ee3-adf6-3b80c1f0f729
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bb798bd4-27fe-4d98-9ea1-cdc24e542c08
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: audit_SM01amnt derived field. Here is comes from Union amnt
+            keyColumnType: None
+            name: audit_AdjLiftRate
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE
+                      WHEN "CM12_COMBINED"."CM12_UNIT"='S' OR "CM12_COMBINED"."CM12_UNIT"='V'
+                      THEN "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Billing Amount" / 
+                          CASE
+                              WHEN "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Quantity" is null or "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Quantity" = 0 OR "CM12_COMBINED"."CM12_FACT" is null or "CM12_COMBINED"."CM12_FACT" = 0
+                              THEN 1
+                              ELSE "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Quantity"*"CM12_COMBINED"."CM12_FACT"
+                          END
+                      ELSE "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Billing Amount"
+                  END
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f6fdaa3b-3900-44b8-a8f2-5a87f4c1b363
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: RM02A Derived Field from qtysum
+            keyColumnType: None
+            name: audit_TotalLifts
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 72e41430-d478-4096-a5e9-e143d86a8fc8
+                    stepCounter: 237393b3-a22c-4507-80b3-3940673c6316
+                transform: IFNULL("STG_RM02_AGGREGATION_ROUTE_AUDIT"."qtysum",0.00)*52
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: 24afcdd2-f250-4e27-b5a4-39d626220277
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: NUMBER
+            description: ""
+            name: Audit_Qty
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 556af833-d6c7-44d1-8f1d-88ccbca93623
+                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
+                transform: |-
+                  CASE
+                      WHEN "CM12_COMBINED"."CM12_UNIT" in ('S','P','V') 
+                      THEN "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Quantity" * "CM12_COMBINED"."CM12_FACT"
+                      ELSE "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Quantity"
+                  END
+          - columnReference:
+              columnCounter: c2b824e8-ba76-4a33-b49c-6b5659e8af63
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: NUMBER
+            description: This is effectively SM01 Amount, can be used to replace Audit_SM01amnt in the sql source script
+            name: Billing Amount
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 398e8eab-62d1-4bf8-8be0-36275a6e0dec
+                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4cf92db1-8983-4167-88fe-315b50be584d
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: Need to modify back to NUMBER
+            keyColumnType: None
+            name: CompactSize
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d47b828-4ab4-42d5-9a95-ea8ade5f97b9
+                    stepCounter: 498f463a-7395-4cc0-ad5f-d4e7e3d38fcf
+                transform: |-
+                  CASE
+                      WHEN "CM05_Combined"."CM05_COMP" = 'false'
+                      THEN 1
+                      ELSE IFNULL("CD05_COMBINED"."CD05_CPCTRATIO",1.00)
+                  END * "CM05_Combined"."CM05_SIZE"*"CM05_Combined"."CM05_QTY"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0f2a8319-2bb5-48b2-9bc9-a3d8668e1adb
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: CompactRatio
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE
+                      WHEN "CM05_Combined"."CM05_COMP" = 'false'
+                      THEN 1
+                      ELSE IFNULL("CD05_COMBINED"."CD05_CPCTRATIO",1.00)
+                  END
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2decdc81-872c-4fb0-bea9-474396b8b3b7
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: This will be incorrect until the conversion factor is complete
+            keyColumnType: None
+            name: weight
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a0d19fe6-9df2-44ef-bbdc-5e449319f1f1
+                    stepCounter: 367df4bd-6291-4ee3-adf6-3b80c1f0f729
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3d7bb629-1437-43e7-b1dc-787757194b86
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Service Size
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: abd2c9eb-8e8e-400c-9cc8-dced119991a1
+                    stepCounter: f36a5cd1-f2d3-4e7f-b35c-8626d19408ac
+                transform: "\"CM05_Combined\".\"CM05_SIZE\"*IFNULL(\"LM06_COMBINED\".\"LM06_FACT\",1)"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d4cacb9d-363a-4608-97d4-0ed70a724bc6
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Maximum Lifts
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c9fb8413-d914-4642-97d6-bcf3b4637d6d
+                    stepCounter: f36a5cd1-f2d3-4e7f-b35c-8626d19408ac
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: ccbba667-2bfd-4b62-80be-7306a1d7ae41
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: NUMBER(18,2)
+            description: ""
+            name: Audit_Actual_Disposal_Amount
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ea3eb2e-1213-4b66-9de7-66496a8e6283
+                    stepCounter: cd889ee9-4b28-42e5-a29b-d93fd52416a3
+                transform: IFNULL("STG_NBTICKETS"."Disposal Amount",0)
+          - columnReference:
+              columnCounter: c3417af0-b1f5-45b8-badd-6632e55e6e1e
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: NUMBER(18,2)
+            description: ""
+            name: Audit Period Charges
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dc729d55-1ed6-47f4-ade0-25ed8243baeb
+                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
+                transform: ""
+          - columnReference:
+              columnCounter: 184b0a59-da8c-4e4b-8ac0-d15af2ab4c08
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: NUMBER(18,2)
+            description: ""
+            name: Audit_Qtywopf
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 556af833-d6c7-44d1-8f1d-88ccbca93623
+                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
+                transform: ""
+          - columnReference:
+              columnCounter: c25878ea-91d7-41fa-bf61-f59a63b080e2
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: NUMBER(18,2)
+            description: ""
+            name: Audit_Actual_Disposal_Quantity
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9f9328c-7622-42bf-bc4c-a3e80da7c4f0
+                    stepCounter: cd889ee9-4b28-42e5-a29b-d93fd52416a3
+                transform: IFNULL("STG_NBTICKETS"."Disposal Quantity",0.00)
+          - columnReference:
+              columnCounter: 32f61a2d-3c81-4940-8b0e-58c70977b1c6
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: NUMBER(18,2)
+            description: ""
+            name: Audit_LM02_BAMT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a6647cac-02b3-4317-beb5-e27767195176
+                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+                transform: IFNULL("STG_DTickets"."Billing Amount",0.00)
+          - columnReference:
+              columnCounter: 4ee13867-9792-4e18-9628-04b758002c8a
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: NUMBER(18,2)
+            description: ""
+            name: Audit_LM02_DAMT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4e8e1710-4dab-4c43-bcd4-aa5fa66278f1
+                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+                transform: IFNULL("STG_DTickets"."Disposal Amount",0.00)
+          - columnReference:
+              columnCounter: 95285c39-7b2f-495c-8f1f-ac2d9d611699
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: NUMBER(18,2)
+            description: ""
+            name: Audit_LM02_DQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 905467fd-e44f-422f-a968-75129c5f9138
+                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+                transform: IFNULL("STG_DTickets"."Disposal Quantity",0.00)
+          - columnReference:
+              columnCounter: 82a61095-5dd8-4131-af71-78c61ee212e2
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: NUMBER(18,2)
+            description: ""
+            name: Billing Quantity
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: af54c01d-c46d-4e05-8011-91fc67c52ad3
+                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+                transform: ""
+          - columnReference:
+              columnCounter: 362f881c-585b-4fd6-9bbc-e1df1cb89b9a
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: Dispatch Datetime
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d5436f7-a183-4ea0-be0b-9ebb9dedf824
+                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
+                transform: ""
+          - columnReference:
+              columnCounter: 44cdb0cc-c277-454b-aeee-1c63a2ec66fc
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: Time Finished
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d04658ee-064c-4251-af38-dc270f9ac0dc
+                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
+                transform: ""
+          - columnReference:
+              columnCounter: b758ab57-bc78-411e-a1fb-a60b7eb45f34
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: Route Date
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 37b2f1d4-e062-4d51-9068-be0a80503376
+                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b14284b7-d33e-4794-bbc9-ea8ae9ec88fe
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Audit_Invoice_Date
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac1240d8-2b71-4da0-8199-cad88e180ec5
+                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: c8c724bd-76b3-4c34-b56b-002edca684ed
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: VARCHAR
+            description: ""
+            name: Work Order Number
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 550e5100-358a-4619-a849-d8eab36a14ac
+                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
+                transform: ""
+          - columnReference:
+              columnCounter: c2c40fa1-4b53-45ba-9e1b-9750dc6ece4c
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: VARCHAR
+            description: ""
+            name: Site Name
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 71f2b13a-b8ca-41f4-88e2-d0e2bacb512a
+                    stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: db3d2b03-b644-4657-a2bd-c85c9d445a62
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Service Type
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e093458-031f-46dd-9558-b9c03d80fe86
+                    stepCounter: f36a5cd1-f2d3-4e7f-b35c-8626d19408ac
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -187,85 +620,10 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: a408c19d-8bcf-4e0d-8098-3f8386189619
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: allticketcount
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: b0f22ff6-0f50-4443-910c-16996ba6800e
-                    stepCounter: c5369d7d-49c5-4a63-bccf-17c717d738e4
-                transform: ""
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 773045f1-dbfb-41eb-8000-ae6c6437f8c8
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: MT02 first join
-            keyColumnType: None
-            name: MT02_AMNT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2e81202c-a8c9-4a75-86a2-495edc2a0508
-                    stepCounter: 2b98c4d9-8de1-44b6-bd96-592c01efdd4c
-                transform: IFNULL("STG_MT02A_ROUTE_AUDIT_SEQUENCE"."MT02_AMNT",0)
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 5e62204e-40df-479d-8c2d-a70e93cd26e1
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: MT02 second join
-            keyColumnType: None
-            name: MT02_AMNTa
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 6c636bb6-2f37-4213-9cfb-041840c10f1d
-                    stepCounter: bf0fc769-5935-4faf-bb22-89d94252cede
-                transform: IFNULL("STG_MT02B_ROUTE_AUDIT"."MT02_AMNT",0)
-            systemColumnType: None
-            transform: ""
-          - columnReference:
-              columnCounter: ccbba667-2bfd-4b62-80be-7306a1d7ae41
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(18,2)
-            description: ""
-            name: Audit_Actual_Disposal_Amount
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 8ea3eb2e-1213-4b66-9de7-66496a8e6283
-                    stepCounter: cd889ee9-4b28-42e5-a29b-d93fd52416a3
-                transform: IFNULL("STG_NBTICKETS"."Disposal Amount",0)
           - columnReference:
               columnCounter: 1e6bf879-cee5-43e5-ac9f-ade0e21b61ec
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             name: Site
             nullable: true
@@ -274,39 +632,6 @@ steps:
                   - columnCounter: c1cbfcf8-2b42-4454-bc81-45f05ba8e153
                     stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
                 transform: ""
-          - columnReference:
-              columnCounter: 659ae579-d3a2-414e-965f-9b5d6fc8080f
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: VARCHAR(12)
-            description: ""
-            name: DTicket Ticket Number
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 15d2e8b2-127e-4307-8170-a6a4a08a285a
-                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
-                transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 54359aa0-4d51-47ad-a14a-2bc5c6c5796c
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: cost
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 5735749a-50e9-4898-82fe-9e7eef39e6ee
-                    stepCounter: 367df4bd-6291-4ee3-adf6-3b80c1f0f729
-                transform: ""
-            systemColumnType: None
-            transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
@@ -328,83 +653,10 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: f91fd1a6-9b21-4f21-84e2-706c7a0c1905
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: VARCHAR(2)
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: Audit_ActualDispDuom
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
-                transform: "'TN'"
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: bb798bd4-27fe-4d98-9ea1-cdc24e542c08
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: audit_SM01amnt derived field. Here is comes from Union amnt
-            keyColumnType: None
-            name: audit_AdjLiftRate
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
-                transform: |-
-                  CASE
-                      WHEN "CM12_COMBINED"."CM12_UNIT"='S' OR "CM12_COMBINED"."CM12_UNIT"='V'
-                      THEN "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Billing Amount" / 
-                          CASE
-                              WHEN "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Quantity" is null or "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Quantity" = 0 OR "CM12_COMBINED"."CM12_FACT" is null or "CM12_COMBINED"."CM12_FACT" = 0
-                              THEN 1
-                              ELSE "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Quantity"*"CM12_COMBINED"."CM12_FACT"
-                          END
-                      ELSE "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Billing Amount"
-                  END
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: f6fdaa3b-3900-44b8-a8f2-5a87f4c1b363
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: RM02A Derived Field from qtysum
-            keyColumnType: None
-            name: audit_TotalLifts
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 72e41430-d478-4096-a5e9-e143d86a8fc8
-                    stepCounter: 237393b3-a22c-4507-80b3-3940673c6316
-                transform: IFNULL("STG_RM02_AGGREGATION_ROUTE_AUDIT"."qtysum",0.00)*52
-            systemColumnType: None
-            transform: ""
           - columnReference:
               columnCounter: 479afe41-0933-43c7-ab47-f9f7b7ca8351
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             name: Route
             nullable: false
@@ -414,33 +666,9 @@ steps:
                     stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
                 transform: ""
           - columnReference:
-              columnCounter: 21a234a7-94b4-43d3-99ae-612ccbc57bba
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: VARCHAR(2)
-            description: This is Audit_Actv
-            name: Audit_Activity
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3143e8f9-6182-408e-a362-acd9c40e9217
-                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
-                transform: ""
-          - columnReference:
-              columnCounter: c3417af0-b1f5-45b8-badd-6632e55e6e1e
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(18,2)
-            description: ""
-            name: Audit Period Charges
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: dc729d55-1ed6-47f4-ade0-25ed8243baeb
-                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
-                transform: ""
-          - columnReference:
               columnCounter: 6a1f44ea-10fe-4926-b491-e5d2a81aff08
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             name: Service
             nullable: true
@@ -452,7 +680,7 @@ steps:
           - columnReference:
               columnCounter: b1b763ef-a2de-43ce-bd60-c9355028fe97
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             name: Original Staged Call
             nullable: true
@@ -462,74 +690,9 @@ steps:
                     stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
                 transform: ""
           - columnReference:
-              columnCounter: 24afcdd2-f250-4e27-b5a4-39d626220277
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER
-            description: ""
-            name: Audit_Qty
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 556af833-d6c7-44d1-8f1d-88ccbca93623
-                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
-                transform: |-
-                  CASE
-                      WHEN "CM12_COMBINED"."CM12_UNIT" in ('S','P','V') 
-                      THEN "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Quantity" * "CM12_COMBINED"."CM12_FACT"
-                      ELSE "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Quantity"
-                  END
-          - columnReference:
-              columnCounter: 184b0a59-da8c-4e4b-8ac0-d15af2ab4c08
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(18,2)
-            description: ""
-            name: Audit_Qtywopf
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 556af833-d6c7-44d1-8f1d-88ccbca93623
-                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
-                transform: ""
-          - columnReference:
-              columnCounter: 362f881c-585b-4fd6-9bbc-e1df1cb89b9a
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: TIMESTAMP_NTZ(9)
-            description: ""
-            name: Dispatch Datetime
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 7d5436f7-a183-4ea0-be0b-9ebb9dedf824
-                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
-                transform: ""
-          - columnReference:
-              columnCounter: 44cdb0cc-c277-454b-aeee-1c63a2ec66fc
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: TIMESTAMP_NTZ(9)
-            description: ""
-            name: Time Finished
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: d04658ee-064c-4251-af38-dc270f9ac0dc
-                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
-                transform: ""
-          - columnReference:
-              columnCounter: b758ab57-bc78-411e-a1fb-a60b7eb45f34
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: TIMESTAMP_NTZ(9)
-            description: ""
-            name: Route Date
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 37b2f1d4-e062-4d51-9068-be0a80503376
-                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
-                transform: ""
-          - columnReference:
               columnCounter: 74e3557f-7e7d-4528-9948-3459941e9b6a
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(18,2)
+            dataType: VARCHAR
             description: ""
             name: Route Sequence
             nullable: false
@@ -541,7 +704,7 @@ steps:
           - columnReference:
               columnCounter: e76d2af8-0a8c-47e9-9ded-ca4f0ffcb152
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             name: Route Call ID
             nullable: true
@@ -553,7 +716,7 @@ steps:
           - columnReference:
               columnCounter: 33a4a11f-6425-4511-af74-aabfbc0684ad
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             name: Customer
             nullable: true
@@ -575,21 +738,9 @@ steps:
                     stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
                 transform: ""
           - columnReference:
-              columnCounter: c2b824e8-ba76-4a33-b49c-6b5659e8af63
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER
-            description: This is effectively SM01 Amount, can be used to replace Audit_SM01amnt in the sql source script
-            name: Billing Amount
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 398e8eab-62d1-4bf8-8be0-36275a6e0dec
-                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
-                transform: ""
-          - columnReference:
               columnCounter: 53b72ece-2a66-4145-85f5-2ae5d218fbf0
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER
+            dataType: VARCHAR
             description: ""
             name: RM03 Flag
             nullable: true
@@ -620,18 +771,6 @@ steps:
             systemColumnType: None
             transform: ""
           - columnReference:
-              columnCounter: c25878ea-91d7-41fa-bf61-f59a63b080e2
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(18,2)
-            description: ""
-            name: Audit_Actual_Disposal_Quantity
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: a9f9328c-7622-42bf-bc4c-a3e80da7c4f0
-                    stepCounter: cd889ee9-4b28-42e5-a29b-d93fd52416a3
-                transform: IFNULL("STG_NBTICKETS"."Disposal Quantity",0.00)
-          - columnReference:
               columnCounter: 436cc7e0-3fb7-41eb-8935-62a728985ab0
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
             dataType: VARCHAR
@@ -642,90 +781,6 @@ steps:
               - columnReferences:
                   - columnCounter: 7324d47b-e066-4591-9101-9002e626291e
                     stepCounter: cd889ee9-4b28-42e5-a29b-d93fd52416a3
-                transform: ""
-          - columnReference:
-              columnCounter: 6df76151-1126-48ae-8040-03f4b29ebcce
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: VARCHAR
-            description: PArt of NBTickets Substring
-            name: NBTicket Destination
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: da0500fd-55e7-49cd-9a06-f24036f2aa6e
-                    stepCounter: cd889ee9-4b28-42e5-a29b-d93fd52416a3
-                transform: ""
-          - columnReference:
-              columnCounter: 9f39ca48-a50c-4304-8582-9170a7f8d5c5
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: VARCHAR(4)
-            description: ""
-            name: Dticket Destination
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 98ab3af5-f6e3-4c9b-9843-62a939bfbe46
-                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
-                transform: ""
-          - columnReference:
-              columnCounter: 32f61a2d-3c81-4940-8b0e-58c70977b1c6
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(18,2)
-            description: ""
-            name: Audit_LM02_BAMT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: a6647cac-02b3-4317-beb5-e27767195176
-                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
-                transform: IFNULL("STG_DTickets"."Billing Amount",0.00)
-          - columnReference:
-              columnCounter: 30955ed9-3986-404e-8832-da7f3a078f38
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: VARCHAR(2)
-            description: ""
-            name: Audit_LM02_DUOM
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3dd5da31-87e9-4d3c-a29b-003cb017584c
-                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
-                transform: IFNULL("STG_DTickets"."Disposal UOM",'')
-          - columnReference:
-              columnCounter: 4ee13867-9792-4e18-9628-04b758002c8a
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(18,2)
-            description: ""
-            name: Audit_LM02_DAMT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 4e8e1710-4dab-4c43-bcd4-aa5fa66278f1
-                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
-                transform: IFNULL("STG_DTickets"."Disposal Amount",0.00)
-          - columnReference:
-              columnCounter: 95285c39-7b2f-495c-8f1f-ac2d9d611699
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(18,2)
-            description: ""
-            name: Audit_LM02_DQTY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 905467fd-e44f-422f-a968-75129c5f9138
-                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
-                transform: IFNULL("STG_DTickets"."Disposal Quantity",0.00)
-          - columnReference:
-              columnCounter: 82a61095-5dd8-4131-af71-78c61ee212e2
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER(18,2)
-            description: ""
-            name: Billing Quantity
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: af54c01d-c46d-4e05-8011-91fc67c52ad3
-                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
                 transform: ""
           - acceptedValues:
               strictMatch: true
@@ -745,79 +800,6 @@ steps:
               - columnReferences:
                   - columnCounter: e39d5ecd-4f9d-4701-a5dc-0c8730a858fd
                     stepCounter: 4f923860-b405-4745-ab70-88d5ff0d6d40
-                transform: ""
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 4cf92db1-8983-4167-88fe-315b50be584d
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: CompactSize
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 5d47b828-4ab4-42d5-9a95-ea8ade5f97b9
-                    stepCounter: 498f463a-7395-4cc0-ad5f-d4e7e3d38fcf
-                transform: |-
-                  CASE
-                      WHEN "CM05_Combined"."CM05_COMP" = 0 
-                      THEN 1
-                      ELSE IFNULL("CD05_COMBINED"."CD05_CPCTRATIO",1.00)
-                  END * "CM05_Combined"."CM05_SIZE"*"CM05_Combined"."CM05_QTY"
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 0f2a8319-2bb5-48b2-9bc9-a3d8668e1adb
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: CompactRatio
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
-                transform: |-
-                  CASE
-                      WHEN "CM05_Combined"."CM05_COMP" = 0 
-                      THEN 1
-                      ELSE IFNULL("CD05_COMBINED"."CD05_CPCTRATIO",1.00)
-                  END
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 2decdc81-872c-4fb0-bea9-474396b8b3b7
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: This will be incorrect until the conversion factor is complete
-            keyColumnType: None
-            name: weight
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: a0d19fe6-9df2-44ef-bbdc-5e449319f1f1
-                    stepCounter: 367df4bd-6291-4ee3-adf6-3b80c1f0f729
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -859,27 +841,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3d7bb629-1437-43e7-b1dc-787757194b86
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: Service Size
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: abd2c9eb-8e8e-400c-9cc8-dced119991a1
-                    stepCounter: f36a5cd1-f2d3-4e7f-b35c-8626d19408ac
-                transform: "\"CM05_Combined\".\"CM05_SIZE\"*IFNULL(\"LM06_COMBINED\".\"LM06_FACT\",1)"
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 6f99385e-a0b1-4b07-9c74-f55a1a927487
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
             config: {}
@@ -893,69 +854,6 @@ steps:
               - columnReferences:
                   - columnCounter: d1f8e25b-775c-42e8-b59b-86c73eefb438
                     stepCounter: f36a5cd1-f2d3-4e7f-b35c-8626d19408ac
-                transform: ""
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: d4cacb9d-363a-4608-97d4-0ed70a724bc6
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: NUMBER
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: Maximum Lifts
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: c9fb8413-d914-4642-97d6-bcf3b4637d6d
-                    stepCounter: f36a5cd1-f2d3-4e7f-b35c-8626d19408ac
-                transform: ""
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: e6293535-9203-463f-a1fd-02ff47573791
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: VARCHAR
-            defaultValue: ""
-            description: DTickets MAterial Description for DTickets Column
-            keyColumnType: None
-            name: Material Description
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 30eda0a2-5d91-4a1c-99d0-71964708df93
-                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
-                transform: ""
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: b14284b7-d33e-4794-bbc9-ea8ae9ec88fe
-              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            config: {}
-            dataType: TIMESTAMP_NTZ(9)
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: Audit_Invoice_Date
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: ac1240d8-2b71-4da0-8199-cad88e180ec5
-                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -980,6 +878,63 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - columnReference:
+              columnCounter: 659ae579-d3a2-414e-965f-9b5d6fc8080f
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: VARCHAR
+            description: ""
+            name: DTicket Ticket Number
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 15d2e8b2-127e-4307-8170-a6a4a08a285a
+                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f91fd1a6-9b21-4f21-84e2-706c7a0c1905
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Audit_ActualDispDuom
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'TN'"
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: 21a234a7-94b4-43d3-99ae-612ccbc57bba
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: VARCHAR(2)
+            description: This is Audit_Actv
+            name: Audit_Activity
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3143e8f9-6182-408e-a362-acd9c40e9217
+                    stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
+                transform: ""
+          - columnReference:
+              columnCounter: 30955ed9-3986-404e-8832-da7f3a078f38
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            dataType: VARCHAR(2)
+            description: ""
+            name: Audit_LM02_DUOM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3dd5da31-87e9-4d3c-a29b-003cb017584c
+                    stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
+                transform: IFNULL("STG_DTickets"."Disposal UOM",'')
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

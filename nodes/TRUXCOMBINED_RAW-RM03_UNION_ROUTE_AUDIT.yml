@@ -239,7 +239,7 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'RM03_COMBINED') }} "RM03_COMBINED"
-                where "RM03_COMBINED"."RM03_QTY" >0
+                where "RM03_COMBINED"."RM03_QTY" >0 and "RM03_COMBINED"."_FIVETRAN_DELETED" = FALSE
             name: RM03_UNION_ROUTE_AUDIT
             noLinkRefs: []
       name: RM03_UNION_ROUTE_AUDIT

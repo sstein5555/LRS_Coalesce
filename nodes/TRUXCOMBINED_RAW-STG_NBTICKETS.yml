@@ -45,20 +45,6 @@ steps:
                     stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
                 transform: SUM("STG_NBTickets_Join_Collections_Disposal"."LM02_BAMT")
           - columnReference:
-              columnCounter: 8ec76039-41e6-480f-b4c1-3091d45f7f9e
-              stepCounter: cd889ee9-4b28-42e5-a29b-d93fd52416a3
-            dataType: VARCHAR(2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: LM02_MATL
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: e99cfcf7-e237-49ae-ae49-2b5a019bc904
-                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
-                transform: ""
-          - columnReference:
               columnCounter: cee457ef-b612-4f75-8db8-119d9a7a2485
               stepCounter: cd889ee9-4b28-42e5-a29b-d93fd52416a3
             dataType: NUMBER(38,0)
@@ -181,28 +167,7 @@ steps:
               - columnReferences:
                   - columnCounter: 8c7a7ea2-fc31-4acd-9d9b-b8e9e8eab256
                     stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
-                transform: ""
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: da0500fd-55e7-49cd-9a06-f24036f2aa6e
-              stepCounter: cd889ee9-4b28-42e5-a29b-d93fd52416a3
-            config: {}
-            dataType: VARCHAR
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: Destination
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 85848b9e-703f-4e92-ae9c-0960e10fe0e3
-                    stepCounter: 5e465d11-50ae-43e7-9c9b-69f255759192
-                transform: ""
+                transform: LISTAGG("STG_NBTickets_Join_Collections_Disposal"."LM02_NUMB",', ')
             systemColumnType: None
             transform: ""
         cteString: ""
@@ -237,7 +202,7 @@ steps:
                 ON "STG_NBTickets_Join_Collections_Disposal"."LM02_DUOM" = "LM06_COMBINED"."LM06_UOM1" 
                     and "STG_NBTickets_Join_Collections_Disposal"."SOURCE" = "LM06_COMBINED"."SOURCE"
                     and "LM06_COMBINED"."LM06_UOM2" = "CD14_COMBINED"."CD14_WEIGHTUOM"
-                GROUP BY "LM02_RDATE","LM02_ROUT","Route Sequence","CD14_DESC","STG_NBTickets_Join_Collections_Disposal"."SOURCE","LM02_MATL","LM02_NUMB","LM02_DSTE"
+                GROUP BY "LM02_RDATE","LM02_ROUT","Route Sequence","CD14_DESC","STG_NBTickets_Join_Collections_Disposal"."SOURCE"
             name: STG_NBTICKETS
             noLinkRefs: []
       name: STG_NBTICKETS

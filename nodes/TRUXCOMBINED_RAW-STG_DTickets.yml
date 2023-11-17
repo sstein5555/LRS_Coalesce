@@ -19,7 +19,7 @@ steps:
           - columnReference:
               columnCounter: 15d2e8b2-127e-4307-8170-a6a4a08a285a
               stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
-            dataType: VARCHAR(12)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -29,7 +29,7 @@ steps:
               - columnReferences:
                   - columnCounter: b5cd2fc9-11b9-4763-82d0-01dfa4d51ce8
                     stepCounter: 6813012c-649c-442a-8a67-4a7693ab2dc2
-                transform: ""
+                transform: LISTAGG(DISTINCT "STG_DTickets_Join_Collections_Disposal"."LM02_DSTE"||' - '||"STG_DTickets_Join_Collections_Disposal"."LM02_NUMB"||' '||"LM04_COMBINED"."LM04_DESC",', ')
           - columnReference:
               columnCounter: d718ce35-b8b4-4186-85b1-8adabe817f39
               stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
@@ -42,20 +42,6 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: d798ed8c-2fac-4c26-b872-070502cdecce
-                    stepCounter: 6813012c-649c-442a-8a67-4a7693ab2dc2
-                transform: ""
-          - columnReference:
-              columnCounter: 98ab3af5-f6e3-4c9b-9843-62a939bfbe46
-              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
-            dataType: VARCHAR(4)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Destination
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 4513492d-4580-42e9-a273-f742f32f79a4
                     stepCounter: 6813012c-649c-442a-8a67-4a7693ab2dc2
                 transform: ""
           - columnReference:
@@ -86,20 +72,6 @@ steps:
                   - columnCounter: 74b02ad1-2467-422f-b9b3-e7204b113c50
                     stepCounter: 6813012c-649c-442a-8a67-4a7693ab2dc2
                 transform: SUM("STG_DTickets_Join_Collections_Disposal"."LM02_BAMT")
-          - columnReference:
-              columnCounter: 2df91efe-1cc6-4227-862e-6216164aab63
-              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
-            dataType: VARCHAR(2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Material
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 485b0dee-ef05-4e13-8e7c-f208248db551
-                    stepCounter: 6813012c-649c-442a-8a67-4a7693ab2dc2
-                transform: ""
           - columnReference:
               columnCounter: 1d0c3398-e2de-4b2f-924e-a944ff5636e4
               stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
@@ -184,27 +156,6 @@ steps:
                   - columnCounter: 540ce4ed-b9c4-4772-aebd-f82e4256a352
                     stepCounter: 6813012c-649c-442a-8a67-4a7693ab2dc2
                 transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 30eda0a2-5d91-4a1c-99d0-71964708df93
-              stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
-            config: {}
-            dataType: VARCHAR
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: Material Description
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 29e98454-68c4-4414-8685-8bae91617e75
-                    stepCounter: d1220fe5-c7b7-4bb4-9a94-fc3d3c6e1c27
-                transform: ""
-            systemColumnType: None
-            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -244,13 +195,9 @@ steps:
                     and "LM06_COMBINED"."LM06_UOM2" = "CD14_COMBINED"."CD14_WEIGHTUOM"
                     and "LM06_COMBINED"."SOURCE" = "CD14_COMBINED"."SOURCE"
                 GROUP BY "Route Date", 
-                    "Destination", 
                     "Route Sequence", 
                     "STG_DTickets_Join_Collections_Disposal"."SOURCE",
                     "CD14_WEIGHTUOM",
-                    "Ticket Number",
-                    "Material Description",
-                    "Material",
                     "Route"
             name: STG_DTickets
             noLinkRefs: []
