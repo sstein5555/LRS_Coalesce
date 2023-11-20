@@ -992,11 +992,11 @@ steps:
               - columnReferences:
                   - columnCounter: 73066796-bdd0-4d2e-9731-5689e42e40fa
                     stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
-                transform: ""
+                transform: rtrim("CM04_Combined"."CM04_CUST")
               - columnReferences:
                   - columnCounter: 1a8f02ec-6c91-4406-b462-ba1d391996aa
                     stepCounter: d0ee8791-10a2-4747-967f-b22621b20d21
-                transform: ""
+                transform: rtrim("SITE_COMBINED"."Customer Number")
             systemColumnType: None
             transform: ""
           - acceptedValues:
@@ -1017,11 +1017,11 @@ steps:
               - columnReferences:
                   - columnCounter: 112edb7e-c114-4829-bb58-6e8264e56247
                     stepCounter: f47180be-fdce-4312-84ff-04027f8092c0
-                transform: ""
+                transform: rtrim("CM04_Combined"."CM04_SITE")
               - columnReferences:
                   - columnCounter: bfc35555-4937-4379-b681-cd530e1bd787
                     stepCounter: d0ee8791-10a2-4747-967f-b22621b20d21
-                transform: ""
+                transform: rtrim("SITE_COMBINED"."Site ID")
             systemColumnType: None
             transform: ""
         enabledColumnTestIDs: []
