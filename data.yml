@@ -2984,7 +2984,7 @@ stepTypes:
     version: 1
   StepType-View:
     id: View
-    isDisabled: false
+    isDisabled: true
     metadata:
       defaultStorageLocation: null
       error: null
