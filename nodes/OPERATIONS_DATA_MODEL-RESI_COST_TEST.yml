@@ -1,0 +1,184 @@
+steps:
+  RESI_COST_TEST-e26629f9-8e28-43b9-8a5c-1ca919a2f889:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: OPERATIONS_DATA_MODEL
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 46ba1586-1ded-49b9-836b-d49c124e23bc
+              stepCounter: e26629f9-8e28-43b9-8a5c-1ca919a2f889
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: RM05_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1fe94ca2-7e25-4844-aa6b-d6710b50f993
+                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1038020d-c7cd-4c1a-b22c-ef3a484466a9
+              stepCounter: e26629f9-8e28-43b9-8a5c-1ca919a2f889
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: RM05_SEQ1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1eb09639-dec4-4628-9604-865473ebe651
+                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 22cdb7ed-efd4-4b24-899c-b2537280b5bd
+              stepCounter: e26629f9-8e28-43b9-8a5c-1ca919a2f889
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: RM05_DRIVER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 869b586b-8048-436b-b15c-962b5f100eb7
+                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 30b677a7-27d5-4f08-94c7-62b90354406c
+              stepCounter: e26629f9-8e28-43b9-8a5c-1ca919a2f889
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: RM05_FUEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dd3e216c-7eb6-4395-ab67-4ecdd4ba702a
+                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: da2bd102-4756-41b6-8512-626ff7f8dead
+              stepCounter: e26629f9-8e28-43b9-8a5c-1ca919a2f889
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: RM05_FUELUOM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d2bede3-498e-4333-b660-329c2a3f55a5
+                    stepCounter: f21fe296-8b27-43b1-978c-64999978c610
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4c6423ad-8f2b-4b8e-a430-86d8a467d454
+              stepCounter: e26629f9-8e28-43b9-8a5c-1ca919a2f889
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: LM06_FACT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2d401f5d-e7c4-4650-8b9f-ffe8ae67ab2f
+                    stepCounter: 1dd6a90f-e18e-4982-b14b-842b8ea5e4f4
+                transform: ""
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              CD14_COMBINED: f21fe296-8b27-43b1-978c-64999978c610
+              LM06_COMBINED: 1dd6a90f-e18e-4982-b14b-842b8ea5e4f4
+              RM01_Combined: bd25ccfd-afa5-4e34-be04-467c3e0970fd
+              Route_Production_Statistics: 86bcad57-ea01-431a-b5a6-dc9062cadf37
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: OPERATIONS_DATA_MODEL
+                nodeName: Route_Production_Statistics
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: CD14_COMBINED
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: LM06_COMBINED
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: RM01_Combined
+            join:
+              joinCondition: |-
+                FROM {{ ref('OPERATIONS_DATA_MODEL', 'Route_Production_Statistics') }} "Route_Production_Statistics"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'RM01_Combined') }} "RM01_Combined"
+                    ON "Route_Production_Statistics"."Route" = "RM01_Combined"."RM01_NUMB" 
+                    AND "Route_Production_Statistics"."SOURCE" = "RM01_Combined"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CD14_COMBINED') }} "CD14_COMBINED"
+                    ON "RM01_Combined"."RM01_TYPE" = "CD14_COMBINED"."CD14_CODE" 
+                    AND "RM01_Combined"."SOURCE" = "CD14_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM06_COMBINED') }} "LM06_COMBINED"
+                    ON "Route_Production_Statistics"."Fuel UOM" = "LM06_COMBINED"."LM06_UOM1" 
+                    AND "CD14_COMBINED"."CD14_FUELUOM" = "LM06_COMBINED"."LM06_UOM2"
+                    AND "Route_Production_Statistics"."SOURCE" = "LM06_COMBINED"."SOURCE"
+            name: RESI_COST_TEST
+            noLinkRefs: []
+      name: RESI_COST_TEST
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: e26629f9-8e28-43b9-8a5c-1ca919a2f889
