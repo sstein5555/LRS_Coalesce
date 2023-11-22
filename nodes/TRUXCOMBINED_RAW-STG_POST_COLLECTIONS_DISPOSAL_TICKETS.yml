@@ -8,7 +8,7 @@ steps:
         testsEnabled: true
         truncateBefore: true
       database: ""
-      deployEnabled: true
+      deployEnabled: false
       description: ""
       isMultisource: false
       locationName: TRUXCOMBINED_RAW
@@ -701,7 +701,7 @@ steps:
               - columnReferences:
                   - columnCounter: 680c00e7-3392-4fb4-a12f-1880827e6ac6
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
-                transform: ""
+                transform: "'TRUX_'||RIGHT(\"LM02_COMBINED\".\"SOURCE\",2)||'_COMP_RAW'"
           - columnReference:
               columnCounter: ff2b37f0-44bd-4798-b89c-d0a9b7e4ec17
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
