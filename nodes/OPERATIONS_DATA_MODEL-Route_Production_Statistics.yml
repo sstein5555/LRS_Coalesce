@@ -377,7 +377,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: TIMEDIFF(minute,"RM05_COMBINED"."RM05_TIM2","RM05_COMBINED"."RM05_TIM1")
+                transform: TIMEDIFF(minute,"RM05_COMBINED"."RM05_TIM1","RM05_COMBINED"."RM05_TIM2")
             systemColumnType: None
             transform: ""
           - acceptedValues:

@@ -104,6 +104,27 @@ steps:
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eaaa9e7d-5cc8-480d-9003-8201768b9dd8
+              stepCounter: c270cd8b-5710-4b3a-b2fc-dae7c90093ab
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5dbd8154-9d24-4f40-89e9-57dbde922fff
+                    stepCounter: 0c5571d1-4228-4228-938c-c2a1fe51daff
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

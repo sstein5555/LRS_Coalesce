@@ -71,7 +71,7 @@ steps:
               - columnReferences:
                   - columnCounter: 436cc7e0-3fb7-41eb-8935-62a728985ab0
                     stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-                transform: ""
+                transform: LISTAGG(DISTINCT "STG_ROUTE_AUDIT_REPORT"."NBTicket Ticket Number",', ')
           - columnReference:
               columnCounter: 2ec331ab-e81f-463b-8915-a27992a4be17
               stepCounter: 4c455188-401f-44f3-8b9f-fb03852c93f9
@@ -85,7 +85,7 @@ steps:
               - columnReferences:
                   - columnCounter: 659ae579-d3a2-414e-965f-9b5d6fc8080f
                     stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-                transform: ""
+                transform: LISTAGG(DISTINCT "STG_ROUTE_AUDIT_REPORT"."DTicket Ticket Number",' ,')
           - columnReference:
               columnCounter: 84b71032-f9ae-4361-93a5-d5e4e17e39df
               stepCounter: 4c455188-401f-44f3-8b9f-fb03852c93f9
@@ -436,6 +436,27 @@ steps:
                   - columnCounter: c8c724bd-76b3-4c34-b56b-002edca684ed
                     stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
                 transform: COUNT(DISTINCT "STG_ROUTE_AUDIT_REPORT"."Work Order Number")
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 91175b19-b50c-45fa-9c04-98b7a1616774
+              stepCounter: 4c455188-401f-44f3-8b9f-fb03852c93f9
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Yards
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ec456fd7-2012-4988-8a5a-119f91f5f3b0
+                    stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+                transform: SUM("STG_ROUTE_AUDIT_REPORT"."Yards")
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -449,7 +470,7 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'STG_ROUTE_AUDIT_REPORT') }} "STG_ROUTE_AUDIT_REPORT"
-                GROUP BY "Route","Route Date","NBTicket Ticket Number","DTicket Ticket Number","SOURCE","Route Description"
+                GROUP BY "Route","Route Date","SOURCE","Route Description"
             name: STG_ROUTE_AUDIT_REPORT_ROUTE_DAY
             noLinkRefs: []
       name: STG_ROUTE_AUDIT_REPORT_ROUTE_DAY
