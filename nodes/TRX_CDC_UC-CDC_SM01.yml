@@ -495,7 +495,7 @@ steps:
               columnCounter: 222f8560-18db-4052-875b-31de8e31841b
               stepCounter: 04aa6c9b-5f87-4933-97af-6a1123c321ad
             config: {}
-            dataType: VARCHAR
+            dataType: BOOLEAN
             defaultValue: ""
             description: ""
             keyColumnType: None

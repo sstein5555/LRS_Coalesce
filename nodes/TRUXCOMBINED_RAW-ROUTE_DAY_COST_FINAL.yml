@@ -272,7 +272,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: ifnull(ifnull("Clock Total Time"/60,"Time Change"/60),0.00) * ifnull("Driver Cost",0.00)
+                transform: ifnull(ifnull(nullifzero("Clock Total Time")/60,"Time Change"/60),0.00) * ifnull("Driver Cost",0.00)
             systemColumnType: None
             transform: ""
           - acceptedValues:

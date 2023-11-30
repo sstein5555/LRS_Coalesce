@@ -117,7 +117,7 @@ steps:
           - columnReference:
               columnCounter: 192edc97-af70-4afa-9645-0ff2f491d823
               stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: MT02 first join
             hashColumns: []
             hashDetails: null
@@ -159,7 +159,7 @@ steps:
           - columnReference:
               columnCounter: 5c73b8c9-a4e3-4037-a650-8a28f2e726d0
               stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: RM02A Derived Field from qtysum
             hashColumns: []
             hashDetails: null
@@ -173,7 +173,7 @@ steps:
           - columnReference:
               columnCounter: 955d1e25-4902-4d8b-8904-3c3521729c13
               stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -187,7 +187,7 @@ steps:
           - columnReference:
               columnCounter: e9b0ef83-abe8-464d-b7b3-12df339d6422
               stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: This is effectively SM01 Amount, can be used to replace Audit_SM01amnt in the sql source script
             hashColumns: []
             hashDetails: null
@@ -243,7 +243,7 @@ steps:
           - columnReference:
               columnCounter: ea294d05-ccbc-47fc-ab03-292a77c5b25f
               stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -481,7 +481,7 @@ steps:
           - columnReference:
               columnCounter: 4d0fae91-4c99-472f-8dae-5a873e0226c2
               stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -495,7 +495,7 @@ steps:
           - columnReference:
               columnCounter: 6e05119a-1281-41a0-9de7-117956206654
               stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: Difference between time 1 and time 2 (start time and end time)
             hashColumns: []
             hashDetails: null
@@ -509,7 +509,7 @@ steps:
           - columnReference:
               columnCounter: 68d7949c-264c-49ff-af88-4169eaffffc7
               stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: Difference between Departure Time and Return Time
             hashColumns: []
             hashDetails: null

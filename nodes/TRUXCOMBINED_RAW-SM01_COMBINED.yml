@@ -451,7 +451,7 @@ steps:
               columnCounter: c9093525-6146-46ae-8029-4f74ee3950a2
               stepCounter: 82475639-b6b5-4ad7-b9c0-98cffc711fcb
             config: {}
-            dataType: VARCHAR
+            dataType: Boolean
             defaultValue: ""
             description: ""
             keyColumnType: None
