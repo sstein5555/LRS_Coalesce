@@ -8,7 +8,7 @@ steps:
         testsEnabled: true
         truncateBefore: true
       database: ""
-      deployEnabled: false
+      deployEnabled: true
       description: First attempt at Route Audit Report
       isMultisource: false
       locationName: TRUXCOMBINED_RAW
@@ -87,7 +87,7 @@ steps:
               columnCounter: 773045f1-dbfb-41eb-8000-ae6c6437f8c8
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
             config: {}
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             defaultValue: ""
             description: MT02 first join
             keyColumnType: None
@@ -181,7 +181,7 @@ steps:
               columnCounter: f6fdaa3b-3900-44b8-a8f2-5a87f4c1b363
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
             config: {}
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             defaultValue: ""
             description: RM02A Derived Field from qtysum
             keyColumnType: None
@@ -197,7 +197,7 @@ steps:
           - columnReference:
               columnCounter: 24afcdd2-f250-4e27-b5a4-39d626220277
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: ""
             name: Audit_Qty
             nullable: true
@@ -214,7 +214,7 @@ steps:
           - columnReference:
               columnCounter: c2b824e8-ba76-4a33-b49c-6b5659e8af63
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: This is effectively SM01 Amount, can be used to replace Audit_SM01amnt in the sql source script
             name: Billing Amount
             nullable: true
@@ -304,7 +304,7 @@ steps:
               columnCounter: 3d7bb629-1437-43e7-b1dc-787757194b86
               stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
             config: {}
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             defaultValue: ""
             description: ""
             keyColumnType: None
@@ -935,6 +935,32 @@ steps:
                   - columnCounter: 3dd5da31-87e9-4d3c-a29b-003cb017584c
                     stepCounter: e911133f-feb6-4f66-9537-59195f8648a3
                 transform: IFNULL("STG_DTickets"."Disposal UOM",'')
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ec456fd7-2012-4988-8a5a-119f91f5f3b0
+              stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Yards
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE
+                      WHEN "CM12_COMBINED"."CM12_UNIT" in ('S','P','V') 
+                      THEN "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Quantity" * "CM12_COMBINED"."CM12_FACT"
+                      ELSE "NBTICKETS_TABLE_RM03_SM03_FIRST_UNION"."Quantity"
+                  END * "CM05_Combined"."CM05_SIZE"*IFNULL("LM06_COMBINED"."LM06_FACT",1)
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

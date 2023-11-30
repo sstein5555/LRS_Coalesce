@@ -8,7 +8,7 @@ steps:
         testsEnabled: true
         truncateBefore: true
       database: ""
-      deployEnabled: false
+      deployEnabled: true
       description: First union of RM03 and SM01 necessitated by Route Audit Report before including disposal ticket data
       isMultisource: true
       locationName: TRUXCOMBINED_RAW
@@ -290,7 +290,7 @@ steps:
               columnCounter: 398e8eab-62d1-4bf8-8be0-36275a6e0dec
               stepCounter: 5648f2b4-337b-485c-8919-b4e53a089b45
             config: {}
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             defaultValue: ""
             description: ""
             keyColumnType: None
@@ -363,7 +363,7 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'RM03_UNION_ROUTE_AUDIT') }} "RM03_UNION_ROUTE_AUDIT"
-                WHERE "RM03_DATE" >='2023-01-01'
+                WHERE YEAR("RM03_DATE")>=YEAR(CURRENT_DATE())-2
             name: RM03_UNION_ROUTE_AUDIT
             noLinkRefs: []
           - aliases:
@@ -376,7 +376,7 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'SM01_UNION_ROUTE_AUDIT') }} "SM01_UNION_ROUTE_AUDIT"
-                WHERE "SM01_DATE" >= '2023-01-01'
+                WHERE YEAR("SM01_DATE") >= YEAR(CURRENT_DATE())-2
             name: SM01_UNION_ROUTE_AUDIT
             noLinkRefs: []
       name: NBTICKETS_TABLE_RM03_SM03_FIRST_UNION

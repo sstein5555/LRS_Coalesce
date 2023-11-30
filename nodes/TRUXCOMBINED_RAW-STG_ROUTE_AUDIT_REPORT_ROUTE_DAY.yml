@@ -71,7 +71,7 @@ steps:
               - columnReferences:
                   - columnCounter: 436cc7e0-3fb7-41eb-8935-62a728985ab0
                     stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-                transform: ""
+                transform: LISTAGG(DISTINCT "STG_ROUTE_AUDIT_REPORT"."NBTicket Ticket Number",', ')
           - columnReference:
               columnCounter: 2ec331ab-e81f-463b-8915-a27992a4be17
               stepCounter: 4c455188-401f-44f3-8b9f-fb03852c93f9
@@ -85,7 +85,7 @@ steps:
               - columnReferences:
                   - columnCounter: 659ae579-d3a2-414e-965f-9b5d6fc8080f
                     stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-                transform: ""
+                transform: LISTAGG(DISTINCT "STG_ROUTE_AUDIT_REPORT"."DTicket Ticket Number",' ,')
           - columnReference:
               columnCounter: 84b71032-f9ae-4361-93a5-d5e4e17e39df
               stepCounter: 4c455188-401f-44f3-8b9f-fb03852c93f9
@@ -131,7 +131,7 @@ steps:
           - columnReference:
               columnCounter: a1367214-abc1-48c9-b123-5952f8c7b4f5
               stepCounter: 4c455188-401f-44f3-8b9f-fb03852c93f9
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: MT02 first join
             hashColumns: []
             hashDetails: null
@@ -173,7 +173,7 @@ steps:
           - columnReference:
               columnCounter: e54322f9-ab9a-43a8-8845-1e9c4dc562af
               stepCounter: 4c455188-401f-44f3-8b9f-fb03852c93f9
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: RM02A Derived Field from qtysum
             hashColumns: []
             hashDetails: null
@@ -187,7 +187,7 @@ steps:
           - columnReference:
               columnCounter: d85d17f5-0106-48dc-9ea9-5e4076e49ca2
               stepCounter: 4c455188-401f-44f3-8b9f-fb03852c93f9
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -201,7 +201,7 @@ steps:
           - columnReference:
               columnCounter: 4663e402-fbef-4857-906e-a5298b8ce74c
               stepCounter: 4c455188-401f-44f3-8b9f-fb03852c93f9
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: This is effectively SM01 Amount, can be used to replace Audit_SM01amnt in the sql source script
             hashColumns: []
             hashDetails: null
@@ -257,7 +257,7 @@ steps:
           - columnReference:
               columnCounter: 94b1d17d-7b75-4485-96f7-141b308be8e1
               stepCounter: 4c455188-401f-44f3-8b9f-fb03852c93f9
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -436,6 +436,27 @@ steps:
                   - columnCounter: c8c724bd-76b3-4c34-b56b-002edca684ed
                     stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
                 transform: COUNT(DISTINCT "STG_ROUTE_AUDIT_REPORT"."Work Order Number")
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 91175b19-b50c-45fa-9c04-98b7a1616774
+              stepCounter: 4c455188-401f-44f3-8b9f-fb03852c93f9
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Yards
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ec456fd7-2012-4988-8a5a-119f91f5f3b0
+                    stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
+                transform: SUM("STG_ROUTE_AUDIT_REPORT"."Yards")
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -449,7 +470,7 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'STG_ROUTE_AUDIT_REPORT') }} "STG_ROUTE_AUDIT_REPORT"
-                GROUP BY "Route","Route Date","NBTicket Ticket Number","DTicket Ticket Number","SOURCE","Route Description"
+                GROUP BY "Route","Route Date","SOURCE","Route Description"
             name: STG_ROUTE_AUDIT_REPORT_ROUTE_DAY
             noLinkRefs: []
       name: STG_ROUTE_AUDIT_REPORT_ROUTE_DAY

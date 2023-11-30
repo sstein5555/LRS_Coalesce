@@ -1,5 +1,5 @@
 steps:
-  STG_Route_Production_Statistics-e4a98945-dbf1-4142-9d81-b868d7f17427:
+  Route_Cost_Sequence-641c36f0-c1a9-40e0-92a6-1f1053c48976:
     operation:
       config:
         insertStrategy: INSERT
@@ -8,17 +8,17 @@ steps:
         testsEnabled: true
         truncateBefore: true
       database: ""
-      deployEnabled: true
-      description: ""
+      deployEnabled: false
+      description: This will be the granular version of Route Cost, not completed, down to the sequence level
       isMultisource: false
-      locationName: FINANCIAL_DATA_MODEL
+      locationName: TRUXCOMBINED_RAW
       materializationType: table
       metadata:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 2e710290-6a66-4a3d-862d-e7fb081d27f6
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: 97e6d8aa-5c35-4d73-804c-7eec8995596f
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: TIMESTAMP_NTZ(9)
             description: ""
             hashColumns: []
@@ -31,8 +31,8 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: 5923da8a-162e-4e0c-87b8-950eee657990
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: 014ce173-5e8c-49e6-b458-eab43d7b7ae2
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -45,8 +45,50 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: b7826ef5-ca5f-4317-b697-2079cf55856f
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: 558812a6-1e29-4b06-a296-4e59565e86fa
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Sequence 1
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1eb09639-dec4-4628-9604-865473ebe651
+                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
+                transform: ""
+          - columnReference:
+              columnCounter: 670144ca-438d-4c92-aad8-e5f6caf57e64
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Sequence 2
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aee2e715-f5a5-44bf-a05f-4eac2fd7eae8
+                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
+                transform: ""
+          - columnReference:
+              columnCounter: fc621aa0-b9af-464f-bf7a-5ccaa8b3b70f
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: End Hour
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4c3d7fbd-c08c-4c91-9a91-6f9b3ebbffbc
+                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
+                transform: ""
+          - columnReference:
+              columnCounter: a2f3c2cf-f089-4220-b45c-1214b0bd8905
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: VARCHAR(2)
             description: ""
             hashColumns: []
@@ -59,8 +101,8 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: 8e68ab0b-fa51-40c5-a87a-e250d01281fb
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: 3e22294e-8945-4bb3-8554-3fa0c9432d80
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: TIMESTAMP_NTZ(9)
             description: ""
             hashColumns: []
@@ -73,8 +115,8 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: 340d3639-7afe-473f-8673-c4a2f7366df4
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: c0c8ca8a-83a8-4ff5-8bc4-6e284d14d234
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -87,8 +129,8 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: 62bc134b-c40b-4adf-8838-664fe2194978
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: 5fbb124c-62d0-4c01-8da0-c2104173d80e
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: TIMESTAMP_NTZ(9)
             description: ""
             hashColumns: []
@@ -101,8 +143,22 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: 68c850ba-2dda-4af3-9a46-218c2a880853
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: 75e8627d-8335-4e75-b9c3-7b808615c040
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Odometer UOM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3da504e0-df3d-4e04-9e45-517b49718e64
+                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
+                transform: ""
+          - columnReference:
+              columnCounter: 23914b88-f55d-49ae-acc4-75f5addd0376
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -115,8 +171,8 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: a906835b-c1eb-4148-b8ee-c832509102b3
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: d48495c8-d195-43f4-8085-a40e63fa3d47
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: TIMESTAMP_NTZ(9)
             description: ""
             hashColumns: []
@@ -127,10 +183,24 @@ steps:
               - columnReferences:
                   - columnCounter: 6a246326-a485-4180-94f4-ad3d6deddf94
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
-                transform: MAX("Route_Production_Statistics"."Return Time")
+                transform: ""
           - columnReference:
-              columnCounter: 9ed30bb6-d481-44cf-a4ec-05759c674b0c
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: a27bff08-132d-4e51-a01b-3a366c4d00a6
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Start Hour
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7b7c7235-621d-4f60-bee9-9ce2a0f8caf0
+                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
+                transform: ""
+          - columnReference:
+              columnCounter: 69f224c5-f01b-4858-9ae5-d8b01d4ec81c
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: TIMESTAMP_NTZ(9)
             description: ""
             hashColumns: []
@@ -141,10 +211,10 @@ steps:
               - columnReferences:
                   - columnCounter: 4fceda5e-5aac-4197-8f6c-f8826b28d7fc
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
-                transform: MIN("Route_Production_Statistics"."Begin Time")
+                transform: ""
           - columnReference:
-              columnCounter: 65b5d1c6-d524-4d80-8cd8-dc2b73ad911c
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: c6639ba1-bffa-4d5d-bd98-c0405036930c
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -157,8 +227,8 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: 46d2af87-65d8-468c-bc94-6b6cb439f40e
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: 420a2de8-5260-44b1-9cc2-cd8b3fd8592e
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: TIMESTAMP_NTZ(9)
             description: ""
             hashColumns: []
@@ -171,8 +241,8 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: b357fcc7-c037-4d8e-90aa-b3fda16788f6
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: 8d6a5f2c-f13c-4f6f-a648-29dd159e7369
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: NUMBER(8,2)
             description: ""
             hashColumns: []
@@ -183,10 +253,10 @@ steps:
               - columnReferences:
                   - columnCounter: dd3e216c-7eb6-4395-ab67-4ecdd4ba702a
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
-                transform: SUM("Route_Production_Statistics"."Fuel Used")
+                transform: ""
           - columnReference:
-              columnCounter: 432d7056-de53-4067-a06d-a19f6a2a14e5
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: c0000efb-d459-4931-9f93-ce6b6e71d0ee
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -199,8 +269,8 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: f6b942b1-700d-4ded-b757-a784af2750a8
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: d8d0c735-35e5-4fc1-bd06-ff6a72d3a8af
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -213,8 +283,8 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: d2631060-90a0-43df-b052-fbd8f521017a
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: 3571b6f5-40e8-485e-91ed-737d5b6c3e7b
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: VARCHAR
             description: ""
             hashColumns: []
@@ -227,8 +297,8 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: 5b921138-838d-42f6-a97b-7bb3984fd585
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: 54305510-399e-4ba8-a746-446e77fbc452
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: NUMBER
             description: ""
             hashColumns: []
@@ -239,10 +309,10 @@ steps:
               - columnReferences:
                   - columnCounter: e9e3ad21-d82b-4f5b-8bbf-bc0a53db96cd
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
-                transform: SUM("Route_Production_Statistics"."Odometer Change")
+                transform: ""
           - columnReference:
-              columnCounter: 3e72354a-c1e6-4efa-839f-e8473698fbd8
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: c49a5ac8-130b-4aa8-81fd-b30c3d8f65ec
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: NUMBER
             description: Difference between time 1 and time 2 (start time and end time)
             hashColumns: []
@@ -253,10 +323,10 @@ steps:
               - columnReferences:
                   - columnCounter: 2e530c0b-8bc4-4d34-a4e2-12abf6a3529b
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
-                transform: SUM("Route_Production_Statistics"."Time Change")
+                transform: ""
           - columnReference:
-              columnCounter: e90b3128-76a4-412c-b9ed-9bbe335b7029
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+              columnCounter: d0c0d388-e88d-418b-b28b-13f20e0865aa
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: NUMBER
             description: Difference between Departure Time and Return Time
             hashColumns: []
@@ -267,63 +337,21 @@ steps:
               - columnReferences:
                   - columnCounter: 1ccbd3e6-a4f9-49ff-9957-1e55e66808aa
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
-                transform: SUM("Route_Production_Statistics"."Trip Duration")
+                transform: ""
           - columnReference:
-              columnCounter: 91c48719-244e-45a3-9243-a723b07f804e
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
-            dataType: NUMBER
+              columnCounter: d14fa98f-ccfd-459f-858b-b0256dcd8edf
+              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
-            name: Number of Stops
+            name: Route Type
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 9d71d30b-0535-4b76-a027-5d410e64eceb
+                  - columnCounter: 649c68cf-bf1a-4c81-b281-bc34b40a298e
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
-                transform: SUM("Route_Production_Statistics"."Number of Stops")
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 70f85d53-1e4d-43a0-bcae-f5667c21afb2
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
-            config: {}
-            dataType: ""
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: EC01 cost
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
                 transform: ""
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 01328437-7090-4562-a2ee-48297fb219c1
-              stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
-            config: {}
-            dataType: ""
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: TR01 Cost
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
-                transform: ""
-            systemColumnType: None
-            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -335,11 +363,11 @@ steps:
                 nodeName: Route_Production_Statistics
             join:
               joinCondition: FROM {{ ref('OPERATIONS_DATA_MODEL', 'Route_Production_Statistics') }} "Route_Production_Statistics"
-            name: STG_Route_Production_Statistics
+            name: Route_Cost_Sequence
             noLinkRefs: []
-      name: STG_Route_Production_Statistics
+      name: Route_Cost_Sequence
       overrideSQL: false
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: e4a98945-dbf1-4142-9d81-b868d7f17427
+    stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
