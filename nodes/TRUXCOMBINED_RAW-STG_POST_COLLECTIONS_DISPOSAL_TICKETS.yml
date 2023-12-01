@@ -37,7 +37,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_LEEDWEIGHT
+            name: LEEDWEIGHT
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -51,7 +51,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_LEED
+            name: LEEDMATERIAL
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -65,7 +65,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_NUMB
+            name: TICKETNUMBER
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -79,25 +79,11 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_RDATE
+            name: ROUTEDATE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 508cefbb-339f-40a9-b643-643ef802f3c1
-                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
-                transform: ""
-          - columnReference:
-              columnCounter: 70a1a95f-b477-4f89-b8ca-fa79f0a8f53b
-              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
-            dataType: NUMBER(18,4)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: LM02_DRATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: afc2fd2e-a8ca-4cec-9d39-d0ed58ad0a65
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
           - columnReference:
@@ -107,25 +93,11 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_CUST
+            name: CUSTOMERNUMBER
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: d86d2d94-9316-4e2f-93e5-9f224721ecfc
-                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
-                transform: ""
-          - columnReference:
-              columnCounter: eaad3674-1090-482f-8037-1472746122e9
-              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
-            dataType: VARCHAR(2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: LM02_DRATEUOM
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2517f6e6-dc60-4cb8-8b8f-eb81ba918a7f
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
           - columnReference:
@@ -149,7 +121,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_CDATE
+            name: CREATEDDATE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -191,7 +163,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_UCHG
+            name: UNITCHANGE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -205,7 +177,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_DSTE
+            name: FACILITY
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -219,7 +191,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_BLAD
+            name: BILLOFLADING
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -233,7 +205,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_SITE
+            name: SITENUMBER
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -247,11 +219,25 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_CARR
+            name: CARRIER
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 57c73fa9-82b6-4b8b-940f-c3b67eaec281
+                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
+                transform: ""
+          - columnReference:
+              columnCounter: 8f97db73-2372-494c-8ae5-a821d85cf659
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TIMEIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b5e06ec4-0ee4-436d-b758-f2aed750e6ab
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
           - columnReference:
@@ -261,7 +247,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_TOUT
+            name: TIMEOUT
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -269,17 +255,17 @@ steps:
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
           - columnReference:
-              columnCounter: ba897ad3-7ff5-465e-af47-902ac773b299
+              columnCounter: c5fae260-596f-4a94-b92f-bccd1e260ad8
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
-            dataType: VARCHAR(2)
+            dataType: VARCHAR(20)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_DUOM
+            name: FACILITYINVOICE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: d69223b6-1b86-48f4-a46b-1b00e5c9751d
+                  - columnCounter: a1dc0195-38c4-4eca-8846-e1286234de5b
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
           - columnReference:
@@ -289,7 +275,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_FDAT
+            name: FACILITYINVOICEDATE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -303,7 +289,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_DATE
+            name: TICKETDATE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -317,7 +303,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_BAMT
+            name: BILLINGAMOUNT
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -331,7 +317,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_INOT
+            name: IN\OUTINDICATOR
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -353,69 +339,13 @@ steps:
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
           - columnReference:
-              columnCounter: c3b036b9-5a00-42ec-b31f-a4aca192db2c
-              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
-            dataType: VARCHAR(2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: LM02_BUOM
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 408d0aac-d034-4d5b-bbfb-ffd9d2a54da7
-                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
-                transform: ""
-          - columnReference:
-              columnCounter: d11d1633-195a-4442-8141-efea412b9a54
-              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
-            dataType: VARCHAR(2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: LM02_MATL
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 687e4f22-0d7b-4057-abd6-978920938052
-                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
-                transform: ""
-          - columnReference:
-              columnCounter: c5fae260-596f-4a94-b92f-bccd1e260ad8
-              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
-            dataType: VARCHAR(20)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: LM02_FINV
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: a1dc0195-38c4-4eca-8846-e1286234de5b
-                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
-                transform: ""
-          - columnReference:
-              columnCounter: 8f97db73-2372-494c-8ae5-a821d85cf659
-              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
-            dataType: TIMESTAMP_NTZ(9)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: LM02_TIN
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: b5e06ec4-0ee4-436d-b758-f2aed750e6ab
-                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
-                transform: ""
-          - columnReference:
               columnCounter: f73c6587-bc87-418c-933b-8b9b57999572
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
             dataType: VARCHAR(1)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_MIN
+            name: CHARGETYPE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -429,39 +359,98 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_ROUT
+            name: ROUTENUMBER
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: b9a95c4c-3c43-4feb-952d-671dba751953
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
-          - columnReference:
-              columnCounter: e32e7a26-946b-4c3d-ae11-fda05ce16f90
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9f798ccb-3c8b-4acd-a037-6f66cbbe2113
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
-            dataType: VARCHAR(100)
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
             description: ""
-            hashColumns: []
-            hashDetails: null
-            name: LM02_NOT1
+            keyColumnType: None
+            name: CUSTOMER
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: a87136aa-e358-4f95-ab92-adbe05849615
+                  - columnCounter: d86d2d94-9316-4e2f-93e5-9f224721ecfc
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 86d4fa60-3eac-4b63-92aa-13912661f3f5
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ORIGINALUNITOFMEASURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "\"DLM06_COMBINED\".\"LM06_UOM1\""
+            systemColumnType: None
+            transform: ""
           - columnReference:
-              columnCounter: 2e915415-4fe6-4224-843e-03cf1680c115
+              columnCounter: eaad3674-1090-482f-8037-1472746122e9
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
             dataType: VARCHAR(2)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_UCHGUOM
+            name: DISPOSALRATEUNITOFMEASURE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: deb1a3c9-e1de-46ce-8fff-b2a3290a4e06
+                  - columnCounter: 2517f6e6-dc60-4cb8-8b8f-eb81ba918a7f
+                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
+                transform: ""
+          - columnReference:
+              columnCounter: ba897ad3-7ff5-465e-af47-902ac773b299
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DISPOSALUNITOFMEASURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d69223b6-1b86-48f4-a46b-1b00e5c9751d
+                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
+                transform: |-
+                  CASE WHEN "LM02_COMBINED"."LM02_DUOM" ='tn' then 'TN'
+                      WHEN "LM02_COMBINED"."LM02_DUOM"  ='ea' then 'EA'
+                      else "LM02_COMBINED"."LM02_DUOM" end
+          - columnReference:
+              columnCounter: 70a1a95f-b477-4f89-b8ca-fa79f0a8f53b
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            dataType: NUMBER(18,4)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DISPOSALRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afc2fd2e-a8ca-4cec-9d39-d0ed58ad0a65
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
           - columnReference:
@@ -471,25 +460,11 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_DAMT
+            name: DISPOSALAMOUNT
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: af1c0580-951e-45e0-aea0-5c54d088fb89
-                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
-                transform: ""
-          - columnReference:
-              columnCounter: 8090092e-f492-4fe2-84ca-274c70987243
-              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
-            dataType: NUMBER(18,2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: LM02_SEQ1
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2804e1cd-287d-49d0-b8b5-1a4393395eb9
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
           - columnReference:
@@ -499,11 +474,138 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_DQTY
+            name: DISPOSALQUANTITY
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: b23c5983-bbee-4c61-83c5-1c141d2cda3b
+                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
+                transform: ""
+          - columnReference:
+              columnCounter: 29707ff2-07e0-4d15-943c-263dc1659627
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            dataType: NUMBER(18,8)
+            description: ""
+            name: DISPOSALMULTIPLIERFACTOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "\"DLM06_COMBINED\".\"LM06_FACT\""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0818380a-d45f-4b8f-9e84-2c57afa54deb
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: CONVERTEDDISPOSALQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE 
+                      when "LM02_COMBINED"."LM02_DUOM" IN ('ea','EA','tn','TN','YD') 
+                      then "LM02_COMBINED"."LM02_DQTY"
+                      else round(("DLM06_COMBINED"."LM06_FACT" * "LM02_COMBINED"."LM02_DQTY"),6)
+                   END
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 012ae814-7a92-4bdf-bff3-fc0a4f191b04
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: CONVERTEDDISPOSALUNITOFMEASURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE 
+                      when "LM02_COMBINED"."LM02_DUOM" IN ('ea','EA','tn','TN','YD') 
+                      then "LM02_COMBINED"."LM02_DUOM" 
+                      ELSE "DLM06_COMBINED"."LM06_UOM2"
+                   END
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 26d33875-939c-4087-a6ce-7ccb69932774
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: CODEDESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 76f3d2bb-02b8-42c6-94ae-817bf71ec1af
+                    stepCounter: e4e972fe-2b99-486d-9cdd-cbdab2810c96
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: 8090092e-f492-4fe2-84ca-274c70987243
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SEQUENCE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2804e1cd-287d-49d0-b8b5-1a4393395eb9
+                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
+                transform: ""
+          - columnReference:
+              columnCounter: 2e915415-4fe6-4224-843e-03cf1680c115
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: UNITCHANGEUNITOFMEASURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: deb1a3c9-e1de-46ce-8fff-b2a3290a4e06
+                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
+                transform: ""
+          - columnReference:
+              columnCounter: c3b036b9-5a00-42ec-b31f-a4aca192db2c
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BILLINGUNITOFMEASURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 408d0aac-d034-4d5b-bbfb-ffd9d2a54da7
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
           - columnReference:
@@ -513,13 +615,135 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_BQTY
+            name: BILLINGQUANTITY
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 3f51f7e1-be93-4fb6-91c9-12b6159ca3e0
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 703cf8e9-156e-481a-9dbd-b5714bd4dd3e
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: BILLINGMULTIPLIERFACTOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "\"BLM06_COMBINED\".\"LM06_FACT\""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 608fbfd7-b6e2-46c0-a95a-73e5af769a5c
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: CONVERTEDBILLINGQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE 
+                      when "LM02_COMBINED"."LM02_BUOM" IN ('ea','EA','tn','TN','YD') 
+                      then "LM02_COMBINED"."LM02_BQTY"
+                      else round(("BLM06_COMBINED"."LM06_FACT" * "LM02_COMBINED"."LM02_BQTY"),6)
+                   END
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e386376c-fd8f-4c87-a105-fd45a6495e8c
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: CONVERTEDBILLINGUNITOFMEASURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE 
+                      when "LM02_COMBINED"."LM02_BUOM" IN ('ea','EA','tn','TN','YD') 
+                      then "LM02_COMBINED"."LM02_BUOM" 
+                      ELSE "BLM06_COMBINED"."LM06_UOM2"
+                   END
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: d11d1633-195a-4442-8141-efea412b9a54
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MATERIAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 687e4f22-0d7b-4057-abd6-978920938052
+                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 56042bda-ac6a-4ec0-aa72-2b4075922d16
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: MATERIALDESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE
+                      when "LM02_COMBINED"."LM02_MATL" = 'BU' THEN 'BULK ITEM'
+                      when "LM02_COMBINED"."LM02_MATL" = 'CC' THEN 'CHRISTMAS TREE'
+                      when "LM02_COMBINED"."LM02_MATL" = 'CL' THEN 'CORR LOOSE YARDS'
+                      when "LM02_COMBINED"."LM02_MATL" = 'CS' THEN 'COMM SINGLE STREAM'
+                      when "LM02_COMBINED"."LM02_MATL" = 'CY' THEN 'CONST LOOSE YARDS'
+                      when "LM02_COMBINED"."LM02_MATL" = 'EX' THEN 'EXTRA YARDAGE'
+                      when "LM02_COMBINED"."LM02_MATL" = 'LY' THEN 'LOOSE YARDS'
+                      when "LM02_COMBINED"."LM02_MATL" = 'MS' THEN 'MSW (MUNICIPAL SOLID WASTE)'
+                      when "LM02_COMBINED"."LM02_MATL" = 'RW' THEN 'RESI WASTE'
+                      when "LM02_COMBINED"."LM02_MATL" = 'T1' THEN 'TIRES'
+                      when "LM02_COMBINED"."LM02_MATL" = 'WG' THEN 'WHITE GOODS'
+                      when "LM02_COMBINED"."LM02_MATL" = 'YD' THEN 'YARDWASTE YDS'
+                      ELSE "LM04_COMBINED"."LM04_DESC" END
+            systemColumnType: None
+            transform: ""
           - columnReference:
               columnCounter: bd112018-d256-4294-be09-56564325663c
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
@@ -527,7 +751,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_SEQ2
+            name: SEQUENCE2
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -541,7 +765,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_FUSE
+            name: RECONCILEUSER
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -555,7 +779,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_PORD
+            name: PURCHASEORDERNUMBER
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -569,7 +793,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_FRDT
+            name: RECONCILEDATE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -583,7 +807,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_FUOM
+            name: FUELUNITOFMEASURE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -597,7 +821,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_FQTY
+            name: FUELQUANTITY
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -619,13 +843,27 @@ steps:
                     stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
                 transform: ""
           - columnReference:
+              columnCounter: e32e7a26-946b-4c3d-ae11-fda05ce16f90
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: NOTE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a87136aa-e358-4f95-ab92-adbe05849615
+                    stepCounter: 68f75e19-cfe1-40f4-874e-fd866350e4c4
+                transform: ""
+          - columnReference:
               columnCounter: c821d462-cc5a-44d8-bf78-2fbb08192920
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
             dataType: VARCHAR(100)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_NOT2
+            name: NOTE2
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -639,7 +877,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_IDTE
+            name: INVOICEDATE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -653,7 +891,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_SERV
+            name: SERVICENUMBER
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -734,15 +972,94 @@ steps:
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
+              BLM06_COMBINED: 1dd6a90f-e18e-4982-b14b-842b8ea5e4f4
+              CD04_COMBINED: e4e972fe-2b99-486d-9cdd-cbdab2810c96
+              DLM06_COMBINED: 1dd6a90f-e18e-4982-b14b-842b8ea5e4f4
+              LM01_COMBINED: 75646501-ee23-441a-91c1-fced667296c2
               LM02_COMBINED: 68f75e19-cfe1-40f4-874e-fd866350e4c4
+              LM04_COMBINED: d1220fe5-c7b7-4bb4-9a94-fc3d3c6e1c27
             customSQL:
-              customSQL: ""
+              customSQL: |-
+                {{ stage('Override Create SQL') }}
+                	CREATE OR REPLACE VIEW {{ ref('TRUXCOMBINED_RAW', 'STG_POST_COLLECTIONS_DISPOSAL_TICKETS')}} AS (
+                		SELECT 
+                 LM02_ID AS LM02_ID,
+                 LM02_LEEDWEIGHT AS LM02_LEEDWEIGHT,
+                 LM02_LEED AS LM02_LEED,
+                 LM02_NUMB AS LM02_NUMB,
+                 LM02_RDATE AS LM02_RDATE,
+                 LM02_DRATE AS LM02_DRATE,
+                 LM02_CUST AS LM02_CUST,
+                 LM02_DRATEUOM AS LM02_DRATEUOM,
+                 LM02_LM05ID AS LM02_LM05ID,
+                 LM02_CDATE AS LM02_CDATE,
+                 LM02_LEEDWEIGHTUOM AS LM02_LEEDWEIGHTUOM,
+                 LM02_LF05ID AS LM02_LF05ID,
+                 LM02_UCHG AS LM02_UCHG,
+                 LM02_DSTE AS LM02_DSTE,
+                 LM02_BLAD AS LM02_BLAD,
+                 LM02_SITE AS LM02_SITE,
+                 LM02_CARR AS LM02_CARR,
+                 LM02_TOUT AS LM02_TOUT,
+                 LM02_DUOM AS LM02_DUOM,
+                 LM02_FDAT AS LM02_FDAT,
+                 LM02_DATE AS LM02_DATE,
+                 LM02_BAMT AS LM02_BAMT,
+                 LM02_INOT AS LM02_INOT,
+                 LM02_OWN AS LM02_OWN,
+                 LM02_BUOM AS LM02_BUOM,
+                 LM02_MATL AS LM02_MATL,
+                 LM02_FINV AS LM02_FINV,
+                 LM02_TIN AS LM02_TIN,
+                 LM02_MIN AS LM02_MIN,
+                 LM02_ROUT AS LM02_ROUT,
+                 LM02_NOT1 AS LM02_NOT1,
+                 LM02_UCHGUOM AS LM02_UCHGUOM,
+                 LM02_DAMT AS LM02_DAMT,
+                 LM02_SEQ1 AS LM02_SEQ1,
+                 LM02_DQTY AS LM02_DQTY,
+                 LM02_BQTY AS LM02_BQTY,
+                 LM02_SEQ2 AS LM02_SEQ2,
+                 LM02_FUSE AS LM02_FUSE,
+                 LM02_PORD AS LM02_PORD,
+                 LM02_FRDT AS LM02_FRDT,
+                 LM02_FUOM AS LM02_FUOM,
+                 LM02_FQTY AS LM02_FQTY,
+                 LM02_CM09ID AS LM02_CM09ID,
+                 LM02_NOT2 AS LM02_NOT2,
+                 LM02_IDTE AS LM02_IDTE,
+                 LM02_SERV AS LM02_SERV,
+                 _FIVETRAN_DELETED AS _FIVETRAN_DELETED,
+                 _FIVETRAN_SYNCED AS _FIVETRAN_SYNCED,
+                 SOURCE AS SOURCE,
+                 METADATA$ACTION AS METADATA$ACTION,
+                 SORT AS SORT
+                 FROM {{ ref('TRUXCOMBINED_RAW', 'LM02_COMBINED') }}
+                	)
             dependencies:
               - locationName: TRUXCOMBINED_RAW
+                nodeName: CD04_COMBINED
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: LM01_COMBINED
+              - locationName: TRUXCOMBINED_RAW
                 nodeName: LM02_COMBINED
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: LM04_COMBINED
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: LM06_COMBINED
             join:
               joinCondition: |-
-                FROM {{ ref('TRUXCOMBINED_RAW', 'LM02_COMBINED') }} "LM02_COMBINED"
+                FROM {{ ref('TRUXCOMBINED_RAW', 'LM02_COMBINED') }} "LM02_COMBINED"-- DISPOSAL TICKETS
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM04_COMBINED') }} "LM04_COMBINED" -- MATERIAL
+                    ON "LM02_COMBINED"."LM02_MATL" = "LM04_COMBINED"."LM04_CODE" and 'TRUX_'||RIGHT("LM02_COMBINED"."SOURCE",2)||'_COMP_RAW' = "LM04_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM01_COMBINED') }} "LM01_COMBINED" -- FACILITY
+                    ON "LM02_COMBINED"."LM02_DSTE" = "LM01_COMBINED"."LM01_DSTE" and 'TRUX_'||RIGHT("LM02_COMBINED"."SOURCE",2)||'_COMP_RAW' = "LM01_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM06_COMBINED') }} "DLM06_COMBINED" -- DISPOSAL UNIT OF MEASURE
+                    ON "LM02_COMBINED"."LM02_DUOM" = "DLM06_COMBINED"."LM06_UOM1" and 'TRUX_'||RIGHT("LM02_COMBINED"."SOURCE",2)||'_COMP_RAW' = "DLM06_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM06_COMBINED') }} "BLM06_COMBINED" -- BILLING UNIT OF MEASURE
+                    ON "LM02_COMBINED"."LM02_BUOM" = "BLM06_COMBINED"."LM06_UOM1" and 'TRUX_'||RIGHT("LM02_COMBINED"."SOURCE",2)||'_COMP_RAW' = "BLM06_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CD04_COMBINED') }} "CD04_COMBINED" -- CODE DESCRIPTION
+                    ON "LM04_COMBINED"."LM04_UOM" = "CD04_COMBINED"."CD04_CODE" and "LM04_COMBINED"."SOURCE" = "CD04_COMBINED"."SOURCE"
                 WHERE lm02_combined."SORT" = 1 and "LM02_COMBINED"."_FIVETRAN_DELETED" =FALSE and "LM02_COMBINED"."LM02_OWN" = 2 and "METADATA$ACTION" = 'INSERT'
             name: STG_POST_COLLECTIONS_DISPOSAL_TICKETS
             noLinkRefs: []
