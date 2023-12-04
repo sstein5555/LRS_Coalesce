@@ -902,6 +902,48 @@ steps:
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 70d3c929-4088-4a67-aa37-25b3a1835574
+              stepCounter: 0957e166-ae04-4009-8d30-9868721628af
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7976f7ff-e167-4a84-a094-3710a3654de8
+                    stepCounter: 04979987-5200-424e-a20d-70afe6d85a1f
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ad300219-02f5-4b1a-b7b9-390949c438c0
+              stepCounter: 0957e166-ae04-4009-8d30-9868721628af
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7ee934ee-dcf2-472d-b639-f957ebac200c
+                    stepCounter: 04979987-5200-424e-a20d-70afe6d85a1f
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

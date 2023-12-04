@@ -243,7 +243,7 @@ steps:
           - columnReference:
               columnCounter: c9c4da7d-ab8f-4aa8-b0c6-fed6bf22809a
               stepCounter: fe28f9e6-ea5f-4b22-8ddd-0d82e1822e8b
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -257,7 +257,7 @@ steps:
           - columnReference:
               columnCounter: 3f2fc968-a7ad-4cb4-80af-570a39c2ec23
               stepCounter: fe28f9e6-ea5f-4b22-8ddd-0d82e1822e8b
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: Difference between time 1 and time 2 (start time and end time)
             hashColumns: []
             hashDetails: null
@@ -271,7 +271,7 @@ steps:
           - columnReference:
               columnCounter: 99b946e4-40c4-40cf-a7cd-b7240f7705a8
               stepCounter: fe28f9e6-ea5f-4b22-8ddd-0d82e1822e8b
-            dataType: NUMBER
+            dataType: NUMBER(18,2)
             description: Difference between Departure Time and Return Time
             hashColumns: []
             hashDetails: null
@@ -403,9 +403,9 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 6ca1fad0-ebc2-4b6f-96da-3185de23cd11
-                    stepCounter: 3120e3f0-d6a8-4151-8938-1b9cf4ad4b22
-                transform: IFNULL("EMPLOYEE_COST_CURRENT"."EC01_CST1"+"EMPLOYEE_COST_CURRENT"."EC01_CST2",0.00)
+                  - columnCounter: 03a210a7-3172-4400-86cc-dbbbc0f27051
+                    stepCounter: 940b0208-f219-48a1-b5d2-0731c88fefa9
+                transform: IFNULL("DRIVER_MASTER"."Employee Cost (EC01) Combined",0.00)
             systemColumnType: None
             transform: ""
           - acceptedValues:
@@ -424,9 +424,9 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 065f1e34-07db-4d70-b7d3-ea758bc934b2
-                    stepCounter: 7b446262-338d-40ee-ad85-a1a2b8fb6bce
-                transform: IFNULL("TRUCK_COST_CURRENT"."TC01_CST1"+"TRUCK_COST_CURRENT"."TC01_CST2",0.00)
+                  - columnCounter: f6e3530c-0d27-41e7-9ae6-fc6c0232df14
+                    stepCounter: 8a6efe00-4604-4029-acd5-f5c728d17fdc
+                transform: IFNULL(TRUCK_MASTER."TC01 Truck Cost Total",0.00)
             systemColumnType: None
             transform: ""
           - acceptedValues:
@@ -450,21 +450,69 @@ steps:
                 transform: IFNULL("FUEL_COST_CURRENT"."FC01_RATE",0.00)
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6af87fbf-bfb7-4fdb-836e-6900bdbd3f47
+              stepCounter: fe28f9e6-ea5f-4b22-8ddd-0d82e1822e8b
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Helper Cost
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 49b3a2d2-fd20-4bfc-8a33-5f49536b89b4
+                    stepCounter: 9d0545fc-c66b-4536-8420-0e9bca0727fe
+                transform: IFNULL("HELPER_MASTER"."Employee Cost (EC01) Combined",0.00)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ad9c3b53-8878-4a59-b017-d532d841e378
+              stepCounter: fe28f9e6-ea5f-4b22-8ddd-0d82e1822e8b
+            config: {}
+            dataType: NUMBER(28,2)
+            defaultValue: ""
+            description: Total Downtime in Minutes
+            keyColumnType: None
+            name: Total Downtime
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c1354d20-7706-409c-9e06-029351f8cfcb
+                    stepCounter: 5bf6009f-b623-4637-a317-2a9d18ff2962
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
-              EMPLOYEE_COST_CURRENT: 3120e3f0-d6a8-4151-8938-1b9cf4ad4b22
+              DRIVER_MASTER: 940b0208-f219-48a1-b5d2-0731c88fefa9
               FUEL_COST_CURRENT: a6ab8fb6-10dc-4f77-ad4a-7f99f5750973
+              HELPER_MASTER: 9d0545fc-c66b-4536-8420-0e9bca0727fe
               ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS: f737a2ee-87c9-4859-840d-f8fe87c59ad4
               ROUTE_DAY_CLOCK_INOUT_TIME: 1487a66c-720d-47df-b75b-cd7ae7739da0
-              TR01_COMBINED: 0957e166-ae04-4009-8d30-9868721628af
+              STG_ROUTE_DAY_DOWNTIME_AGGREGATION: 5bf6009f-b623-4637-a317-2a9d18ff2962
               TRUCK_COST_CURRENT: 7b446262-338d-40ee-ad85-a1a2b8fb6bce
+              TRUCK_MASTER: 8a6efe00-4604-4029-acd5-f5c728d17fdc
             customSQL:
               customSQL: ""
             dependencies:
-              - locationName: TRUXCOMBINED_RAW
-                nodeName: EMPLOYEE_COST_CURRENT
+              - locationName: MASTER_DATA_CLEAN
+                nodeName: DRIVER_MASTER
+              - locationName: MASTER_DATA_CLEAN
+                nodeName: HELPER_MASTER
+              - locationName: MASTER_DATA_CLEAN
+                nodeName: TRUCK_MASTER
               - locationName: TRUXCOMBINED_RAW
                 nodeName: FUEL_COST_CURRENT
               - locationName: TRUXCOMBINED_RAW
@@ -472,7 +520,7 @@ steps:
               - locationName: TRUXCOMBINED_RAW
                 nodeName: ROUTE_DAY_CLOCK_INOUT_TIME
               - locationName: TRUXCOMBINED_RAW
-                nodeName: TR01_COMBINED
+                nodeName: STG_ROUTE_DAY_DOWNTIME_AGGREGATION
               - locationName: TRUXCOMBINED_RAW
                 nodeName: TRUCK_COST_CURRENT
             join:
@@ -483,18 +531,27 @@ steps:
                     and "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."Route Date" = "ROUTE_DAY_CLOCK_INOUT_TIME"."RM17_DATE"
                     AND "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."Driver" = "ROUTE_DAY_CLOCK_INOUT_TIME"."RM17_DRIVER"
                     AND "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."SOURCE" = "ROUTE_DAY_CLOCK_INOUT_TIME"."SOURCE"
-                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'EMPLOYEE_COST_CURRENT') }} "EMPLOYEE_COST_CURRENT"
-                ON "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."Driver" = "EMPLOYEE_COST_CURRENT"."EC01_NUMB"
-                    AND "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."SOURCE" = "EMPLOYEE_COST_CURRENT"."SOURCE"
+                LEFT JOIN {{ ref('MASTER_DATA_CLEAN', 'DRIVER_MASTER') }} "DRIVER_MASTER"
+                ON "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."Driver" = "DRIVER_MASTER"."Employee Number"
+                    AND "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."SOURCE" = "DRIVER_MASTER"."SOURCE"
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'TRUCK_COST_CURRENT') }} "TRUCK_COST_CURRENT"
                 ON "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."Truck" = "TRUCK_COST_CURRENT"."TC01_NUMB"
                     AND "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."SOURCE" = "TRUCK_COST_CURRENT"."SOURCE"
-                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'TR01_COMBINED') }} "TR01_COMBINED"
-                ON "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."Truck" = "TR01_COMBINED"."TR01_NUMB"
-                    AND "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."SOURCE" = "TR01_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('MASTER_DATA_CLEAN', 'TRUCK_MASTER') }} "TRUCK_MASTER"
+                ON "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."Truck" = "TRUCK_MASTER"."Truck Number"
+                    AND "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."SOURCE" = "TRUCK_MASTER"."SOURCE"
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'FUEL_COST_CURRENT') }} "FUEL_COST_CURRENT"
-                ON "TR01_COMBINED"."TR01_FTYPE" = "FUEL_COST_CURRENT"."FC01_TYPE"
-                    AND "TR01_COMBINED"."SOURCE" = "FUEL_COST_CURRENT"."SOURCE"
+                ON "TRUCK_MASTER"."Fuel Type" = "FUEL_COST_CURRENT"."FC01_TYPE"
+                    AND "TRUCK_MASTER"."SOURCE" = "FUEL_COST_CURRENT"."SOURCE"
+                LEFT JOIN {{ ref('MASTER_DATA_CLEAN', 'HELPER_MASTER') }} "HELPER_MASTER"
+                ON "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."Helper" = "HELPER_MASTER"."Employee Number"
+                    AND "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."SOURCE" = "HELPER_MASTER"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'STG_ROUTE_DAY_DOWNTIME_AGGREGATION') }} "STG_ROUTE_DAY_DOWNTIME_AGGREGATION"
+                ON "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."Route" = "STG_ROUTE_DAY_DOWNTIME_AGGREGATION"."Route"
+                    AND "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."Route Date" = "STG_ROUTE_DAY_DOWNTIME_AGGREGATION"."Route Date"
+                    AND "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."Driver" ="STG_ROUTE_DAY_DOWNTIME_AGGREGATION"."Driver"
+                    AND "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."Truck" = "STG_ROUTE_DAY_DOWNTIME_AGGREGATION"."Vehicle"
+                    AND "ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS"."SOURCE" = "STG_ROUTE_DAY_DOWNTIME_AGGREGATION"."SOURCE"
             name: ROUTE_DAY_COST_JOIN
             noLinkRefs: []
       name: ROUTE_DAY_COST_JOIN

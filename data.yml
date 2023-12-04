@@ -214,6 +214,11 @@ locations:
       "2":
         database: LRS_RAW
         schema: SG_RECDAT_DBO
+  SOFTPAK_CLEAN:
+    mappingDefinitions:
+      "2":
+        database: LRS_PRODUCTION
+        schema: SOFTPAK_CLEAN
   SOFTPAK_RAW:
     mappingDefinitions:
       "2":

@@ -23,7 +23,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: Route DAteDate
+            name: Route Date
             nullable: true
             sourceColumnReferences:
               - columnReferences:

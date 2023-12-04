@@ -117,7 +117,7 @@ steps:
           - columnReference:
               columnCounter: 29976737-e868-4a80-b699-eeb81ee5dbf8
               stepCounter: a5ec92a2-6eb9-4273-b44f-aa11dfc6f7dc
-            dataType: NUMBER
+            dataType: NUMBER(38,2)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -131,7 +131,7 @@ steps:
           - columnReference:
               columnCounter: 9617f1b2-d2fd-422c-b2ef-0884a0207eb2
               stepCounter: a5ec92a2-6eb9-4273-b44f-aa11dfc6f7dc
-            dataType: NUMBER
+            dataType: NUMBER(38,2)
             description: Difference between time 1 and time 2 (start time and end time)
             hashColumns: []
             hashDetails: null
@@ -145,7 +145,7 @@ steps:
           - columnReference:
               columnCounter: 0c65ef5c-1fb6-438d-a13c-476ec74f21fd
               stepCounter: a5ec92a2-6eb9-4273-b44f-aa11dfc6f7dc
-            dataType: NUMBER
+            dataType: NUMBER(38,2)
             description: Difference between Departure Time and Return Time
             hashColumns: []
             hashDetails: null
@@ -240,6 +240,27 @@ steps:
                   - columnCounter: 1d7252c2-0407-4bef-a98b-9d32e4428979
                     stepCounter: fe28f9e6-ea5f-4b22-8ddd-0d82e1822e8b
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0a7ef683-64de-413f-843b-5e1f1cb0078d
+              stepCounter: a5ec92a2-6eb9-4273-b44f-aa11dfc6f7dc
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Helper Cost
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6af87fbf-bfb7-4fdb-836e-6900bdbd3f47
+                    stepCounter: fe28f9e6-ea5f-4b22-8ddd-0d82e1822e8b
+                transform: ""
+            systemColumnType: None
+            transform: ""
           - columnReference:
               columnCounter: 326ccbe6-d23b-41cf-8a12-d46d25ac0138
               stepCounter: a5ec92a2-6eb9-4273-b44f-aa11dfc6f7dc
@@ -315,6 +336,48 @@ steps:
                   - columnCounter: "0"
                     stepCounter: "0"
                 transform: ifnull("Fuel Rate" * "Fuel Used",0.00)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1a3724d9-d51b-4ce1-b72c-be1993ff07da
+              stepCounter: a5ec92a2-6eb9-4273-b44f-aa11dfc6f7dc
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Total Helper Cost
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ifnull(ifnull(nullifzero("Clock Total Time")/60,"Time Change"/60),0.00) * ifnull("Helper Cost",0.00)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2ed3a380-d1d7-4e6a-afda-a00ee611fb6d
+              stepCounter: a5ec92a2-6eb9-4273-b44f-aa11dfc6f7dc
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Total Downtime
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ad9c3b53-8878-4a59-b017-d532d841e378
+                    stepCounter: fe28f9e6-ea5f-4b22-8ddd-0d82e1822e8b
+                transform: ""
             systemColumnType: None
             transform: ""
         cteString: ""

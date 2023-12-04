@@ -51,7 +51,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: MATERIAL
+            name: Material
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -243,14 +243,17 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - aliases: {}
+          - aliases:
+              VARIABLE_DISPOSAL_SITE_REPORT: 15c39153-9708-427d-b198-ad6eada46d5c
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: SOFTPAK_RAW
                 nodeName: VARIABLE_DISPOSAL_SITE_REPORT
             join:
-              joinCondition: FROM {{ ref('SOFTPAK_RAW', 'VARIABLE_DISPOSAL_SITE_REPORT') }} "VARIABLE_DISPOSAL_SITE_REPORT"
+              joinCondition: |-
+                FROM {{ ref('SOFTPAK_RAW', 'VARIABLE_DISPOSAL_SITE_REPORT') }} "VARIABLE_DISPOSAL_SITE_REPORT"
+                WHERE "CO" <> 'CO'
             name: FCT_VARIABLE_DISPOSAL_SITE_REPORT_VW
             noLinkRefs: []
       name: FCT_VARIABLE_DISPOSAL_SITE_REPORT_VW

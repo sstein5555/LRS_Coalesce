@@ -8,10 +8,10 @@ steps:
         testsEnabled: true
         truncateBefore: true
       database: ""
-      deployEnabled: false
+      deployEnabled: true
       description: This will be the granular version of Route Cost, not completed, down to the sequence level
       isMultisource: false
-      locationName: TRUXCOMBINED_RAW
+      locationName: OPERATIONS_DATA_MODEL
       materializationType: table
       metadata:
         appliedNodeTests: []
@@ -355,14 +355,16 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - aliases: {}
+          - aliases:
+              Route_Production_Statistics: 86bcad57-ea01-431a-b5a6-dc9062cadf37
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: OPERATIONS_DATA_MODEL
                 nodeName: Route_Production_Statistics
             join:
-              joinCondition: FROM {{ ref('OPERATIONS_DATA_MODEL', 'Route_Production_Statistics') }} "Route_Production_Statistics"
+              joinCondition: |
+                FROM {{ ref('OPERATIONS_DATA_MODEL', 'Route_Production_Statistics') }} "Route_Production_Statistics"
             name: Route_Cost_Sequence
             noLinkRefs: []
       name: Route_Cost_Sequence
