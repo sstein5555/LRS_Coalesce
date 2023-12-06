@@ -37,7 +37,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LEEDWEIGHT
+            name: Leed Weight
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -51,7 +51,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LEEDMATERIAL
+            name: Leed Material
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -65,7 +65,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: TICKETNUMBER
+            name: Ticket Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -79,7 +79,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ROUTEDATE
+            name: Route Date
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -89,11 +89,11 @@ steps:
           - columnReference:
               columnCounter: 1a4762a1-5c35-4771-95af-eb8f1df2c1ac
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
-            name: CUSTOMERNUMBER
+            name: Customer Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -121,7 +121,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: CREATEDDATE
+            name: Created Date
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -135,7 +135,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LM02_LEEDWEIGHTUOM
+            name: Leed Weight Unit of Measure
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -163,7 +163,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: UNITCHANGE
+            name: Unit Change
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -177,7 +177,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: FACILITY
+            name: Facility
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -191,7 +191,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: BILLOFLADING
+            name: Bill of Ladding
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -205,7 +205,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SITENUMBER
+            name: Site Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -219,7 +219,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: CARRIER
+            name: Carrier
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -233,7 +233,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: TIMEIN
+            name: Time In
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -247,7 +247,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: TIMEOUT
+            name: Time Out
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -261,7 +261,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: FACILITYINVOICE
+            name: Facility Invoice
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -275,7 +275,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: FACILITYINVOICEDATE
+            name: Facility Invoice Date
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -289,7 +289,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: TICKETDATE
+            name: Ticket Date
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -303,7 +303,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: IN\OUTINDICATOR
+            name: In\Out Indicator
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -331,7 +331,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: CHARGETYPE
+            name: Charge Type
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -345,7 +345,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ROUTENUMBER
+            name: Route Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -364,7 +364,7 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: CUSTOMER
+            name: Customer
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -385,7 +385,7 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: ORIGINALUNITOFMEASURE
+            name: Original Unit of Measure
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -401,7 +401,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DISPOSALRATEUNITOFMEASURE
+            name: Disposal Rate Unit of Measure
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -415,7 +415,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DISPOSALUNITOFMEASURE
+            name: Disposal Unit of Measure
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -429,7 +429,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DISPOSALRATE
+            name: Disposal Rate
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -443,7 +443,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DISPOSALAMOUNT
+            name: Disposal Amount
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -457,7 +457,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DISPOSALQUANTITY
+            name: Disposal Quantity
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -469,7 +469,7 @@ steps:
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
             dataType: NUMBER(18,8)
             description: ""
-            name: DISPOSALMULTIPLIERFACTOR
+            name: Disposal Multiplier Factor
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -488,7 +488,7 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: CONVERTEDDISPOSALQTY
+            name: Converted Disposal Quantity
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -514,7 +514,7 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: CONVERTEDDISPOSALUNITOFMEASURE
+            name: Converted Disposal Unit of Measure
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -540,7 +540,7 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: CODEDESCRIPTION
+            name: Code Description
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -556,7 +556,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SEQUENCE1
+            name: Sequence1
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -570,7 +570,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: UNITCHANGEUNITOFMEASURE
+            name: Unit Change Unit of Measure
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -584,7 +584,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: BILLINGUNITOFMEASURE
+            name: Billing Unit of Measure
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -598,7 +598,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: BILLINGQUANTITY
+            name: Billing Quantity
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -617,7 +617,7 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: BILLINGMULTIPLIERFACTOR
+            name: Billing Multiplier Factor
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -638,7 +638,7 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: CONVERTEDBILLINGQTY
+            name: Converted Billing Quantity
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -659,7 +659,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: BILLINGAMOUNT
+            name: Billing Amount
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -678,7 +678,7 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: CONVERTEDBILLINGUNITOFMEASURE
+            name: Converted Billing Unit of Measure
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -699,7 +699,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: MATERIAL
+            name: Material
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -718,12 +718,12 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: MATERIALDESCRIPTION
+            name: Material Description
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
+                  - columnCounter: 29e98454-68c4-4414-8685-8bae91617e75
+                    stepCounter: d1220fe5-c7b7-4bb4-9a94-fc3d3c6e1c27
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -734,7 +734,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SEQUENCE2
+            name: Sequence2
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -748,7 +748,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: RECONCILEUSER
+            name: Reconcile User
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -762,7 +762,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: PURCHASEORDERNUMBER
+            name: Purchase Order Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -776,7 +776,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: RECONCILEDATE
+            name: Reconcile Date
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -790,7 +790,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: FUELUNITOFMEASURE
+            name: Fuel Unit of Measure
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -804,7 +804,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: FUELQUANTITY
+            name: Fuel Quantity
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -832,7 +832,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: NOTE1
+            name: Note1
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -846,7 +846,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: NOTE2
+            name: Note2
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -860,7 +860,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: INVOICEDATE
+            name: Invoice Date
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -874,7 +874,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SERVICENUMBER
+            name: Service Number
             nullable: true
             sourceColumnReferences:
               - columnReferences:
@@ -1006,14 +1006,18 @@ steps:
               joinCondition: |
                 FROM {{ ref('TRUXCOMBINED_RAW', 'STG_POST_COLLECTIONS_DISPOSAL_TICKETS') }} "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"-- DISPOSAL TICKETS
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM04_COMBINED') }} "LM04_COMBINED" -- MATERIAL
-                    ON "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_MATL" = "LM04_COMBINED"."LM04_CODE" and "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE"= "LM04_COMBINED"."SOURCE"
+                    ON "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_MATL" = "LM04_COMBINED"."LM04_CODE" 
+                    and "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE"= "LM04_COMBINED"."SOURCE"
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM01_COMBINED') }} "LM01_COMBINED" -- FACILITY
-                    ON "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_DSTE" = "LM01_COMBINED"."LM01_DSTE" and "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE" = "LM01_COMBINED"."SOURCE"
+                    ON "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_DSTE" = "LM01_COMBINED"."LM01_DSTE" 
+                    and "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE" = "LM01_COMBINED"."SOURCE"
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM06_COMBINED') }} "DLM06_COMBINED" -- DISPOSAL UNIT OF MEASURE
-                    ON "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_DUOM" = "DLM06_COMBINED"."LM06_UOM1" and "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE" = "DLM06_COMBINED"."SOURCE"
+                    ON "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_DUOM" = "DLM06_COMBINED"."LM06_UOM1" 
+                    and "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE" = "DLM06_COMBINED"."SOURCE"
                         AND "DLM06_COMBINED"."LM06_UOM2" = 'TN'
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM06_COMBINED') }} "BLM06_COMBINED" -- BILLING UNIT OF MEASURE
-                    ON "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_BUOM" = "BLM06_COMBINED"."LM06_UOM1" and "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE" = "BLM06_COMBINED"."SOURCE"
+                    ON "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_BUOM" = "BLM06_COMBINED"."LM06_UOM1" 
+                    and "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE" = "BLM06_COMBINED"."SOURCE"
                     AND "BLM06_COMBINED"."LM06_UOM2" = 'TN'
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CD04_COMBINED') }} "CD04_COMBINED" -- CODE DESCRIPTION
                     ON "LM04_COMBINED"."LM04_UOM" = "CD04_COMBINED"."CD04_CODE" and "LM04_COMBINED"."SOURCE" = "CD04_COMBINED"."SOURCE"
