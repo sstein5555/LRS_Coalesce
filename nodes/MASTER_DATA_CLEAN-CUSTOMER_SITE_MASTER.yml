@@ -41,7 +41,6 @@ steps:
             description: Customer Number, can Join to Customer with Source
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: Customer Number
             nullable: true
             sourceColumnReferences:
@@ -60,7 +59,6 @@ steps:
             description: Site Number, can join to Service with Customer and Source
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: Site Number
             nullable: true
             sourceColumnReferences:
@@ -985,6 +983,7 @@ steps:
             dataType: VARCHAR
             defaultValue: ""
             description: ""
+            isBusinessKey: true
             keyColumnType: None
             name: Customer Small Key
             nullable: true
@@ -1010,6 +1009,7 @@ steps:
             dataType: VARCHAR
             defaultValue: ""
             description: ""
+            isBusinessKey: true
             keyColumnType: None
             name: Site Small Key
             nullable: true

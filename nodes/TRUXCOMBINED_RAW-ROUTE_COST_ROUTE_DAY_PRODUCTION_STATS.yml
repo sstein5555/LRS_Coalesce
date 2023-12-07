@@ -408,7 +408,7 @@ steps:
               joinCondition: |-
                 FROM {{ ref('OPERATIONS_DATA_MODEL', 'Route_Production_Statistics') }} "Route_Production_Statistics"
                 WHERE YEAR("Route Date")>=YEAR(CURRENT_DATE())-2
-                GROUP BY "SOURCE","Driver","Helper","Route","Route Date","Route Type","Truck"
+                GROUP BY "SOURCE","Route","Route Date","Route Type","Driver","Helper","Truck"
             name: ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS
             noLinkRefs: []
       name: ROUTE_COST_ROUTE_DAY_PRODUCTION_STATS

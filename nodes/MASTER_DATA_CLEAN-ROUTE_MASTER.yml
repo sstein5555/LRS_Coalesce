@@ -485,6 +485,27 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fde31c29-662e-4888-88f6-d5edcc26a9b0
+              stepCounter: bcc56605-9b2f-4640-99de-4dcb0b7d1dce
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Start Location Name
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 909dd0ca-34ac-428f-80e9-005e7d4805c0
+                    stepCounter: 6a58c60a-fd40-458e-b415-7aa216626cb2
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -494,6 +515,7 @@ steps:
               LM04_COMBINED: d1220fe5-c7b7-4bb4-9a94-fc3d3c6e1c27
               RM01_Combined: bd25ccfd-afa5-4e34-be04-467c3e0970fd
               RM04_COMBINED: ee847855-7787-4e90-bc2b-f25d4232ef87
+              SL01_COMBINED: 6a58c60a-fd40-458e-b415-7aa216626cb2
               TR01_COMBINED: 0957e166-ae04-4009-8d30-9868721628af
             customSQL:
               customSQL: ""
@@ -509,6 +531,8 @@ steps:
               - locationName: TRUXCOMBINED_RAW
                 nodeName: RM04_COMBINED
               - locationName: TRUXCOMBINED_RAW
+                nodeName: SL01_COMBINED
+              - locationName: TRUXCOMBINED_RAW
                 nodeName: TR01_COMBINED
             join:
               joinCondition: |-
@@ -523,6 +547,9 @@ steps:
                 ON "RM01_Combined"."RM01_FAC" = "LM01_COMBINED"."LM01_DSTE" and "RM01_Combined"."SOURCE" = "LM01_COMBINED"."SOURCE"
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM04_COMBINED') }} "LM04_COMBINED"
                 ON "RM01_Combined"."RM01_MATL" = "LM04_COMBINED"."LM04_CODE" and "RM01_Combined"."SOURCE" = "LM04_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'SL01_COMBINED') }} "SL01_COMBINED"
+                ON "RM01_Combined"."RM01_SLID" = "SL01_COMBINED"."SL01_ID"
+                    AND "RM01_Combined"."SOURCE" = "SL01_COMBINED"."SOURCE"
             name: ROUTE_MASTER
             noLinkRefs: []
       name: ROUTE_MASTER
