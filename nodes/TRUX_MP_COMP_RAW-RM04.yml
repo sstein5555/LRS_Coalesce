@@ -28,28 +28,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 4a242af4-f603-45a4-af4a-b49f861ad438
+              columnCounter: c7d7551a-6c59-4f97-857a-824e0541eda2
               stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
             config: {}
-            dataType: VARCHAR(20)
+            dataType: NUMBER(10,2)
             defaultValue: ""
             description: ""
-            name: RM04_FNAM
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 777b0588-80fd-404f-8b5e-5a9a177605a1
-              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
-            config: {}
-            dataType: VARCHAR(20)
-            defaultValue: ""
-            description: ""
-            name: RM04_LNAM
+            name: RM04_CST2
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -73,118 +58,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: c7d7551a-6c59-4f97-857a-824e0541eda2
+              columnCounter: 6a929f76-5217-4fa4-9b62-4c0574d631e6
               stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
             config: {}
-            dataType: NUMBER(10,2)
+            dataType: TIMESTAMP_NTZ(9)
             defaultValue: ""
             description: ""
-            name: RM04_CST2
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 0557a4f3-731e-471c-abf1-9097933dcedb
-              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
-            config: {}
-            dataType: VARCHAR(80)
-            defaultValue: ""
-            description: ""
-            name: RM04_EMAIL
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 609546ab-8a7e-4f1e-a024-1c3eb62fa4f8
-              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
-            config: {}
-            dataType: VARCHAR(10)
-            defaultValue: ""
-            description: ""
-            name: RM04_PHONE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: f54b9077-cc91-4ebf-9f6e-e4b47f4fc82c
-              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
-            config: {}
-            dataType: VARCHAR(20)
-            defaultValue: ""
-            description: ""
-            name: RM04_EMPNUM
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 20f7054a-5f60-459e-8a94-2127ea68ec36
-              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
-            config: {}
-            dataType: VARCHAR(5)
-            defaultValue: ""
-            description: ""
-            name: RM04_ACTIVE
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: a6828d73-53a4-4228-bda6-1dd5c992c0f9
-              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
-            config: {}
-            dataType: VARCHAR(5)
-            defaultValue: ""
-            description: ""
-            name: RM04_MECH
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 3bfee7b6-e74c-47e3-82ba-c48263b1e09d
-              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
-            config: {}
-            dataType: VARCHAR(10)
-            defaultValue: ""
-            description: ""
-            name: RM04_PWD
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: ed25fb5a-bcb0-40d9-9bb3-64549752db82
-              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
-            config: {}
-            dataType: VARCHAR(20)
-            defaultValue: ""
-            description: ""
-            name: RM04_TRACKING_PHONE
+            name: RM04_LICRDTE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -208,13 +88,163 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6a929f76-5217-4fa4-9b62-4c0574d631e6
+              columnCounter: f54b9077-cc91-4ebf-9f6e-e4b47f4fc82c
               stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
             config: {}
-            dataType: TIMESTAMP_NTZ(9)
+            dataType: VARCHAR(20)
             defaultValue: ""
             description: ""
-            name: RM04_LICRDTE
+            name: RM04_EMPNUM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 609546ab-8a7e-4f1e-a024-1c3eb62fa4f8
+              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: RM04_PHONE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0557a4f3-731e-471c-abf1-9097933dcedb
+              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: RM04_EMAIL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1f9467c5-5191-4be4-8370-78637b516351
+              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 94637b38-31a3-4529-8c73-fd33ca75f7a7
+              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 777b0588-80fd-404f-8b5e-5a9a177605a1
+              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: RM04_LNAM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3bfee7b6-e74c-47e3-82ba-c48263b1e09d
+              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: RM04_PWD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 20f7054a-5f60-459e-8a94-2127ea68ec36
+              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: RM04_ACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4a242af4-f603-45a4-af4a-b49f861ad438
+              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: RM04_FNAM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ed25fb5a-bcb0-40d9-9bb3-64549752db82
+              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: RM04_TRACKING_PHONE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a6828d73-53a4-4228-bda6-1dd5c992c0f9
+              stepCounter: 2c3a1406-7f8e-4888-9bc1-e04437c7b758
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: RM04_MECH
             nullable: true
             primaryKey: false
             uniqueKey: false

@@ -54,6 +54,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isChangeTracking: true
             name: First Name
             nullable: true
             sourceColumnReferences:
@@ -68,6 +69,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isChangeTracking: true
             name: Last Name
             nullable: true
             sourceColumnReferences:
@@ -110,6 +112,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isChangeTracking: true
             name: Email
             nullable: true
             sourceColumnReferences:
@@ -124,6 +127,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isChangeTracking: true
             name: Phone
             nullable: true
             sourceColumnReferences:
@@ -374,6 +378,48 @@ steps:
                 transform: "\"EMPLOYEE_COST_CURRENT\".\"EC01_CST2\"+\"EMPLOYEE_COST_CURRENT\".\"EC01_CST1\""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c01c489f-ca04-494a-9e05-1bbd7ad71c24
+              stepCounter: 940b0208-f219-48a1-b5d2-0731c88fefa9
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Full Name
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "\"RM04_COMBINED\".\"RM04_FNAM\"||' '||\"RM04_COMBINED\".\"RM04_LNAM\""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d5da55c6-d9f4-4acd-a068-2cf924396739
+              stepCounter: 940b0208-f219-48a1-b5d2-0731c88fefa9
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Formatted Name
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "\"RM04_COMBINED\".\"RM04_LNAM\"||', '||\"RM04_COMBINED\".\"RM04_FNAM\""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -393,6 +439,7 @@ steps:
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'EMPLOYEE_COST_CURRENT') }} "EMPLOYEE_COST_CURRENT"
                 ON "RM04_COMBINED"."RM04_NUMB" = "EMPLOYEE_COST_CURRENT"."EC01_NUMB"
                     AND "RM04_COMBINED"."SOURCE" = "EMPLOYEE_COST_CURRENT"."SOURCE"
+                WHERE "_FIVETRAN_DELETED" = FALSE
             name: DRIVER_MASTER
             noLinkRefs: []
       name: DRIVER_MASTER
