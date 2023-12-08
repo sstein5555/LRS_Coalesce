@@ -29,7 +29,7 @@ steps:
               - columnReferences:
                   - columnCounter: b7824b52-35e4-4481-a8ee-5ea9a83ffa1b
                     stepCounter: 335a729b-b952-45d9-a3d3-8b968a81e190
-                transform: ""
+                transform: RTRIM("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_ID")
           - columnReference:
               columnCounter: 02a65dec-bd4b-4cf2-9255-67e2ce6d00ad
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
@@ -71,7 +71,7 @@ steps:
               - columnReferences:
                   - columnCounter: f0592a83-f750-4f1d-95be-a48b5e2c440c
                     stepCounter: 335a729b-b952-45d9-a3d3-8b968a81e190
-                transform: ""
+                transform: RTRIM("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB")
           - columnReference:
               columnCounter: f48ffa37-b97b-4a39-95da-405d36928ecd
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
@@ -171,20 +171,6 @@ steps:
                     stepCounter: 335a729b-b952-45d9-a3d3-8b968a81e190
                 transform: ""
           - columnReference:
-              columnCounter: 0b75379c-3967-4ba9-b494-97ba6aee3a2f
-              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Facility
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2ff91392-0410-4cff-8a75-30fcda18ce38
-                    stepCounter: 335a729b-b952-45d9-a3d3-8b968a81e190
-                transform: ""
-          - columnReference:
               columnCounter: 708a724c-a707-478f-a5f9-c4250ec7d286
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
             dataType: VARCHAR(16777216)
@@ -254,6 +240,41 @@ steps:
                   - columnCounter: 4b960227-6fe1-4f71-933e-c1203313c757
                     stepCounter: 335a729b-b952-45d9-a3d3-8b968a81e190
                 transform: ""
+          - columnReference:
+              columnCounter: 0b75379c-3967-4ba9-b494-97ba6aee3a2f
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Facility
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ff91392-0410-4cff-8a75-30fcda18ce38
+                    stepCounter: 335a729b-b952-45d9-a3d3-8b968a81e190
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9afc4248-8657-406a-8ce2-d30b5ebea417
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Facility Name
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cd4510fb-1723-4025-a813-baddfee3e4c6
+                    stepCounter: 75646501-ee23-441a-91c1-fced667296c2
+                transform: ""
+            systemColumnType: None
+            transform: ""
           - columnReference:
               columnCounter: c5fae260-596f-4a94-b92f-bccd1e260ad8
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
@@ -881,6 +902,35 @@ steps:
                   - columnCounter: 2b36a8fb-d74f-435c-8334-735f6f49d0b1
                     stepCounter: 335a729b-b952-45d9-a3d3-8b968a81e190
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e7ba8041-0e22-40e6-bbfc-6e0f6dbd0d04
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: IsIntercompany
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |2-
+                    CASE
+                      WHEN EXISTS (
+                          SELECT 1
+                          FROM {{ ref('TRUXCOMBINED_RAW', 'STG_COLLECTIONS_DISPOSAL_TICKETS') }}
+                          WHERE RTRIM("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB") = RTRIM("STG_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB")
+                      )THEN 1
+                      ELSE 0
+                    END
+            systemColumnType: None
+            transform: ""
           - columnReference:
               columnCounter: 4b4cb1dd-3755-4f89-84fb-2db8ec8f0835
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
@@ -932,6 +982,7 @@ steps:
               DLM06_COMBINED: 1dd6a90f-e18e-4982-b14b-842b8ea5e4f4
               LM01_COMBINED: 75646501-ee23-441a-91c1-fced667296c2
               LM04_COMBINED: d1220fe5-c7b7-4bb4-9a94-fc3d3c6e1c27
+              STG_COLLECTIONS_DISPOSAL_TICKETS: f3e5c614-4177-4bd4-aca0-cb4086788c20
               STG_POST_COLLECTIONS_DISPOSAL_TICKETS: 335a729b-b952-45d9-a3d3-8b968a81e190
             customSQL:
               customSQL: |-
@@ -1001,6 +1052,8 @@ steps:
               - locationName: TRUXCOMBINED_RAW
                 nodeName: LM06_COMBINED
               - locationName: TRUXCOMBINED_RAW
+                nodeName: STG_COLLECTIONS_DISPOSAL_TICKETS
+              - locationName: TRUXCOMBINED_RAW
                 nodeName: STG_POST_COLLECTIONS_DISPOSAL_TICKETS
             join:
               joinCondition: |
@@ -1021,8 +1074,9 @@ steps:
                     AND "BLM06_COMBINED"."LM06_UOM2" = 'TN'
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CD04_COMBINED') }} "CD04_COMBINED" -- CODE DESCRIPTION
                     ON "LM04_COMBINED"."LM04_UOM" = "CD04_COMBINED"."CD04_CODE" and "LM04_COMBINED"."SOURCE" = "CD04_COMBINED"."SOURCE"
-                
-                
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'STG_COLLECTIONS_DISPOSAL_TICKETS') }} "STG_COLLECTIONS_DISPOSAL_TICKETS"
+                   ON RTRIM("STG_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB") = RTRIM("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB")
+                   AND "STG_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE" ="STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE"
             name: STG_POST_COLLECTIONS_MODEL
             noLinkRefs: []
       name: STG_POST_COLLECTIONS_MODEL
