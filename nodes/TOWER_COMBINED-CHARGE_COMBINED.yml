@@ -524,7 +524,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: "'TOWER'"
+                transform: ""
             systemColumnType: None
             transform: ""
         cteString: ""

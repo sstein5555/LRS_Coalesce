@@ -933,6 +933,46 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 70d304d9-f9ae-49d9-8db5-fdfdc9235f7e
+              stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Tickets
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE 
+                      WHEN "STG_ROUTE_AUDIT_REPORT_ROUTE_DAY"."NBTicket Ticket Number" =''
+                      THEN ''
+                      WHEN "STG_ROUTE_AUDIT_REPORT_ROUTE_DAY"."NBTicket Ticket Number" IS NULL
+                      THEN ''
+                      ELSE "STG_ROUTE_AUDIT_REPORT_ROUTE_DAY"."NBTicket Ticket Number"
+                      END
+                  ||
+                  CASE 
+                      WHEN "STG_ROUTE_AUDIT_REPORT_ROUTE_DAY"."DTicket Ticket Number" = ''
+                      THEN ''
+                      WHEN "STG_ROUTE_AUDIT_REPORT_ROUTE_DAY"."DTicket Ticket Number" is null
+                      THEN ''
+                      ELSE "STG_ROUTE_AUDIT_REPORT_ROUTE_DAY"."DTicket Ticket Number"
+                      END
+              - columnReferences:
+                  - columnCounter: 43d39f0c-e5c5-43ae-ad86-b1d7b11364f2
+                    stepCounter: e09f1723-77f3-4b75-9bf9-34168e3ba179
+                transform: ""
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:

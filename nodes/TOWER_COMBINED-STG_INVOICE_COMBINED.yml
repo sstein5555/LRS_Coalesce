@@ -165,9 +165,9 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
-                transform: "'TOWER'"
+                  - columnCounter: 649a7885-9ce7-4857-9daa-0428182aaedc
+                    stepCounter: 6f531235-8623-4802-b122-469fc3588b72
+                transform: "\"INVOICE_COMBINED\".\"COMPANYID\"||' - TOWER'"
             systemColumnType: None
             transform: ""
           - acceptedValues:

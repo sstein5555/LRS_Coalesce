@@ -279,9 +279,9 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 6840e2aa-39ea-4c77-8239-54f1559a298a
-                    stepCounter: 5be70546-5eab-4773-b142-b60abcbc8da2
-                transform: ""
+                  - columnCounter: 5f6804fe-4724-40fb-86d7-ea031e5db5c0
+                    stepCounter: cd62b4e3-06b4-4cba-8f88-bcf5a192026c
+                transform: "\"ARDETAIL_COMBINED\".\"COMPANYID\"||' - TOWER'"
           - acceptedValues:
               strictMatch: true
               values: []

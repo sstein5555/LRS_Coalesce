@@ -936,8 +936,10 @@ steps:
                   - columnCounter: 4b4a6439-7e61-48b0-906b-14e141fa435a
                     stepCounter: 080d8ab0-3edf-4ee0-b848-dcc7364164df
                 transform: ""
-              - columnReferences: []
-                transform: "'TOWER'"
+              - columnReferences:
+                  - columnCounter: 8f05726f-8939-430d-b86e-54aa1b9b1ae5
+                    stepCounter: af74a786-1641-4201-ad6f-8127eba08c06
+                transform: "\"CUSTOMER_COMBINED\".\"COMPANYID\"||' - TOWER'"
           - acceptedValues:
               strictMatch: true
               values: []
@@ -1102,7 +1104,7 @@ steps:
                     stepCounter: c2e3b305-d522-488b-bbc6-6ade93cd3385
                 transform: ""
               - columnReferences: []
-                transform: "'TOWER'"
+                transform: "\"CUSTOMER_COMBINED\".\"COMPANYID\"||' - TOWER'"
             systemColumnType: None
             transform: ""
           - acceptedValues:
