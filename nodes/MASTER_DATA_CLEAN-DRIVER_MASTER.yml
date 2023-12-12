@@ -7,7 +7,7 @@ steps:
         testsEnabled: true
       database: ""
       deployEnabled: true
-      description: ""
+      description: might need additional stage for RM04
       isMultisource: false
       locationName: MASTER_DATA_CLEAN
       materializationType: table
@@ -439,7 +439,6 @@ steps:
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'EMPLOYEE_COST_CURRENT') }} "EMPLOYEE_COST_CURRENT"
                 ON "RM04_COMBINED"."RM04_NUMB" = "EMPLOYEE_COST_CURRENT"."EC01_NUMB"
                     AND "RM04_COMBINED"."SOURCE" = "EMPLOYEE_COST_CURRENT"."SOURCE"
-                WHERE "_FIVETRAN_DELETED" = FALSE
             name: DRIVER_MASTER
             noLinkRefs: []
       name: DRIVER_MASTER

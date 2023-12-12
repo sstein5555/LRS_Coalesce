@@ -279,8 +279,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 5f6804fe-4724-40fb-86d7-ea031e5db5c0
-                    stepCounter: cd62b4e3-06b4-4cba-8f88-bcf5a192026c
+                  - columnCounter: 9dbd060f-29a4-4442-a6ad-c66763f6c05c
+                    stepCounter: dad57b1e-b8d9-4227-9d92-4f169f6ce074
                 transform: "\"ARDETAIL_COMBINED\".\"COMPANYID\"||' - TOWER'"
           - acceptedValues:
               strictMatch: true
@@ -319,8 +319,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: dd8dea10-fc0b-47c0-8029-4fe978240ff2
-                    stepCounter: cd62b4e3-06b4-4cba-8f88-bcf5a192026c
+                  - columnCounter: aabe0418-4d7f-4979-9f0b-20192ca175be
+                    stepCounter: dad57b1e-b8d9-4227-9d92-4f169f6ce074
                 transform: CASE WHEN "ARDETAIL_COMBINED"."INVOICEUID" IS NULL THEN "STG_LAST_INVOICE_CUSTOMER_TOWER"."Unique Invoice ID" ELSE "ARDETAIL_COMBINED"."INVOICEUID" END
             systemColumnType: None
             transform: ""
