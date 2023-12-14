@@ -210,8 +210,8 @@ steps:
                     stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
                 transform: ""
               - columnReferences:
-                  - columnCounter: ad251460-54b0-4b2c-a4a8-2ed433f20390
-                    stepCounter: 926de0bb-edd5-4689-b171-81b4c6a87565
+                  - columnCounter: 1a017c67-0b03-4cfb-9218-21528a09f934
+                    stepCounter: 6f531235-8623-4802-b122-469fc3588b72
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -241,7 +241,7 @@ steps:
                   - columnCounter: 581c44d4-daea-4fc9-a443-158eec519821
                     stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
                 transform: |-
-                  CASE WHEN CONTAINS("AR_Invoice_Amounts"."Invoice Number",'A')=TRUE THEN 'INVOICE ADJUSTMENT'
+                  CASE WHEN CONTAINS("AR_Invoice_Amounts"."Invoice Number",'A')=TRUE THEN 'Invoice Adjustment'
                   WHEN CONTAINS("AR_Invoice_Amounts"."Invoice Number",'A')=FALSE THEN 'Invoice'
                   ELSE NULL END
               - columnReferences: []
@@ -272,8 +272,8 @@ steps:
                     stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
                 transform: ""
               - columnReferences:
-                  - columnCounter: 805cb634-6fcb-45ba-8537-755e1c5b7228
-                    stepCounter: 926de0bb-edd5-4689-b171-81b4c6a87565
+                  - columnCounter: 8036502b-8554-4463-83a1-e10267c9ed32
+                    stepCounter: 6f531235-8623-4802-b122-469fc3588b72
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -301,8 +301,8 @@ steps:
                     stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
                 transform: ""
               - columnReferences:
-                  - columnCounter: 805cb634-6fcb-45ba-8537-755e1c5b7228
-                    stepCounter: 926de0bb-edd5-4689-b171-81b4c6a87565
+                  - columnCounter: 8036502b-8554-4463-83a1-e10267c9ed32
+                    stepCounter: 6f531235-8623-4802-b122-469fc3588b72
                 transform: ""
             systemColumnType: None
             transform: ""
@@ -330,9 +330,9 @@ steps:
                     stepCounter: 6cbdcc75-9616-48ec-95e9-b79240d9b295
                 transform: ""
               - columnReferences:
-                  - columnCounter: 805cb634-6fcb-45ba-8537-755e1c5b7228
-                    stepCounter: 926de0bb-edd5-4689-b171-81b4c6a87565
-                transform: coalesce("ARDETAIL_COMBINED"."DUEDATE","STG_INVOICE_COMBINED"."Invoice Date")
+                  - columnCounter: 8036502b-8554-4463-83a1-e10267c9ed32
+                    stepCounter: 6f531235-8623-4802-b122-469fc3588b72
+                transform: coalesce("ARDETAIL_COMBINED"."DUEDATE","INVOICE_COMBINED"."INVOICEDATE")
             systemColumnType: None
             transform: ""
           - acceptedValues:
@@ -619,20 +619,20 @@ steps:
             noLinkRefs: []
           - aliases:
               ARDETAIL_COMBINED: dad57b1e-b8d9-4227-9d92-4f169f6ce074
-              STG_INVOICE_COMBINED: 926de0bb-edd5-4689-b171-81b4c6a87565
+              INVOICE_COMBINED: 6f531235-8623-4802-b122-469fc3588b72
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: TOWER_COMBINED
                 nodeName: ARDETAIL_COMBINED
               - locationName: TOWER_COMBINED
-                nodeName: STG_INVOICE_COMBINED
+                nodeName: INVOICE_COMBINED
             join:
               joinCondition: |-
                 FROM {{ ref('TOWER_COMBINED', 'ARDETAIL_COMBINED') }} "ARDETAIL_COMBINED"
-                LEFT JOIN {{ ref('TOWER_COMBINED', 'STG_INVOICE_COMBINED') }} "STG_INVOICE_COMBINED"
-                ON "ARDETAIL_COMBINED"."INVOICEUID" = "STG_INVOICE_COMBINED"."Unique Invoice ID"
-                WHERE "ARDETAIL_COMBINED"."BALANCE" <>0 and "ARDETAIL_COMBINED"."STATUS" = 2
+                LEFT JOIN {{ ref('TOWER_COMBINED', 'INVOICE_COMBINED') }} "INVOICE_COMBINED"
+                ON "ARDETAIL_COMBINED"."INVOICEUID" = "INVOICE_COMBINED"."INVOICEUID"
+                WHERE "ARDETAIL_COMBINED"."BALANCE" <>0 and "ARDETAIL_COMBINED"."STATUS" <> 2
             name: TOWER_OPEN_BALANCE
             noLinkRefs: []
       name: AR_INVOICE_TRANSACTION

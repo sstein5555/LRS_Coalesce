@@ -87,20 +87,6 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: a2f3c2cf-f089-4220-b45c-1214b0bd8905
-              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
-            dataType: VARCHAR(2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Fuel UOM
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 66280401-fc5a-49c7-940a-0698784b0f6f
-                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
-                transform: ""
-          - columnReference:
               columnCounter: 3e22294e-8945-4bb3-8554-3fa0c9432d80
               stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: TIMESTAMP_NTZ(9)
@@ -115,20 +101,6 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: c0c8ca8a-83a8-4ff5-8bc4-6e284d14d234
-              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Odometer End
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 22c1785f-54d3-4e1c-8404-c166b17dff08
-                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
-                transform: ""
-          - columnReference:
               columnCounter: 5fbb124c-62d0-4c01-8da0-c2104173d80e
               stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: TIMESTAMP_NTZ(9)
@@ -140,20 +112,6 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 29b324ab-92e9-4eab-91a3-dccc8a259701
-                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
-                transform: ""
-          - columnReference:
-              columnCounter: 75e8627d-8335-4e75-b9c3-7b808615c040
-              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
-            dataType: VARCHAR(2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Odometer UOM
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3da504e0-df3d-4e04-9e45-517b49718e64
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
@@ -269,20 +227,6 @@ steps:
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
           - columnReference:
-              columnCounter: d8d0c735-35e5-4fc1-bd06-ff6a72d3a8af
-              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Odometer Start
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 0ee36f3c-a273-4347-ac4d-caaf31cd87bc
-                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
-                transform: ""
-          - columnReference:
               columnCounter: 3571b6f5-40e8-485e-91ed-737d5b6c3e7b
               stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
             dataType: VARCHAR
@@ -338,20 +282,6 @@ steps:
                   - columnCounter: 1ccbd3e6-a4f9-49ff-9957-1e55e66808aa
                     stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
                 transform: ""
-          - columnReference:
-              columnCounter: d14fa98f-ccfd-459f-858b-b0256dcd8edf
-              stepCounter: 641c36f0-c1a9-40e0-92a6-1f1053c48976
-            dataType: VARCHAR
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Route Type
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 649c68cf-bf1a-4c81-b281-bc34b40a298e
-                    stepCounter: 86bcad57-ea01-431a-b5a6-dc9062cadf37
-                transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -363,8 +293,9 @@ steps:
               - locationName: OPERATIONS_DATA_MODEL
                 nodeName: Route_Production_Statistics
             join:
-              joinCondition: |
+              joinCondition: |-
                 FROM {{ ref('OPERATIONS_DATA_MODEL', 'Route_Production_Statistics') }} "Route_Production_Statistics"
+                where year("Route Date")>=year(current_date()-2)
             name: Route_Cost_Sequence
             noLinkRefs: []
       name: Route_Cost_Sequence

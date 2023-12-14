@@ -45,20 +45,6 @@ steps:
                     stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
                 transform: ""
           - columnReference:
-              columnCounter: 6dab9305-2ce3-4101-b19e-caa457159301
-              stepCounter: 26ecf3ab-3a86-48c4-a62f-db8bf47d44e7
-            dataType: NUMBER(18,2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: CompactRatio
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 0f2a8319-2bb5-48b2-9bc9-a3d8668e1adb
-                    stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-                transform: ""
-          - columnReference:
               columnCounter: acb41f4a-bc50-468b-a7b7-759127468537
               stepCounter: 26ecf3ab-3a86-48c4-a62f-db8bf47d44e7
             dataType: NUMBER(18,2)
@@ -101,20 +87,6 @@ steps:
                     stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
                 transform: ""
           - columnReference:
-              columnCounter: 4fb2e6e0-fc0f-4389-8009-27145437516c
-              stepCounter: 26ecf3ab-3a86-48c4-a62f-db8bf47d44e7
-            dataType: VARCHAR
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Work Order Number
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: c8c724bd-76b3-4c34-b56b-002edca684ed
-                    stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-                transform: ""
-          - columnReference:
               columnCounter: 7b006d4d-da2e-4a0d-a594-fbf71d76bbf4
               stepCounter: 26ecf3ab-3a86-48c4-a62f-db8bf47d44e7
             dataType: VARCHAR
@@ -140,20 +112,6 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 1e6bf879-cee5-43e5-ac9f-ade0e21b61ec
-                    stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-                transform: ""
-          - columnReference:
-              columnCounter: 60072800-1b27-44a4-aa93-fd315f96afb4
-              stepCounter: 26ecf3ab-3a86-48c4-a62f-db8bf47d44e7
-            dataType: VARCHAR
-            description: Join modification necessary for separate joins on same table
-            hashColumns: []
-            hashDetails: null
-            name: Volume UOM
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: ba74b453-75a2-425a-85b7-21f53fca280c
                     stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
                 transform: ""
           - columnReference:
@@ -238,20 +196,6 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: e696e276-96d5-4114-bb40-187eabddd0c7
-                    stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
-                transform: ""
-          - columnReference:
-              columnCounter: 6e6f427a-54f1-4f3c-b116-6f8ecbf7712a
-              stepCounter: 26ecf3ab-3a86-48c4-a62f-db8bf47d44e7
-            dataType: VARCHAR
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: Billing Unit
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: e9d58794-8666-48ca-a744-28b644e0344c
                     stepCounter: cf6f6a52-c917-4760-9ab5-34d679cd67ca
                 transform: ""
           - columnReference:
