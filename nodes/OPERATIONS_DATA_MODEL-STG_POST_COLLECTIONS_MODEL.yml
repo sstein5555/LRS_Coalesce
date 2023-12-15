@@ -272,7 +272,7 @@ steps:
               - columnReferences:
                   - columnCounter: cd4510fb-1723-4025-a813-baddfee3e4c6
                     stepCounter: 75646501-ee23-441a-91c1-fced667296c2
-                transform: ""
+                transform: CONCAT("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_DSTE", CONCAT(' - ',"LM01_COMBINED"."LM01_NAME"))
             systemColumnType: None
             transform: ""
           - columnReference:
@@ -320,7 +320,7 @@ steps:
           - columnReference:
               columnCounter: dd4b7ea0-ca68-431c-9b69-81f75830d979
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
-            dataType: BOOLEAN
+            dataType: VARCHAR(250)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -330,7 +330,7 @@ steps:
               - columnReferences:
                   - columnCounter: 1516894d-8694-4419-91d3-ebcf66e86774
                     stepCounter: 335a729b-b952-45d9-a3d3-8b968a81e190
-                transform: ""
+                transform: CASE WHEN "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_INOT" = TRUE THEN 'Inbound' ELSE  'Outbound' END
           - columnReference:
               columnCounter: a3c28b42-74f3-437c-8a0c-b622de9968df
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
@@ -1077,6 +1077,7 @@ steps:
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'STG_COLLECTIONS_DISPOSAL_TICKETS') }} "STG_COLLECTIONS_DISPOSAL_TICKETS"
                    ON RTRIM("STG_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB") = RTRIM("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB")
                    AND "STG_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE" ="STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE"
+                WHERE "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_LEED" <> TRUE
             name: STG_POST_COLLECTIONS_MODEL
             noLinkRefs: []
       name: STG_POST_COLLECTIONS_MODEL
