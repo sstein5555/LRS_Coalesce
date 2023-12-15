@@ -926,8 +926,8 @@ steps:
                           SELECT 1
                           FROM {{ ref('TRUXCOMBINED_RAW', 'STG_COLLECTIONS_DISPOSAL_TICKETS') }}
                           WHERE RTRIM("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB") = RTRIM("STG_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB")
-                      )THEN 1
-                      ELSE 0
+                      )THEN 'Yes'
+                      ELSE 'No'
                     END
             systemColumnType: None
             transform: ""
