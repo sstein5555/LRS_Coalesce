@@ -99,6 +99,7 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'MT02_COMBINED') }} "MT02_COMBINED"
+                WHERE "_FIVETRAN_DELETED" = FALSE and "MT02_OWN" = '1'
                 GROUP BY "MT02_DATE","MT02_ROUT","MT02_SEQU","SOURCE"
             name: STG_MT02A_ROUTE_AUDIT_SEQUENCE
             noLinkRefs: []

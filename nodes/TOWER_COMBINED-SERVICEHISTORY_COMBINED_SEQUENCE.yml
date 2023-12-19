@@ -436,6 +436,27 @@ steps:
                   - columnCounter: 2f734154-0d74-44d8-be06-82e6c410a671
                     stepCounter: 8bf4908c-aeb8-48ae-95af-1e70bd990479
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4f37aa7d-6b81-4c7b-ad1a-a4c26f93088a
+              stepCounter: 5055b40f-88d4-4395-afca-9a6f8536a937
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Total Stop Time
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: TIMEDIFF(MINUTE,"SERVICEHISTORY_COMBINED"."STARTTIME","SERVICEHISTORY_COMBINED"."FINISHTIME")
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -447,9 +468,7 @@ steps:
               - locationName: TOWER_COMBINED
                 nodeName: SERVICEHISTORY_COMBINED
             join:
-              joinCondition: |-
-                FROM {{ ref('TOWER_COMBINED', 'SERVICEHISTORY_COMBINED') }} "SERVICEHISTORY_COMBINED"
-                where "RELEASEDTOBILLING" = 2 and "STATUS" <>0
+              joinCondition: FROM {{ ref('TOWER_COMBINED', 'SERVICEHISTORY_COMBINED') }} "SERVICEHISTORY_COMBINED"
             name: SERVICEHISTORY_COMBINED_SEQUENCE
             noLinkRefs: []
       name: SERVICEHISTORY_COMBINED_SEQUENCE

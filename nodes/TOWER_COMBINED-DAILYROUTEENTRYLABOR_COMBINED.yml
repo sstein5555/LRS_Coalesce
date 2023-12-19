@@ -156,6 +156,48 @@ steps:
                   - columnCounter: b991ccdb-0adb-4993-b5f3-d5d3a7ee8a4b
                     stepCounter: 6b36dd41-04c2-4a75-8701-4d576f53a031
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 129d20ab-5b7b-4de8-b7bb-d993bbad2e36
+              stepCounter: 6f0e7589-0436-49aa-be80-f7fca181bb3b
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Total Lunch Time
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: TIMEDIFF(MINUTE,"DAILYROUTEENTRYLABOR"."LUNCHSTARTTIME","DAILYROUTEENTRYLABOR"."LUNCHENDTIME")
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b2883471-7678-478d-b155-76cc4c7102a8
+              stepCounter: 6f0e7589-0436-49aa-be80-f7fca181bb3b
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Total Work Time
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: TIMEDIFF(MINUTE,"DAILYROUTEENTRYLABOR"."STARTTIME","DAILYROUTEENTRYLABOR"."ENDTIME")
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

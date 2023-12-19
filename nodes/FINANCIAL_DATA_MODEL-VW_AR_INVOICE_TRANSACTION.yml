@@ -296,6 +296,27 @@ steps:
                   - columnCounter: 6174c3cc-b1a6-4554-99e6-5676a8313638
                     stepCounter: d498ce99-b60e-4c2c-ad6b-df38aad4cf45
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 58a58851-267e-408e-aec8-e454080feec8
+              stepCounter: fb5e1fbb-d68c-4089-b2dc-cd6c45737898
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: View Source
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1bcf425c-e7ea-4f12-bbe8-282d0f0ec820
+                    stepCounter: d498ce99-b60e-4c2c-ad6b-df38aad4cf45
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

@@ -198,6 +198,27 @@ steps:
                   - columnCounter: 49d0a907-dd1e-462e-bc44-82d92131169c
                     stepCounter: cc24304f-3a1c-4b68-ad54-fcd76efe856d
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4257a696-00b5-4e2e-9f40-19b32199fa65
+              stepCounter: 609eaaa5-6e2e-4e08-af40-2189cc2ca74c
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Total Downtime
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: TIMEDIFF(MINUTE,"DAILYROUTEENTRYDOWNTIME"."DOWNTIMESTARTTIME","DAILYROUTEENTRYDOWNTIME"."DOWNTIMEENDTIME")
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

@@ -47,7 +47,7 @@ steps:
           - columnReference:
               columnCounter: 7f367e34-b9b1-4396-b8e4-7f96ea2b8f93
               stepCounter: 7497f9b6-8e48-4e21-96fe-ab44b134f092
-            dataType: TIMESTAMP_NTZ(9)
+            dataType: NUMBER(38,2)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -55,9 +55,9 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: d2d0516a-4146-46cd-81f6-9766a72af76d
-                    stepCounter: 5055b40f-88d4-4395-afca-9a6f8536a937
-                transform: DATEDIFF(MINUTE,MAX("SERVICEHISTORY_COMBINED_SEQUENCE"."Finish Time"),MIN("SERVICEHISTORY_COMBINED_SEQUENCE"."Start Time"))
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: SUM("SERVICEHISTORY_COMBINED_SEQUENCE"."Total Stop Time")
           - columnReference:
               columnCounter: b252b5f9-f73e-4626-8fbd-a7fb990707de
               stepCounter: 7497f9b6-8e48-4e21-96fe-ab44b134f092
