@@ -910,7 +910,7 @@ steps:
               columnCounter: e7ba8041-0e22-40e6-bbfc-6e0f6dbd0d04
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
             config: {}
-            dataType: VARCHAR(2)
+            dataType: VARCHAR(38)
             defaultValue: ""
             description: ""
             keyColumnType: None
