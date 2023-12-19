@@ -584,6 +584,31 @@ steps:
                 transform: "\"ARDETAIL_COMBINED\".\"COMPANYID\"||' - TOWER'"
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1bcf425c-e7ea-4f12-bbe8-282d0f0ec820
+              stepCounter: d498ce99-b60e-4c2c-ad6b-df38aad4cf45
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: View Source
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'TRUX PAYMENTS'"
+              - columnReferences: []
+                transform: "'TRUX INVOICES'"
+              - columnReferences: []
+                transform: "'TOWER'"
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
