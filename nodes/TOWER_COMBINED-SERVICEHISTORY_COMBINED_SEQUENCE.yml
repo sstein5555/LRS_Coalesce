@@ -365,7 +365,7 @@ steps:
               - columnReferences:
                   - columnCounter: ab42516a-9741-42e2-b6d7-6a4e7e1c0255
                     stepCounter: 8bf4908c-aeb8-48ae-95af-1e70bd990479
-                transform: ""
+                transform: ifnull("SERVICEHISTORY_COMBINED"."ALLOCATEDREVENUE",0)
           - columnReference:
               columnCounter: 763e966f-523e-440d-bb79-1c66488914a8
               stepCounter: 5055b40f-88d4-4395-afca-9a6f8536a937
@@ -379,7 +379,7 @@ steps:
               - columnReferences:
                   - columnCounter: 1e74ac8f-eea6-457c-ab11-5577a208412a
                     stepCounter: 8bf4908c-aeb8-48ae-95af-1e70bd990479
-                transform: ""
+                transform: ifnull("SERVICEHISTORY_COMBINED"."RECURRINGREVENUE",0)
           - columnReference:
               columnCounter: d705e840-25bd-48b0-b044-85fa50859559
               stepCounter: 5055b40f-88d4-4395-afca-9a6f8536a937
@@ -393,7 +393,7 @@ steps:
               - columnReferences:
                   - columnCounter: a2ee1e21-023f-4026-bb02-d60d08bf3d41
                     stepCounter: 8bf4908c-aeb8-48ae-95af-1e70bd990479
-                transform: ""
+                transform: ifnull("SERVICEHISTORY_COMBINED"."SURCHARGES",0)
           - columnReference:
               columnCounter: 29169dd0-48d7-4103-a859-c57fc2ab14f4
               stepCounter: 5055b40f-88d4-4395-afca-9a6f8536a937
@@ -407,7 +407,7 @@ steps:
               - columnReferences:
                   - columnCounter: 1abe1196-8290-40b2-b937-b4cc24960050
                     stepCounter: 8bf4908c-aeb8-48ae-95af-1e70bd990479
-                transform: ""
+                transform: ifnull("SERVICEHISTORY_COMBINED"."WORKORDERREVENUE",0)
           - columnReference:
               columnCounter: ac64eb61-0b37-42db-85a4-3f2e688301e4
               stepCounter: 5055b40f-88d4-4395-afca-9a6f8536a937
@@ -421,7 +421,7 @@ steps:
               - columnReferences:
                   - columnCounter: ea1c7fee-df3c-4f05-89e6-88f7d07224a1
                     stepCounter: 8bf4908c-aeb8-48ae-95af-1e70bd990479
-                transform: ""
+                transform: ifnull("SERVICEHISTORY_COMBINED"."THIRDPARTYSERVICECOST",0)
           - columnReference:
               columnCounter: b10ecd58-fe21-4ef2-a393-e403da7b94d5
               stepCounter: 5055b40f-88d4-4395-afca-9a6f8536a937
@@ -435,7 +435,7 @@ steps:
               - columnReferences:
                   - columnCounter: 2f734154-0d74-44d8-be06-82e6c410a671
                     stepCounter: 8bf4908c-aeb8-48ae-95af-1e70bd990479
-                transform: ""
+                transform: ifnull("SERVICEHISTORY_COMBINED"."THIRDPARTYWORKORDERCOST",0)
           - acceptedValues:
               strictMatch: true
               values: []
