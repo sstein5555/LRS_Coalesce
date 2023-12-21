@@ -964,10 +964,8 @@ steps:
                     stepCounter: "0"
                 transform: |2-
                     CASE
-                      WHEN EXISTS (
-                          SELECT 1
-                          FROM {{ ref('TRUXCOMBINED_RAW', 'STG_COLLECTIONS_DISPOSAL_TICKETS') }}
-                          WHERE RTRIM("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB") = RTRIM("STG_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB") 
+                      WHEN (
+                          "STG_COLLECTIONS_DISPOSAL_TICKETS_INTERCOMPANY"."Post Collection Tickets" IS NOT NULL
                       )THEN 'Yes'
                       ELSE 'No'
                     END
@@ -1025,6 +1023,7 @@ steps:
               LM01_COMBINED: 75646501-ee23-441a-91c1-fced667296c2
               LM04_COMBINED: d1220fe5-c7b7-4bb4-9a94-fc3d3c6e1c27
               STG_COLLECTIONS_DISPOSAL_TICKETS: f3e5c614-4177-4bd4-aca0-cb4086788c20
+              STG_COLLECTIONS_DISPOSAL_TICKETS_INTERCOMPANY: 058045ec-90ae-4213-a442-28db01552d42
               STG_LF05D_COMBINED: 055d62c4-a626-4473-b119-959d16003a58
               STG_POST_COLLECTIONS_DISPOSAL_TICKETS: 335a729b-b952-45d9-a3d3-8b968a81e190
             customSQL:
@@ -1097,6 +1096,8 @@ steps:
               - locationName: TRUXCOMBINED_RAW
                 nodeName: STG_COLLECTIONS_DISPOSAL_TICKETS
               - locationName: TRUXCOMBINED_RAW
+                nodeName: STG_COLLECTIONS_DISPOSAL_TICKETS_INTERCOMPANY
+              - locationName: TRUXCOMBINED_RAW
                 nodeName: STG_LF05D_COMBINED
               - locationName: TRUXCOMBINED_RAW
                 nodeName: STG_POST_COLLECTIONS_DISPOSAL_TICKETS
@@ -1125,6 +1126,9 @@ steps:
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'STG_LF05D_COMBINED') }} "STG_LF05D_COMBINED"
                     ON RTRIM("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB") = RTRIM("STG_LF05D_COMBINED"."LF05D_LINK")
                     AND "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE" = "STG_LF05D_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'STG_COLLECTIONS_DISPOSAL_TICKETS_INTERCOMPANY') }} "STG_COLLECTIONS_DISPOSAL_TICKETS_INTERCOMPANY"
+                    ON "STG_COLLECTIONS_DISPOSAL_TICKETS_INTERCOMPANY"."Collections Tickets" = "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB"
+                    AND ABS(DATEDIFF(DAY, "STG_COLLECTIONS_DISPOSAL_TICKETS_INTERCOMPANY"."Collections Date", "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_DATE")) <=7
                 
             name: STG_POST_COLLECTIONS_MODEL
             noLinkRefs: []
