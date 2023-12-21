@@ -58,6 +58,48 @@ steps:
                   - columnCounter: d59d40a8-2778-4899-ba67-041ef73c5b3c
                     stepCounter: 335a729b-b952-45d9-a3d3-8b968a81e190
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 79ffb298-5fa9-48e0-9f75-660de2f40534
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Maximum LF05D Leed
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0d64394b-65af-49d7-8dde-c71e9bb728bf
+                    stepCounter: 055d62c4-a626-4473-b119-959d16003a58
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 34c3dac3-3be4-48da-8573-0d2efe2ba26c
+              stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Minimum LF05D Leed
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 20f089cf-51f5-4ffb-a7be-1e2a60b0e9fb
+                    stepCounter: 055d62c4-a626-4473-b119-959d16003a58
+                transform: ""
+            systemColumnType: None
+            transform: ""
           - columnReference:
               columnCounter: 51cabde0-dced-47e2-9e37-a2d669de5894
               stepCounter: 9c1881c3-1512-44da-b9c8-3165f7b79f28
@@ -925,7 +967,7 @@ steps:
                       WHEN EXISTS (
                           SELECT 1
                           FROM {{ ref('TRUXCOMBINED_RAW', 'STG_COLLECTIONS_DISPOSAL_TICKETS') }}
-                          WHERE RTRIM("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB") = RTRIM("STG_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB")
+                          WHERE RTRIM("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB") = RTRIM("STG_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB") 
                       )THEN 'Yes'
                       ELSE 'No'
                     END
@@ -983,6 +1025,7 @@ steps:
               LM01_COMBINED: 75646501-ee23-441a-91c1-fced667296c2
               LM04_COMBINED: d1220fe5-c7b7-4bb4-9a94-fc3d3c6e1c27
               STG_COLLECTIONS_DISPOSAL_TICKETS: f3e5c614-4177-4bd4-aca0-cb4086788c20
+              STG_LF05D_COMBINED: 055d62c4-a626-4473-b119-959d16003a58
               STG_POST_COLLECTIONS_DISPOSAL_TICKETS: 335a729b-b952-45d9-a3d3-8b968a81e190
             customSQL:
               customSQL: |-
@@ -1054,6 +1097,8 @@ steps:
               - locationName: TRUXCOMBINED_RAW
                 nodeName: STG_COLLECTIONS_DISPOSAL_TICKETS
               - locationName: TRUXCOMBINED_RAW
+                nodeName: STG_LF05D_COMBINED
+              - locationName: TRUXCOMBINED_RAW
                 nodeName: STG_POST_COLLECTIONS_DISPOSAL_TICKETS
             join:
               joinCondition: |
@@ -1077,7 +1122,10 @@ steps:
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'STG_COLLECTIONS_DISPOSAL_TICKETS') }} "STG_COLLECTIONS_DISPOSAL_TICKETS"
                    ON RTRIM("STG_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB") = RTRIM("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB")
                    AND "STG_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE" ="STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE"
-                WHERE "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_LEED" <> TRUE
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'STG_LF05D_COMBINED') }} "STG_LF05D_COMBINED"
+                    ON RTRIM("STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."LM02_NUMB") = RTRIM("STG_LF05D_COMBINED"."LF05D_LINK")
+                    AND "STG_POST_COLLECTIONS_DISPOSAL_TICKETS"."SOURCE" = "STG_LF05D_COMBINED"."SOURCE"
+                
             name: STG_POST_COLLECTIONS_MODEL
             noLinkRefs: []
       name: STG_POST_COLLECTIONS_MODEL
