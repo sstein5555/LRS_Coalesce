@@ -311,6 +311,9 @@ steps:
                   ON LTRIM(RTRIM(GLAMF.ACCTGRPCOD)) = LTRIM(RTRIM(GLACGRP.ACCTGRPCOD)) AND GLACGRP.AUDTORG = GLAMF.AUDTORG
                       LEFT JOIN {{ ref('SAGE_COMBINED', 'CSCOM_COMBINED') }} CSCOM
                   ON LTRIM(RTRIM(CSCOM.AUDTORG)) = LTRIM(RTRIM(GLAFS."Database ID"))
+                where GLAMF."Sort" =1 
+                    AND GLAMF."_FIVETRAN_DELETED"=FALSE 
+                    AND GLAMF."METADATA$ACTION" ='INSERT'
                     )
             dependencies:
               - locationName: SAGE_COMBINED
