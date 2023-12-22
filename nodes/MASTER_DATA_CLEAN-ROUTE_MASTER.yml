@@ -37,7 +37,7 @@ steps:
           - columnReference:
               columnCounter: 8e6d689f-f20a-4d6f-a620-e8434e1c2fe1
               stepCounter: bcc56605-9b2f-4640-99de-4dcb0b7d1dce
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
@@ -56,12 +56,12 @@ steps:
           - columnReference:
               columnCounter: 333963aa-83f5-490e-b841-ad2e1c55f10e
               stepCounter: bcc56605-9b2f-4640-99de-4dcb0b7d1dce
-            dataType: VARCHAR(40)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
             name: Route Description
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: d7c79737-6613-483a-b1b2-02babcee34d3
@@ -209,7 +209,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Shadow Route Flag
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: b2199caa-18a4-497c-ad00-5429171bd07e
@@ -225,7 +225,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Non Billable Route Flag
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: abfa9eb7-1014-4069-bde2-0723a759afc5
@@ -635,7 +635,9 @@ steps:
               - locationName: TOWER_COMBINED
                 nodeName: ROUTE_COMBINED
             join:
-              joinCondition: FROM {{ ref('TOWER_COMBINED', 'ROUTE_COMBINED') }} "ROUTE_COMBINED"
+              joinCondition: |-
+                FROM {{ ref('TOWER_COMBINED', 'ROUTE_COMBINED') }} "ROUTE_COMBINED"
+                WHERE "COMPANYID" is not null
             name: Tower Routes
             noLinkRefs: []
       name: ROUTE_MASTER

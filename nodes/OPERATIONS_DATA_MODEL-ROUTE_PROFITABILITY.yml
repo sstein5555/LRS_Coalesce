@@ -1117,6 +1117,31 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9d13840e-666e-4756-9919-dcd10ecd2e3b
+              stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
+            config: {}
+            dataType: boolean
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: No Revenue Flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "\"STG_ROUTE_AUDIT_REPORT_ROUTE_DAY\".\"Service Revenue\" + \"STG_ROUTE_AUDIT_REPORT_ROUTE_DAY\".\"Billing Amount\">0"
+              - columnReferences: []
+                transform: "\"STG_VARIABLE_SITE_DISPOSAL_ROUTE_AGG\".\"Service Revenue\">0"
+              - columnReferences: []
+                transform: "\"TOWER_ROUTE_DAY_REVENUE_AND_COST\".\"Service Revenue\">0"
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
