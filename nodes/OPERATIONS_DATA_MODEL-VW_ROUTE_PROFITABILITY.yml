@@ -758,17 +758,41 @@ steps:
                   - columnCounter: 70d304d9-f9ae-49d9-8db5-fdfdc9235f7e
                     stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 51692a3a-f02e-4cde-a37e-2357136f9c7d
+              stepCounter: 43e51f9e-95a0-4ce8-b0c2-6a27d82c11b3
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Revenue Flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9d13840e-666e-4756-9919-dcd10ecd2e3b
+                    stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - aliases: {}
+          - aliases:
+              ROUTE_PROFITABILITY: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: OPERATIONS_DATA_MODEL
                 nodeName: ROUTE_PROFITABILITY
             join:
-              joinCondition: FROM {{ ref('OPERATIONS_DATA_MODEL', 'ROUTE_PROFITABILITY') }} "ROUTE_PROFITABILITY"
+              joinCondition: |-
+                FROM {{ ref('OPERATIONS_DATA_MODEL', 'ROUTE_PROFITABILITY') }} "ROUTE_PROFITABILITY"
+                where "Route" is not null
             name: VW_ROUTE_PROFITABILITY
             noLinkRefs: []
       name: VW_ROUTE_PROFITABILITY

@@ -113,7 +113,7 @@ steps:
               - columnReferences:
                   - columnCounter: 6fa68714-bf57-4598-9a94-769fa7ce7705
                     stepCounter: 7497f9b6-8e48-4e21-96fe-ab44b134f092
-                transform: IFNULL("TOWER_ROUTE_DAY_REVENUE"."Service Revenue",0)
+                transform: ""
           - columnReference:
               columnCounter: 5e7baeab-e379-453b-aaca-80d5f026bd4c
               stepCounter: 84e84c06-b403-43af-a8b1-350fc4c7c9e4
@@ -488,16 +488,40 @@ steps:
                   - columnCounter: 65677b5c-619e-4802-b287-bf8e5d833b84
                     stepCounter: 63c3a772-c345-432a-9f9e-44986ae97f5e
                 transform: IFNULL("TOWER_DAILY_ROUTE_METRICS"."Total Downtime Instances",0)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 755ce932-c489-46c4-9f66-0ff157c47eb5
+              stepCounter: 84e84c06-b403-43af-a8b1-350fc4c7c9e4
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Company ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 18b99b12-8df7-49a3-b85a-1f2e4abea004
+                    stepCounter: b352bf7c-adde-4cb4-98b3-dde09a9406e0
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
+              ROUTE_COMBINED: b352bf7c-adde-4cb4-98b3-dde09a9406e0
               TOWER_COLLECTIONS_TICKETS_ROUTE_DATE: 2b04a398-cc77-40c7-991c-cf93b1a0b5c3
               TOWER_DAILY_ROUTE_METRICS: 63c3a772-c345-432a-9f9e-44986ae97f5e
               TOWER_ROUTE_DAY_REVENUE: 7497f9b6-8e48-4e21-96fe-ab44b134f092
             customSQL:
               customSQL: ""
             dependencies:
+              - locationName: TOWER_COMBINED
+                nodeName: ROUTE_COMBINED
               - locationName: TOWER_COMBINED
                 nodeName: TOWER_COLLECTIONS_TICKETS_ROUTE_DATE
               - locationName: TOWER_COMBINED
@@ -513,7 +537,9 @@ steps:
                 LEFT JOIN {{ ref('TOWER_COMBINED', 'TOWER_DAILY_ROUTE_METRICS') }} "TOWER_DAILY_ROUTE_METRICS"
                 ON "TOWER_ROUTE_DAY_REVENUE"."Route" = "TOWER_DAILY_ROUTE_METRICS"."ROUTE"
                     AND "TOWER_ROUTE_DAY_REVENUE"."Route Date" = "TOWER_DAILY_ROUTE_METRICS"."WORKDATE"
-                where "TOWER_ROUTE_DAY_REVENUE"."Route" is not null
+                LEFT JOIN {{ ref('TOWER_COMBINED', 'ROUTE_COMBINED') }} "ROUTE_COMBINED"
+                ON "TOWER_ROUTE_DAY_REVENUE"."Route" = "ROUTE_COMBINED"."ROUTE"
+                where "TOWER_ROUTE_DAY_REVENUE"."Route" is not null and "TOWER_ROUTE_DAY_REVENUE"."Status" = 1
             name: TOWER_ROUTE_DAY_REVENUE_AND_COST
             noLinkRefs: []
       name: TOWER_ROUTE_DAY_REVENUE_AND_COST

@@ -202,7 +202,28 @@ steps:
               - columnReferences:
                   - columnCounter: cfa1af57-c59e-4e30-8270-80894c8a69f9
                     stepCounter: 5055b40f-88d4-4395-afca-9a6f8536a937
-                transform: count_if("SERVICEHISTORY_COMBINED_SEQUENCE"."STATUS" = 1)
+                transform: count("SERVICEHISTORY_COMBINED_SEQUENCE"."Route Sequence")
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 457a14d1-812d-4dd4-ac0d-4ec2b1495848
+              stepCounter: 7497f9b6-8e48-4e21-96fe-ab44b134f092
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Status
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8144047d-309a-4bd1-ba1f-73456924a9e9
+                    stepCounter: 5055b40f-88d4-4395-afca-9a6f8536a937
+                transform: ""
             systemColumnType: None
             transform: ""
         cteString: ""
@@ -218,7 +239,7 @@ steps:
             join:
               joinCondition: |-
                 FROM {{ ref('TOWER_COMBINED', 'SERVICEHISTORY_COMBINED_SEQUENCE') }} "SERVICEHISTORY_COMBINED_SEQUENCE"
-                group by "Route","Route Date"
+                group by "Route","Route Date","STATUS"
             name: TOWER_ROUTE_DAY_REVENUE
             noLinkRefs: []
       name: TOWER_ROUTE_DAY_REVENUE
