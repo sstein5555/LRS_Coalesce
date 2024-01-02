@@ -19,7 +19,7 @@ steps:
           - columnReference:
               columnCounter: 456572ed-fbc2-471a-8af7-3879d0b01cc8
               stepCounter: ee847855-7787-4e90-bc2b-f25d4232ef87
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null

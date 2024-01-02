@@ -731,9 +731,9 @@ steps:
                 FROM {{ ref('TRUXCOMBINED_RAW', 'LM02_COMBINED') }} "LM02_COMBINED"
                 WHERE 
                     "LM02_COMBINED"."SORT" = 1
-                    and "LM02_COMBINED"."_FIVETRAN_DELETED" =FALSE 
-                    and "LM02_COMBINED"."LM02_OWN" = 2
-                    and "METADATA$ACTION" = 'INSERT'
+                    AND "LM02_COMBINED"."_FIVETRAN_DELETED" =FALSE 
+                    AND "LM02_COMBINED"."LM02_OWN" = 2
+                    AND "METADATA$ACTION" = 'INSERT'
             name: STG_POST_COLLECTIONS_DISPOSAL_TICKETS
             noLinkRefs: []
       name: STG_POST_COLLECTIONS_DISPOSAL_TICKETS

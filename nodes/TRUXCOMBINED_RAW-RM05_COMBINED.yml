@@ -33,7 +33,7 @@ steps:
           - columnReference:
               columnCounter: d45515c6-5e54-4bc1-8dde-6589a5168487
               stepCounter: c9f0cfc1-14e2-43ce-9e3b-a4ac9f6ac743
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             hashColumns: []
             hashDetails: null
