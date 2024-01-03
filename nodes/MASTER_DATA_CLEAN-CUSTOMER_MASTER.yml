@@ -1205,6 +1205,29 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13591616-d5de-46be-92b9-8dc7c3692cff
+              stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Intercompany Flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 340c7fb6-b7d8-43be-9fd5-703a8af375b1
+                    stepCounter: 83f237e0-2bb1-4230-bef1-d6b54576823f
+                transform: ""
+              - columnReferences: []
+                transform: ""
+            systemColumnType: None
+            transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
@@ -1213,6 +1236,7 @@ steps:
               CD11_COMBINED: 3131b480-711a-434f-be4a-e6e3315d3c0a
               CD52_COMBINED: af2cc5f9-03e6-4b06-a245-b0719b2aa432
               CM03_Combined: 080d8ab0-3edf-4ee0-b848-dcc7364164df
+              CP01_COMBINED: 83f237e0-2bb1-4230-bef1-d6b54576823f
               TRUX_DATABASE_METADATA: c2e3b305-d522-488b-bbc6-6ade93cd3385
             customSQL:
               customSQL: ""
@@ -1229,6 +1253,8 @@ steps:
                 nodeName: CD52_COMBINED
               - locationName: TRUXCOMBINED_RAW
                 nodeName: CM03_Combined
+              - locationName: TRUXCOMBINED_RAW
+                nodeName: CP01_COMBINED
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'CM03_Combined') }} "CM03_Combined"
@@ -1242,6 +1268,8 @@ steps:
                 ON "CM03_Combined"."CM03_SREP" = "CD07_COMBINED"."CD07_CODE" and "CM03_Combined"."SOURCE" = "CD07_COMBINED"."SOURCE"
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CD52_COMBINED') }} "CD52_COMBINED"
                 ON "CM03_Combined"."CM03_COLLAGNT" = "CD52_COMBINED"."CD52_CODE" and "CM03_Combined"."SOURCE" = "CD52_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CP01_COMBINED') }} "CP01_COMBINED"
+                ON "CM03_Combined"."CM03_CUST" = "CP01_COMBINED"."CP01_CUST" and "CM03_Combined"."SOURCE" = "CP01_COMBINED"."SOURCE"
             name: CM03_COMBINED_TRUX
             noLinkRefs: []
           - aliases:

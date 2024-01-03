@@ -954,6 +954,27 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f790fd3d-7fb8-4de8-994e-f7cf294a239b
+              stepCounter: 343a2abd-4687-4718-be4c-21a2e7cfdfec
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Intercompany Flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13591616-d5de-46be-92b9-8dc7c3692cff
+                    stepCounter: a83e2043-c50d-4bf2-8f19-a0858a24d969
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

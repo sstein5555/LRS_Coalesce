@@ -178,7 +178,7 @@ steps:
             hashColumns: []
             hashDetails: null
             name: Route Sequence
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 74e3557f-7e7d-4528-9948-3459941e9b6a
@@ -336,6 +336,7 @@ steps:
                 FROM {{ ref('TOWER_COMBINED', 'SERVICEHISTORY_COMBINED_SEQUENCE') }} "SERVICEHISTORY_COMBINED_SEQUENCE"
                 LEFT JOIN {{ ref('TOWER_COMBINED', 'ROUTE_COMBINED') }} "ROUTE_COMBINED"
                 ON "SERVICEHISTORY_COMBINED_SEQUENCE"."Route" = "ROUTE_COMBINED"."ROUTE"
+                where "SERVICEHISTORY_COMBINED_SEQUENCE"."Route" is not null
             name: Tower Route Sequence Revenue
             noLinkRefs: []
       name: Route_Sequence_Revenue

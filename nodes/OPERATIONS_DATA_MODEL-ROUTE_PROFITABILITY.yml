@@ -75,7 +75,7 @@ steps:
               - columnReferences: []
                 transform: "'SOFTPAK'"
               - columnReferences: []
-                transform: "'TOWER'"
+                transform: "\"ROUTE_COMBINED\".\"COMPANYID\"||' - TOWER'"
           - columnReference:
               columnCounter: 854c39f9-ca5e-4d2c-9992-e614c157a314
               stepCounter: cdc66665-ecf8-4d1b-b710-4053ef4d3deb
@@ -1180,14 +1180,20 @@ steps:
             name: SOFTPAK_ROUTE_PROFITABILITY
             noLinkRefs: []
           - aliases:
+              ROUTE_COMBINED: b352bf7c-adde-4cb4-98b3-dde09a9406e0
               TOWER_ROUTE_DAY_REVENUE_AND_COST: 84e84c06-b403-43af-a8b1-350fc4c7c9e4
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: TOWER_COMBINED
+                nodeName: ROUTE_COMBINED
+              - locationName: TOWER_COMBINED
                 nodeName: TOWER_ROUTE_DAY_REVENUE_AND_COST
             join:
-              joinCondition: FROM {{ ref('TOWER_COMBINED', 'TOWER_ROUTE_DAY_REVENUE_AND_COST') }} "TOWER_ROUTE_DAY_REVENUE_AND_COST"
+              joinCondition: |-
+                FROM {{ ref('TOWER_COMBINED', 'TOWER_ROUTE_DAY_REVENUE_AND_COST') }} "TOWER_ROUTE_DAY_REVENUE_AND_COST"
+                LEFT JOIN {{ ref('TOWER_COMBINED', 'ROUTE_COMBINED') }} "ROUTE_COMBINED"
+                ON "TOWER_ROUTE_DAY_REVENUE_AND_COST"."Route" = "ROUTE_COMBINED"."ROUTE"
             name: TOWER_REVENUE_AND_COST
             noLinkRefs: []
       name: ROUTE_PROFITABILITY

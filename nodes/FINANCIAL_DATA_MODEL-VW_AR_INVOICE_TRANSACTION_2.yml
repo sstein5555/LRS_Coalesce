@@ -1,0 +1,529 @@
+steps:
+  VW_AR_INVOICE_TRANSACTION_2-4bd101c9-aecb-4198-8976-b5932e44ae7d:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: FINANCIAL_DATA_MODEL
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b696b956-c17c-4bd5-923d-a6456a5cd3d0
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: Payment ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c9525d4c-b31b-49ef-9e66-ae9fcb652987
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: Invoice ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 146704fd-cb27-46ad-88c9-111652d27f9b
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: Customer_Source
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a72f2b13-69e8-434e-8eb1-b89c81b4e2bc
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: Site_Source
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9a682600-aa13-4ee5-abef-4f831ddadcb7
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: DB - Cust
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2fc88f2b-2cae-4438-a365-35438b67f174
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: DB - Site - Cust
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bbaa652b-6961-4027-bbb6-d8b13e51ab38
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: Invoice Number
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 36f6e991-2705-48e1-ae84-7906afa9bd1f
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: Transaction Type
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cd0bc432-2b0c-4711-95e6-83d4f82d0e12
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: Transaction Date
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 67816917-6410-4205-9a64-b51e93f0c24e
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: Invoice Date
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d2ffb9b8-ca2a-4b1a-8147-b94faf0d23f4
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: Due Date
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 77c13bdd-ed6b-439c-9498-fa3498b6cc41
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: Transaction Amount
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8604e516-c71f-4620-beae-098ec089feaf
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: Invoice Amount
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e4e11233-b778-4737-bf82-5c89f884a23a
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: NUMBER(1,0)
+            defaultValue: ""
+            description: ""
+            name: Balance
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8e2aa090-c81d-46e1-b5a7-91e9a304949f
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: Record Date
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0bc463ac-0f65-4b57-9856-582095bdd46f
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: GL Number
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3e1841da-b60f-45ae-b530-6d8d24d27e18
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: Group ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bd007924-f676-4341-9555-fd0a456af757
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: NUMBER(9,0)
+            defaultValue: ""
+            description: ""
+            name: dso_from_due
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 38ff83df-1a4d-42b8-8c0b-cb70f8e86c68
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: NUMBER(9,0)
+            defaultValue: ""
+            description: ""
+            name: dso_from_invoice
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8c2e7344-6a22-4023-b607-e8398daa484e
+              stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: Source
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: |-
+                {{ stage('Override Create SQL') }}
+                	CREATE OR REPLACE VIEW {{ ref('FINANCIAL_DATA_MODEL', 'VW_AR_INVOICE_TRANSACTION_2')}} AS (
+                with 
+                trux_payments
+                as
+                (
+                    select
+                     pym."Unique ID" as "Payment ID",
+                     inv."Unique ID"as "Invoice ID",
+                     inv."Customer_Source",
+                     inv."Site Number" as "Site_Source",
+                     concat(inv.source, "Customer Number") as "DB - Cust",
+                     concat(inv.source,inv."Site Number",'-',inv."Customer Number") as "DB - Site - Cust",
+                     inv."Invoice Number" as "Invoice Number",
+                     case when pym."Payment or Adjustment" = 'P' then 'Payment'
+                          when pym."Payment or Adjustment" = 'A' then 'Adjustment Payment'
+                     else null end as "Transaction Type",
+                     pym."Payment Date" as "Transaction Date",
+                     inv."Invoice Date" as "Invoice Date",
+                     coalesce("Due Date","Invoice Date") as "Due Date",
+                     case when pym."Payment or Adjustment" = 'P' then pym."Amount" * -1
+                          when pym."Payment or Adjustment" = 'A' then pym."Amount"
+                     else null end as "Transaction Amount",
+                     inv."Amount" as "Invoice Amount",
+                     0 as "Balance",
+                     pym."Record Date" as "Record Date",
+                     pym."GL Number" as "GL Number",
+                     pym."Group ID" as "Group ID",
+                     case when pym."Payment or Adjustment" = 'P' then datediff(DAY,inv."Due Date",pym."Payment Date")
+                     else null end as "dso_from_due",
+                     case when pym."Payment or Adjustment" = 'P' then datediff(DAY, inv."Invoice Date",pym."Payment Date")
+                     else null end as "dso_from_invoice",
+                     pym.SOURCE as "Source"
+                    from
+                      LRS_DEVELOPMENT.financial_data_model."AR_Payment_Details" pym
+                    left join
+                      LRS_DEVELOPMENT.financial_data_model."AR_Invoice_Amounts" inv
+                    on
+                       pym."Link_Source" = inv."ID_Source"
+                    where
+                      pym.source not LIKE '%TOWER%'
+                 
+                )
+                ,
+                trux_invoices as (
+                   select
+                     null as "Payment ID",
+                     "Unique ID" as "Invoice ID",
+                     "Customer_Source" as "Customer_Source",
+                     "Site Number" as "Site_Source",
+                     concat(source,"Customer Number") as "DB - Cust",
+                      concat(source,"Site Number",'-',"Customer Number") as "DB - Site - Cust",
+                      "Invoice Number" as "Invoice Number",
+                     case when contains("Invoice Number", 'A') = TRUE then 'Invoice Adjustment'
+                          when contains("Invoice Number", 'A') = FALSE then 'Invoice'
+                     else null end as "Transaction Type",
+                    -- "Due Date" as "Transaction Date",
+                     "Invoice Date" as "Transaction Date",
+                     "Invoice Date" as "Invoice Date",
+                     coalesce("Due Date","Invoice Date") as "Due Date",
+                     "Amount" as "Transaction Amount",
+                     "Amount" as "Invoice Amount",
+                     0 as "Balance",
+                     null as "Record Date",
+                     null as "GL Number",
+                     null as "Group ID",
+                     null as "dso_from_due",
+                     null as "dso_from_invoice",
+                     source as "Source"
+                   from
+                    LRS_DEVELOPMENT.financial_data_model."AR_Invoice_Amounts" 
+                   where
+                     source not LIKE '%TOWER%'
+                ),
+                tower_open_balance as (
+                select 
+                 null as "Payment ID",
+                 a.invoiceuid as "Invoice ID",
+                 a.custid as "Customer_Source",
+                 a.siteid as "Site_Source",
+                 a.companyid||' - TOWER'||a.custid as "DB - Cust",
+                 a.companyid||' - TOWER'||a.siteid||'-'||a.custid as "DB - Site - Cust",
+                 b.invoiceid as "Invoice Number",
+                 'Open Balance' as "Transaction Type",
+                 b.invoicedate as "Transaction Date",
+                 b.invoicedate as "Invoice Date",
+                 coalesce(a.duedate, b.invoicedate) as "Due Date",
+                 a.balance as "Transaction Amount",
+                 a.originalamount as "Invoice Amount",
+                 0 as "Balance",
+                 null as "Record Date",
+                 a.creditacct as "GL Number",
+                 a.companyid as "Group ID",
+                 null as "dso_from_due",
+                 null as "dso_from_invoice",
+                 a.companyid||' - TOWER' as "Source"
+                from
+                  lrs_raw.tower_raw.ardetail a
+                left join
+                  lrs_raw.tower_raw.invoice b
+                on
+                  a.invoiceuid = b.invoiceuid
+                where
+                 a.balance <> 0
+                 and
+                 a.status <> 2
+                )
+                
+                /*tower_open_balance as(
+                  select
+                    null as "Payment ID",
+                    inv."Unique ID" as "Invoice ID",
+                    inv."Customer_Source" as "Customer Source",
+                    concat(inv.source,inv."Site Number",'-',inv."Customer Number") as "DB - Site - Cust",
+                    inv."Invoice Number" as "Invoice Number",
+                    'Open Balance' as "Transaction Type",
+                    inv."Due Date" as "Transaction Date",
+                    inv."Invoice Date" as "Invoice Date",
+                    opn.balance as "Transaction Amount",
+                    opn.originalamount as "Invoice Amount",
+                    0 as "Balance",
+                    null as "Record Date",
+                    null as "GL Number",
+                    null as "Group ID",
+                    inv.source as "Source"
+                  from
+                    LRS_DEVELOPMENT.financial_data_model."AR_Invoice_Amounts" inv
+                  left join
+                    lrs_raw.tower_raw.customer_vw_open_invoices opn
+                  on
+                    inv."Invoice Number" = opn.invoiceid
+                  where 
+                    inv.source = 'TOWER'
+                  and
+                    opn.billcustid is not null
+                
+                )*/
+                select
+                  *
+                from
+                  trux_invoices
+                  
+                union all
+                
+                select
+                
+                *
+                from
+                  trux_payments
+                
+                union all
+                
+                select
+                  *
+                from
+                tower_open_balance
+                	)
+            dependencies: []
+            join:
+              joinCondition: ""
+            name: VW_AR_INVOICE_TRANSACTION_2
+            noLinkRefs: []
+      name: VW_AR_INVOICE_TRANSACTION_2
+      overrideSQL: true
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: 4bd101c9-aecb-4198-8976-b5932e44ae7d
