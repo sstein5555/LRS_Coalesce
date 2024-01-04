@@ -266,27 +266,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b6bf49d7-0ce3-4af1-bd50-1cb16a8b184f
-              stepCounter: 8cd1fe65-d8f8-453b-96da-11a5b96997b6
-            config: {}
-            dataType: VARCHAR
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: Facility Description
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: cd4510fb-1723-4025-a813-baddfee3e4c6
-                    stepCounter: 75646501-ee23-441a-91c1-fced667296c2
-                transform: ""
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: a82c28ca-85bf-497c-831f-08421627917e
               stepCounter: 8cd1fe65-d8f8-453b-96da-11a5b96997b6
             config: {}
@@ -330,7 +309,6 @@ steps:
           - aliases:
               CR01_COMBINED: cda7522c-0429-40ef-8a6c-67b5bcd0d948
               LF05H_COMBINED: 598f6c67-8f48-4c37-85b4-ae7c7d47d5f5
-              LM01_COMBINED: 75646501-ee23-441a-91c1-fced667296c2
               MP13_COMBINED: 4c0e1656-a58e-463a-98d8-f02559bc28a0
               STG_CARRIER_RATES: 2802e6e9-4687-469b-a0cb-92e40f7ae790
             customSQL:
@@ -341,8 +319,6 @@ steps:
               - locationName: TRUXCOMBINED_RAW
                 nodeName: LF05H_COMBINED
               - locationName: TRUXCOMBINED_RAW
-                nodeName: LM01_COMBINED
-              - locationName: TRUXCOMBINED_RAW
                 nodeName: MP13_COMBINED
               - locationName: TRUXCOMBINED_RAW
                 nodeName: STG_CARRIER_RATES
@@ -350,18 +326,15 @@ steps:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'MP13_COMBINED') }} "MP13_COMBINED"
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LF05H_COMBINED') }} "LF05H_COMBINED"
-                ON "MP13_COMBINED"."MP13_TICK" = "LF05H_COMBINED"."LF05H_NUMB" 
+                ON "MP13_COMBINED"."MP13_TICK" = "LF05H_COMBINED"."LF05H_ID" 
                     AND "MP13_COMBINED"."SOURCE" = "LF05H_COMBINED"."SOURCE"
-                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM01_COMBINED') }} "LM01_COMBINED"
-                ON "LF05H_COMBINED"."LF05H_FCTY" = "LM01_COMBINED"."LM01_DSTE"
-                    AND "LF05H_COMBINED"."SOURCE" = "LM01_COMBINED"."SOURCE"
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'STG_CARRIER_RATES') }} "STG_CARRIER_RATES"
                 ON "MP13_COMBINED"."MP13_CARR" = "STG_CARRIER_RATES"."Unique ID"
                     and "MP13_COMBINED"."SOURCE" = "STG_CARRIER_RATES"."SOURCE"
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'CR01_COMBINED') }} "CR01_COMBINED"
                 ON "STG_CARRIER_RATES"."Link" = "CR01_COMBINED"."CR01_ID"
                     and "STG_CARRIER_RATES"."SOURCE" = "CR01_COMBINED"."SOURCE"
-                WHERE "MP13_COMBINED"."_FIVETRAN_DELETED" = FALSE
+                WHERE "MP13_COMBINED"."_FIVETRAN_DELETED" = FALSE and "MP13_ACHG"<>0
             name: FREIGHT_COST
             noLinkRefs: []
       name: FREIGHT_COST
