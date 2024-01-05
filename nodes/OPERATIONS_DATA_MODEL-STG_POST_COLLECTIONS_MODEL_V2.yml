@@ -529,7 +529,7 @@ steps:
           - columnReference:
               columnCounter: edde4ec8-1085-4259-8fdb-e8d57336f5b1
               stepCounter: 56ab6887-1fa1-4b96-905e-454bf2221168
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR
             description: ""
             name: Customer Number
             nullable: true
