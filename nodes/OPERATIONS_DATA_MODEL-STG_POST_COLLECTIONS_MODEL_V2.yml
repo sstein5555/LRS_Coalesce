@@ -821,6 +821,7 @@ steps:
                     ON "LF05D_COMBINED"."LF05D_TUOM" = "TLM06_COMBINED"."LM06_UOM1" 
                         AND "LF05D_COMBINED"."SOURCE" = "TLM06_COMBINED"."SOURCE"
                         AND "TLM06_COMBINED"."LM06_UOM2" = 'TN'
+                WHERE DATE("LF05H_COMBINED"."LF05H_DTEI") > DATEADD(year,-2,GETDATE())
             name: STG_POST_COLLECTIONS_MODEL_V2
             noLinkRefs: []
       name: STG_POST_COLLECTIONS_MODEL_V2
