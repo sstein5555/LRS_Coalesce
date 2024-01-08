@@ -393,9 +393,9 @@ steps:
                      else null end as "dso_from_invoice",
                      pym.SOURCE as "Source"
                     from
-                      LRS_DEVELOPMENT.financial_data_model."AR_Payment_Details" pym
+                      LRS_PRODUCTION.financial_data_model."AR_Payment_Details" pym
                     left join
-                      LRS_DEVELOPMENT.financial_data_model."AR_Invoice_Amounts" inv
+                      LRS_PRODUCTION.financial_data_model."AR_Invoice_Amounts" inv
                     on
                        pym."Link_Source" = inv."ID_Source"
                     where
@@ -429,7 +429,7 @@ steps:
                      null as "dso_from_invoice",
                      source as "Source"
                    from
-                    LRS_DEVELOPMENT.financial_data_model."AR_Invoice_Amounts" 
+                    LRS_PRODUCTION.financial_data_model."AR_Invoice_Amounts" 
                    where
                      source not LIKE '%TOWER%'
                 ),
