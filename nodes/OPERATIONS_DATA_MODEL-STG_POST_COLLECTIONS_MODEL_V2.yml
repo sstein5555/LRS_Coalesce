@@ -141,6 +141,27 @@ steps:
                   - columnCounter: 07d479fe-b7cc-4b34-8304-1e03173d2999
                     stepCounter: 15542181-ab9e-4ad7-a5ec-c0d5fdb18a51
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d24dd295-bd65-47a4-907e-6f4327377517
+              stepCounter: 56ab6887-1fa1-4b96-905e-454bf2221168
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: Material Description
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29e98454-68c4-4414-8685-8bae91617e75
+                    stepCounter: d1220fe5-c7b7-4bb4-9a94-fc3d3c6e1c27
+                transform: ""
+            systemColumnType: None
+            transform: ""
           - columnReference:
               columnCounter: 7f2d9e5e-adc6-42cb-b218-fd9060463f43
               stepCounter: 56ab6887-1fa1-4b96-905e-454bf2221168
@@ -562,6 +583,27 @@ steps:
                   - columnCounter: c2ca4c15-e3ba-4fdc-953e-b062f1f4a85d
                     stepCounter: 598f6c67-8f48-4c37-85b4-ae7c7d47d5f5
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 04af627c-68d2-4d5c-9acf-2350d9ef4fd2
+              stepCounter: 56ab6887-1fa1-4b96-905e-454bf2221168
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: In\Out Indicator
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "LF05H_COMBINED"."LF05H_INBOUND" = TRUE THEN 'Inbound' ELSE 'Outbound' END
+            systemColumnType: None
+            transform: ""
           - columnReference:
               columnCounter: d4e50533-395d-49d3-b4f2-aa01dc8f17a1
               stepCounter: 56ab6887-1fa1-4b96-905e-454bf2221168
@@ -775,7 +817,7 @@ steps:
           - columnReference:
               columnCounter: 479b707d-dfb3-4426-86b1-3b4c63c51ecf
               stepCounter: 56ab6887-1fa1-4b96-905e-454bf2221168
-            dataType: VARCHAR
+            dataType: VARCHAR(250)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -794,6 +836,7 @@ steps:
               DLM06_COMBINED: 1dd6a90f-e18e-4982-b14b-842b8ea5e4f4
               LF05D_COMBINED: 15542181-ab9e-4ad7-a5ec-c0d5fdb18a51
               LF05H_COMBINED: 598f6c67-8f48-4c37-85b4-ae7c7d47d5f5
+              LM04_COMBINED: d1220fe5-c7b7-4bb4-9a94-fc3d3c6e1c27
               TLM06_COMBINED: 1dd6a90f-e18e-4982-b14b-842b8ea5e4f4
             customSQL:
               customSQL: ""
@@ -803,24 +846,30 @@ steps:
               - locationName: TRUXCOMBINED_RAW
                 nodeName: LF05H_COMBINED
               - locationName: TRUXCOMBINED_RAW
+                nodeName: LM04_COMBINED
+              - locationName: TRUXCOMBINED_RAW
                 nodeName: LM06_COMBINED
             join:
               joinCondition: |-
                 FROM {{ ref('TRUXCOMBINED_RAW', 'LF05D_COMBINED') }} "LF05D_COMBINED"
                 INNER JOIN {{ ref('TRUXCOMBINED_RAW', 'LF05H_COMBINED') }} "LF05H_COMBINED"
-                ON "LF05D_COMBINED"."LF05D_LINK" = "LF05H_COMBINED"."LF05H_ID" AND "LF05D_COMBINED"."SOURCE" = "LF05H_COMBINED"."SOURCE"
+                ON "LF05D_COMBINED"."LF05D_LINK" = "LF05H_COMBINED"."LF05H_ID" 
+                    AND "LF05D_COMBINED"."SOURCE" = "LF05H_COMBINED"."SOURCE"
+                LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM04_COMBINED') }} "LM04_COMBINED" -- MATERIAL
+                ON "LF05D_COMBINED"."LF05D_MATL" = "LM04_COMBINED"."LM04_CODE" 
+                    AND "LF05D_COMBINED"."SOURCE"= "LM04_COMBINED"."SOURCE"
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM06_COMBINED') }} "DLM06_COMBINED" -- DISPOSAL UNIT OF MEASURE
-                    ON "LF05D_COMBINED"."LF05D_CUOM" = "DLM06_COMBINED"."LM06_UOM1" 
-                        AND "LF05D_COMBINED"."SOURCE" = "DLM06_COMBINED"."SOURCE"
-                        AND "DLM06_COMBINED"."LM06_UOM2" = 'TN'
+                ON "LF05D_COMBINED"."LF05D_CUOM" = "DLM06_COMBINED"."LM06_UOM1" 
+                    AND "LF05D_COMBINED"."SOURCE" = "DLM06_COMBINED"."SOURCE"
+                    AND "DLM06_COMBINED"."LM06_UOM2" = 'TN'
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM06_COMBINED') }} "BLM06_COMBINED" -- BILLING UNIT OF MEASURE
-                    ON "LF05D_COMBINED"."LF05D_BUOM" = "BLM06_COMBINED"."LM06_UOM1" 
-                        AND "LF05D_COMBINED"."SOURCE" = "BLM06_COMBINED"."SOURCE"
-                        AND "BLM06_COMBINED"."LM06_UOM2" = 'TN'
+                ON "LF05D_COMBINED"."LF05D_BUOM" = "BLM06_COMBINED"."LM06_UOM1" 
+                    AND "LF05D_COMBINED"."SOURCE" = "BLM06_COMBINED"."SOURCE"
+                    AND "BLM06_COMBINED"."LM06_UOM2" = 'TN'
                 LEFT JOIN {{ ref('TRUXCOMBINED_RAW', 'LM06_COMBINED') }} "TLM06_COMBINED" -- Tracking UNIT OF MEASURE
-                    ON "LF05D_COMBINED"."LF05D_TUOM" = "TLM06_COMBINED"."LM06_UOM1" 
-                        AND "LF05D_COMBINED"."SOURCE" = "TLM06_COMBINED"."SOURCE"
-                        AND "TLM06_COMBINED"."LM06_UOM2" = 'TN'
+                ON "LF05D_COMBINED"."LF05D_TUOM" = "TLM06_COMBINED"."LM06_UOM1" 
+                    AND "LF05D_COMBINED"."SOURCE" = "TLM06_COMBINED"."SOURCE"
+                    AND "TLM06_COMBINED"."LM06_UOM2" = 'TN'
                 WHERE DATE("LF05H_COMBINED"."LF05H_DTEI") > DATEADD(year,-2,GETDATE())
             name: STG_POST_COLLECTIONS_MODEL_V2
             noLinkRefs: []
